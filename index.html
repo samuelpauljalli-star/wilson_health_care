@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -45,10 +45,10 @@
 
         nav {
             background: var(--white);
-            padding: 1rem 5%;
+            padding: 0.8rem 5%;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 10px;
             position: fixed;
             top: 0;
             width: 100%;
@@ -100,26 +100,51 @@
             position: relative;
         }
 
-        .nav-search input {
-            width: 100%;
-            padding: 0.6rem 1rem 0.6rem 2.5rem;
-            border: 2px solid #e2e8f0;
+        .nav-search {
+            position: relative;
+            background: white;
+            border: 2px solid var(--primary);
             border-radius: 50px;
-            outline: none;
-            transition: var(--transition);
+            padding: 0 15px;
+            flex: 1;
+            max-width: 500px;
+            margin: 0 2rem;
+            height: 40px;
+            display: none;
+            align-items: center;
         }
 
-        .nav-search input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0, 168, 168, 0.1);
+        .nav-search.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .nav-search {
+                width: 100%;
+                margin: 10px 0 0;
+                order: 3;
+            }
+        }
+
+        .nav-search input {
+            border: none;
+            background: transparent;
+            padding: 0 10px 0 30px;
+            outline: none;
+            font-size: 0.85rem;
+            width: 100%;
+            height: 100%;
+            color: var(--secondary);
         }
 
         .nav-search i {
             position: absolute;
-            left: 1rem;
+            left: 20px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-light);
+            z-index: 1;
         }
 
         .nav-actions {
@@ -582,9 +607,21 @@
         .total-row {
             display: flex;
             justify-content: space-between;
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .grand-total-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-top: 1rem;
             margin-bottom: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            color: var(--primary);
         }
 
         .checkout-btn {
@@ -601,6 +638,19 @@
 
         .checkout-btn:hover {
             background: var(--primary-dark);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
         }
 
         /* Login Form Styles */
@@ -824,9 +874,7 @@
                 width: 50px;
             }
 
-            .logo .brand-healthcare {
-                display: none;
-            }
+
 
             .nav-search {
                 order: 3;
@@ -940,37 +988,49 @@
 <body>
 
     <nav>
-        <a href="#" class="logo">
-            <img src="logo.jpg" alt="Wilson Health Care Logo">
-            <span>
-                <span class="brand-wilson">WILSON</span>
-                <span class="brand-healthcare">HEALTH CARE</span>
-            </span>
-        </a>
-        <div class="nav-search">
-            <i class="fas fa-search"></i>
-            <input type="text" id="search-input" placeholder="Search equipment, brands, surgical tools..."
-                oninput="handleSearch(this.value)">
+        <div
+            style="display: flex; align-items: center; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 0;">
+                <a href="#" class="logo">
+                    <img src="logo.jpg" alt="Wilson Health Care Logo">
+                    <div style="display: flex; flex-direction: column; line-height: 1.1;">
+                        <span class="brand-wilson">WILSON</span>
+                        <span class="brand-healthcare">HEALTH CARE</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="nav-search" id="search-bar">
+                <i class="fas fa-search" style="color: var(--secondary);"></i>
+                <input type="text" id="search-input" placeholder="Search equipment, brands, surgical tools..."
+                    oninput="handleSearch(this.value)">
+            </div>
+
+            <div class="nav-actions">
+                <a href="#" class="nav-btn" title="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <button class="nav-btn" onclick="toggleSearch()" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="nav-btn" onclick="openModal('wishlist')">
+                    <i class="far fa-heart"></i>
+                    <span class="badge" id="wishlist-count">0</span>
+                </button>
+                <button class="nav-btn" onclick="openModal('cart')">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </button>
+                <button class="nav-btn" onclick="openModal('orders')">
+                    <i class="fas fa-box"></i>
+                </button>
+                <button class="nav-btn" id="login-nav-btn" onclick="openModal('login')">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+            </div>
         </div>
-        <div class="nav-actions">
-            <a href="#" class="nav-btn" title="Home">
-                <i class="fas fa-home"></i>
-            </a>
-            <button class="nav-btn" onclick="openModal('wishlist')">
-                <i class="far fa-heart"></i>
-                <span class="badge" id="wishlist-count">0</span>
-            </button>
-            <button class="nav-btn" onclick="openModal('cart')">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="badge" id="cart-count">0</span>
-            </button>
-            <button class="nav-btn" onclick="openModal('orders')">
-                <i class="fas fa-box"></i>
-            </button>
-            <button class="nav-btn" id="login-nav-btn" onclick="openModal('login')">
-                <i class="fas fa-user-circle"></i>
-            </button>
-        </div>
+
+
     </nav>
     <section class="hero">
         <div class="hero-slide active"
@@ -1015,7 +1075,9 @@
             <h1>Advanced Medical Solutions for a Healthier Tomorrow</h1>
             <p>From precision diagnostic tools to professional surgical equipment, we provide the best in medical
                 technology for hospitals and home care.</p>
-            <button class="cta-btn">View Catalog</button>
+            <button class="cta-btn"
+                onclick="renderProducts('All'); document.getElementById('products-heading').scrollIntoView({behavior: 'smooth'})">View
+                Catalog</button>
         </div>
     </section>
 
@@ -1073,9 +1135,8 @@
                 <!-- Cart items here -->
             </div>
             <div class="modal-footer">
-                <div class="total-row">
-                    <span>Total Amount:</span>
-                    <span id="cart-total">$0.00</span>
+                <div id="cart-summary">
+                    <!-- Summary populated by JS -->
                 </div>
                 <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
             </div>
@@ -1319,6 +1380,7 @@
         const products = [
             {
                 id: 1,
+                gst: 5,
                 name: "SP02 PROBES",
                 category: "Diagnostics",
                 price: 1599.00,
@@ -1336,6 +1398,7 @@
             },
             {
                 id: 2,
+                gst: 18,
                 name: "SP02 EXTENSION CABLES",
                 category: "Diagnostics",
                 price: 1599.00,
@@ -1353,6 +1416,7 @@
             },
             {
                 id: 3,
+                gst: 12,
                 name: "DISPOSABLE SP02 PROBES",
                 category: "Diagnostics",
                 price: 399.00,
@@ -1370,6 +1434,7 @@
             },
             {
                 id: 4,
+                gst: 18,
                 name: "MONITOR 5 LEAD ECG CABLES",
                 category: "Diagnostics",
                 price: 2099.00,
@@ -1387,6 +1452,7 @@
             },
             {
                 id: 5,
+                gst: 5,
                 name: "MONITOR 3 LEAD ECG CABLES",
                 category: "Diagnostics",
                 price: 1999.00,
@@ -1404,6 +1470,7 @@
             },
             {
                 id: 6,
+                gst: 12,
                 name: "10 LEADS ECG CABLES",
                 category: "Diagnostics",
                 price: 2299.00,
@@ -1421,6 +1488,7 @@
             },
             {
                 id: 7,
+                gst: 5,
                 name: "ECG ELECTRODES",
                 category: "Diagnostics",
                 price: 799.00,
@@ -1438,6 +1506,7 @@
             },
             {
                 id: 8,
+                gst: 18,
                 name: "NEON ECG ELECTRODE 3 WIRE",
                 category: "Diagnostics",
                 price: 299.00,
@@ -1455,6 +1524,7 @@
             },
             {
                 id: 9,
+                gst: 12,
                 name: "DISPOSABLE ELECTRODES",
                 category: "Diagnostics",
                 price: 15.00,
@@ -1472,6 +1542,7 @@
             },
             {
                 id: 10,
+                gst: 18,
                 name: "DISPOSABLE ELECTRODES",
                 category: "Diagnostics",
                 price: 15.00,
@@ -1489,6 +1560,7 @@
             },
             {
                 id: 11,
+                gst: 5,
                 name: "ECG ALLIGATOR CLIPS",
                 category: "Surgical",
                 price: 399.00,
@@ -1506,6 +1578,7 @@
             },
             {
                 id: 12,
+                gst: 12,
                 name: "ECG CLAMPS SET",
                 category: "Surgical",
                 price: 999.00,
@@ -1523,6 +1596,7 @@
             },
             {
                 id: 13,
+                gst: 5,
                 name: "ECG PAPER -A4 SHEET (100 sheets)",
                 category: "Diagnostics",
                 price: 449.00,
@@ -1540,6 +1614,7 @@
             },
             {
                 id: 14,
+                gst: 18,
                 name: "ECG PAPER-3 CHANNEL PAPERS (100 sheets)",
                 category: "Diagnostics",
                 price: 399.00,
@@ -1557,6 +1632,7 @@
             },
             {
                 id: 15,
+                gst: 12,
                 name: "NST MACHINEPAPERS (100 sheets)",
                 category: "Diagnostics",
                 price: 449.00,
@@ -1575,6 +1651,7 @@
             },
             {
                 id: 16,
+                gst: 18,
                 name: "ECG MACHINE JELLY BOTTLE 250 ml",
                 category: "Diagnostics",
                 price: 199.00,
@@ -1592,6 +1669,7 @@
             },
             {
                 id: 17,
+                gst: 5,
                 name: "ECG MACHINE JELLY JAR 5 KG",
                 category: "Diagnostics",
                 price: 649.00,
@@ -1609,6 +1687,7 @@
             },
             {
                 id: 18,
+                gst: 12,
                 name: "ULTRASOUND JELLY BOTTLE 250 ml",
                 category: "Diagnostics",
                 price: 199.00,
@@ -1626,6 +1705,7 @@
             },
             {
                 id: 19,
+                gst: 5,
                 name: "ULTRASOUND JELLY JAR 5 KG",
                 category: "Diagnostics",
                 price: 649.00,
@@ -1643,6 +1723,7 @@
             },
             {
                 id: 20,
+                gst: 18,
                 name: "NIBP HOSING",
                 category: "First Aid",
                 price: 1499.00,
@@ -1660,6 +1741,7 @@
             },
             {
                 id: 21,
+                gst: 12,
                 name: "REUSABLE NIBP CUFFS (ADULT, EX LARGE, THIGH)",
                 category: "First Aid",
                 price: 599.00,
@@ -1677,6 +1759,7 @@
             },
             {
                 id: 22,
+                gst: 18,
                 name: "DISPOSABLE NIBPCUFFS (PEDIATRIC, NEONATAL, INFANT)",
                 category: "First Aid",
                 price: 349.00,
@@ -1694,6 +1777,7 @@
             },
             {
                 id: 23,
+                gst: 5,
                 name: "BD IBP CABLE",
                 category: "Diagnostics",
                 price: 2399.00,
@@ -1710,6 +1794,7 @@
             },
             {
                 id: 24,
+                gst: 12,
                 name: "MEDEX IBP CABLE",
                 category: "Diagnostics",
                 price: 2399.00,
@@ -1727,6 +1812,7 @@
             },
             {
                 id: 25,
+                gst: 5,
                 name: "EDWARDS IBP CABLE",
                 category: "Diagnostics",
                 price: 2399.00,
@@ -1742,6 +1828,7 @@
             },
             {
                 id: 26,
+                gst: 18,
                 name: "TEMPERATURE PROBES",
                 category: "Diagnostics",
                 price: 2299.00,
@@ -1759,6 +1846,7 @@
             },
             {
                 id: 27,
+                gst: 12,
                 name: "EDWARDS SINGLE LINE",
                 category: "Surgical",
                 price: 849.00,
@@ -1776,6 +1864,7 @@
             },
             {
                 id: 28,
+                gst: 18,
                 name: "MEDEX SINGLE LINE",
                 category: "Surgical",
                 price: 849.00,
@@ -1792,6 +1881,7 @@
             },
             {
                 id: 29,
+                gst: 5,
                 name: "UTAH SINGLE LINE",
                 category: "Surgical",
                 price: 849.00,
@@ -1809,6 +1899,7 @@
             },
             {
                 id: 30,
+                gst: 12,
                 name: "B.D SINGLE LINE",
                 category: "Surgical",
                 price: 849.00,
@@ -1824,6 +1915,7 @@
             },
             {
                 id: 31,
+                gst: 5,
                 name: "EDWARDS DOUBLE LINE",
                 category: "Surgical",
                 price: 1399.00,
@@ -1841,6 +1933,7 @@
             },
             {
                 id: 32,
+                gst: 18,
                 name: "MEDEX DOUBLE LINE",
                 category: "Surgical",
                 price: 1399.00,
@@ -1857,6 +1950,7 @@
             },
             {
                 id: 33,
+                gst: 12,
                 name: "IBP DPT BRACKET & DPT HOLDER",
                 category: "Surgical",
                 price: 1199.00,
@@ -1874,6 +1968,7 @@
             },
             {
                 id: 34,
+                gst: 18,
                 name: "ETCO2 MODULE",
                 category: "Diagnostics",
                 price: 30000.00,
@@ -1891,6 +1986,7 @@
             },
             {
                 id: 35,
+                gst: 5,
                 name: "ETCO2 WATER TRAPS",
                 category: "Surgical",
                 price: 1999.00,
@@ -1908,6 +2004,7 @@
             },
             {
                 id: 36,
+                gst: 12,
                 name: "ETCO2 SAMPLING LINE",
                 category: "Surgical",
                 price: 1499.00,
@@ -1925,6 +2022,7 @@
             },
             {
                 id: 37,
+                gst: 5,
                 name: "ETCO2 ADAPTOR",
                 category: "Surgical",
                 price: 1999.00,
@@ -1942,6 +2040,7 @@
             },
             {
                 id: 38,
+                gst: 18,
                 name: "IBP DOUBLE ADAPTOR",
                 category: "Surgical",
                 price: 3499.00,
@@ -1959,6 +2058,7 @@
             },
             {
                 id: 39,
+                gst: 12,
                 name: "OXYGEN HOOD",
                 category: "First Aid",
                 price: 1999.00,
@@ -1977,6 +2077,7 @@
 
             {
                 id: 40,
+                gst: 18,
                 name: "FACE MASKS (SIZE=1-5)",
                 category: "First Aid",
                 price: 599.00,
@@ -1994,6 +2095,7 @@
             },
             {
                 id: 41,
+                gst: 5,
                 name: "DISPOSABLEADULT HUMIDIFIER CHAMBER",
                 category: "Surgical",
                 price: 999.00,
@@ -2011,6 +2113,7 @@
             },
             {
                 id: 42,
+                gst: 12,
                 name: "REUSABLE ADULT HUMIDIFIER CHAMBER",
                 category: "Surgical",
                 price: 3499.00,
@@ -2028,6 +2131,7 @@
             },
             {
                 id: 43,
+                gst: 5,
                 name: "REUSABLE NEONATE HUMIDIFIER CHAMBER",
                 category: "Surgical",
                 price: 4999.00,
@@ -2045,6 +2149,7 @@
             },
             {
                 id: 44,
+                gst: 18,
                 name: "DISPOSABLE NEONATE HUMIDIFIER CHAMBER",
                 category: "Surgical",
                 price: 999.00,
@@ -2062,6 +2167,7 @@
             },
             {
                 id: 45,
+                gst: 12,
                 name: "ANAESTHESIA MASKS (SIZE=1-5)",
                 category: "Surgical",
                 price: 599.00,
@@ -2079,6 +2185,7 @@
             },
             {
                 id: 46,
+                gst: 18,
                 name: "LMA",
                 category: "Surgical",
                 price: 899.00,
@@ -2096,6 +2203,7 @@
             },
             {
                 id: 47,
+                gst: 5,
                 name: "DISPOSABLE BAIN CIRCUIT",
                 category: "Surgical",
                 price: 799.00,
@@ -2113,6 +2221,7 @@
             },
             {
                 id: 48,
+                gst: 12,
                 name: "DISPOSABLE VENTILATOR CIRCUIT",
                 category: "Surgical",
                 price: 1599.00,
@@ -2130,6 +2239,7 @@
             },
             {
                 id: 49,
+                gst: 5,
                 name: "DISPOSABLE VENTILATOR CIRCUIT WITH 2 WATER TRAP",
                 category: "Surgical",
                 price: 699.00,
@@ -2147,6 +2257,7 @@
             },
             {
                 id: 50,
+                gst: 18,
                 name: "REUSABLE VENTILATOR CIRCUIT",
                 category: "Surgical",
                 price: 4499.00,
@@ -2164,6 +2275,7 @@
             },
             {
                 id: 51,
+                gst: 12,
                 name: "TEST LUNG",
                 category: "Surgical",
                 price: 1799.00,
@@ -2181,6 +2293,7 @@
             },
             {
                 id: 52,
+                gst: 18,
                 name: "NEONATE TEST LUNG",
                 category: "Surgical",
                 price: 1199.00,
@@ -2198,6 +2311,7 @@
             },
             {
                 id: 53,
+                gst: 5,
                 name: "AMBU BAG",
                 category: "Mobility",
                 price: 999.00,
@@ -2215,6 +2329,7 @@
             },
             {
                 id: 54,
+                gst: 12,
                 name: "BREATHING BAGS",
                 category: "Mobility",
                 price: 549.00,
@@ -2232,6 +2347,7 @@
             },
             {
                 id: 55,
+                gst: 5,
                 name: "BREATHING BAGS",
                 category: "Diagnostics",
                 price: 2499.00,
@@ -2249,6 +2365,7 @@
             },
             {
                 id: 56,
+                gst: 18,
                 name: "U TYPE SCAN",
                 category: "Diagnostics",
                 price: 2499.00,
@@ -2266,6 +2383,7 @@
             },
             {
                 id: 57,
+                gst: 12,
                 name: "THERMO SCAN",
                 category: "Diagnostics",
                 price: 1499.00,
@@ -2283,6 +2401,7 @@
             },
             {
                 id: 58,
+                gst: 18,
                 name: "LARYNGOSCOPE",
                 category: "Surgical",
                 price: 5999.00,
@@ -2300,6 +2419,7 @@
             },
             {
                 id: 59,
+                gst: 5,
                 name: "MCCOY LARYNGOSCOPE (SIZE=2-6)",
                 category: "Surgical",
                 price: 2999.00,
@@ -2317,6 +2437,7 @@
             },
             {
                 id: 60,
+                gst: 12,
                 name: "LARYNGOSCOPE BULBS",
                 category: "Surgical",
                 price: 249.00,
@@ -2334,6 +2455,7 @@
             },
             {
                 id: 61,
+                gst: 5,
                 name: "FINGER CLIP",
                 category: "Diagnostics",
                 price: 1499.00,
@@ -2351,6 +2473,7 @@
             },
             {
                 id: 62,
+                gst: 18,
                 name: "NEEDLE DESTROYER",
                 category: "Surgical",
                 price: 1499.00,
@@ -2368,6 +2491,7 @@
             },
             {
                 id: 63,
+                gst: 12,
                 name: "OXYGEN MASKS",
                 category: "First Aid",
                 price: 99.00,
@@ -2385,6 +2509,7 @@
             },
             {
                 id: 64,
+                gst: 18,
                 name: "NEBULIZER MASKS",
                 category: "First Aid",
                 price: 109.00,
@@ -2402,6 +2527,7 @@
             },
             {
                 id: 65,
+                gst: 5,
                 name: "HME FILTER",
                 category: "First Aid",
                 price: 99.00,
@@ -2419,6 +2545,7 @@
             },
             {
                 id: 66,
+                gst: 12,
                 name: "BACTERIAL FILTER",
                 category: "First Aid",
                 price: 249.00,
@@ -2436,6 +2563,7 @@
             },
             {
                 id: 67,
+                gst: 5,
                 name: "SPIROLOGA+H",
                 category: "Diagnostics",
                 price: 12999.00,
@@ -2453,6 +2581,7 @@
             },
             {
                 id: 68,
+                gst: 18,
                 name: "SPIROMETER THREE BALL",
                 category: "Diagnostics",
                 price: 199.00,
@@ -2470,6 +2599,7 @@
             },
             {
                 id: 69,
+                gst: 12,
                 name: "FLOW SENSOR",
                 category: "Diagnostics",
                 price: 1799.00,
@@ -2487,6 +2617,7 @@
             },
             {
                 id: 70,
+                gst: 18,
                 name: "PLAIN CIRCUIT",
                 category: "Surgical",
                 price: 399.00,
@@ -2504,6 +2635,7 @@
             },
             {
                 id: 71,
+                gst: 5,
                 name: "DEFIBRILLATOR PADS",
                 category: "First Aid",
                 price: 2499.00,
@@ -2521,6 +2653,7 @@
             },
             {
                 id: 72,
+                gst: 12,
                 name: "X-RAY VIEWER (SINGLE PANEL)-LED",
                 category: "Diagnostics",
                 price: 5999.00,
@@ -2538,6 +2671,7 @@
             },
             {
                 id: 73,
+                gst: 5,
                 name: "X-RAY VIEWER (DUEL PANEL)-LED",
                 category: "Diagnostics",
                 price: 7999.00,
@@ -2555,6 +2689,7 @@
             },
             {
                 id: 74,
+                gst: 18,
                 name: "X-RAY VIEWER (TRIPLE PANEL)-LED",
                 category: "Diagnostics",
                 price: 8999.00,
@@ -2572,6 +2707,7 @@
             },
             {
                 id: 75,
+                gst: 12,
                 name: "BIPOLAR CABLE",
                 category: "Surgical",
                 price: 1999.00,
@@ -2589,6 +2725,7 @@
             },
             {
                 id: 76,
+                gst: 18,
                 name: "DIATHERMY CABLES",
                 category: "Surgical",
                 price: 1999.00,
@@ -2606,6 +2743,7 @@
             },
             {
                 id: 77,
+                gst: 5,
                 name: "MONOPOLAR CABLE",
                 category: "Surgical",
                 price: 1999.00,
@@ -2623,6 +2761,7 @@
             },
             {
                 id: 78,
+                gst: 12,
                 name: "O2 SENSOR",
                 category: "Diagnostics",
                 price: 7999.00,
@@ -2640,6 +2779,7 @@
             },
             {
                 id: 79,
+                gst: 5,
                 name: "BIOPOLAR FORCES (imported)",
                 category: "Surgical",
                 price: 3999.00,
@@ -2657,6 +2797,7 @@
             },
             {
                 id: 80,
+                gst: 18,
                 name: "BIOPOLAR FORCES",
                 category: "Surgical",
                 price: 1999.00,
@@ -2674,6 +2815,7 @@
             },
             {
                 id: 81,
+                gst: 12,
                 name: "SILICON PATIENT PLATE",
                 category: "Surgical",
                 price: 1999.00,
@@ -2691,6 +2833,7 @@
             },
             {
                 id: 82,
+                gst: 18,
                 name: "METAL PATIENT PLATE",
                 category: "Surgical",
                 price: 1299.00,
@@ -2708,6 +2851,7 @@
             },
             {
                 id: 83,
+                gst: 5,
                 name: "SPLIT PAD",
                 category: "Surgical",
                 price: 249.00,
@@ -2725,6 +2869,7 @@
             },
             {
                 id: 84,
+                gst: 12,
                 name: "DISPOSABLE PAD",
                 category: "Surgical",
                 price: 249.00,
@@ -2742,6 +2887,7 @@
             },
             {
                 id: 85,
+                gst: 5,
                 name: "VENTED MASK",
                 category: "First Aid",
                 price: 1799.00,
@@ -2759,6 +2905,7 @@
             },
             {
                 id: 86,
+                gst: 18,
                 name: "NONVENTED MASK",
                 category: "First Aid",
                 price: 1799.00,
@@ -2776,6 +2923,7 @@
             },
             {
                 id: 87,
+                gst: 12,
                 name: "NASAL CANNULA",
                 category: "Mobility",
                 price: 1999.00,
@@ -2793,6 +2941,7 @@
             },
             {
                 id: 88,
+                gst: 18,
                 name: "NASAL MASK",
                 category: "First Aid",
                 price: 1499.00,
@@ -2810,6 +2959,7 @@
             },
             {
                 id: 89,
+                gst: 5,
                 name: "BP APPARATUS (Diamond)",
                 category: "Diagnostics",
                 price: 4199.00,
@@ -2827,6 +2977,7 @@
             },
             {
                 id: 90,
+                gst: 12,
                 name: "CUFF BP APPARATUS (PHS)",
                 category: "First Aid",
                 price: 1999.00,
@@ -2844,6 +2995,7 @@
             },
             {
                 id: 91,
+                gst: 5,
                 name: "DIGITAL BP APPARATUS",
                 category: "Diagnostics",
                 price: 1999.00,
@@ -2861,6 +3013,7 @@
             },
             {
                 id: 92,
+                gst: 18,
                 name: "BP BULBS",
                 category: "First Aid",
                 price: 249.00,
@@ -2878,6 +3031,7 @@
             },
             {
                 id: 93,
+                gst: 12,
                 name: "BP BAGS",
                 category: "First Aid",
                 price: 249.00,
@@ -2895,6 +3049,7 @@
             },
             {
                 id: 94,
+                gst: 18,
                 name: "OXYGEN FLOW METERS TYPE-1",
                 category: "First Aid",
                 price: 1799.00,
@@ -2912,6 +3067,7 @@
             },
             {
                 id: 95,
+                gst: 5,
                 name: "OXYGEN FLOW METERS TYPE-2",
                 category: "First Aid",
                 price: 2499.00,
@@ -2929,6 +3085,7 @@
             },
             {
                 id: 96,
+                gst: 12,
                 name: "OXYGEN FLOW METERS TYPE-3",
                 category: "First Aid",
                 price: 1599.00,
@@ -2946,6 +3103,7 @@
             },
             {
                 id: 97,
+                gst: 5,
                 name: "OXYGEN FLOW METERS TYPE-4",
                 category: "First Aid",
                 price: 3499.00,
@@ -2963,6 +3121,7 @@
             },
             {
                 id: 98,
+                gst: 18,
                 name: "REUSABLE TRANSPARENT INFUSION PRESSURE BAGS REUSABLE (100 ml)",
                 category: "Mobility",
                 price: 4299.00,
@@ -2980,6 +3139,7 @@
             },
             {
                 id: 99,
+                gst: 12,
                 name: "REUSABLE INFUSION PRESSURE BAGS",
                 category: "Mobility",
                 price: 1899.00,
@@ -2997,6 +3157,7 @@
             },
             {
                 id: 100,
+                gst: 18,
                 name: "DISPOSABLE INFUSION PRESSURE BAGS",
                 category: "Mobility",
                 price: 1199.00,
@@ -3014,6 +3175,7 @@
             },
             {
                 id: 101,
+                gst: 5,
                 name: "NEBULIZER",
                 category: "Diagnostics",
                 price: 1499.00,
@@ -3031,6 +3193,7 @@
             },
             {
                 id: 102,
+                gst: 12,
                 name: "WEIGHT SCALE",
                 category: "Diagnostics",
                 price: 1999.00,
@@ -3048,6 +3211,7 @@
             },
             {
                 id: 103,
+                gst: 5,
                 name: "CHILD SCALE",
                 category: "Diagnostics",
                 price: 3499.00,
@@ -3065,6 +3229,7 @@
             },
             {
                 id: 104,
+                gst: 18,
                 name: "DISPOSABLE PENCILS",
                 category: "Surgical",
                 price: 199.00,
@@ -3082,6 +3247,7 @@
             },
             {
                 id: 105,
+                gst: 12,
                 name: "RESUABLE PENCILS",
                 category: "Surgical",
                 price: 3999.00,
@@ -3099,6 +3265,7 @@
             },
             {
                 id: 106,
+                gst: 18,
                 name: "STETHOSCOPE",
                 category: "Diagnostics",
                 price: 1499.00,
@@ -3116,6 +3283,7 @@
             },
             {
                 id: 107,
+                gst: 5,
                 name: "DISPOSABLE PATIENT GOWN",
                 category: "PPE Kits",
                 price: 99.00,
@@ -3133,6 +3301,7 @@
             },
             {
                 id: 108,
+                gst: 12,
                 name: "DISPOSABLE SURGEON GOWN WRAPPED AROUND (SMS) WITH WIPES- STERILE 50 GSM",
                 category: "PPE Kits",
                 price: 199.00,
@@ -3150,6 +3319,7 @@
             },
             {
                 id: 109,
+                gst: 5,
                 name: "BED SHEET WITH PILLOW COVER SMS NONWOVEN 85x63",
                 category: "PPE Kits",
                 price: 99.00,
@@ -3167,6 +3337,7 @@
             },
             {
                 id: 110,
+                gst: 18,
                 name: "PATIENT MONITORS",
                 category: "Diagnostics",
                 price: 399.00,
@@ -3184,6 +3355,7 @@
             },
             {
                 id: 111,
+                gst: 12,
                 name: "ECG MACHINES",
                 category: "Diagnostics",
                 price: 399.00,
@@ -3201,6 +3373,7 @@
             },
             {
                 id: 112,
+                gst: 18,
                 name: "SYRINGE PUMP",
                 category: "Surgical",
                 price: 399.00,
@@ -3218,6 +3391,7 @@
             },
             {
                 id: 113,
+                gst: 5,
                 name: "INFUSION PUMP",
                 category: "Surgical",
                 price: 399.00,
@@ -3235,6 +3409,7 @@
             },
             {
                 id: 114,
+                gst: 12,
                 name: "SUCTION APPARATUS",
                 category: "Surgical",
                 price: 399.00,
@@ -3252,6 +3427,7 @@
             },
             {
                 id: 115,
+                gst: 5,
                 name: "FETAL DOPPLER",
                 category: "Diagnostics",
                 price: 399.00,
@@ -3269,6 +3445,7 @@
             },
             {
                 id: 116,
+                gst: 18,
                 name: "CTG MACHINE",
                 category: "Diagnostics",
                 price: 399.00,
@@ -3286,6 +3463,7 @@
             },
             {
                 id: 117,
+                gst: 12,
                 name: "AED MACHINE",
                 category: "First Aid",
                 price: 399.00,
@@ -3303,6 +3481,7 @@
             },
             {
                 id: 118,
+                gst: 18,
                 name: "DEFIBRILLATOR",
                 category: "First Aid",
                 price: 399.00,
@@ -3320,6 +3499,7 @@
             },
             {
                 id: 119,
+                gst: 5,
                 name: "FLUID/BLOOD WARMER",
                 category: "Surgical",
                 price: 399.00,
@@ -3337,6 +3517,7 @@
             },
             {
                 id: 120,
+                gst: 12,
                 name: "BLANKETET WARMER",
                 category: "Surgical",
                 price: 399.00,
@@ -3354,6 +3535,7 @@
             },
             {
                 id: 121,
+                gst: 5,
                 name: "KEY PADS",
                 category: "Surgical",
                 price: 399.00,
@@ -3370,6 +3552,8 @@
                 usage: "Clean the surface before application. Align carefully and press firmly to bond."
             }
         ];
+
+
         let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
         let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
         let orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
@@ -3543,18 +3727,18 @@
                         <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 5px;"></i> +${user.mobile}
                     </p>
                     
-                    <form onsubmit="saveProfileDetails(event)" class="login-form" style="text-align: left; gap: 1.2rem; padding: 0 10px;">
+                    <form onsubmit="saveProfileDetails(event)" class="login-form" style="text-align: left; gap: 1.2rem; padding: 0 5px;">
                         <div class="form-group" style="gap: 0.4rem;">
                             <label style="font-size: 0.85rem; color: var(--secondary); display: flex; align-items: center; gap: 8px;">
                                 <i class="fas fa-user" style="color: var(--primary); width: 15px;"></i> Full Name
                             </label>
-                            <input type="text" id="prof-name" value="${user.name}" placeholder="Enter your full name" style="padding: 0.7rem 1rem; font-size: 0.95rem; border: 2px solid #e2e8f0; border-radius: 12px;">
+                            <input type="text" id="prof-name" value="${user.name}" placeholder="Enter your full name" style="padding: 0.75rem 1rem; font-size: 0.95rem; border: 2px solid #e2e8f0; border-radius: 12px; width: 100%; box-sizing: border-box;">
                         </div>
                         <div class="form-group" style="gap: 0.4rem;">
                             <label style="font-size: 0.85rem; color: var(--secondary); display: flex; align-items: center; gap: 8px;">
                                 <i class="fas fa-envelope" style="color: var(--primary); width: 15px;"></i> Email Address
                             </label>
-                            <input type="email" id="prof-email" value="${user.email}" placeholder="yourname@gmail.com" style="padding: 0.7rem 1rem; font-size: 0.95rem; border: 2px solid #e2e8f0; border-radius: 12px;">
+                            <input type="email" id="prof-email" value="${user.email}" placeholder="yourname@gmail.com" style="padding: 0.75rem 1rem; font-size: 0.95rem; border: 2px solid #e2e8f0; border-radius: 12px; width: 100%; box-sizing: border-box;">
                         </div>
                         
                         <div style="border-top: 1px solid #f1f5f9; padding-top: 1.2rem; margin-top: 0.5rem;">
@@ -3563,41 +3747,41 @@
                             </p>
                         </div>
 
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="form-grid">
                             <div class="form-group" style="gap: 0.4rem;">
                                 <label style="font-size: 0.75rem; color: var(--text-light);">House/Door No.</label>
-                                <input type="text" id="prof-hno" value="${user.hno}" placeholder="H.No / Flat" style="padding: 0.7rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px;">
+                                <input type="text" id="prof-hno" value="${user.hno}" placeholder="H.No / Flat" style="padding: 0.75rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px; width: 100%; box-sizing: border-box;">
                             </div>
                             <div class="form-group" style="gap: 0.4rem;">
                                 <label style="font-size: 0.75rem; color: var(--text-light);">Street / Area</label>
-                                <input type="text" id="prof-street" value="${user.street}" placeholder="Street Name" style="padding: 0.7rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px;">
+                                <input type="text" id="prof-street" value="${user.street}" placeholder="Street Name" style="padding: 0.75rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px; width: 100%; box-sizing: border-box;">
                             </div>
                         </div>
 
                         <div class="form-group" style="gap: 0.4rem;">
                             <label style="font-size: 0.75rem; color: var(--text-light);">Nearby Landmark</label>
-                            <input type="text" id="prof-landmark" value="${user.landmark}" placeholder="e.g. Near Mall / Hospital" style="padding: 0.7rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px;">
+                            <input type="text" id="prof-landmark" value="${user.landmark}" placeholder="e.g. Near Mall / Hospital" style="padding: 0.75rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px; width: 100%; box-sizing: border-box;">
                         </div>
 
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="form-grid">
                             <div class="form-group" style="gap: 0.4rem;">
                                 <label style="font-size: 0.75rem; color: var(--text-light);">PIN Code</label>
-                                <input type="text" id="prof-pincode" value="${user.pincode}" placeholder="6-digit" style="padding: 0.7rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px;">
+                                <input type="text" id="prof-pincode" value="${user.pincode}" placeholder="6-digit" style="padding: 0.75rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px; width: 100%; box-sizing: border-box;">
                             </div>
                             <div class="form-group" style="gap: 0.4rem;">
                                 <label style="font-size: 0.75rem; color: var(--text-light);">City / District</label>
-                                <input type="text" id="prof-district" value="${user.district}" placeholder="District" style="padding: 0.7rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px;">
+                                <input type="text" id="prof-district" value="${user.district}" placeholder="District" style="padding: 0.75rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px; width: 100%; box-sizing: border-box;">
                             </div>
                         </div>
                         
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="form-grid">
                             <div class="form-group" style="gap: 0.4rem;">
                                 <label style="font-size: 0.75rem; color: var(--text-light);">State</label>
-                                <input type="text" id="prof-state" value="${user.state}" placeholder="State" style="padding: 0.7rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px;">
+                                <input type="text" id="prof-state" value="${user.state}" placeholder="State" style="padding: 0.75rem; font-size: 0.9rem; border: 2px solid #e2e8f0; border-radius: 10px; width: 100%; box-sizing: border-box;">
                             </div>
                             <div class="form-group" style="gap: 0.4rem;">
                                 <label style="font-size: 0.75rem; color: var(--text-light);">Country</label>
-                                <input type="text" id="prof-country" value="${user.country}" placeholder="Country" readonly style="padding: 0.7rem; font-size: 0.9rem; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 10px; color: var(--text-light);">
+                                <input type="text" id="prof-country" value="${user.country}" placeholder="Country" readonly style="padding: 0.75rem; font-size: 0.9rem; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 10px; color: var(--text-light); width: 100%; box-sizing: border-box;">
                             </div>
                         </div>
                         
@@ -3821,8 +4005,33 @@
                 </div>
             `).join('');
 
-            const total = cart.reduce((sum, item) => sum + item.price, 0);
-            document.getElementById('cart-total').innerText = `$${total.toLocaleString()}`;
+            let subtotal = 0;
+            let totalTax = 0;
+
+            cart.forEach(item => {
+                subtotal += item.price;
+                totalTax += (item.price * (item.gst || 0) / 100);
+            });
+
+            const grandTotal = subtotal + totalTax;
+
+            // Build the cost summary HTML
+            const summaryHTML = `
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span>$${subtotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                </div>
+                <div class="total-row">
+                    <span>Total GST:</span>
+                    <span>$${totalTax.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                </div>
+                <div class="grand-total-row">
+                    <span>Grand Total:</span>
+                    <span>$${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                </div>
+            `;
+
+            document.getElementById('cart-summary').innerHTML = summaryHTML;
         }
 
         // Wishlist Logic
@@ -3891,7 +4100,15 @@
         }
 
         function processOrder(method) {
-            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            let subtotal = 0;
+            let totalTax = 0;
+
+            cart.forEach(item => {
+                subtotal += item.price;
+                totalTax += (item.price * (item.gst || 0) / 100);
+            });
+
+            const grandTotal = subtotal + totalTax;
             const orderId = 'ORD-' + Math.floor(1000 + Math.random() * 9000);
 
             // Construct Order Summary
@@ -3907,39 +4124,39 @@
             orderSummary += method === 'whatsapp' ? `*Landmark:* ${currentUser.landmark || 'N/A'}\n` : `Landmark: ${currentUser.landmark || 'N/A'}\n`;
             orderSummary += `${currentUser.district || ''}, ${currentUser.state || ''} - ${currentUser.pincode || ''}\n\n`;
 
-            // Add Profile Picture Info
-            if (currentUser.profilePic) {
-                if (method === 'whatsapp') {
-                    orderSummary += `*Profile Photo:* [Image Data Included]\n\n`;
-                } else {
-                    orderSummary += `Profile Photo Data: ${currentUser.profilePic}\n\n`;
-                }
-            } else {
-                orderSummary += `Profile Photo: Not uploaded\n\n`;
-            }
 
             orderSummary += method === 'whatsapp' ? `*Items Ordered:*\n` : `Items Ordered:\n`;
 
             cart.forEach((item, index) => {
+                const itemTax = (item.price * (item.gst || 0) / 100);
+                const itemTotal = item.price + itemTax;
+
                 if (method === 'whatsapp') {
-                    orderSummary += `${index + 1}. *${item.name}* - $${item.price.toLocaleString()}\n`;
-                    orderSummary += `   _Image: ${item.image || 'No Image'}_\n`;
+                    orderSummary += `${index + 1}. *${item.name}* \n`;
+                    orderSummary += `   Price: $${item.price.toLocaleString()} + ${item.gst}% GST\n`;
+                    orderSummary += `   Item Total: $${itemTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
                 } else {
-                    orderSummary += `${index + 1}. ${item.name} - $${item.price.toLocaleString()}\n`;
-                    orderSummary += `   Product Image: ${item.image || 'No Image'}\n`;
+                    orderSummary += `${index + 1}. ${item.name} \n`;
+                    orderSummary += `   Price: $${item.price.toLocaleString()} + ${item.gst}% GST\n`;
+                    orderSummary += `   Item Total: $${itemTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
                 }
             });
 
-            orderSummary += method === 'whatsapp' ? `\n*Total Amount: $${total.toLocaleString()}*\n` : `\nTotal Amount: $${total.toLocaleString()}\n`;
+            if (method === 'whatsapp') {
+                orderSummary += `\n*Subtotal: $${subtotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}*\n`;
+                orderSummary += `*Total GST: $${totalTax.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}*\n`;
+                orderSummary += `*Grand Total: $${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}*\n`;
+            } else {
+                orderSummary += `\nSubtotal: $${subtotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
+                orderSummary += `Total GST: $${totalTax.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
+                orderSummary += `Grand Total: $${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
+            }
             orderSummary += `--------------------------------\n`;
-
-            const storeUrl = window.location.href.split('?')[0].split('#')[0];
-            orderSummary += method === 'whatsapp' ? `*Store Link:* ${storeUrl}\n` : `Store Link: ${storeUrl}\n`;
 
             const newOrder = {
                 id: orderId,
                 date: new Date().toLocaleDateString(),
-                total: total,
+                total: grandTotal,
                 items: [...cart]
             };
 
@@ -3958,12 +4175,24 @@
                 }, 800);
             } else {
                 const adminEmail = "wilsonhealthcare7@gmail.com";
-                const subject = encodeURIComponent(`New Order: ${orderId} - ${currentUser.name}`);
-                const body = encodeURIComponent(orderSummary);
-                const mailtoUrl = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
-                showToast("Redirecting to Email...");
+                const subject = `New Order: ${orderId} - ${currentUser.name}`;
+                const body = orderSummary;
+
+                // Construct both Mailto and Gmail URLs
+                const mailtoUrl = `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${adminEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                showToast("Redirecting to Gmail...");
+
                 setTimeout(() => {
-                    window.location.href = mailtoUrl;
+                    // Try to open Gmail in a new tab, fallback to mailto if it fails or if the user prefers default app
+                    // However, to be safe and follow the user's specific request for "Gmail", 
+                    // we'll try the Gmail web interface first.
+                    window.open(gmailUrl, '_blank');
+                    // We also trigger mailto as a fallback or for mobile users who have the Gmail app set as default
+                    setTimeout(() => {
+                        window.location.href = mailtoUrl;
+                    }, 500);
                 }, 800);
             }
         }
@@ -4017,6 +4246,17 @@
 
         function closeModal(id) {
             document.getElementById(id + '-modal').style.display = 'none';
+        }
+
+        function toggleSearch() {
+            const searchBar = document.getElementById('search-bar');
+            const searchInput = document.getElementById('search-input');
+            if (searchBar.classList.contains('active')) {
+                searchBar.classList.remove('active');
+            } else {
+                searchBar.classList.add('active');
+                searchInput.focus();
+            }
         }
 
         function showToast(msg) {
