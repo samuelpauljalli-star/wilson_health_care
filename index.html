@@ -4084,12 +4084,28 @@
             doc.text(`Date: ${new Date().toLocaleDateString()}`, 14, 61);
 
             if (currentUser) {
-                doc.text("Bill To:", 140, 55);
+                doc.text("Invoice To:", 130, 55);
                 doc.setFont("helvetica", "bold");
-                doc.text(currentUser.name || "Valued Customer", 140, 61);
+                doc.text(currentUser.name || "Valued Customer", 130, 61);
                 doc.setFont("helvetica", "normal");
-                if (currentUser.mobile) doc.text(`+${currentUser.mobile}`, 140, 67);
-                if (currentUser.email) doc.text(currentUser.email, 140, 73);
+                doc.setFontSize(9);
+                if (currentUser.mobile) doc.text(`Mobile: +${currentUser.mobile}`, 130, 66);
+                if (currentUser.email) doc.text(`Email: ${currentUser.email}`, 130, 71);
+
+                // Add Address if available
+                const addr = [
+                    currentUser.hno,
+                    currentUser.street,
+                    currentUser.landmark,
+                    `${currentUser.district} ${currentUser.pincode}`,
+                    currentUser.state
+                ].filter(Boolean).join(', ');
+
+                if (addr) {
+                    const splitAddr = doc.splitTextToSize(addr, 70);
+                    doc.text("Ship To:", 130, 80);
+                    doc.text(splitAddr, 130, 85);
+                }
             }
 
             // Table
@@ -4109,15 +4125,21 @@
             doc.autoTable({
                 head: [["Item", "Price", "Qty", "GST", "Total"]],
                 body: tableRows,
-                startY: 85,
+                startY: currentUser ? (doc.lastAutoTable ? doc.lastAutoTable.finalY + 10 : 105) : 85,
                 theme: 'grid',
                 headStyles: { fillColor: primaryColor, textColor: 255 },
                 styles: { fontSize: 9, cellPadding: 3 },
                 columnStyles: { 0: { cellWidth: 80 }, 4: { halign: 'right' } }
             });
 
+            if (doc.lastAutoTable.finalY > 250) {
+                doc.addPage();
+                doc.lastAutoTable.finalY = 20;
+            }
+
             // Totals
             const finalY = doc.lastAutoTable.finalY + 10;
+            doc.setFontSize(10);
             doc.text("Subtotal:", 140, finalY);
             doc.text(`$${subtotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 195, finalY, { align: "right" });
             doc.text("GST Total:", 140, finalY + 6);
@@ -4131,7 +4153,7 @@
             doc.setFont("helvetica", "normal");
             doc.setFontSize(9);
             doc.setTextColor(100);
-            doc.text("Thank you for your business!", 105, 280, { align: "center" });
+            doc.text("Thank you for choosing Wilson Health Care!", 105, 280, { align: "center" });
 
             return doc;
         }
@@ -4148,15 +4170,12 @@
 
             const grandTotal = subtotal + totalTax;
             const orderId = 'ORD-' + Math.floor(1000 + Math.random() * 9000);
-
-            // Construct Order Summary
-            let orderSummary = method === 'whatsapp' ? `*New Order from Wilson Health Care*\n` : `New Order from Wilson Health Care\n`;
-            orderSummary += `--------------------------------\n`;
+            const itemCount = cart.length;
 
             // SHORT MESSAGE FOR APP REDIRECTION
             const simpleMessage = method === 'whatsapp'
-                ? `*Order ID:* ${orderId}\nHi, please find my order invoice attached.`
-                : `Order ID: ${orderId}\n\nHi Wilson Health Care,\n\nPlease process my order. The invoice is attached below.\n\nRegards,\n${currentUser.name || 'Customer'}`;
+                ? `*New Order: ${orderId}*\n*Grand Total:* $${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}\n*Items:* ${itemCount}\n\nHi, please find my order invoice attached.`
+                : `Order ID: ${orderId}\nTotal: $${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}\nItems: ${itemCount}\n\nHi Wilson Health Care,\n\nPlease process my order. The invoice is attached below.\n\nRegards,\n${currentUser.name || 'Customer'}`;
 
             const newOrder = {
                 id: orderId,
@@ -4165,112 +4184,51 @@
                 items: [...cart]
             };
 
-            // Generate Invoice PDF Blob
-            let pdfFile = null;
+            // Generate Invoice PDF and Trigger Download
             try {
                 const doc = createInvoiceDoc(orderId, newOrder.items, subtotal, totalTax, grandTotal);
                 if (doc) {
-                    const blob = doc.output('blob');
-                    pdfFile = new File([blob], `Invoice_${orderId}.pdf`, { type: "application/pdf" });
+                    doc.save(`Invoice_${orderId}.pdf`);
                 }
-            } catch (e) { console.error("PDF Gen Error:", e); }
+            } catch (e) {
+                console.error("PDF Gen Error:", e);
+                showToast("Error generating invoice PDF");
+            }
 
             orders.push(newOrder);
             cart = [];
             updateStats();
             closeModal('cart');
 
-            // UTILITY: Fallback for when Auto-Attach isn't supported
-            const executeFallback = () => {
-                // 1. Manually trigger download
-                if (doc) doc.save(`Invoice_${orderId}.pdf`);
+            // Redirect Logic to Specific Contacts
+            if (method === 'whatsapp') {
+                const adminWhatsApp = "917032687122";
+                const message = encodeURIComponent(simpleMessage);
+                const whatsappUrl = `https://wa.me/${adminWhatsApp}?text=${message}`;
 
-                // 2. Prepare Links
-                if (method === 'whatsapp') {
-                    const adminWhatsApp = "917032687122";
-                    const message = encodeURIComponent(simpleMessage);
-                    const whatsappUrl = `https://wa.me/${adminWhatsApp}?text=${message}`;
-                    showToast("Invoice Downloaded! Please attach it on WhatsApp.");
-                    setTimeout(() => window.location.href = whatsappUrl, 1500);
-                } else {
-                    const adminEmail = "wilsonhealthcare7@gmail.com";
-                    const subject = `New Order: ${orderId} - ${currentUser.name}`;
-                    const body = simpleMessage;
-                    const mailtoUrl = `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${adminEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-                    showToast("Invoice Downloaded! Please attach it on Gmail.");
-                    setTimeout(() => {
-                        window.open(gmailUrl, '_blank');
-                        setTimeout(() => window.location.href = mailtoUrl, 500);
-                    }, 1500);
-                }
-            };
-
-            // ATTEMPT 1: Web Share API (Mobile/Tablet/Modern Desktop)
-            // This allows choosing the app AND passing the file immediately
-            if (pdfFile && navigator.canShare && navigator.canShare({ files: [pdfFile] })) {
-                try {
-                    await navigator.share({
-                        files: [pdfFile],
-                        title: `Invoice ${orderId}`,
-                        text: simpleMessage
-                    });
-                    showToast("Order sent successfully!");
-                } catch (err) {
-                    console.log("Share cancelled or failed, using fallback...");
-                    // If user cancels share or it fails, do we fallback? 
-                    // Yes, because they might have clicked by accident or realized they don't have the app installed.
-                    // BUT, if they kept the Share Sheet open and sent it, the promise resolves.
-                    // If they cancelled, it rejects.
-                    // If they just cancelled, they probably don't want the fallback download loop immediately. 
-                    // But safe to offer the fallback logic (download + link) in case.
-
-                    // Actually, re-creating the doc object is hard since scope is lost? 
-                    // No, we have 'doc' variable? No, 'doc' was block scoped in try{} above.
-                    // We have 'pdfFile'. We can download it.
-
-                    // Let's simplified fallback:
-                    const url = URL.createObjectURL(pdfFile);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = pdfFile.name;
-                    a.click();
-
-                    // Proceed to link
-                    if (method === 'whatsapp') {
-                        window.location.href = `https://wa.me/917032687122?text=${encodeURIComponent(simpleMessage)}`;
-                    } else {
-                        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=wilsonhealthcare7@gmail.com&su=${encodeURIComponent("Order " + orderId)}&body=${encodeURIComponent(simpleMessage)}`, '_blank');
-                    }
-                }
+                showToast("Invoice Downloaded! Redirecting to WhatsApp...");
+                setTimeout(() => window.location.href = whatsappUrl, 1500);
             } else {
-                // ATTEMPT 2: Fallback (Desktop Windows, etc)
-                // We need the 'doc' object to save, but it's out of scope. 
-                // We can use the pdfFile blob we already have.
-                if (pdfFile) {
-                    const url = URL.createObjectURL(pdfFile);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = pdfFile.name;
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                }
+                const adminEmail = "wilsonhealthcare7@gmail.com";
+                const subject = `New Order: ${orderId} - ${currentUser.name || 'Customer'}`;
+                const body = simpleMessage;
 
-                // Redirect logic
-                if (method === 'whatsapp') {
-                    const message = encodeURIComponent(simpleMessage);
-                    const whatsappUrl = `https://wa.me/917032687122?text=${message}`;
-                    showToast("Invoice Downloaded! Please manually attach to WhatsApp.");
-                    setTimeout(() => window.location.href = whatsappUrl, 1500);
-                } else {
-                    const subject = `New Order: ${orderId}`;
-                    const body = simpleMessage;
-                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=wilsonhealthcare7@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                    showToast("Invoice Downloaded! Please manually attach to Gmail.");
-                    setTimeout(() => window.open(gmailUrl, '_blank'), 1500);
-                }
+                // Gmail Web Link (Priority)
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${adminEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                // Standard Mailto Link (Fallback/Alternative)
+                const mailtoUrl = `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                showToast("Invoice Downloaded! Redirecting to Email...");
+
+                setTimeout(() => {
+                    // Try to open Gmail in new tab
+                    const newWindow = window.open(gmailUrl, '_blank');
+
+                    if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                        window.location.href = mailtoUrl;
+                    }
+                }, 1500);
             }
         }
 
