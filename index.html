@@ -3843,8 +3843,8 @@
                         <h3 class="product-title">${p.name}</h3>
                         ${p.price ? `
                         <div class="product-price">
-                            <span class="current-price">$${p.price.toLocaleString()}</span>
-                            ${p.oldPrice ? `<span class="old-price">$${p.oldPrice.toLocaleString()}</span>` : ''}
+                            <span class="current-price">₹${p.price.toLocaleString('en-IN')}</span>
+                            ${p.oldPrice ? `<span class="old-price">₹${p.oldPrice.toLocaleString('en-IN')}</span>` : ''}
                         </div>` : ''}
                         <div class="product-actions" style="display: flex; gap: 5px; margin-top: 8px;">
                             <button class="add-cart-btn" style="flex: 2;" onclick="addToCart(${p.id})">Add</button>
@@ -3885,7 +3885,7 @@
                     
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                         <span class="product-tag" style="font-size: 0.9rem;">${p.tag}</span>
-                        ${p.price ? `<div class="current-price" style="font-size: 1.5rem;">$${p.price.toLocaleString()}</div>` : ''}
+                        ${p.price ? `<div class="current-price" style="font-size: 1.5rem;">₹${p.price.toLocaleString('en-IN')}</div>` : ''}
                     </div>
 
                     <h4 style="color: var(--primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;">
@@ -3901,7 +3901,7 @@
                     </p>
 
                     <button class="checkout-btn" style="margin-top: 2rem;" onclick="addToCart(${p.id})">
-                        Add to Cart ${p.price ? `- $${p.price.toLocaleString()}` : ''}
+                        Add to Cart ${p.price ? `- ₹${p.price.toLocaleString('en-IN')}` : ''}
                     </button>
                 `;
             openModal('info');
@@ -3927,9 +3927,29 @@
                 return;
             }
             const product = products.find(p => p.id === id);
-            cart.push({ ...product, cartId: Date.now() });
+            const existingItem = cart.find(item => item.id === id);
+
+            if (existingItem) {
+                existingItem.quantity = (existingItem.quantity || 1) + 1;
+                showToast(`Increased ${product.name} quantity to ${existingItem.quantity}!`);
+            } else {
+                cart.push({ ...product, cartId: Date.now(), quantity: 1 });
+                showToast(`Added ${product.name} to cart!`);
+            }
             updateStats();
-            showToast(`Added ${product.name} to cart!`);
+        }
+
+        function changeQuantity(cartId, delta) {
+            const item = cart.find(i => i.cartId === cartId);
+            if (item) {
+                item.quantity = (item.quantity || 1) + delta;
+                if (item.quantity <= 0) {
+                    removeFromCart(cartId);
+                } else {
+                    updateStats();
+                    renderCart();
+                }
+            }
         }
 
         function removeFromCart(cartId) {
@@ -3942,7 +3962,7 @@
             const container = document.getElementById('cart-items');
             if (cart.length === 0) {
                 container.innerHTML = '<p style="text-align:center; color:#64748b; margin-top: 2rem;">Your cart is empty.</p>';
-                document.getElementById('cart-total').innerText = '$0.00';
+                document.getElementById('cart-total') ? document.getElementById('cart-total').innerText = '₹0.00' : null;
                 return;
             }
             container.innerHTML = cart.map(item => `
@@ -3950,7 +3970,12 @@
                     <img src="${item.image}" alt="${item.name}">
                     <div class="cart-item-info">
                         <div class="cart-item-title">${item.name}</div>
-                        <div class="cart-item-price">${item.price ? '$' + item.price.toLocaleString() : 'Price on Request'}</div>
+                        <div class="cart-item-price">${item.price ? '₹' + item.price.toLocaleString('en-IN') : 'Price on Request'}</div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
+                            <button onclick="changeQuantity(${item.cartId}, -1)" style="width: 25px; height: 25px; border-radius: 50%; border: 1px solid #e2e8f0; background: white; cursor: pointer;">-</button>
+                            <span style="font-weight: 600; font-size: 0.9rem;">${item.quantity || 1}</span>
+                            <button onclick="changeQuantity(${item.cartId}, 1)" style="width: 25px; height: 25px; border-radius: 50%; border: 1px solid #e2e8f0; background: white; cursor: pointer;">+</button>
+                        </div>
                     </div>
                     <button class="remove-item" onclick="removeFromCart(${item.cartId})">
                         <i class="fas fa-trash"></i>
@@ -3962,7 +3987,7 @@
             let totalTax = 0;
 
             cart.forEach(item => {
-                const price = item.price || 0;
+                const price = (item.price || 0) * (item.quantity || 1);
                 subtotal += price;
                 totalTax += (price * (item.gst || 0) / 100);
             });
@@ -3973,15 +3998,15 @@
             const summaryHTML = `
                 <div class="total-row">
                     <span>Subtotal:</span>
-                    <span>$${subtotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                    <span>₹${subtotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </div>
                 <div class="total-row">
                     <span>Total GST:</span>
-                    <span>$${totalTax.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                    <span>₹${totalTax.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </div>
                 <div class="grand-total-row">
                     <span>Grand Total:</span>
-                    <span>$${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                    <span>₹${grandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 </div>
             `;
 
@@ -4014,14 +4039,14 @@
                 return;
             }
             container.innerHTML = items.map(p => `
-                <div class="cart-item">
+                < div class="cart-item" >
                     <img src="${p.image}" alt="${p.name}">
-                    <div class="cart-item-info">
-                        <div class="cart-item-title">${p.name}</div>
-                        <div class="cart-item-price">${p.price ? '$' + p.price.toLocaleString() : 'Price on Request'}</div>
+                        <div class="cart-item-info">
+                            <div class="cart-item-title">${p.name}</div>
+                            <div class="cart-item-price">${p.price ? '₹' + p.price.toLocaleString('en-IN') : 'Price on Request'}</div>
+                        </div>
+                        <button class="add-cart-btn" style="padding: 0.4rem; font-size: 0.8rem;" onclick="addToCart(${p.id})">Add</button>
                     </div>
-                    <button class="add-cart-btn" style="padding: 0.4rem; font-size: 0.8rem;" onclick="addToCart(${p.id})">Add</button>
-                </div>
             `).join('');
         }
 
@@ -4079,9 +4104,11 @@
             doc.text("INVOICE", 195, 25, { align: "right" });
 
             // Info
+            const today = new Date();
+            const formattedDate = `${String(today.getDate()).padStart(2, '0')}/${String(today.getMonth() + 1).padStart(2, '0')}/${today.getFullYear()}`;
             doc.setTextColor(...secondaryColor);
             doc.text(`Order ID: ${orderId}`, 14, 55);
-            doc.text(`Date: ${new Date().toLocaleDateString()}`, 14, 61);
+            doc.text(`Date: ${formattedDate}`, 14, 61);
 
             if (currentUser) {
                 doc.text("Invoice To:", 130, 55);
@@ -4111,25 +4138,28 @@
             // Table
             const tableRows = items.map(item => {
                 const price = item.price || 0;
-                const gst = item.gst || 0;
-                const total = price + (price * gst / 100);
+                const qty = item.quantity || 1;
+                const taxableValue = price * qty;
+                const gstRate = item.gst || 0;
+                const total = taxableValue + (taxableValue * gstRate / 100);
                 return [
                     item.name,
-                    `$${price.toLocaleString()}`,
-                    "1",
-                    `${gst}%`,
-                    `$${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+                    `₹${price.toLocaleString('en-IN')}`,
+                    qty.toString(),
+                    `₹${taxableValue.toLocaleString('en-IN')}`,
+                    `${gstRate}%`,
+                    `₹${total.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
                 ];
             });
 
             doc.autoTable({
-                head: [["Item", "Price", "Qty", "GST", "Total"]],
+                head: [["Item Description", "Unit Price", "Qty", "Taxable Value", "GST %", "Total"]],
                 body: tableRows,
                 startY: currentUser ? (doc.lastAutoTable ? doc.lastAutoTable.finalY + 10 : 105) : 85,
                 theme: 'grid',
                 headStyles: { fillColor: primaryColor, textColor: 255 },
-                styles: { fontSize: 9, cellPadding: 3 },
-                columnStyles: { 0: { cellWidth: 80 }, 4: { halign: 'right' } }
+                styles: { fontSize: 8, cellPadding: 2 },
+                columnStyles: { 0: { cellWidth: 55 }, 1: { halign: 'right' }, 2: { halign: 'center' }, 3: { halign: 'right' }, 4: { halign: 'center' }, 5: { halign: 'right' } }
             });
 
             if (doc.lastAutoTable.finalY > 250) {
@@ -4140,20 +4170,26 @@
             // Totals
             const finalY = doc.lastAutoTable.finalY + 10;
             doc.setFontSize(10);
-            doc.text("Subtotal:", 140, finalY);
-            doc.text(`$${subtotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 195, finalY, { align: "right" });
-            doc.text("GST Total:", 140, finalY + 6);
-            doc.text(`$${totalTax.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 195, finalY + 6, { align: "right" });
+            doc.text("Total Taxable Value:", 140, finalY);
+            doc.text(`₹${subtotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 195, finalY, { align: "right" });
+            doc.text("Total GST Amount:", 140, finalY + 6);
+            doc.text(`₹${totalTax.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 195, finalY + 6, { align: "right" });
             doc.setFont("helvetica", "bold");
             doc.setTextColor(...primaryColor);
-            doc.text("Grand Total:", 140, finalY + 14);
-            doc.text(`$${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 195, finalY + 14, { align: "right" });
+            doc.text("Grand Total (Incl. GST):", 140, finalY + 14);
+            doc.text(`₹${grandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 195, finalY + 14, { align: "right" });
 
             // Footer
             doc.setFont("helvetica", "normal");
-            doc.setFontSize(9);
+            doc.setFontSize(8);
             doc.setTextColor(100);
-            doc.text("Thank you for choosing Wilson Health Care!", 105, 280, { align: "center" });
+            doc.text("WILSON HEALTH CARE - Premium Medical Equipment Provider", 105, 272, { align: "center" });
+            doc.text("We specialize in supplying high-quality, trusted medical equipments directly to hospitals and healthcare centers.", 105, 277, { align: "center" });
+            doc.setFont("helvetica", "bold");
+            doc.text("Your trust is our commitment to excellence in healthcare solutions.", 105, 282, { align: "center" });
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(9);
+            doc.text("Thank you for choosing Wilson Health Care!", 105, 288, { align: "center" });
 
             return doc;
         }
@@ -4163,7 +4199,7 @@
             let totalTax = 0;
 
             cart.forEach(item => {
-                const price = item.price || 0;
+                const price = (item.price || 0) * (item.quantity || 1);
                 subtotal += price;
                 totalTax += (price * (item.gst || 0) / 100);
             });
@@ -4174,8 +4210,8 @@
 
             // SHORT MESSAGE FOR APP REDIRECTION
             const simpleMessage = method === 'whatsapp'
-                ? `*New Order: ${orderId}*\n*Grand Total:* $${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}\n*Items:* ${itemCount}\n\nHi, please find my order invoice attached.`
-                : `Order ID: ${orderId}\nTotal: $${grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}\nItems: ${itemCount}\n\nHi Wilson Health Care,\n\nPlease process my order. The invoice is attached below.\n\nRegards,\n${currentUser.name || 'Customer'}`;
+                ? `*New Order: ${orderId}*\n*Grand Total:* ₹${grandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}\n*Items:* ${itemCount}\n\nHi, please find my order invoice attached.`
+                : `Order ID: ${orderId}\nTotal: ₹${grandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}\nItems: ${itemCount}\n\nHi Wilson Health Care,\n\nPlease process my order. The invoice is attached below.\n\nRegards,\n${currentUser.name || 'Customer'}`;
 
             const newOrder = {
                 id: orderId,
@@ -4263,9 +4299,9 @@
                         <span>${order.id}</span>
                         <span>${order.date}</span>
                     </div>
-                    <strong>Total: $${order.total.toLocaleString()}</strong>
+                    <strong>Total: ₹${order.total.toLocaleString('en-IN')}</strong>
                     <div style="font-size: 0.8rem; margin-top: 0.5rem; color: #64748b;">
-                        ${order.items.length} items purchased
+                        ${order.items.reduce((sum, item) => sum + (item.quantity || 1), 0)} items purchased
                     </div>
                 </div>
             `).join('');
@@ -4273,7 +4309,8 @@
 
         // UI Helpers
         function updateStats() {
-            document.getElementById('cart-count').innerText = cart.length;
+            const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            document.getElementById('cart-count').innerText = totalQty;
             document.getElementById('wishlist-count').innerText = wishlist.length;
             localStorage.setItem('wilson-cart', JSON.stringify(cart));
             localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
