@@ -1,6 +1,0 @@
-﻿products.forEach(p => {
-    if (p.category === 'Diagnostics') p.gst = 12;
-    else if (p.category === 'Surgical') p.gst = 18;
-    else if (p.category === 'First Aid') p.gst = 5;
-    else p.gst = 18; // Default
-});
