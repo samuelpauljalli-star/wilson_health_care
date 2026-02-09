@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="data.js"></script>
     <style>
         :root {
             --primary: #00a8a8;
@@ -1332,7 +1333,9 @@
             color: var(--secondary);
             margin-bottom: 2px;
             display: -webkit-box;
-            -webkit-line-clamp: 1;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
@@ -1789,7 +1792,7 @@
     </footer>
 
     <script>
-        const products = [
+        /* const products = [
             {
                 id: 1,
                 gst: 5,
@@ -3907,7 +3910,7 @@
                 desc: "Replacement interfaces for medical pumps/monitors.",
                 usage: "Replaces worn-out buttons on equipment so they remain sterile and functional."
             },
-        ];
+        ]; */
 
 
         let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
@@ -3939,6 +3942,8 @@
                 if (hash.startsWith('#product-')) {
                     const id = parseInt(hash.replace('#product-', ''));
                     if (id) showProductInfo(id);
+                } else if (hash === '#open-cart') {
+                    openModal('cart');
                 } else if (hash === '#' || hash === '') {
                     closeModal('info');
                 }
@@ -3948,6 +3953,15 @@
             if (window.location.hash.startsWith('#product-')) {
                 const id = parseInt(window.location.hash.replace('#product-', ''));
                 if (id) showProductInfo(id);
+            } else if (window.location.hash === '#open-cart') {
+                openModal('cart');
+            }
+
+            // Check for Buy Now from subpage
+            if (localStorage.getItem('wilson-auto-checkout') === 'true') {
+                localStorage.removeItem('wilson-auto-checkout');
+                openModal('cart');
+                checkout();
             }
         }
 
@@ -4060,8 +4074,20 @@
                     <button type="submit" class="checkout-btn">
                         Get Started
                     </button>
+                    
+                    <div style="display: flex; align-items: center; gap: 15px; margin: 1.5rem 0; color: #94a3b8;">
+                        <div style="flex: 1; height: 1px; background: #e2e8f0;"></div>
+                        <span style="font-size: 0.8rem;">OR</span>
+                        <div style="flex: 1; height: 1px; background: #e2e8f0;"></div>
+                    </div>
+
+                    <button type="button" class="checkout-btn" style="background: white; color: var(--secondary); border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; gap: 10px;" onclick="loginWithGoogle()">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png" style="width: 20px;">
+                        Continue with Google
+                    </button>
                 </form>
             `;
+
         }
 
         function logout() {
@@ -4354,72 +4380,10 @@
 
         let currentSlideIndex = 0;
         function showProductInfo(id) {
-            const p = products.find(prod => prod.id === id);
-            const container = document.getElementById('info-container');
-            const title = document.getElementById('info-title');
-            currentSlideIndex = 0;
-
-            title.innerText = p.name;
-
-            const allImages = p.images && p.images.length > 0 ? p.images : [p.image];
-            const sliderItemsHtml = allImages.map(img => `
-                <div class="slider-item">
-                    <img src="${img}" alt="${p.name}">
-                </div>
-            `).join('');
-
-            container.innerHTML = `
-                    <div class="slider-container">
-                        <div class="slider-track" id="slider-track" style="transform: translateX(0)">
-                            ${sliderItemsHtml}
-                        </div>
-                        <div class="slider-nav">
-                            <button class="slider-btn" onclick="moveSlider(-1)"><i class="fas fa-chevron-left"></i></button>
-                            <button class="slider-btn" onclick="moveSlider(1)"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                        <span class="product-tag" style="font-size: 0.9rem;">${p.tag}</span>
-                        ${p.price ? `<div class="current-price" style="font-size: 1.5rem;">₹${p.price.toLocaleString('en-IN')}</div>` : ''}
-                    </div>
-
-                    <h4 style="color: var(--primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-info-circle"></i> Technical Specifications
-                    </h4>
-                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--text-main); line-height: 1.7; background: #f8fafc; padding: 12px; border-radius: 10px;">
-                        ${p.desc}. Built with clinical-grade materials for maximum reliability. 
-                        Meets ISO and CE safety standards for medical diagnostics.
-                    </p>
-                    
-                    <h4 style="color: var(--accent); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-hand-holding-medical"></i> Clinical Usage Instructions
-                    </h4>
-                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-main); background: #fdfaf2; padding: 15px; border-radius: 12px; border: 1px dashed var(--accent);">
-                        <strong>How to Use:</strong> ${p.usage}. <br><br>
-                        <strong>Maintenance:</strong> Sterilize before first use where applicable. Ensure the device is powered by a stable voltage source or fresh high-capacity batteries. Store in a clean, ambient environment.
-                    </p>
-
-                    <div style="display: flex; gap: 10px; margin-top: 2rem;">
-                        <button class="checkout-btn" style="flex: 1; padding: 0.6rem; font-size: 0.85rem;" onclick="addToCart(${p.id})">
-                            <i class="fas fa-plus"></i> Add to Cart
-                        </button>
-                        <button class="checkout-btn" style="flex: 1; padding: 0.6rem; font-size: 0.85rem; background: var(--secondary);" onclick="buyNow(${p.id})">
-                            <i class="fas fa-bolt"></i> Buy Now
-                        </button>
-                    </div>
-                `;
-
-            // Add to recently viewed
             addToRecentlyViewed(id);
-
-            // "Redirect" feel: Update URL Hash and Scroll to top
-            window.location.hash = `product-${id}`;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Open modal
-            openModal('info');
+            window.location.href = `product-detail.html?id=${id}`;
         }
+
 
         function moveSlider(dir) {
             const track = document.getElementById('slider-track');
@@ -4808,11 +4772,22 @@
                 : `Order Confirmation - ${orderId}\n\nDear ${currentUser.name},\n\nYour order has been placed successfully. Total: ₹${grandTotal.toLocaleString('en-IN')}.\n\nBest,\nWilson Health Care`;
 
             const newOrder = {
-                id: orderId,
-                date: new Date().toLocaleDateString(),
+                orderId: orderId,
+                date: new Date().toISOString(),
                 total: grandTotal,
-                items: [...cart]
+                items: [...cart],
+                customer: {
+                    name: currentUser.name,
+                    email: currentUser.email,
+                    mobile: currentUser.mobile
+                }
             };
+
+            // Save to Firebase (Async)
+            if (window.saveOrderToFirebase) {
+                window.saveOrderToFirebase(newOrder);
+            }
+
 
             try {
                 const doc = createInvoiceDoc(orderId, newOrder.items, subtotal, totalTax, grandTotal);
@@ -4914,9 +4889,82 @@
             }
         };
 
+        function trackUserLogin(user) {
+            let history = JSON.parse(localStorage.getItem('wilson-user-history')) || [];
+            const existing = history.find(u => u.email === user.email);
+            if (!existing) {
+                history.push({
+                    name: user.name,
+                    email: user.email,
+                    mobile: user.mobile,
+                    lastLogin: new Date().toISOString()
+                });
+            } else {
+                existing.lastLogin = new Date().toISOString();
+            }
+            localStorage.setItem('wilson-user-history', JSON.stringify(history));
+        }
+
         // Initialize
         init();
     </script>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const provider = new GoogleAuthProvider();
+
+        window.loginWithGoogle = async () => {
+            try {
+                const result = await signInWithPopup(auth, provider);
+                const user = result.user;
+                currentUser = {
+                    name: user.displayName,
+                    email: user.email,
+                    mobile: user.phoneNumber || '0000000000',
+                    profilePic: user.photoURL,
+                    hno: '', street: '', landmark: '', pincode: '', district: '', state: ''
+                };
+                localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+                trackUserLogin(currentUser);
+                showToast(`Welcome, ${user.displayName}!`);
+                checkUserStatus();
+                closeModal('login');
+            } catch (error) {
+                console.error("Google Login Error:", error);
+                showToast("Login failed. Please try again.");
+            }
+        };
+
+        // Export saveOrder to Firebase
+        window.saveOrderToFirebase = async (orderData) => {
+            try {
+                await addDoc(collection(db, "orders"), {
+                    ...orderData,
+                    timestamp: serverTimestamp()
+                });
+                console.log("Order saved to Firebase");
+            } catch (e) {
+                console.error("Firebase Order Error:", e);
+            }
+        };
+    </script>
+
 </body>
 
 </html>
