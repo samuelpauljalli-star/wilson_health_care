@@ -1,4 +1,4 @@
-﻿$path = "index.html"
+$path = "index.html"
 $content = [IO.File]::ReadAllText($path)
 $callback = {
     param($match)

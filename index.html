@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,7 +19,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <script src="data.js"></script>
+<<<<<<< HEAD
     <script type="module" src="firebase-config.js"></script>
+=======
+>>>>>>> 70b0d08f8bbaf5c339ae5403f5f8bb9c332c5151
     <style>
         :root {
             --primary: #00a8a8;
@@ -4247,6 +4250,7 @@
                         Sign in with Google
                     </button>
                     
+<<<<<<< HEAD
                     <div style="display: flex; align-items: center; gap: 15px; color: #94a3b8; font-size: 0.8rem;">
                         <div style="flex: 1; height: 1px; background: #e2e8f0;"></div>
                         <span>OR LOGIN WITH EMAIL</span>
@@ -4269,6 +4273,18 @@
                     <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 1rem; text-align: center;">
                         By continuing, you verify that you are a medical professional or authorized purchaser.
                     </p>
+=======
+                    <div style="display: flex; align-items: center; gap: 15px; margin: 1.5rem 0; color: #94a3b8;">
+                        <div style="flex: 1; height: 1px; background: #e2e8f0;"></div>
+                        <span style="font-size: 0.8rem;">OR</span>
+                        <div style="flex: 1; height: 1px; background: #e2e8f0;"></div>
+                    </div>
+
+                    <button type="button" class="checkout-btn" style="background: white; color: var(--secondary); border: 2px solid #e2e8f0; display: flex; align-items: center; justify-content: center; gap: 10px;" onclick="loginWithGoogle()">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png" style="width: 20px;">
+                        Continue with Google
+                    </button>
+>>>>>>> 70b0d08f8bbaf5c339ae5403f5f8bb9c332c5151
                 </form>
             `;
 
@@ -5049,6 +5065,7 @@
                 customer: {
                     name: currentUser.name,
                     email: currentUser.email,
+<<<<<<< HEAD
                     mobile: currentUser.mobile,
                     hno: currentUser.hno,
                     street: currentUser.street,
@@ -5057,6 +5074,9 @@
                     district: currentUser.district,
                     state: currentUser.state,
                     country: currentUser.country
+=======
+                    mobile: currentUser.mobile
+>>>>>>> 70b0d08f8bbaf5c339ae5403f5f8bb9c332c5151
                 }
             };
 
@@ -5065,6 +5085,10 @@
                 window.saveOrderToFirebase(newOrder);
             }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 70b0d08f8bbaf5c339ae5403f5f8bb9c332c5151
             try {
                 const doc = createInvoiceDoc(orderId, newOrder.items, subtotal, totalTax, grandTotal);
                 if (doc) doc.save(`Order_${orderId}.pdf`);
@@ -5200,6 +5224,7 @@
             localStorage.setItem('wilson-user-history', JSON.stringify(history));
         }
 
+<<<<<<< HEAD
         // Install App Logic
         let deferredPrompt;
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -5221,6 +5246,8 @@
             }
         }
 
+=======
+>>>>>>> 70b0d08f8bbaf5c339ae5403f5f8bb9c332c5151
         // Initialize
         init();
 
@@ -5233,7 +5260,64 @@
     </script>
 
     <!-- Firebase SDKs -->
+<<<<<<< HEAD
 
+=======
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const provider = new GoogleAuthProvider();
+
+        window.loginWithGoogle = async () => {
+            try {
+                const result = await signInWithPopup(auth, provider);
+                const user = result.user;
+                currentUser = {
+                    name: user.displayName,
+                    email: user.email,
+                    mobile: user.phoneNumber || '0000000000',
+                    profilePic: user.photoURL,
+                    hno: '', street: '', landmark: '', pincode: '', district: '', state: ''
+                };
+                localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+                trackUserLogin(currentUser);
+                showToast(`Welcome, ${user.displayName}!`);
+                checkUserStatus();
+                closeModal('login');
+            } catch (error) {
+                console.error("Google Login Error:", error);
+                showToast("Login failed. Please try again.");
+            }
+        };
+
+        // Export saveOrder to Firebase
+        window.saveOrderToFirebase = async (orderData) => {
+            try {
+                await addDoc(collection(db, "orders"), {
+                    ...orderData,
+                    timestamp: serverTimestamp()
+                });
+                console.log("Order saved to Firebase");
+            } catch (e) {
+                console.error("Firebase Order Error:", e);
+            }
+        };
+    </script>
+>>>>>>> 70b0d08f8bbaf5c339ae5403f5f8bb9c332c5151
 
 </body>
 

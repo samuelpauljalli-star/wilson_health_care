@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -823,4 +824,831 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIPOLAR FORCEPS | Wilson Health Care</title>
+    <meta name="description"
+        content="High-quality SP02 PROBES for accurate oxygen saturation measurement. Professional medical grade equipment by Wilson Health Care.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00a8a8;
+            --primary-dark: #008b8b;
+            --secondary: #1e293b;
+            --accent: #f59e0b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --spring: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+            padding-top: 100px;
+        }
+
+        nav {
+            background: var(--white);
+            padding: 0.8rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo .brand-wilson {
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .logo .brand-healthcare {
+            color: var(--secondary);
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+            padding: 2px;
+            background: white;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--secondary);
+            cursor: pointer;
+            position: relative;
+            transition: var(--spring);
+            text-decoration: none;
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: var(--primary);
+            color: white;
+            font-size: 0.7rem;
+            padding: 1px 6px;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+
+        /* Product Container */
+        .product-page-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-page-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Gallery */
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .main-image { width: 75%; max-width: 450px; margin: 0 auto; 
+            width: 100%;
+            aspect-ratio: 1;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #f1f5f9;
+        }
+
+        .main-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .thumb { width: 80px; height: 80px; 
+            aspect-ratio: 1;
+            background: white;
+            border-radius: 12px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .thumb:hover {
+            transform: translateY(-3px);
+        }
+
+        .thumb.active {
+            border-color: var(--primary);
+        }
+
+        .thumb img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        /* Content */
+        .product-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: flex;
+            gap: 8px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+
+        .product-header h1 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(0, 168, 168, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin: 1rem 0;
+        }
+
+        .current-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .old-price {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+
+        .discount-tag {
+            color: #ef4444;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .rating span {
+            color: var(--text-light);
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        .short-desc {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .qty-input {
+            display: flex;
+            align-items: center;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 50px;
+        }
+
+        .qty-btn {
+            width: 40px;
+            height: 100%;
+            border: none;
+            background: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.2s;
+        }
+
+        .qty-btn:hover {
+            background: #f1f5f9;
+        }
+
+        .qty-val {
+            width: 40px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .btn {
+            flex: 1;
+            height: 50px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 168, 168, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .feature-item i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Tabs */
+        .product-details {
+            margin: 4rem auto;
+            max-width: 1200px;
+            padding: 0 5%;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #e2e8f0;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            padding-bottom: 1rem;
+            font-weight: 700;
+            color: var(--text-light);
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .tab.active {
+            color: var(--primary);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .specs-table td {
+            padding: 1rem;
+        }
+
+        .specs-table td:first-child {
+            font-weight: 700;
+            color: var(--secondary);
+            width: 30%;
+        }
+
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            z-index: 2000;
+            transform: translateY(100px);
+            transition: var(--transition);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .toast.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">
+            <img src="../logo.jpg" alt="Wilson Health Care Logo">
+            <div style="display: flex; flex-direction: column; line-height: 1.1;">
+                <span class="brand-wilson">WILSON</span>
+                <span class="brand-healthcare">HEALTH CARE</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="../index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+            <a href="#" class="nav-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge" id="cart-count">0</span>
+            </a>
+            <a href="#" class="nav-btn"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+
+    <div class="product-page-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeA6zu4m0kBz8bQPHe1J0n4F3TR34xxgI4AYExm2iGLftqD2oXbMKJVKExQ19gcIB_TJ7Wre-uaOzXXWED7u356qy7co1lLpwbTIzn_5cOf_8BFqwTg3d2iw"
+                    id="main-product-img" alt="SP02 PROBES">
+            </div>
+            <div class="thumbnail-grid">
+                <div class="thumb active"
+                    onclick="changeImage(this, 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeA6zu4m0kBz8bQPHe1J0n4F3TR34xxgI4AYExm2iGLftqD2oXbMKJVKExQ19gcIB_TJ7Wre-uaOzXXWED7u356qy7co1lLpwbTIzn_5cOf_8BFqwTg3d2iw')">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeA6zu4m0kBz8bQPHe1J0n4F3TR34xxgI4AYExm2iGLftqD2oXbMKJVKExQ19gcIB_TJ7Wre-uaOzXXWED7u356qy7co1lLpwbTIzn_5cOf_8BFqwTg3d2iw"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg')">
+                    <img src="https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg"
+                        alt="SP02 PROBES">
+                </div>
+            </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg')">
+                    <img src="https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg"
+                        alt="SP02 PROBES">
+                </div>
+            </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg')">
+                    <img src="https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg"
+                        alt="SP02 PROBES">
+                </div>
+            </div>
+                <div class="thumb"
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb"
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg')">
+                    <img src="https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg" alt="SP02 PROBES">
+                </div>
+                <div class="thumb"
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/4/501447903/HD/DR/RB/243343770/nellcor-spo2-probe-sensor.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/4/501447903/HD/DR/RB/243343770/nellcor-spo2-probe-sensor.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html#Surgical">Surgical</a> › BIPOLAR FORCEPS</div>
+            <div class="product-header">
+                <span class="tag">Diagnostics</span>
+                <h1>BIPOLAR FORCEPS</h1>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(4.3 • 57 Reviews)</span>
+                </div>
+            </div>
+
+            <div class="price-section">
+                <span class="current-price">₹1,599.00</span>
+                <span class="old-price">₹2,220.83</span>
+                <span class="discount-tag">28% OFF</span>
+            </div>
+
+            <p class="short-desc">Sensors and extensions used to measure oxygen saturation in the blood. Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.</p>
+
+            <div class="actions">
+                <div class="qty-input">
+                    <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                    <div class="qty-val" id="qty">1</div>
+                    <button class="qty-btn" onclick="updateQty(1)">+</button>
+                </div>
+                <button class="btn btn-primary" onclick="addToCartSync()">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+                <button class="btn btn-secondary" onclick="buyNowSync()">
+                    <i class="fas fa-bolt"></i> Buy Now
+                </button>
+            </div>
+
+            <div class="features">
+                <div class="feature-item"><i class="fas fa-truck-fast"></i> Pan India Delivery</div>
+                <div class="feature-item"><i class="fas fa-shield-check"></i> 1 Year Warranty</div>
+                <div class="feature-item"><i class="fas fa-certificate"></i> CE & ISO Certified</div>
+                <div class="feature-item"><i class="fas fa-headset"></i> 24/7 Tech Support</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-details">
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab(this, 'description')">Description</div>
+            <div class="tab" onclick="switchTab(this, 'specs')">Specifications</div>
+            <div class="tab" onclick="switchTab(this, 'usage')">Clinical Usage</div>
+        </div>
+
+        <div id="description" class="tab-content active">
+            <p style="margin-bottom: 1rem;">The Wilson Health Care SP02 PROBES is designed for professional medical environments, offering precision and reliability.</p>
+            <p>Sensors and extensions used to measure oxygen saturation in the blood.</p>
+        </div>
+
+        <div id="specs" class="tab-content">
+            <table class="specs-table">
+                <tr>
+                    <td>Category</td>
+                    <td>Diagnostics</td>
+                </tr>
+                <tr>
+                    <td>GST Rate</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>Certification</td>
+                    <td>CE & ISO Certified</td>
+                </tr>
+                <tr>
+                    <td>Warranty</td>
+                    <td>1 Year Limited Warranty</td>
+                </tr>
+                <tr>
+                    <td>Origin</td>
+                    <td>Professional Grade Import/Local</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="usage" class="tab-content">
+            <h4 style="margin-bottom: 1rem; color: var(--secondary);">Clinical Application:</h4>
+            <p style="margin-bottom: 1rem;">Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 2rem;">
+                <li>Ready for immediate clinical use.</li>
+                <li>Ensures accurate results for patient monitoring.</li>
+                <li>Ergonomic design for healthcare professional convenience.</li>
+                <li>Compatible with standard medical protocols.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Wilson Health Care</h3>
+                <p>Providing certified medical equipment and professional healthcare services with over 7 years of
+                    trusted experience.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#Diagnostics">Diagnostics</a></li>
+                    <li><a href="../index.html#Surgical">Surgical</a></li>
+                    <li><a href="../index.html#support">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Uppal, Hyderabad, Telangana</p>
+                <p><i class="fas fa-phone"></i> +91 70326 87122</p>
+                <p><i class="fas fa-envelope"></i> wilsonhealthcare7@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Wilson Health Care. All Rights Reserved.
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">Added to cart!</div>
+
+    <script>
+                                const product = {
+            id: 80,
+            gst: 18,
+            name: "BIPOLAR FORCEPS",
+            category: "Surgical",
+            price: 1999.0,
+            image: "https://5.imimg.com/data5/ANDROID/Default/2022/1/BE/YO/HY/115082354/product-jpeg-500x500.jpg"
+        };
+        function addToRecentlyViewed(id) {
+            let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+            rv = rv.filter(itemId => itemId !== id);
+            rv.unshift(id);
+            rv = rv.slice(0, 10);
+            localStorage.setItem('wilson-rv', JSON.stringify(rv));
+        }
+        addToRecentlyViewed(product.id);
+        
+        function addToRecentlyViewed(id) {
+            let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+            rv = rv.filter(itemId => itemId !== id);
+            rv.unshift(id);
+            rv = rv.slice(0, 10);
+            localStorage.setItem('wilson-rv', JSON.stringify(rv));
+        }
+        addToRecentlyViewed(product.id);
+        
+        function addToRecentlyViewed(id) {
+            let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+            rv = rv.filter(itemId => itemId !== id);
+            rv.unshift(id);
+            rv = rv.slice(0, 10);
+            localStorage.setItem('wilson-rv', JSON.stringify(rv));
+        }
+        addToRecentlyViewed(product.id);
+        
+
+        let qty = 1;
+
+        function updateQty(delta) {
+            qty = Math.max(1, qty + delta);
+            document.getElementById('qty').innerText = qty;
+        }
+
+        function changeImage(thumb, src) {
+            document.getElementById('main-product-img').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        function switchTab(tab, contentId) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        function addToCartSync() {
+            let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const existing = cart.find(item => item.id === product.id);
+            if (existing) {
+                existing.quantity += qty;
+            } else {
+                cart.push({ ...product, quantity: qty, cartId: Date.now() });
+            }
+            localStorage.setItem('wilson-cart', JSON.stringify(cart));
+            updateCartCount();
+            showToast(`Added ${qty} ${product.name} to cart!`);
+        }
+
+        function buyNowSync() {
+            addToCartSync();
+            window.location.href = '../index.html#open-cart';
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+            document.getElementById('cart-count').innerText = totalQty;
+        }
+
+        // Initialize
+        updateCartCount();
+    </script>
+</body>
+
+>>>>>>> 70b0d08f8bbaf5c339ae5403f5f8bb9c332c5151
 </html>
