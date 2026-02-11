@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOPOLAR FORCEPS (imported) | Wilson Health Care</title>
+    <meta name="description"
+        content="High-quality SP02 PROBES for accurate oxygen saturation measurement. Professional medical grade equipment by Wilson Health Care.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00a8a8;
+            --primary-dark: #008b8b;
+            --secondary: #1e293b;
+            --accent: #f59e0b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --spring: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+            padding-top: 100px;
+        }
+
+        nav {
+            background: var(--white);
+            padding: 0.8rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo .brand-wilson {
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .logo .brand-healthcare {
+            color: var(--secondary);
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+            padding: 2px;
+            background: white;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--secondary);
+            cursor: pointer;
+            position: relative;
+            transition: var(--spring);
+            text-decoration: none;
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: var(--primary);
+            color: white;
+            font-size: 0.7rem;
+            padding: 1px 6px;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+
+        /* Product Container */
+        .product-page-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-page-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Gallery */
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .main-image { width: 75%; max-width: 450px; margin: 0 auto; 
+            width: 100%;
+            aspect-ratio: 1;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #f1f5f9;
+        }
+
+        .main-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .thumb { width: 80px; height: 80px; 
+            aspect-ratio: 1;
+            background: white;
+            border-radius: 12px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .thumb:hover {
+            transform: translateY(-3px);
+        }
+
+        .thumb.active {
+            border-color: var(--primary);
+        }
+
+        .thumb img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        /* Content */
+        .product-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: flex;
+            gap: 8px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+
+        .product-header h1 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            line-height: 1.2;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(0, 168, 168, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin: 1rem 0;
+        }
+
+        .current-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .old-price {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+
+        .discount-tag {
+            color: #ef4444;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .rating span {
+            color: var(--text-light);
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        .short-desc {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .qty-input {
+            display: flex;
+            align-items: center;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 50px;
+        }
+
+        .qty-btn {
+            width: 40px;
+            height: 100%;
+            border: none;
+            background: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.2s;
+        }
+
+        .qty-btn:hover {
+            background: #f1f5f9;
+        }
+
+        .qty-val {
+            width: 40px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .btn {
+            flex: 1;
+            height: 50px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 168, 168, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .feature-item i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Tabs */
+        .product-details {
+            margin: 4rem auto;
+            max-width: 1200px;
+            padding: 0 5%;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #e2e8f0;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            padding-bottom: 1rem;
+            font-weight: 700;
+            color: var(--text-light);
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .tab.active {
+            color: var(--primary);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .specs-table td {
+            padding: 1rem;
+        }
+
+        .specs-table td:first-child {
+            font-weight: 700;
+            color: var(--secondary);
+            width: 30%;
+        }
+
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            z-index: 2000;
+            transform: translateY(100px);
+            transition: var(--transition);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .toast.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">
+            <img src="../logo.jpg" alt="Wilson Health Care Logo">
+            <div style="display: flex; flex-direction: column; line-height: 1.1;">
+                <span class="brand-wilson">WILSON</span>
+                <span class="brand-healthcare">HEALTH CARE</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <a href="../index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+            <a href="#" class="nav-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge" id="cart-count">0</span>
+            </a>
+            <a href="#" class="nav-btn"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+
+    <div class="product-page-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeA6zu4m0kBz8bQPHe1J0n4F3TR34xxgI4AYExm2iGLftqD2oXbMKJVKExQ19gcIB_TJ7Wre-uaOzXXWED7u356qy7co1lLpwbTIzn_5cOf_8BFqwTg3d2iw"
+                    id="main-product-img" alt="SP02 PROBES">
+            </div>
+            <div class="thumbnail-grid">
+                <div class="thumb active"
+                    onclick="changeImage(this, 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeA6zu4m0kBz8bQPHe1J0n4F3TR34xxgI4AYExm2iGLftqD2oXbMKJVKExQ19gcIB_TJ7Wre-uaOzXXWED7u356qy7co1lLpwbTIzn_5cOf_8BFqwTg3d2iw')">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeA6zu4m0kBz8bQPHe1J0n4F3TR34xxgI4AYExm2iGLftqD2oXbMKJVKExQ19gcIB_TJ7Wre-uaOzXXWED7u356qy7co1lLpwbTIzn_5cOf_8BFqwTg3d2iw"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg')">
+                    <img src="https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg"
+                        alt="SP02 PROBES">
+                </div>
+            </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg')">
+                    <img src="https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg"
+                        alt="SP02 PROBES">
+                </div>
+            </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb "
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg')">
+                    <img src="https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg"
+                        alt="SP02 PROBES">
+                </div>
+            </div>
+                <div class="thumb"
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/485447341/DP/LU/KR/118511328/disposable-spo2-probes-500x500.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+                <div class="thumb"
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg')">
+                    <img src="https://5.imimg.com/data5/SW/TD/MY-28594783/spo2-sensor-500x500.jpg" alt="SP02 PROBES">
+                </div>
+                <div class="thumb"
+                    onclick="changeImage(this, 'https://5.imimg.com/data5/SELLER/Default/2025/4/501447903/HD/DR/RB/243343770/nellcor-spo2-probe-sensor.jpeg')">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/4/501447903/HD/DR/RB/243343770/nellcor-spo2-probe-sensor.jpeg"
+                        alt="SP02 PROBES">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html#Surgical">Surgical</a> › BIOPOLAR FORCEPS (imported)</div>
+            <div class="product-header">
+                <span class="tag">Diagnostics</span>
+                <h1>BIOPOLAR FORCEPS (imported)</h1>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(4.3 • 57 Reviews)</span>
+                </div>
+            </div>
+
+            <div class="price-section">
+                <span class="current-price">₹1,599.00</span>
+                <span class="old-price">₹2,220.83</span>
+                <span class="discount-tag">28% OFF</span>
+            </div>
+
+            <p class="short-desc">Sensors and extensions used to measure oxygen saturation in the blood. Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.</p>
+
+            <div class="actions">
+                <div class="qty-input">
+                    <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                    <div class="qty-val" id="qty">1</div>
+                    <button class="qty-btn" onclick="updateQty(1)">+</button>
+                </div>
+                <button class="btn btn-primary" onclick="addToCartSync()">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+                <button class="btn btn-secondary" onclick="buyNowSync()">
+                    <i class="fas fa-bolt"></i> Buy Now
+                </button>
+            </div>
+
+            <div class="features">
+                <div class="feature-item"><i class="fas fa-truck-fast"></i> Pan India Delivery</div>
+                <div class="feature-item"><i class="fas fa-shield-check"></i> 1 Year Warranty</div>
+                <div class="feature-item"><i class="fas fa-certificate"></i> CE & ISO Certified</div>
+                <div class="feature-item"><i class="fas fa-headset"></i> 24/7 Tech Support</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-details">
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab(this, 'description')">Description</div>
+            <div class="tab" onclick="switchTab(this, 'specs')">Specifications</div>
+            <div class="tab" onclick="switchTab(this, 'usage')">Clinical Usage</div>
+        </div>
+
+        <div id="description" class="tab-content active">
+            <p style="margin-bottom: 1rem;">The Wilson Health Care SP02 PROBES is designed for professional medical environments, offering precision and reliability.</p>
+            <p>Sensors and extensions used to measure oxygen saturation in the blood.</p>
+        </div>
+
+        <div id="specs" class="tab-content">
+            <table class="specs-table">
+                <tr>
+                    <td>Category</td>
+                    <td>Diagnostics</td>
+                </tr>
+                <tr>
+                    <td>GST Rate</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>Certification</td>
+                    <td>CE & ISO Certified</td>
+                </tr>
+                <tr>
+                    <td>Warranty</td>
+                    <td>1 Year Limited Warranty</td>
+                </tr>
+                <tr>
+                    <td>Origin</td>
+                    <td>Professional Grade Import/Local</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="usage" class="tab-content">
+            <h4 style="margin-bottom: 1rem; color: var(--secondary);">Clinical Application:</h4>
+            <p style="margin-bottom: 1rem;">Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 2rem;">
+                <li>Ready for immediate clinical use.</li>
+                <li>Ensures accurate results for patient monitoring.</li>
+                <li>Ergonomic design for healthcare professional convenience.</li>
+                <li>Compatible with standard medical protocols.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Wilson Health Care</h3>
+                <p>Providing certified medical equipment and professional healthcare services with over 7 years of
+                    trusted experience.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#Diagnostics">Diagnostics</a></li>
+                    <li><a href="../index.html#Surgical">Surgical</a></li>
+                    <li><a href="../index.html#support">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Uppal, Hyderabad, Telangana</p>
+                <p><i class="fas fa-phone"></i> +91 70326 87122</p>
+                <p><i class="fas fa-envelope"></i> wilsonhealthcare7@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Wilson Health Care. All Rights Reserved.
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">Added to cart!</div>
+
+    <script>
+                                const product = {
+            id: 79,
+            gst: 5,
+            name: "BIOPOLAR FORCEPS (imported)",
+            category: "Surgical",
+            price: 3999.0,
+            image: "data:image/jpeg;base64,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"
+        };
+        function addToRecentlyViewed(id) {
+            let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+            rv = rv.filter(itemId => itemId !== id);
+            rv.unshift(id);
+            rv = rv.slice(0, 10);
+            localStorage.setItem('wilson-rv', JSON.stringify(rv));
+        }
+        addToRecentlyViewed(product.id);
+        
+        function addToRecentlyViewed(id) {
+            let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+            rv = rv.filter(itemId => itemId !== id);
+            rv.unshift(id);
+            rv = rv.slice(0, 10);
+            localStorage.setItem('wilson-rv', JSON.stringify(rv));
+        }
+        addToRecentlyViewed(product.id);
+        
+        function addToRecentlyViewed(id) {
+            let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+            rv = rv.filter(itemId => itemId !== id);
+            rv.unshift(id);
+            rv = rv.slice(0, 10);
+            localStorage.setItem('wilson-rv', JSON.stringify(rv));
+        }
+        addToRecentlyViewed(product.id);
+        
+
+        let qty = 1;
+
+        function updateQty(delta) {
+            qty = Math.max(1, qty + delta);
+            document.getElementById('qty').innerText = qty;
+        }
+
+        function changeImage(thumb, src) {
+            document.getElementById('main-product-img').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        function switchTab(tab, contentId) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        function addToCartSync() {
+            let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const existing = cart.find(item => item.id === product.id);
+            if (existing) {
+                existing.quantity += qty;
+            } else {
+                cart.push({ ...product, quantity: qty, cartId: Date.now() });
+            }
+            localStorage.setItem('wilson-cart', JSON.stringify(cart));
+            updateCartCount();
+            showToast(`Added ${qty} ${product.name} to cart!`);
+        }
+
+        function buyNowSync() {
+            addToCartSync();
+            window.location.href = '../index.html#open-cart';
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
+            document.getElementById('cart-count').innerText = totalQty;
+        }
+
+        // Initialize
+        updateCartCount();
+    </script>
+</body>
+
+</html>
