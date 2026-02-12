@@ -4,7 +4,7 @@
   "description": "Wilson Health Care Web App",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "npx webpack",
     "bundle": "rollup -c",
     "start": "webpack serve --open"
   },
