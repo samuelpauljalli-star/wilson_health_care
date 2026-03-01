@@ -2,6 +2,7 @@
   "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js": { "integrity": "sha512-cOej7bh9ekwKqiuhi8tyaB1G+SOWymEZ1Kho3NjN4sh5LxjnIdGSz8HWM0xG1aDCuFJBdH1UatjR2piHsCwAlA==", "contentType": "text/javascript; charset=UTF-8" },
   "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js": { "integrity": "sha512-VJoCeD6CVgc+UcA67bs8RTmqwzTdDoj9BiWrQ32Bkl7YdSxAbHOLBVpUbWxvOnV3bCyM1+/2/vnbNDwduxP7+A==", "contentType": "text/javascript; charset=UTF-8" },
   "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js": { "integrity": "sha512-q0QXf/PvmpwA5JMlOC5/8s5lnxuKzFTNu0IRFnxycMvCIscquK5HgwE6iiOo5LWXU9BNb9D8W1GhHq8Q6QlZKA==", "contentType": "text/javascript; charset=UTF-8" },
+  "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js": { "integrity": "sha512-OJCxj+/jLx7uwRYYVYLp55gMTGQCbgW+s7GESoMxg8KNRCGUGidaAKOOGMLrMy/6NBw7LF4qMpJ7Eu5h/7fApQ==", "contentType": "text/javascript; charset=UTF-8" },
   "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js": { "integrity": "sha512-4D8/I2QyjmwFqr1tv3JM4GMvZmH5A/75nf3huP5SNprm4tEJ5DxNA5nYYKds4tmh7WgI3vz07bwA3Yc46Xc3Ww==", "contentType": "text/javascript; charset=UTF-8" },
   "version": 1
 }

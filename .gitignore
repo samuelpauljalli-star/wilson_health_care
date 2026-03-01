@@ -1,1 +1,26 @@
-node_modules
+# Dependencies
+node_modules/
+package-lock.json
+
+# Builds
+dist/
+bundle.js
+
+# Temp files
+.DS_Store
+Thumbs.db
+.metadata
+.gemini/
+~$*.xlsx
+
+# Local project files
+webpack.lock
+webpack.lock.data/
+.vercel/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log

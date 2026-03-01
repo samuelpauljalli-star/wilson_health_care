@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Products to Firestore</title>
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .status {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            background: #f0f0f0;
+            white-space: pre-wrap;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #059669;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #047857;
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Upload Products from data.js to Firestore</h1>
+    <p>This tool will upload all products found in <code>data.js</code> to the 'products' collection in Firestore.</p>
+    <p><strong>Note:</strong> You must be logged in to upload data if your Firestore Security Rules require
+        authentication.</p>
+
+    <!-- Auth Section -->
+    <div style="margin: 20px 0; padding: 15px; background: #e0f2fe; border-radius: 8px;">
+        <div id="loggedOutView">
+            <p>Please log in to proceed:</p>
+            <button id="loginBtn" class="btn" style="background:#4285F4;">Sign in with Google</button>
+        </div>
+        <div id="loggedInView" style="display:none;">
+            <p>Logged in as: <strong id="userEmail">...</strong></p>
+            <button id="uploadBtn" class="btn">Start Upload</button>
+        </div>
+    </div>
+
+    <div id="status" class="status">Waiting for user login...</div>
+
+    <!-- Load Local Data -->
+    <script src="data.js"></script>
+    <!-- Bridge script to ensure products is accessible if declared with const/let -->
+    <script>
+        // Try to attach products to window if it exists in scope
+        try {
+            if (typeof products !== 'undefined') {
+                window.products = products;
+            }
+        } catch (e) { console.log("Products not yet available"); }
+    </script>
+
+    <!-- Firebase Logic -->
+    <script type="module">
+        import { db, doc, setDoc, auth, provider, signInWithPopup } from './firebase-config.js';
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+        const statusDiv = document.getElementById('status');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const loginBtn = document.getElementById('loginBtn');
+        const loggedOutView = document.getElementById('loggedOutView');
+        const loggedInView = document.getElementById('loggedInView');
+        const userEmailSpan = document.getElementById('userEmail');
+
+        function log(msg) {
+            statusDiv.textContent += msg + '\n';
+            statusDiv.scrollTop = statusDiv.scrollHeight;
+            console.log(msg);
+        }
+
+        const AUTHORIZED_EMAILS = ['samuelpauljalli@gmail.com', 'wilsonhealthcare7@gmail.com'];
+        import { signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+        // Auth State Listener
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const email = user.email ? user.email.toLowerCase() : '';
+                if (AUTHORIZED_EMAILS.includes(email)) {
+                    loggedOutView.style.display = 'none';
+                    loggedInView.style.display = 'block';
+                    userEmailSpan.textContent = user.email;
+                    log(`User authenticated: ${user.email}`);
+                    uploadBtn.disabled = false;
+                } else {
+                    signOut(auth);
+                    log(`❌ Access Denied: ${user.email} is not an authorized administrator.`);
+                    loggedOutView.style.display = 'block';
+                    loggedInView.style.display = 'none';
+                }
+            } else {
+                loggedOutView.style.display = 'block';
+                loggedInView.style.display = 'none';
+                log("User not logged in.");
+            }
+        });
+
+        // Login Handler
+        loginBtn.addEventListener('click', async () => {
+            try {
+                await signInWithPopup(auth, provider);
+            } catch (error) {
+                log(`Login Failed: ${error.message}`);
+            }
+        });
+
+        // Upload Handler
+        uploadBtn.addEventListener('click', async () => {
+            // Access products safely
+            let productsArray = window.products;
+
+            // Fallback if window.products isn't set but 'products' exists in global scope (rare with const)
+            if (!productsArray) {
+                try { productsArray = products; } catch (e) { }
+            }
+
+            if (!productsArray || !Array.isArray(productsArray)) {
+                log("Error: 'products' array not found. Ensure data.js is loaded.");
+                return;
+            }
+
+            uploadBtn.disabled = true;
+            log(`\nStarting Upload for ${productsArray.length} products...`);
+
+            let successCount = 0;
+            let failCount = 0;
+
+            for (const product of productsArray) {
+                try {
+                    if (!product.id) {
+                        log(`Skipping product without ID: ${product.name}`);
+                        continue;
+                    }
+
+                    const docId = String(product.id);
+                    const prodRef = doc(db, "products", docId);
+
+                    await setDoc(prodRef, product);
+
+                    log(`✅ Uploaded: [${product.category}] ${product.name}`);
+                    successCount++;
+                } catch (error) {
+                    console.error(error);
+                    let errSnippet = error.message;
+                    if (errSnippet.includes("Missing or insufficient permissions")) {
+                        errSnippet = "Permission Denied (Check Firestore Rules)";
+                    }
+                    log(`❌ Failed: ${product.name} - ${errSnippet}`);
+                    failCount++;
+                }
+            }
+
+            log(`\nUpload Complete!`);
+            log(`Success: ${successCount}`);
+            log(`Failed: ${failCount}`);
+
+            if (failCount > 0) {
+                log("\nIf you see Permission Denied errors despite being logged in, check your Firestore Security Rules in the Firebase Console.");
+                log("They should allow writes for authenticated users, e.g.:");
+                log("allow write: if request.auth != null;");
+            }
+            uploadBtn.disabled = false;
+        });
+    </script>
+</body>
+
+</html>

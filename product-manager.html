@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager — Wilson Health Care</title>
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SheetJS for Excel export/import -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- data.js — product source -->
+    <script src="data.js"></script>
+
+    <script type="module">
+        import {
+            db, collection, doc, setDoc, deleteDoc, getDocs,
+            serverTimestamp, auth, provider, signInWithPopup, signOut, onAuthStateChanged
+        } from './firebase-config.js';
+
+        const AUTHORIZED_EMAILS = ['samuelpauljalli@gmail.com', 'wilsonhealthcare7@gmail.com'];
+
+        // Expose to the regular script below
+        window._pmFB = { db, collection, doc, setDoc, deleteDoc, getDocs, serverTimestamp };
+
+        // ── Auth Handling ──────────────────────────────────────────
+        onAuthStateChanged(auth, (user) => {
+            const gate = document.getElementById('login-gate');
+            const errEl = document.getElementById('login-error');
+            const subtitle = document.getElementById('login-subtitle');
+
+            if (user) {
+                const email = user.email ? user.email.toLowerCase() : '';
+                if (AUTHORIZED_EMAILS.includes(email)) {
+                    gate.style.opacity = '0';
+                    setTimeout(() => gate.style.display = 'none', 500);
+                    loadFromFB();
+                } else {
+                    signOut(auth);
+                    if (errEl) {
+                        errEl.textContent = `❌ ${user.email} is not authorized for manager access.`;
+                        errEl.style.display = 'block';
+                    }
+                }
+            } else {
+                gate.style.display = 'flex';
+                gate.style.opacity = '1';
+                if (subtitle) subtitle.textContent = 'Sign in with an authorized Google account.';
+            }
+        });
+
+        window.adminLogin = async function () {
+            try {
+                await signInWithPopup(auth, provider);
+            } catch (error) {
+                console.error('Login error:', error);
+                const errEl = document.getElementById('login-error');
+                if (errEl) { errEl.textContent = `Error: ${error.message}`; errEl.style.display = 'block'; }
+            }
+        };
+
+        // ── Load products FROM Firestore ─────────────────────────
+        async function loadFromFB() {
+            try {
+                const snap = await getDocs(collection(db, 'products'));
+                if (!snap.empty) {
+                    const fbProducts = [];
+                    snap.forEach(d => fbProducts.push({ id: d.data().id ?? d.id, ...d.data() }));
+                    window._fbProducts = fbProducts;
+                }
+            } catch (e) {
+                console.warn('Could not load from Firestore, using data.js:', e.message);
+            }
+            // Signal ready
+            window.dispatchEvent(new Event('firebase-ready'));
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #059669;
+            --primary-dark: #047857;
+            --secondary: #134e4a;
+            --accent: #f59e0b;
+            --bg: #f0fdf4;
+            --white: #ffffff;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --border: #d1fae5;
+            --row-hover: #ecfdf5;
+            --row-edited: #fffbeb;
+            --header-bg: #134e4a;
+            --danger: #ef4444;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* ── TOP BAR ── */
+        .topbar {
+            background: var(--secondary);
+            color: white;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .topbar-left img {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+        }
+
+        .topbar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .topbar-sub {
+            font-size: 0.75rem;
+            color: #6ee7b7;
+            margin-top: 1px;
+        }
+
+        .topbar-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: #1a1a1a;
+        }
+
+        .btn-accent:hover {
+            background: #d97706;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-green {
+            background: #16a34a;
+            color: white;
+        }
+
+        .btn-green:hover {
+            background: #15803d;
+        }
+
+        /* ── STATS BAR ── */
+        .stats-bar {
+            display: flex;
+            gap: 16px;
+            padding: 14px 24px;
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .stat-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--secondary);
+            border: 1px solid var(--border);
+        }
+
+        .stat-chip i {
+            color: var(--primary);
+        }
+
+        .stat-chip span {
+            color: var(--text-light);
+            font-weight: 400;
+            margin-left: 2px;
+        }
+
+        .status-badge {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* ── TOOLBAR ── */
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            padding: 12px 24px;
+            background: white;
+            border-bottom: 1px solid #f1f5f9;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 6px 12px;
+            background: var(--bg);
+            flex: 1;
+            min-width: 200px;
+            max-width: 340px;
+        }
+
+        .search-box i {
+            color: var(--text-light);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            width: 100%;
+        }
+
+        .filter-select {
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 7px 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            background: var(--bg);
+            color: var(--text);
+            cursor: pointer;
+            outline: none;
+        }
+
+        .edited-count {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: #d97706;
+            font-weight: 600;
+            background: #fef3c7;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: none;
+        }
+
+        .edited-count.visible {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ── TABLE ── */
+        .table-wrap {
+            overflow: auto;
+            max-height: calc(100vh - 220px);
+            border-radius: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 1200px;
+            font-size: 0.82rem;
+        }
+
+        thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        thead th {
+            background: var(--header-bg);
+            color: white;
+            padding: 11px 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            user-select: none;
+        }
+
+        thead th:first-child {
+            width: 50px;
+            text-align: center;
+        }
+
+        thead th.col-img {
+            width: 80px;
+            text-align: center;
+        }
+
+        thead th.col-id {
+            width: 60px;
+        }
+
+        thead th.col-name {
+            min-width: 220px;
+        }
+
+        thead th.col-cat {
+            width: 130px;
+        }
+
+        thead th.col-price {
+            width: 110px;
+        }
+
+        thead th.col-old {
+            width: 110px;
+        }
+
+        thead th.col-disc {
+            width: 90px;
+        }
+
+        thead th.col-rating {
+            width: 80px;
+        }
+
+        thead th.col-tag {
+            width: 110px;
+        }
+
+        thead th.col-desc {
+            min-width: 220px;
+        }
+
+        thead th.col-act {
+            width: 80px;
+            text-align: center;
+        }
+
+        tbody tr {
+            background: white;
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.15s;
+        }
+
+        tbody tr:hover {
+            background: var(--row-hover);
+        }
+
+        tbody tr.edited {
+            background: var(--row-edited) !important;
+        }
+
+        tbody tr.edited:hover {
+            background: #fef9c3 !important;
+        }
+
+        td {
+            padding: 6px 8px;
+            vertical-align: middle;
+            border-right: 1px solid #f1f5f9;
+        }
+
+        td:first-child {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.75rem;
+        }
+
+        td.col-img {
+            text-align: center;
+        }
+
+        td.col-img img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+        }
+
+        /* Editable cell */
+        td[contenteditable="true"] {
+            outline: none;
+            cursor: text;
+            border-radius: 4px;
+            padding: 5px 8px;
+            transition: background 0.15s, box-shadow 0.15s;
+        }
+
+        td[contenteditable="true"]:focus {
+            background: white !important;
+            box-shadow: inset 0 0 0 2px var(--primary);
+        }
+
+        td[contenteditable="true"]:empty::before {
+            color: #cbd5e1;
+            font-style: italic;
+        }
+
+        .col-price-val {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .col-disc-val {
+            color: var(--danger);
+            font-weight: 600;
+        }
+
+        .col-rating-val {
+            color: #d97706;
+        }
+
+        .del-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            border: none;
+            background: #fee2e2;
+            color: var(--danger);
+            cursor: pointer;
+            transition: all 0.2s;
+            margin: auto;
+            font-size: 0.85rem;
+        }
+
+        .del-btn:hover {
+            background: var(--danger);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* ── ADD ROW ── */
+        .add-row-bar {
+            padding: 12px 24px;
+            border-top: 1px solid #f1f5f9;
+            background: white;
+        }
+
+        /* ── TOAST ── */
+        #toast {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            transform: translateY(80px);
+            opacity: 0;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            pointer-events: none;
+        }
+
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        #toast i {
+            font-size: 1rem;
+        }
+
+        #toast.success i {
+            color: #6ee7b7;
+        }
+
+        #toast.error i {
+            color: #fca5a5;
+        }
+
+        /* ── MODAL: Generate data.js ── */
+        .modal-bg {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(6px);
+            z-index: 500;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-bg.open {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            max-width: 720px;
+            width: 95%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        .modal-close:hover {
+            color: var(--danger);
+        }
+
+        .code-area {
+            flex: 1;
+            overflow: auto;
+            background: #0f172a;
+            color: #6ee7b7;
+            font-family: 'Courier New', monospace;
+            font-size: 0.78rem;
+            border-radius: 10px;
+            padding: 16px;
+            white-space: pre;
+            max-height: 50vh;
+            line-height: 1.5;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* ── IMPORT FILE ── */
+        #file-input {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .topbar {
+                padding: 10px 14px;
+            }
+
+            .stats-bar,
+            .toolbar {
+                padding: 10px 14px;
+            }
+
+            .table-wrap {
+                max-height: calc(100vh - 260px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Login Gate -->
+    <div id="login-gate"
+        style="position:fixed; inset:0; background:rgba(15, 23, 42, 0.95); z-index:10000; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(15px);">
+        <div
+            style="background:rgba(255, 255, 255, 0.05); border:1px solid rgba(255,255,255,0.1); padding:3rem; border-radius:30px; width:400px; text-align:center;">
+            <img src="logo.jpg"
+                style="width:80px; height:80px; border-radius:20px; border:2px solid #059669; margin-bottom:1.5rem;">
+            <h1 style="color:white; font-size:1.8rem; margin-bottom:0.5rem;">Inventory Manager</h1>
+            <p id="login-subtitle" style="color:#94a3b8; font-size:0.9rem; margin-bottom:2rem;">Restricted to authorized
+                administrators.</p>
+            <div id="login-error"
+                style="display:none; background:rgba(239, 68, 68, 0.1); color:#ef4444; padding:12px; border-radius:12px; font-size:0.85rem; margin-bottom:1.5rem; border:1px solid rgba(239, 68, 68, 0.2);">
+            </div>
+            <button onclick="adminLogin()"
+                style="width:100%; display:flex; align-items:center; justify-content:center; gap:12px; background:white; color:#0f172a; border:none; padding:12px; border-radius:12px; font-weight:700; cursor:pointer;">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png"
+                    style="width:20px;">
+                Sign in with Google
+            </button>
+        </div>
+    </div>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <img src="logo.jpg" alt="Wilson Logo">
+            <div>
+                <div class="topbar-title">Product Manager</div>
+                <div class="topbar-sub">Wilson Health Care — Live Editor</div>
+            </div>
+        </div>
+        <div class="topbar-actions">
+            <button class="btn btn-outline" onclick="document.getElementById('file-input').click()"
+                title="Import Excel">
+                <i class="fas fa-file-excel"></i> Import Excel
+            </button>
+            <button class="btn btn-accent" onclick="exportExcel()" title="Download as Excel">
+                <i class="fas fa-download"></i> Export Excel
+            </button>
+            <button class="btn btn-green" onclick="openGenerateModal()" title="Generate updated data.js">
+                <i class="fas fa-code"></i> Save → data.js
+            </button>
+            <button class="btn btn-primary" id="fb-sync-btn" onclick="syncAllToFirebase()"
+                title="Push all products to Firebase">
+                <i class="fas fa-cloud-upload-alt"></i> Sync All → Firebase
+            </button>
+            <a href="index.html" class="btn btn-outline">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </div>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat-chip"><i class="fas fa-boxes"></i> Total Products: <span id="stat-total">0</span></div>
+        <div class="stat-chip"><i class="fas fa-tags"></i> Categories: <span id="stat-cats">0</span></div>
+        <div class="stat-chip"><i class="fas fa-rupee-sign"></i> Avg Price: <span id="stat-avg">₹0</span></div>
+        <div class="stat-chip"><i class="fas fa-chart-line"></i> Avg Discount: <span id="stat-disc">0%</span></div>
+        <div class="status-badge">
+            <div class="status-dot"></div>
+            <span id="last-saved">No unsaved changes</span>
+        </div>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Search by name, category, description…"
+                oninput="filterTable()">
+        </div>
+        <select class="filter-select" id="cat-filter" onchange="filterTable()">
+            <option value="">All Categories</option>
+        </select>
+        <select class="filter-select" id="sort-filter" onchange="filterTable()">
+            <option value="">Sort: Default</option>
+            <option value="price-asc">Price ↑</option>
+            <option value="price-desc">Price ↓</option>
+            <option value="name-asc">Name A–Z</option>
+            <option value="rating-desc">Rating ↓</option>
+        </select>
+        <button class="btn btn-primary" onclick="addNewRow()">
+            <i class="fas fa-plus"></i> Add Product
+        </button>
+        <div class="edited-count" id="edited-count">
+            <i class="fas fa-pen"></i> <span id="edit-num">0</span> edited
+        </div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrap">
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th class="col-img">Image</th>
+                    <th class="col-id">ID</th>
+                    <th class="col-name">Product Name</th>
+                    <th class="col-cat">Category</th>
+                    <th class="col-price">Price (₹)</th>
+                    <th class="col-old">Old Price (₹)</th>
+                    <th class="col-disc">Discount</th>
+                    <th class="col-rating">Rating</th>
+                    <th class="col-tag">Tag</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-act">Del</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <!-- ADD ROW BAR -->
+    <div class="add-row-bar">
+        <button class="btn btn-primary" onclick="addNewRow()" style="font-size:0.78rem; padding:6px 14px;">
+            <i class="fas fa-plus"></i> Add New Product Row
+        </button>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast"><i class="fas fa-check-circle"></i> <span id="toast-msg"></span></div>
+
+    <!-- GENERATE MODAL -->
+    <div class="modal-bg" id="gen-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title"><i class="fas fa-code"
+                        style="color:var(--primary); margin-right:8px;"></i>Generated data.js</div>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-light);">
+                Copy the code below and <strong>replace the entire contents</strong> of <code>data.js</code>,
+                or click <strong>Download data.js</strong> to save it directly.
+            </p>
+            <div class="code-area" id="code-preview"></div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="copyCode()"><i class="fas fa-copy"></i> Copy Code</button>
+                <button class="btn btn-green" onclick="downloadDataJs()"><i class="fas fa-download"></i> Download
+                    data.js</button>
+                <button class="btn btn-accent" id="fs-save-btn" onclick="saveDirectly()" style="display:none;">
+                    <i class="fas fa-save"></i> Save Directly to File
+                </button>
+                <button class="btn btn-outline" style="background:#f1f5f9; color:var(--text);"
+                    onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden file input for Excel import -->
+    <input type="file" id="file-input" accept=".xlsx,.xls,.csv" onchange="importExcel(event)">
+
+    <script>
+        // ── STATE ──
+        let tableData = [];   // working dataset (array of product objects)
+        let editedIds = new Set();
+        let fileHandle = null; // File System Access API handle
+        const autoSaveTimers = {}; // per-product debounce timers
+
+        // ── INIT — wait for Firebase then load ──
+        async function init() {
+            // Prefer Firestore data if available, fall back to data.js
+            if (window._fbProducts && window._fbProducts.length > 0) {
+                tableData = window._fbProducts.map(p => ({ ...p }));
+                setStatus('✅ Loaded ' + tableData.length + ' products from Firebase');
+            } else if (typeof products !== 'undefined' && Array.isArray(products)) {
+                tableData = products.map(p => ({ ...p }));
+                setStatus('Loaded from data.js — Firebase DB may be empty');
+            } else {
+                toast('⚠ No products found', 'error');
+                tableData = [];
+            }
+            buildTable();
+            updateStats();
+            populateCategoryFilter();
+            checkFileSystemAccess();
+        }
+
+        // Wait for Firebase module to signal ready, then init
+        window.addEventListener('firebase-ready', init);
+        // Fallback: if firebase-ready never fires (e.g. offline), still init from data.js after 3s
+        setTimeout(() => { if (tableData.length === 0) init(); }, 3000);
+
+        function setStatus(msg) {
+            document.getElementById('last-saved').textContent = msg;
+        }
+
+        // ── BUILD TABLE ──
+        function buildTable(data = tableData) {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+            data.forEach((p, i) => {
+                tbody.appendChild(createRow(p, i + 1));
+            });
+        }
+
+        function createRow(p, rowNum) {
+            const tr = document.createElement('tr');
+            tr.dataset.id = p.id;
+            if (editedIds.has(String(p.id))) tr.classList.add('edited');
+
+            tr.innerHTML = `
+            <td>${rowNum}</td>
+            <td class="col-img">
+                <img src="${esc(p.image || 'logo.jpg')}" alt="${esc(p.name)}"
+                     onerror="this.src='logo.jpg'"
+                     title="${esc(p.image || '')}">
+            </td>
+            <td style="color:var(--text-light); font-size:0.75rem;">${esc(String(p.id ?? ''))}</td>
+            <td contenteditable="true" data-field="name" class="col-name-val">${esc(p.name || '')}</td>
+            <td contenteditable="true" data-field="category">${esc(p.category || '')}</td>
+            <td contenteditable="true" data-field="price" class="col-price-val">${p.price ?? ''}</td>
+            <td contenteditable="true" data-field="oldPrice">${p.oldPrice ?? ''}</td>
+            <td contenteditable="true" data-field="discount" class="col-disc-val">${esc(p.discount || '')}</td>
+            <td contenteditable="true" data-field="rating" class="col-rating-val">${esc(String(p.rating ?? ''))}</td>
+            <td contenteditable="true" data-field="tag">${esc(p.tag || '')}</td>
+            <td contenteditable="true" data-field="desc">${esc(p.desc || '')}</td>
+            <td><button class="del-btn" onclick="deleteRow(this)" title="Delete row"><i class="fas fa-trash"></i></button></td>
+        `;
+
+            // Listen for edits
+            tr.querySelectorAll('[contenteditable]').forEach(cell => {
+                cell.addEventListener('input', () => {
+                    const field = cell.dataset.field;
+                    const rawVal = cell.innerText.trim();
+                    const val = (field === 'price' || field === 'oldPrice' || field === 'gst')
+                        ? (parseFloat(rawVal) || 0)
+                        : rawVal;
+
+                    // Update in tableData
+                    const idx = tableData.findIndex(x => String(x.id) === String(p.id));
+                    if (idx !== -1) {
+                        tableData[idx][field] = val;
+                    }
+
+                    // Mark as edited
+                    editedIds.add(String(p.id));
+                    tr.classList.add('edited');
+                    updateEditedCount();
+                    updateStats();
+                    setStatus(`✏️ Edited — auto-saving in 1.5s…`);
+
+                    // ── Auto-save to Firestore (debounced 1.5s) ──
+                    clearTimeout(autoSaveTimers[p.id]);
+                    autoSaveTimers[p.id] = setTimeout(() => {
+                        const product = tableData.find(x => String(x.id) === String(p.id));
+                        if (product) saveProductToFirebase(product);
+                    }, 1500);
+                });
+
+                // Image URL live preview on blur
+                if (cell.dataset.field === 'image') {
+                    cell.addEventListener('blur', () => {
+                        const img = tr.querySelector('.col-img img');
+                        if (img) img.src = cell.innerText.trim() || 'logo.jpg';
+                    });
+                }
+            });
+
+            return tr;
+        }
+
+        function esc(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        // ── ADD ROW ──
+        function addNewRow() {
+            const newId = Date.now();
+            const newProduct = {
+                id: newId, name: 'New Product', category: 'General',
+                price: 0, oldPrice: 0, gst: 5, discount: '0%', rating: '4.0',
+                ratingCount: 50, tag: 'New', desc: 'Description here', image: 'logo.jpg'
+            };
+            tableData.push(newProduct);
+            const tbody = document.getElementById('table-body');
+            const row = createRow(newProduct, tableData.length);
+            tbody.appendChild(row);
+            row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            editedIds.add(String(newId));
+            row.classList.add('edited');
+            updateEditedCount();
+            updateStats();
+            // Focus name cell
+            row.querySelector('[data-field="name"]').focus();
+            toast('✅ New product added — will auto-save to Firebase', 'success');
+            // Save to Firebase immediately
+            saveProductToFirebase(newProduct);
+        }
+
+        // ── DELETE ROW ──
+        async function deleteRow(btn) {
+            const tr = btn.closest('tr');
+            const id = tr.dataset.id;
+            if (!confirm(`Delete product ID ${id} from website AND database?`)) return;
+            tableData = tableData.filter(p => String(p.id) !== String(id));
+            editedIds.delete(String(id));
+            tr.remove();
+            renumberRows();
+            updateStats();
+            updateEditedCount();
+            // Delete from Firestore
+            if (window._pmFB) {
+                try {
+                    const { db, doc, deleteDoc } = window._pmFB;
+                    await deleteDoc(doc(db, 'products', String(id)));
+                    toast('🗑️ Product deleted from database', 'error');
+                } catch (e) {
+                    toast('Deleted locally, Firebase error: ' + e.message, 'error');
+                }
+            } else {
+                toast('Product deleted (offline)', 'error');
+            }
+        }
+
+        function renumberRows() {
+            document.querySelectorAll('#table-body tr').forEach((tr, i) => {
+                tr.firstElementChild.textContent = i + 1;
+            });
+        }
+
+        // ── FILTER / SEARCH ──
+        function filterTable() {
+            const q = document.getElementById('search-input').value.toLowerCase();
+            const cat = document.getElementById('cat-filter').value;
+            const sort = document.getElementById('sort-filter').value;
+
+            let filtered = tableData.filter(p => {
+                const matchCat = !cat || p.category === cat;
+                const matchQ = !q || [p.name, p.category, p.desc, p.tag]
+                    .some(f => String(f || '').toLowerCase().includes(q));
+                return matchCat && matchQ;
+            });
+
+            if (sort === 'price-asc') filtered.sort((a, b) => (a.price || 0) - (b.price || 0));
+            if (sort === 'price-desc') filtered.sort((a, b) => (b.price || 0) - (a.price || 0));
+            if (sort === 'name-asc') filtered.sort((a, b) => String(a.name || '').localeCompare(String(b.name || '')));
+            if (sort === 'rating-desc') filtered.sort((a, b) => parseFloat(b.rating || 0) - parseFloat(a.rating || 0));
+
+            buildTable(filtered);
+        }
+
+        // ── STATS ──
+        function updateStats() {
+            const total = tableData.length;
+            const cats = new Set(tableData.map(p => p.category)).size;
+            const avg = total ? Math.round(tableData.reduce((s, p) => s + (Number(p.price) || 0), 0) / total) : 0;
+            const avgDisc = total ? Math.round(tableData.reduce((s, p) => {
+                const d = parseInt(String(p.discount || '0')) || 0; return s + d;
+            }, 0) / total) : 0;
+
+            document.getElementById('stat-total').textContent = total;
+            document.getElementById('stat-cats').textContent = cats;
+            document.getElementById('stat-avg').textContent = '₹' + avg.toLocaleString('en-IN');
+            document.getElementById('stat-disc').textContent = avgDisc + '%';
+        }
+
+        function updateEditedCount() {
+            const count = editedIds.size;
+            const el = document.getElementById('edited-count');
+            document.getElementById('edit-num').textContent = count;
+            el.classList.toggle('visible', count > 0);
+        }
+
+        function populateCategoryFilter() {
+            const cats = [...new Set(tableData.map(p => p.category).filter(Boolean))].sort();
+            const sel = document.getElementById('cat-filter');
+            cats.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c; opt.textContent = c;
+                sel.appendChild(opt);
+            });
+        }
+
+        // ── COLLECT CURRENT DATA FROM DOM ──
+        function collectTableData() {
+            const rows = document.querySelectorAll('#table-body tr');
+            const result = [];
+            rows.forEach(tr => {
+                const id = tr.dataset.id;
+                const existing = tableData.find(p => String(p.id) === String(id)) || {};
+                const cells = tr.querySelectorAll('[contenteditable]');
+                const fields = ['name', 'category', 'price', 'oldPrice', 'discount', 'rating', 'tag', 'desc'];
+                const obj = { ...existing };
+                cells.forEach((cell, i) => {
+                    const field = fields[i];
+                    if (!field) return;
+                    const raw = cell.innerText.trim();
+                    obj[field] = (field === 'price' || field === 'oldPrice')
+                        ? (parseFloat(raw) || 0) : raw;
+                });
+                result.push(obj);
+            });
+            return result;
+        }
+
+        // ── GENERATE data.js CODE ──
+        function generateCode(data) {
+            const lines = data.map(p => {
+                const fields = [
+                    `id: ${JSON.stringify(p.id)}`,
+                    `name: ${JSON.stringify(p.name || '')}`,
+                    `category: ${JSON.stringify(p.category || '')}`,
+                    `price: ${Number(p.price) || 0}`,
+                    `oldPrice: ${Number(p.oldPrice) || 0}`,
+                    `discount: ${JSON.stringify(p.discount || '')}`,
+                    `rating: ${JSON.stringify(p.rating || '4.0')}`,
+                    `ratingCount: ${p.ratingCount || 50}`,
+                    `tag: ${JSON.stringify(p.tag || '')}`,
+                    `desc: ${JSON.stringify(p.desc || '')}`,
+                    `image: ${JSON.stringify(p.image || 'logo.jpg')}`,
+                    p.images ? `images: ${JSON.stringify(p.images)}` : null,
+                    p.usage ? `usage: ${JSON.stringify(p.usage)}` : null,
+                ].filter(Boolean).join(',\n        ');
+                return `    {\n        ${fields}\n    }`;
+            });
+            return `// Wilson Health Care — Product Data\n// Auto-generated by Product Manager on ${new Date().toLocaleString()}\n// Total: ${data.length} products\n\nconst products = [\n${lines.join(',\n')}\n];\n`;
+        }
+
+        // ── OPEN MODAL ──
+        function openGenerateModal() {
+            const data = collectTableData();
+            const code = generateCode(data);
+            document.getElementById('code-preview').textContent = code;
+            document.getElementById('gen-modal').classList.add('open');
+        }
+        function closeModal() {
+            document.getElementById('gen-modal').classList.remove('open');
+        }
+
+        // ── COPY CODE ──
+        function copyCode() {
+            const code = document.getElementById('code-preview').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                toast('Code copied to clipboard!', 'success');
+            }).catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = code; document.body.appendChild(ta);
+                ta.select(); document.execCommand('copy');
+                ta.remove();
+                toast('Code copied!', 'success');
+            });
+        }
+
+        // ── DOWNLOAD data.js ──
+        function downloadDataJs() {
+            const data = collectTableData();
+            const code = generateCode(data);
+            const blob = new Blob([code], { type: 'text/javascript' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'data.js';
+            a.click();
+            URL.revokeObjectURL(a.href);
+            toast('data.js downloaded! Replace your old file with it.', 'success');
+            editedIds.clear();
+            updateEditedCount();
+            document.getElementById('last-saved').textContent = 'Saved at ' + new Date().toLocaleTimeString();
+        }
+
+        // ── FILE SYSTEM ACCESS (Chrome/Edge) ── Direct save to data.js
+        function checkFileSystemAccess() {
+            if ('showSaveFilePicker' in window) {
+                document.getElementById('fs-save-btn').style.display = 'flex';
+            }
+        }
+
+        async function saveDirectly() {
+            const data = collectTableData();
+            const code = generateCode(data);
+            try {
+                if (!fileHandle) {
+                    fileHandle = await window.showSaveFilePicker({
+                        suggestedName: 'data.js',
+                        types: [{ description: 'JavaScript', accept: { 'text/javascript': ['.js'] } }]
+                    });
+                }
+                const writable = await fileHandle.createWritable();
+                await writable.write(code);
+                await writable.close();
+                editedIds.clear();
+                updateEditedCount();
+                document.getElementById('last-saved').textContent = '✅ Saved directly at ' + new Date().toLocaleTimeString();
+                toast('✅ Saved directly to data.js!', 'success');
+                closeModal();
+            } catch (err) {
+                if (err.name !== 'AbortError') toast('Save failed: ' + err.message, 'error');
+            }
+        }
+
+        // ── EXPORT TO EXCEL ──
+        function exportExcel() {
+            const data = collectTableData();
+            const rows = data.map(p => ({
+                ID: p.id,
+                Name: p.name,
+                Category: p.category,
+                'Price (₹)': p.price,
+                'Old Price (₹)': p.oldPrice,
+                Discount: p.discount,
+                Rating: p.rating,
+                'Rating Count': p.ratingCount,
+                Tag: p.tag,
+                Description: p.desc,
+                'Image URL': p.image
+            }));
+            const ws = XLSX.utils.json_to_sheet(rows);
+
+            // Column widths
+            ws['!cols'] = [
+                { wch: 8 }, { wch: 35 }, { wch: 18 }, { wch: 12 }, { wch: 14 }, { wch: 12 },
+                { wch: 8 }, { wch: 12 }, { wch: 16 }, { wch: 45 }, { wch: 60 }
+            ];
+
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, 'Products');
+            XLSX.writeFile(wb, `Wilson_Products_${new Date().toISOString().slice(0, 10)}.xlsx`);
+            toast('Excel file downloaded!', 'success');
+        }
+
+        // ── IMPORT FROM EXCEL ──
+        function importExcel(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const wb = XLSX.read(e.target.result, { type: 'binary' });
+                    const ws = wb.Sheets[wb.SheetNames[0]];
+                    const rows = XLSX.utils.sheet_to_json(ws);
+
+                    if (rows.length === 0) { toast('Excel file is empty!', 'error'); return; }
+
+                    const imported = rows.map((row, i) => ({
+                        id: row['ID'] || row['id'] || (Date.now() + i),
+                        name: row['Name'] || row['name'] || '',
+                        category: row['Category'] || row['category'] || '',
+                        price: parseFloat(row['Price (₹)'] || row['price'] || 0),
+                        oldPrice: parseFloat(row['Old Price (₹)'] || row['oldPrice'] || 0),
+                        discount: row['Discount'] || row['discount'] || '',
+                        rating: String(row['Rating'] || row['rating'] || '4.0'),
+                        ratingCount: parseInt(row['Rating Count'] || row['ratingCount'] || 50),
+                        tag: row['Tag'] || row['tag'] || '',
+                        desc: row['Description'] || row['desc'] || '',
+                        image: row['Image URL'] || row['image'] || 'logo.jpg',
+                    }));
+
+                    if (confirm(`Import ${imported.length} products from Excel? This will REPLACE the current table!`)) {
+                        tableData = imported;
+                        imported.forEach(p => editedIds.add(String(p.id)));
+                        buildTable();
+                        updateStats();
+                        updateEditedCount();
+                        toast(`✅ Imported ${imported.length} products from Excel!`, 'success');
+                    }
+                } catch (err) {
+                    toast('Import failed: ' + err.message, 'error');
+                    console.error(err);
+                }
+                event.target.value = ''; // reset
+            };
+            reader.readAsBinaryString(file);
+        }
+
+        // ── FIREBASE SAVE SINGLE PRODUCT ──
+        async function saveProductToFirebase(product) {
+            if (!window._pmFB) return;
+            try {
+                const { db, doc, setDoc, serverTimestamp } = window._pmFB;
+                const docId = String(product.id);
+                await setDoc(doc(db, 'products', docId), {
+                    ...product,
+                    id: product.id,
+                    updatedAt: serverTimestamp()
+                }, { merge: true });
+                setStatus(`☁️ Saved "${product.name}" to Firebase at ${new Date().toLocaleTimeString()}`);
+                // Mark row as no longer edited
+                editedIds.delete(docId);
+                const row = document.querySelector(`#table-body tr[data-id="${docId}"]`);
+                if (row) row.classList.remove('edited');
+                updateEditedCount();
+            } catch (e) {
+                console.error('Firebase save error:', e);
+                setStatus('⚠️ Firebase save failed: ' + e.message);
+            }
+        }
+
+        // ── SYNC ALL TO FIREBASE ──
+        async function syncAllToFirebase() {
+            if (!window._pmFB) {
+                toast('Firebase not connected yet', 'error'); return;
+            }
+            const data = collectTableData();
+            if (!confirm(`Push all ${data.length} products to Firebase? This will overwrite existing data.`)) return;
+
+            const btn = document.getElementById('fb-sync-btn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Syncing…';
+
+            let count = 0;
+            const { db, doc, setDoc, serverTimestamp } = window._pmFB;
+            try {
+                for (const p of data) {
+                    await setDoc(doc(db, 'products', String(p.id)), {
+                        ...p,
+                        updatedAt: serverTimestamp()
+                    }, { merge: true });
+                    count++;
+                    btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${count}/${data.length}`;
+                }
+                editedIds.clear();
+                updateEditedCount();
+                document.querySelectorAll('#table-body tr').forEach(r => r.classList.remove('edited'));
+                setStatus(`✅ All ${count} products synced to Firebase at ${new Date().toLocaleTimeString()}`);
+                toast(`✅ ${count} products synced to Firebase!`, 'success');
+            } catch (e) {
+                toast('Sync failed at item ' + count + ': ' + e.message, 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Sync All → Firebase';
+            }
+        }
+
+        // ── TOAST ──
+        let toastTimer;
+        function toast(msg, type = 'success') {
+            const el = document.getElementById('toast');
+            const icon = el.querySelector('i');
+            document.getElementById('toast-msg').textContent = msg;
+            el.className = `show ${type}`;
+            icon.className = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => el.classList.remove('show'), 3500);
+        }
+
+        // ── KEYBOARD SHORTCUTS ──
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                openGenerateModal();
+            }
+            if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
+                e.preventDefault();
+                exportExcel();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -4,9 +4,16 @@
   "description": "Wilson Health Care Web App",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack serve --open",
     "build": "npx webpack",
     "bundle": "rollup -c",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "serve": "npx serve .",
+    "excel:export": "node scripts/export-to-excel.mjs",
+    "excel:import": "node scripts/import-from-excel.mjs",
+    "excel:watch": "node scripts/watch-excel.mjs",
+    "excel:triple": "node scripts/triple-products.mjs",
+    "firebase:sync": "node scripts/sync-to-firebase.mjs"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +22,12 @@
     "firebase": "^10.7.1"
   },
   "devDependencies": {
+    "chokidar": "^5.0.0",
     "rollup": "^4.9.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "xlsx": "^0.18.5"
   },
   "type": "module"
 }

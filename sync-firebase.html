@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Sync — Wilson Health Care</title>
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root {
+            --primary: #059669;
+            --dark: #0f172a;
+            --card: #1e293b;
+            --border: #334155;
+            --text: #f1f5f9;
+            --dim: #94a3b8;
+            --warn: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: var(--dark);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header img {
+            height: 56px;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .header p {
+            color: var(--dim);
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        @media(max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .card-title i {
+            color: var(--primary);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.88rem;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-val {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .progress-wrap {
+            margin: 1rem 0;
+            background: var(--dark);
+            border-radius: 99px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--primary), #34d399);
+            transition: width 0.3s ease;
+            width: 0%;
+        }
+
+        .progress-label {
+            font-size: 0.78rem;
+            color: var(--dim);
+            text-align: right;
+            margin-top: 4px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.9rem;
+            border-radius: 12px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #047857);
+            color: white;
+        }
+
+        .btn-primary:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.4);
+        }
+
+        .btn-warn {
+            background: linear-gradient(135deg, var(--warn), #d97706);
+            color: #1c1400;
+        }
+
+        .btn-warn:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger), #b91c1c);
+            color: white;
+        }
+
+        .btn-danger:not(:disabled):hover {
+            transform: translateY(-2px);
+        }
+
+        .log-box {
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem;
+            font-family: monospace;
+            font-size: 0.75rem;
+            height: 180px;
+            overflow-y: auto;
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+
+        .log-ok {
+            color: #34d399;
+        }
+
+        .log-warn {
+            color: var(--warn);
+        }
+
+        .log-err {
+            color: var(--danger);
+        }
+
+        .log-dim {
+            color: var(--dim);
+        }
+
+        .status-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .chip-idle {
+            background: rgba(148, 163, 184, 0.15);
+            color: var(--dim);
+        }
+
+        .chip-running {
+            background: rgba(5, 150, 105, 0.2);
+            color: var(--success);
+        }
+
+        .chip-done {
+            background: rgba(52, 211, 153, 0.15);
+            color: #34d399;
+        }
+
+        .chip-error {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .spacer {
+            height: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="login-gate"
+        style="position:fixed; inset:0; background:#0f172a; z-index:10000; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(20px);">
+        <div
+            style="background:rgba(30,41,59,0.7); padding:3rem; border-radius:30px; width:100%; max-width:400px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
+            <img src="logo.jpg"
+                style="width:80px; height:80px; border-radius:20px; border:2px solid var(--primary); padding:5px; margin-bottom:1.5rem;">
+            <h1 style="font-size:1.8rem; margin-bottom:0.5rem; color:#fff;">Admin Sync</h1>
+            <p id="login-subtitle" style="color:var(--dim); font-size:0.9rem; margin-bottom:2rem;">Restricted to
+                authorized developers only.</p>
+
+            <div id="login-error"
+                style="display:none; background:rgba(239,68,68,0.1); color:#ef4444; padding:12px; border-radius:12px; font-size:0.85rem; margin-bottom:1.5rem; border:1px solid rgba(239,68,68,0.2);">
+            </div>
+
+            <button id="google-login-btn" onclick="adminLogin()"
+                style="width:100%; display:flex; align-items:center; justify-content:center; gap:12px; background:#fff; color:#1e293b; border:none; padding:12px; border-radius:12px; font-weight:700; cursor:pointer; transition:0.3s;">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png"
+                    style="width:20px;">
+                Sign in with Google
+            </button>
+        </div>
+    </div>
+
+    <div class="header">
+        <img src="logo.jpg" alt="Wilson" onerror="this.style.display='none'">
+        <h1>🔥 Firebase Sync Dashboard</h1>
+        <p>Wilson Health Care — Admin Only</p>
+    </div>
+
+    <div class="grid">
+
+        <!-- ── PRODUCTS CARD ─────────────────────────────────────── -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-box-open"></i>
+                Products Upload
+                <span id="prod-chip" class="status-chip chip-idle">Idle</span>
+            </div>
+
+            <div class="stat-row">
+                <span>Products in data.js</span>
+                <span class="stat-val" id="local-count">—</span>
+            </div>
+            <div class="stat-row">
+                <span>Currently in Firestore</span>
+                <span class="stat-val" id="fb-count">—</span>
+            </div>
+            <div class="stat-row">
+                <span>Uploaded this session</span>
+                <span class="stat-val" id="uploaded-count">0</span>
+            </div>
+            <div class="stat-row">
+                <span>Errors</span>
+                <span class="stat-val" id="upload-errors" style="color:var(--danger)">0</span>
+            </div>
+
+            <div class="progress-wrap">
+                <div class="progress-bar" id="prod-progress-bar"></div>
+            </div>
+            <div class="progress-label" id="prod-progress-label">0 / 0</div>
+
+            <button class="btn btn-primary" id="btn-upload" onclick="uploadAllProducts()">
+                <i class="fas fa-cloud-upload-alt"></i> Upload All 336 Products
+            </button>
+            <button class="btn btn-danger" id="btn-clear-prod" onclick="clearFirestoreProducts()"
+                style="margin-top:0.5rem; font-size:0.85rem; padding:0.6rem;">
+                <i class="fas fa-trash"></i> Clear Firestore Products First (re-upload clean)
+            </button>
+        </div>
+
+        <!-- ── ORDERS CARD ────────────────────────────────────────── -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-shopping-bag"></i>
+                Orders Sync
+                <span id="order-chip" class="status-chip chip-idle">Idle</span>
+            </div>
+
+            <div class="stat-row">
+                <span>Orders in localStorage</span>
+                <span class="stat-val" id="local-orders">—</span>
+            </div>
+            <div class="stat-row">
+                <span>Orders in Firestore</span>
+                <span class="stat-val" id="fb-orders">—</span>
+            </div>
+            <div class="stat-row">
+                <span>Synced this session</span>
+                <span class="stat-val" id="synced-orders">0</span>
+            </div>
+
+            <div class="progress-wrap">
+                <div class="progress-bar" id="order-progress-bar"></div>
+            </div>
+            <div class="progress-label" id="order-progress-label">0 / 0</div>
+
+            <button class="btn btn-warn" id="btn-sync-orders" onclick="syncOrders()">
+                <i class="fas fa-sync-alt"></i> Sync Orders to Firebase
+            </button>
+
+            <div class="stat-row" style="margin-top:0.8rem;">
+                <span style="font-size:0.78rem; color:var(--dim);">
+                    Auto-sync on every new order is already handled by <code>index.html</code>.
+                    Use this button to push historic localStorage orders.
+                </span>
+            </div>
+        </div>
+
+        <!-- ── LOG ───────────────────────────────────────────────── -->
+        <div class="card full-width">
+            <div class="card-title"><i class="fas fa-terminal"></i> Log</div>
+            <div class="log-box" id="log-box">
+                <div class="log-dim">Ready. Click a button above to begin.</div>
+            </div>
+            <button class="btn btn-primary"
+                style="margin-top:0.8rem; max-width:200px; font-size:0.85rem; padding:0.6rem;"
+                onclick="document.getElementById('log-box').innerHTML='<div class=log-dim>Log cleared.</div>'">
+                <i class="fas fa-broom"></i> Clear Log
+            </button>
+        </div>
+
+    </div><!-- /grid -->
+
+    <script type="module">
+        import { initializeApp, getApps, getApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import {
+            getFirestore,
+            collection, doc, setDoc, getDoc, getDocs,
+            writeBatch, deleteDoc, serverTimestamp, addDoc
+        } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+        import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+
+        const AUTHORIZED_EMAILS = ['samuelpauljalli@gmail.com', 'wilsonhealthcare7@gmail.com'];
+
+        // ── Config ────────────────────────────────────────────────
+        const firebaseConfig = {
+            apiKey: "AIzaSyCh5w0Vljp-7dV_Ui_8gTXj_WKF5TyEToA",
+            authDomain: "wilson-health-care.firebaseapp.com",
+            databaseURL: "https://wilson-health-care-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "wilson-health-care",
+            storageBucket: "wilson-health-care.firebasestorage.app",
+            messagingSenderId: "60179173764",
+            appId: "1:60179173764:web:adfda13ac51d1140a00dd1"
+        };
+
+        const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+
+        // ── Auth Handling ──────────────────────────────────────────
+        onAuthStateChanged(auth, (user) => {
+            const gate = document.getElementById('login-gate');
+            const errEl = document.getElementById('login-error');
+            const subtitle = document.getElementById('login-subtitle');
+
+            if (user) {
+                const email = user.email ? user.email.toLowerCase() : '';
+                if (AUTHORIZED_EMAILS.includes(email)) {
+                    gate.style.opacity = '0';
+                    setTimeout(() => gate.style.display = 'none', 500);
+                    refreshCounts();
+                } else {
+                    signOut(auth);
+                    if (errEl) {
+                        errEl.textContent = `❌ ${user.email} is not authorized for sync access.`;
+                        errEl.style.display = 'block';
+                    }
+                }
+            } else {
+                gate.style.display = 'flex';
+                gate.style.opacity = '1';
+                if (subtitle) subtitle.textContent = 'Sign in with an authorized Google account.';
+            }
+        });
+
+        window.adminLogin = async function () {
+            const btn = document.getElementById('google-login-btn');
+            const errEl = document.getElementById('login-error');
+            if (btn) { btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Authenticating...'; btn.disabled = true; }
+            if (errEl) errEl.style.display = 'none';
+            try {
+                await signInWithPopup(auth, provider);
+            } catch (error) {
+                console.error('Login error:', error);
+                if (btn) { btn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png" style="width:20px;"> Sign in with Google'; btn.disabled = false; }
+                if (errEl) { errEl.textContent = `Error: ${error.message}`; errEl.style.display = 'block'; }
+            }
+        };
+
+        // ── Helpers ───────────────────────────────────────────────
+        function log(msg, type = 'ok') {
+            const box = document.getElementById('log-box');
+            const line = document.createElement('div');
+            line.className = `log-${type}`;
+            const ts = new Date().toLocaleTimeString('en-IN', { hour12: false });
+            line.textContent = `[${ts}] ${msg}`;
+            box.appendChild(line);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function setChip(id, state) {
+            const el = document.getElementById(id);
+            const map = {
+                idle: ['chip-idle', 'Idle'], running: ['chip-running', 'Running…'],
+                done: ['chip-done', 'Done ✓'], error: ['chip-error', 'Error ✗']
+            };
+            el.className = `status-chip ${map[state][0]}`;
+            el.textContent = map[state][1];
+        }
+
+        function setProgress(barId, labelId, done, total) {
+            const pct = total ? Math.round((done / total) * 100) : 0;
+            document.getElementById(barId).style.width = pct + '%';
+            document.getElementById(labelId).textContent = `${done} / ${total}  (${pct}%)`;
+        }
+
+        // ── Load initial counts ───────────────────────────────────
+        async function refreshCounts() {
+            // Products: data.js
+            const localProds = (window.products || []).length;
+            document.getElementById('local-count').textContent = localProds;
+
+            // Products: Firestore
+            try {
+                const snap = await getDocs(collection(db, 'products'));
+                document.getElementById('fb-count').textContent = snap.size;
+            } catch (e) {
+                document.getElementById('fb-count').textContent = 'Error';
+                log('Could not reach Firestore products: ' + e.message, 'err');
+            }
+
+            // Orders: localStorage
+            const localOrders = JSON.parse(localStorage.getItem('wilson-orders') || '[]');
+            document.getElementById('local-orders').textContent = localOrders.length;
+
+            // Orders: Firestore
+            try {
+                const snap2 = await getDocs(collection(db, 'orders'));
+                document.getElementById('fb-orders').textContent = snap2.size;
+            } catch (e) {
+                document.getElementById('fb-orders').textContent = 'Error';
+            }
+        }
+
+        // ── Upload ALL products ───────────────────────────────────
+        window.uploadAllProducts = async function () {
+            const btn = document.getElementById('btn-upload');
+            btn.disabled = true;
+            setChip('prod-chip', 'running');
+
+            const prods = window.products || [];
+            if (prods.length === 0) {
+                log('No products found in data.js!', 'err');
+                setChip('prod-chip', 'error');
+                btn.disabled = false;
+                return;
+            }
+
+            log(`Starting upload of ${prods.length} products in batches of 499…`, 'warn');
+
+            const BATCH_SIZE = 499; // Firestore limit is 500 ops per batch
+            let uploaded = 0;
+            let errors = 0;
+
+            for (let i = 0; i < prods.length; i += BATCH_SIZE) {
+                const chunk = prods.slice(i, i + BATCH_SIZE);
+                const batch = writeBatch(db);
+
+                chunk.forEach(p => {
+                    if (!p || !p.id) {
+                        console.warn('Skipping product with missing ID:', p);
+                        return;
+                    }
+                    const ref = doc(db, 'products', String(p.id));
+                    batch.set(ref, {
+                        id: p.id,
+                        name: p.name || '',
+                        category: p.category || '',
+                        price: p.price || 0,
+                        oldPrice: p.oldPrice || 0,
+                        gst: p.gst || 0,
+                        discount: p.discount || '',
+                        rating: p.rating || '4.0',
+                        ratingCount: p.ratingCount || 50,
+                        tag: p.tag || '',
+                        desc: p.desc || '',
+                        usage: p.usage || '',
+                        image: p.image || '',
+                        images: p.images || [],
+                        updatedAt: serverTimestamp()
+                    }, { merge: true });
+                });
+
+                try {
+                    await batch.commit();
+                    uploaded += chunk.length;
+                    document.getElementById('uploaded-count').textContent = uploaded;
+                    setProgress('prod-progress-bar', 'prod-progress-label', uploaded, prods.length);
+                    log(`✅ Batch ${Math.ceil((i + 1) / BATCH_SIZE)}: uploaded products ${i + 1}–${Math.min(i + BATCH_SIZE, prods.length)}`, 'ok');
+                } catch (err) {
+                    errors += chunk.length;
+                    document.getElementById('upload-errors').textContent = errors;
+                    log(`❌ Batch ${Math.ceil((i + 1) / BATCH_SIZE)} FAILED: ${err.message}`, 'err');
+                }
+
+                // Small delay between batches to avoid rate limiting
+                if (i + BATCH_SIZE < prods.length) {
+                    await new Promise(r => setTimeout(r, 400));
+                }
+            }
+
+            if (errors === 0) {
+                log(`🎉 All ${uploaded} products uploaded successfully!`, 'ok');
+                setChip('prod-chip', 'done');
+            } else {
+                log(`⚠️ Done with ${errors} errors. Check log for failed batches.`, 'warn');
+                setChip('prod-chip', 'error');
+            }
+
+            btn.disabled = false;
+            await refreshCounts();
+        };
+
+        // ── Clear Firestore products ──────────────────────────────
+        window.clearFirestoreProducts = async function () {
+            if (!confirm('⚠️ This will DELETE all products from Firestore.\nContinue only if you want a clean re-upload!')) return;
+
+            const btn = document.getElementById('btn-clear-prod');
+            btn.disabled = true;
+            log('Clearing all Firestore products…', 'warn');
+
+            try {
+                const snap = await getDocs(collection(db, 'products'));
+                log(`Found ${snap.size} documents to delete…`, 'dim');
+
+                const BATCH_SIZE = 499;
+                const docs = snap.docs;
+                let deleted = 0;
+
+                for (let i = 0; i < docs.length; i += BATCH_SIZE) {
+                    const batch = writeBatch(db);
+                    docs.slice(i, i + BATCH_SIZE).forEach(d => batch.delete(d.ref));
+                    await batch.commit();
+                    deleted += Math.min(BATCH_SIZE, docs.length - i);
+                    log(`Deleted ${deleted} / ${docs.length}`, 'warn');
+                }
+
+                log(`✅ Cleared ${deleted} products from Firestore.`, 'ok');
+            } catch (err) {
+                log('❌ Clear failed: ' + err.message, 'err');
+            }
+
+            btn.disabled = false;
+            await refreshCounts();
+        };
+
+        // ── Sync orders ───────────────────────────────────────────
+        window.syncOrders = async function () {
+            const btn = document.getElementById('btn-sync-orders');
+            btn.disabled = true;
+            setChip('order-chip', 'running');
+
+            const localOrders = JSON.parse(localStorage.getItem('wilson-orders') || '[]');
+            if (localOrders.length === 0) {
+                log('No orders found in localStorage. Nothing to sync.', 'warn');
+                setChip('order-chip', 'done');
+                btn.disabled = false;
+                return;
+            }
+
+            log(`Syncing ${localOrders.length} orders from localStorage to Firestore…`, 'warn');
+            let synced = 0;
+            let errors = 0;
+
+            for (let i = 0; i < localOrders.length; i++) {
+                const order = localOrders[i];
+                try {
+                    // Use orderId as document ID if available, otherwise generate
+                    const orderId = order.orderId || order.id || `order_${Date.now()}_${i}`;
+                    await setDoc(doc(db, 'orders', String(orderId)), {
+                        orderId: orderId,
+                        customerName: order.customerName || order.user?.name || 'Unknown',
+                        customerEmail: order.customerEmail || order.user?.email || '',
+                        customerPhone: order.customerPhone || order.user?.mobile || '',
+                        items: order.items || order.products || [],
+                        totalAmount: order.totalAmount || order.total || 0,
+                        status: order.status || 'Pending',
+                        paymentMethod: order.paymentMethod || 'COD',
+                        address: order.address || {},
+                        date: order.date || order.timestamp || new Date().toISOString(),
+                        syncedAt: serverTimestamp()
+                    }, { merge: true });
+
+                    synced++;
+                    document.getElementById('synced-orders').textContent = synced;
+                    setProgress('order-progress-bar', 'order-progress-label', synced, localOrders.length);
+
+                    if (i % 10 === 0 || i === localOrders.length - 1) {
+                        log(`Synced ${synced} / ${localOrders.length} orders…`, 'ok');
+                    }
+                } catch (err) {
+                    errors++;
+                    log(`❌ Order ${i + 1} failed: ${err.message}`, 'err');
+                }
+            }
+
+            if (errors === 0) {
+                log(`🎉 All ${synced} orders synced to Firestore!`, 'ok');
+                setChip('order-chip', 'done');
+            } else {
+                log(`⚠️ Done — ${synced} synced, ${errors} failed.`, 'warn');
+                setChip('order-chip', 'error');
+            }
+
+            btn.disabled = false;
+            await refreshCounts();
+        };
+
+        // ── Init ──────────────────────────────────────────────────
+        refreshCounts().then(() => {
+            log(`data.js loaded: ${(window.products || []).length} products ready`, 'ok');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,26 +1,33 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details - Wilson Health Care</title>
+    <link rel="icon" type="image/jpg" href="logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="data.js"></script>
+    <script>
+        // ── Seed window.products from data.js immediately (before Firebase fires) ──
+        if (typeof products !== 'undefined' && Array.isArray(products)) {
+            window.products = products;
+        }
+    </script>
     <style>
         :root {
-            --primary: #007185;
+            --primary: #059669;
             /* Amazon blue-green */
-            --primary-dark: #005e6e;
-            --secondary: #0F1111;
-            --accent: #FFD814;
+            --primary-dark: #047857;
+            --secondary: #134e4a;
+            --accent: #f59e0b;
             /* Amazon Yellow */
-            --accent-dark: #F7CA00;
-            --buy-now: #FFA41C;
+            --accent-dark: #d97706;
+            --buy-now: #10b981;
             /* Amazon Orange */
             --bg-light: #fff;
             --gray-light: #F0F2F2;
@@ -50,7 +57,7 @@
 
         /* Navbar */
         nav {
-            background: #131921;
+            background: #0d2d2a;
             padding: 10px 5%;
             display: flex;
             align-items: center;
@@ -65,26 +72,57 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
         }
 
         .logo img {
-            height: 40px;
-            width: 40px;
+            height: 48px;
+            width: 48px;
             border-radius: 50%;
+            border: 2px solid var(--primary);
+            padding: 1px;
+            background: white;
         }
 
-        .logo-text .brand {
+        .logo .brand-wilson {
             color: white;
-            font-weight: 700;
-            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            display: flex;
+            gap: 2px;
+            font-size: 1.2rem;
+            line-height: 1;
         }
 
-        .logo-text .sub-brand {
+        .logo .brand-healthcare {
             color: var(--buy-now);
-            font-size: 0.7rem;
-            display: block;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            gap: 1.5px;
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        @keyframes letterReveal {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo span b {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: letterReveal 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
 
         .nav-actions {
@@ -122,25 +160,75 @@
             gap: 20px;
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1000px) {
             .main-container {
-                grid-template-columns: 80px 400px 1fr;
-            }
-
-            .buy-box {
-                position: static !important;
-                grid-column: 1 / -1;
-                margin-top: 20px;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .main-container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 300px;
+                grid-template-areas:
+                    "image buybox"
+                    "thumbs buybox"
+                    "details buybox";
             }
 
             .thumb-strip {
-                display: none;
+                flex-direction: row;
+                grid-area: thumbs;
+                order: 2;
+                overflow-x: auto;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .image-viewer {
+                grid-area: image;
+                height: 400px;
+            }
+
+            .product-details {
+                grid-area: details;
+            }
+
+            .buy-box {
+                grid-area: buybox;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "image"
+                    "thumbs"
+                    "details"
+                    "buybox";
+                gap: 10px;
+            }
+
+            .thumb-strip {
+                display: flex;
+                /* Ensure it's visible */
+                flex-direction: row;
+                gap: 10px;
+                overflow-x: auto;
+                padding-bottom: 5px;
+                justify-content: flex-start;
+            }
+
+            .thumb {
+                flex-shrink: 0;
+            }
+
+            .image-viewer {
+                height: 300px;
+                position: static;
+            }
+
+            .buy-box {
+                position: static;
+                margin-top: 20px;
+            }
+
+            .product-title {
+                font-size: 1.2rem;
             }
         }
 
@@ -163,8 +251,8 @@
 
         .thumb:hover,
         .thumb.active {
-            border-color: #E77600;
-            box-shadow: 0 0 3px 2px rgba(228, 121, 17, .5);
+            border-color: #059669;
+            box-shadow: 0 0 3px 2px rgba(5, 150, 105, .5);
         }
 
         .thumb img {
@@ -232,7 +320,7 @@
         }
 
         .deal-badge {
-            background: #CC0C39;
+            background: #dc2626;
             color: white;
             padding: 2px 8px;
             font-size: 0.75rem;
@@ -247,7 +335,7 @@
         }
 
         .discount-pct {
-            color: #CC0C39;
+            color: #dc2626;
             font-size: 1.8rem;
             font-weight: 300;
         }
@@ -315,7 +403,7 @@
         }
 
         .stock-status {
-            color: #007600;
+            color: #059669;
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 15px;
@@ -348,7 +436,7 @@
 
         .btn-amazon-primary {
             background: var(--accent);
-            border-color: #FCD200;
+            border-color: #d97706;
         }
 
         .btn-amazon-primary:hover {
@@ -357,7 +445,7 @@
 
         .btn-amazon-secondary {
             background: var(--buy-now);
-            border-color: #FA8914;
+            border-color: #059669;
         }
 
         .btn-amazon-secondary:hover {
@@ -401,8 +489,8 @@
         }
 
         .tab-btn.active {
-            border-bottom-color: #E77600;
-            color: #E77600;
+            border-bottom-color: #059669;
+            color: #059669;
         }
 
         .tab-pane {
@@ -419,7 +507,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #232f3e;
+            background: #134e4a;
             color: white;
             padding: 12px 24px;
             border-radius: 4px;
@@ -474,19 +562,183 @@
             margin-top: 10px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
+        /* ── Mobile Responsive ─────────────────────────────────────── */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+                padding-bottom: 80px;
+                /* Space for bottom nav */
+            }
+
+            .main-container {
+                padding: 0 12px;
+                gap: 15px;
+            }
+
+            .logo img {
+                height: 42px;
+                width: 42px;
+            }
+
+            .logo .brand-wilson {
+                font-size: 1.3rem !important;
+                letter-spacing: -0.5px;
+            }
+
+            .logo .brand-healthcare {
+                font-size: 0.65rem !important;
+                letter-spacing: 1.2px !important;
+                margin-top: -3px;
+                color: var(--buy-now) !important;
+            }
+
+            .nav-actions {
+                gap: 1rem;
+            }
+
+            .main-product-img {
+                max-height: 320px;
+                object-fit: contain;
+            }
+
+            .buy-box {
+                margin-top: 10px;
+                border: 1px solid #e5e7eb;
+                background: #fdfdfd;
+                padding: 1.2rem;
+            }
+
+            /* ── Mobile Bottom Navigation Bar Styles ── */
+            .mobile-bottom-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 9999;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                border-top: 1px solid rgba(5, 150, 105, 0.15);
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+                padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .mnav-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                flex: 1;
+                color: #64748b;
+                text-decoration: none;
+                background: none;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .mnav-item i {
+                font-size: 1.4rem;
+            }
+
+            .mnav-item:active {
+                transform: scale(0.9);
+                color: var(--primary);
+            }
+
+            .mnav-label {
+                font-size: 0.65rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.2px;
+            }
+
+            .mnav-badge {
+                position: absolute;
+                top: 5px;
+                left: 55%;
+                background: var(--primary);
+                color: white;
+                font-size: 0.65rem;
+                min-width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                border: 1.5px solid white;
+            }
+        }
     </style>
+    <!-- Firebase Auth & Data Module -->
+    <script type="module" src="auth.js"></script>
+    <script type="module">
+        import { db, collection, getDocs, doc, getDoc, onSnapshot } from './firebase-config.js';
+
+        // Expose Firestore to window for debug/helper
+        window._db = db;
+
+        // Bridge for auth.js events
+        window.onWilsonSignIn = function (merged) {
+            window.currentUser = merged;
+            if (typeof updateUserNav === 'function') updateUserNav(merged);
+        };
+        window.onWilsonSignOut = function () {
+            window.currentUser = null;
+            if (typeof updateUserNav === 'function') updateUserNav(null);
+        };
+
+        // ── Live product sync — merge with existing data.js products ──────────
+        onSnapshot(collection(db, 'products'), (snapshot) => {
+            if (snapshot.empty) return;
+            const fbProducts = [];
+            snapshot.forEach(d => {
+                const data = d.data();
+                fbProducts.push({ id: data.id ?? parseInt(d.id) ?? d.id, ...data });
+            });
+
+            // Merge: Firebase takes priority, data.js fills any gaps
+            const base = (typeof products !== 'undefined' && Array.isArray(products)) ? products : [];
+            const merged = [...base];
+            fbProducts.forEach(fp => {
+                const idx = merged.findIndex(p => String(p.id) === String(fp.id));
+                if (idx >= 0) merged[idx] = fp; // update existing
+                else merged.push(fp);            // add new
+            });
+            window.products = merged;
+            console.log(`✅ Firebase Sync: ${fbProducts.length} Firebase + ${base.length} local = ${merged.length} total products`);
+
+            // If we didn't find the product initially, retry now
+            if (typeof retryFindProduct === 'function') retryFindProduct();
+        });
+    </script>
 </head>
 
 <body>
     <nav>
         <a href="index.html" class="logo">
             <img src="logo.jpg" alt="Wilson Logo">
-            <div class="logo-text">
-                <span class="brand">WILSON</span>
-                <span class="sub-brand">HEALTH CARE</span>
+            <div style="display: flex; flex-direction: column; line-height: 1.1;">
+                <span class="brand-wilson">
+                    <b style="animation-delay: 0.1s">W</b><b style="animation-delay: 0.15s">I</b><b
+                        style="animation-delay: 0.2s">L</b><b style="animation-delay: 0.25s">S</b><b
+                        style="animation-delay: 0.3s">O</b><b style="animation-delay: 0.35s">N</b>
+                </span>
+                <span class="brand-healthcare">
+                    <b style="animation-delay: 0.4s">H</b><b style="animation-delay: 0.45s">E</b><b
+                        style="animation-delay: 0.5s">A</b><b style="animation-delay: 0.55s">L</b><b
+                        style="animation-delay: 0.6s">T</b><b style="animation-delay: 0.65s">H</b>&nbsp;
+                    <b style="animation-delay: 0.7s">C</b><b style="animation-delay: 0.75s">A</b><b
+                        style="animation-delay: 0.8s">R</b><b style="animation-delay: 0.85s">E</b>
+                </span>
             </div>
         </a>
         <div class="nav-actions">
@@ -495,6 +747,11 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span class="badge" id="cart-count">0</span>
             </a>
+            <!-- Auth Button -->
+            <button id="login-nav-btn" onclick="handleAuthNavClick()" title="Account"
+                style="background:none; border:none; cursor:pointer; color:white; font-size:1.2rem; padding:0; position:relative;">
+                <i class="fas fa-user-circle"></i>
+            </button>
         </div>
     </nav>
 
@@ -585,7 +842,7 @@
             <span class="buy-price">₹<span id="buy-box-price">0.00</span></span>
             <div class="delivery-info">
                 <a href="#" class="brand-link">FREE delivery</a> <strong>Tomorrow</strong>. Order within <span
-                    style="color: #007600;">8 hrs</span>.
+                    style="color: #059669;">8 hrs</span>.
             </div>
             <div class="stock-status">In stock</div>
 
@@ -620,33 +877,341 @@
         </div>
     </div>
 
-    <div class="toast" id="toast">Added to cart!</div>
+    <div class="toast" id="toast">Item added to cart!</div>
 
-    <script>
-        // Get ID from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = parseInt(urlParams.get('id'));
-        let currentProduct = products.find(p => p.id === productId);
+    <!-- Order Confirmation Popup -->
+    <div class="modal-overlay" id="confirm-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:2000; align-items:center; justify-content:center;">
+        <div class="modal-content"
+            style="width: 500px; max-width:95%; border-radius: 20px; animation: slideDown 0.4s ease; text-align: left; padding: 2rem; background: #fff; max-height: 90vh; overflow-y: auto;">
+            <div
+                style="display: flex; align-items: center; gap: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 1rem; margin-bottom: 1.5rem;">
+                <div
+                    style="width: 40px; height: 40px; background: rgba(5, 150, 105, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 10px; font-size: 1.2rem;">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div>
+                    <h3 style="color: var(--secondary); margin: 0; font-size: 1.2rem;">Booking Confirmation</h3>
+                    <p style="color: #64748b; font-size: 0.8rem; margin: 0;">Please verify your details</p>
+                </div>
+            </div>
 
-        function init() {
-            if (!currentProduct) {
-                // Try to find if the filename is XX.html
-                const pathParts = window.location.pathname.split('/');
-                const fileName = pathParts[pathParts.length - 1];
-                const fileId = parseInt(fileName.split('.')[0]);
-                if (!isNaN(fileId)) {
-                    currentProduct = products.find(p => p.id === fileId);
-                }
+            <!-- Item Brief -->
+            <div id="confirm-items-preview"
+                style="margin-bottom: 1.5rem; border: 1.5px solid #f1f5f9; border-radius: 12px; padding: 12px; background: #f8fafc;">
+                <!-- Product summary injected here -->
+            </div>
+
+            <!-- Delivery Address (Editable) -->
+            <div style="margin-bottom: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                    <h4
+                        style="font-size: 0.9rem; color: var(--secondary); margin: 0; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-map-marker-alt" style="color: #ef4444;"></i> Delivery Address
+                    </h4>
+                    <span style="font-size: 0.75rem; color: var(--primary); font-weight: 600; cursor: pointer;"
+                        onclick="document.querySelectorAll('.address-input').forEach(i => i.disabled = !i.disabled)">
+                        <i class="fas fa-edit"></i> Edit
+                    </span>
+                </div>
+
+                <div id="confirm-address-area"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #fff; padding: 1rem; border-radius: 12px; border: 1.5px solid #eef2f6;">
+                    <div style="grid-column: 1 / -1;">
+                        <label
+                            style="font-size: 0.65rem; color: #64748b; font-weight: 700; margin-bottom: 3px; display: block;">Recipient
+                            Name</label>
+                        <input type="text" id="conf-name" class="address-input" disabled
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.85rem;">
+                    </div>
+                    <div>
+                        <label
+                            style="font-size: 0.65rem; color: #64748b; font-weight: 700; margin-bottom: 3px; display: block;">House
+                            No.</label>
+                        <input type="text" id="conf-hno" class="address-input" disabled
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.85rem;">
+                    </div>
+                    <div>
+                        <label
+                            style="font-size: 0.65rem; color: #64748b; font-weight: 700; margin-bottom: 3px; display: block;">Street</label>
+                        <input type="text" id="conf-street" class="address-input" disabled
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.85rem;">
+                    </div>
+                    <div>
+                        <label
+                            style="font-size: 0.65rem; color: #64748b; font-weight: 700; margin-bottom: 3px; display: block;">Pincode</label>
+                        <input type="text" id="conf-pincode" class="address-input" disabled
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.85rem;">
+                    </div>
+                    <div>
+                        <label
+                            style="font-size: 0.65rem; color: #64748b; font-weight: 700; margin-bottom: 3px; display: block;">District</label>
+                        <input type="text" id="conf-district" class="address-input" disabled
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.85rem;">
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <button class="btn-amazon btn-amazon-primary" style="margin:0; border-radius:10px; height:45px;"
+                    onclick="confirmOrder()">
+                    Confirm Order
+                </button>
+                <button class="btn-amazon"
+                    style="margin:0; border-radius:10px; height:45px; background:#f1f5f9; border-color:#e2e8f0; color:#64748b;"
+                    onclick="closeModal('confirm')">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes slideDown {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
             }
 
-            if (!currentProduct) {
-                document.body.innerHTML = "<h2 style='text-align:center; margin-top:100px;'>Product Not Found</h2><p style='text-align:center;'><a href='index.html'>Back Home</a></p>";
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-overlay {
+            display: none;
+        }
+    </style>
+
+    <script>
+        // Modal functions
+        function openModal(id) {
+            const modal = document.getElementById(`${id}-modal`);
+            if (modal) {
+                modal.style.display = 'flex';
+                // Populate modal content if it's the confirm modal
+                if (id === 'confirm' && currentProduct) {
+                    const qty = document.getElementById('qty-select').value;
+                    document.getElementById('confirm-items-preview').innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <img src="${currentProduct.image}" alt="${currentProduct.name}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;">
+                            <div>
+                                <p style="font-size: 0.9rem; font-weight: 600; color: var(--secondary); margin: 0;">${currentProduct.name}</p>
+                                <p style="font-size: 0.8rem; color: #64748b; margin: 0;">Qty: ${qty} | Price: ₹${(currentProduct.price * qty).toLocaleString('en-IN')}</p>
+                            </div>
+                        </div>
+                    `;
+                    // Populate address fields (dummy data for now)
+                    document.getElementById('conf-name').value = 'John Doe';
+                    document.getElementById('conf-hno').value = '123';
+                    document.getElementById('conf-street').value = 'Main St';
+                    document.getElementById('conf-pincode').value = '123456';
+                    document.getElementById('conf-district').value = 'Anytown';
+                }
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(`${id}-modal`);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        function confirmOrder() {
+            // In a real app, this would send the order to a backend
+            console.log('Order confirmed for:', currentProduct.name, 'Quantity:', document.getElementById('qty-select').value);
+            closeModal('confirm');
+            showToast('Order placed successfully!');
+            // Optionally redirect to an order confirmation page or clear cart
+        }
+
+        // Get constants from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        let productId = urlParams.get('id');
+        let currentProduct = null;
+
+        // If no ID in query, try to get it from path (handle clean URLs like /product-detail/1)
+        if (!productId) {
+            const pathParts = window.location.pathname.split('/');
+            const lastPart = pathParts[pathParts.length - 1];
+            if (lastPart && !lastPart.includes('.html') && lastPart !== 'product-detail') {
+                productId = lastPart;
+            }
+        }
+
+        function findProduct() {
+            if (!productId || productId === 'null' || productId === 'undefined') return null;
+
+            // Priority 1: Check window.products (populated by data.js OR Firestore)
+            const list = window.products || (typeof products !== 'undefined' ? products : []);
+            let found = list.find(p => p && (String(p.id) === String(productId)));
+
+            // Priority 2: Check by filename (legacy or direct access)
+            if (!found) {
+                const pathParts = window.location.pathname.split('/');
+                const fileName = pathParts[pathParts.length - 1].toLowerCase();
+                const fileId = fileName.split('.')[0];
+                if (fileId && fileId !== 'product-detail' && fileId !== 'product-detail.html') {
+                    found = list.find(p => p && String(p.id) === String(fileId));
+                }
+            }
+            return found;
+        }
+
+        window.retryFindProduct = function () {
+            if (currentProduct) return; // already found
+            const found = findProduct();
+            if (found) {
+                currentProduct = found;
+                renderProduct();
+                renderRelated();
+                console.log("✅ Product found after content/sync update");
+            }
+        };
+
+        function init() {
+            // If no product ID at all — show a friendly redirect message
+            if (!productId || productId === 'null' || productId === 'undefined') {
+                document.getElementById('product-title').innerText = "No Product Selected";
+                document.body.innerHTML = `
+                    <div style="text-align:center; padding: 100px 20px; font-family:'Segoe UI',sans-serif;">
+                        <img src="logo.jpg" style="height:70px; margin-bottom:20px; border-radius:50%;" onerror="this.style.display='none'">
+                        <h2 style="font-size:2rem; color:#1e293b;">No Product Selected</h2>
+                        <p style="color:#64748b; margin: 15px 0 30px;">Please browse our store and click on a product to view its details.</p>
+                        <a href="index.html" style="background:#059669; color:white; padding:14px 30px; border-radius:12px; text-decoration:none; font-weight:700; font-size:1rem;">← Browse Products</a>
+                    </div>`;
                 return;
             }
 
-            renderProduct();
-            renderRelated();
+            // First attempt — try from data.js (already seeded into window.products)
+            currentProduct = findProduct();
+
+            if (currentProduct) {
+                renderProduct();
+                renderRelated();
+            } else {
+                // Show loading state while waiting for Firebase
+                console.warn(`Product ID "${productId}" not in data.js, trying Firestore...`);
+                document.getElementById('product-title').innerText = "Loading Product...";
+
+                // Actively fetch from Firestore
+                _tryFetchFromFirestore(productId);
+
+                // Fallback timeout – show Not Found after 12 seconds
+                const notFoundTimer = setTimeout(() => {
+                    if (!currentProduct) {
+                        document.body.innerHTML = `
+                            <div style="text-align:center; padding: 100px 20px; font-family:'Segoe UI',sans-serif;">
+                                <img src="logo.jpg" style="height:70px; margin-bottom:20px; border-radius:50%;" onerror="this.style.display='none'">
+                                <h2 style="font-size:2rem; color:#1e293b;">Product Not Found</h2>
+                                <p style="color:#64748b; margin: 15px 0 30px;">The product you're looking for is not available or may have been removed.</p>
+                                <a href="index.html" style="background:#059669; color:white; padding:14px 30px; border-radius:12px; text-decoration:none; font-weight:700; font-size:1rem;">← Back to Home</a>
+                            </div>`;
+                    }
+                }, 12000);
+
+                // If products come in from Firestore listener, render immediately
+                window._onProductsReady = () => {
+                    currentProduct = findProduct();
+                    if (currentProduct) {
+                        clearTimeout(notFoundTimer);
+                        renderProduct();
+                        renderRelated();
+                        updateCartCount();
+                    }
+                };
+            }
+
             updateCartCount();
+
+            // Restore user from cache
+            const cached = JSON.parse(localStorage.getItem('wilson-user') || 'null');
+            if (cached) {
+                window.currentUser = cached;
+                updateUserNav(cached);
+            }
+        }
+
+        // Directly fetch this product from Firestore if window.products isn't loaded yet
+        async function _tryFetchFromFirestore(id) {
+            try {
+                // Wait for window._db to be set by the module script (up to 5s)
+                let attempts = 0;
+                while (!window._db && attempts < 50) {
+                    await new Promise(r => setTimeout(r, 100));
+                    attempts++;
+                }
+
+                const firebaseDb = window._db;
+                if (!firebaseDb) {
+                    console.warn('Firestore db not available for direct product fetch');
+                    return;
+                }
+
+                // Dynamically import only what we need
+                const { doc, getDoc, collection, getDocs } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+
+                // Try direct product fetch first (fastest)
+                const snap = await getDoc(doc(firebaseDb, 'products', String(id)));
+                if (snap.exists()) {
+                    const data = snap.data();
+                    currentProduct = { id: data.id ?? id, ...data };
+                    if (!window.products) window.products = [];
+                    window.products.push(currentProduct);
+                    renderProduct();
+                    renderRelated();
+                    updateCartCount();
+                    console.log('✅ Product loaded directly from Firestore');
+                    return;
+                }
+
+                // If not found by direct ID, search all products
+                const allSnap = await getDocs(collection(firebaseDb, 'products'));
+                const allProds = [];
+                allSnap.forEach(d => allProds.push({ id: d.data().id ?? d.id, ...d.data() }));
+                window.products = allProds;
+
+                // Try to find now
+                currentProduct = findProduct();
+                if (currentProduct) {
+                    renderProduct();
+                    renderRelated();
+                    updateCartCount();
+                } else if (typeof window._onProductsReady === 'function') {
+                    window._onProductsReady();
+                }
+
+            } catch (err) {
+                console.warn('Firestore fetch on product-detail failed:', err.message);
+            }
+        }
+
+        function updateUserNav(user) {
+            const btn = document.getElementById('login-nav-btn');
+            if (!btn) return;
+            if (user) {
+                if (user.profilePic) {
+                    btn.innerHTML = `<img src="${user.profilePic}" style="width:28px;height:28px;border-radius:50%;border:2px solid #059669;object-fit:cover;" onerror="this.outerHTML='<i class=\\'fas fa-user-check\\'></i>'">`;
+                } else {
+                    btn.innerHTML = `<i class="fas fa-user-check" style="color:#059669;"></i>`;
+                }
+            } else {
+                btn.innerHTML = `<i class="fas fa-user-circle"></i>`;
+            }
+        }
+
+        function handleAuthNavClick() {
+            const user = window.currentUser || JSON.parse(localStorage.getItem('wilson-user') || 'null');
+            if (user) {
+                if (confirm(`Signed in as ${user.name || user.email}\n\nSign out?`)) {
+                    if (typeof window.wilsonSignOut === 'function') window.wilsonSignOut();
+                    else { localStorage.removeItem('wilson-user'); window.currentUser = null; updateUserNav(null); }
+                }
+            } else {
+                if (typeof window.openAuthModal === 'function') window.openAuthModal();
+            }
         }
 
         function renderProduct() {
@@ -687,9 +1252,13 @@
         }
 
         function handleAddToCart() {
-            const user = JSON.parse(localStorage.getItem('wilson-user'));
+            const user = window.currentUser || JSON.parse(localStorage.getItem('wilson-user') || 'null');
             if (!user) {
-                showToast("Please login on the home page first");
+                showToast("Please sign in to add items to cart");
+                // Open the auth modal from auth.js
+                if (typeof window.openAuthModal === 'function') {
+                    setTimeout(() => window.openAuthModal(), 400);
+                }
                 return;
             }
             let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
@@ -701,18 +1270,103 @@
                 cart.push({ ...currentProduct, quantity: qty, cartId: Date.now() });
             }
             localStorage.setItem('wilson-cart', JSON.stringify(cart));
-            showToast(`Added ${qty} item(s) to cart!`);
+            showToast(`Added ${qty} item(s) to cart! ✓`);
             updateCartCount();
         }
 
+        function openModal(id) {
+            document.getElementById(`${id}-modal`).style.display = 'flex';
+        }
+        function closeModal(id) {
+            document.getElementById(`${id}-modal`).style.display = 'none';
+        }
+
         function handleBuyNow() {
+            const user = window.currentUser || JSON.parse(localStorage.getItem('wilson-user') || 'null');
+            if (!user) {
+                showToast("Please sign in first");
+                if (typeof window.openAuthModal === 'function') {
+                    setTimeout(() => window.openAuthModal(), 400);
+                }
+                return;
+            }
+
             const qty = document.getElementById('qty-select').value;
-            const text = `Hi Wilson Health Care, I'm interested in ordering ${qty} unit(s) of ${currentProduct.name} (ID: ${currentProduct.id}).`;
-            window.open(`https://wa.me/917032687122?text=${encodeURIComponent(text)}`, '_blank');
+            const preview = document.getElementById('confirm-items-preview');
+            preview.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 15px; text-align: left;">
+                    <img src="${currentProduct.image}" style="width: 60px; height: 60px; border-radius: 8px; object-fit: cover;">
+                    <div style="flex: 1;">
+                        <div style="font-weight: 700; color: var(--secondary); font-size: 1rem;">${currentProduct.name}</div>
+                        <div style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Qty: ${qty} × Rs ${currentProduct.price.toLocaleString('en-IN')}</div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('conf-name').value = user.name || '';
+            document.getElementById('conf-hno').value = user.hno || '';
+            document.getElementById('conf-street').value = user.street || '';
+            document.getElementById('conf-pincode').value = user.pincode || '';
+            document.getElementById('conf-district').value = user.district || '';
+
+            document.querySelectorAll('.address-input').forEach(i => i.disabled = true);
+            openModal('confirm');
+        }
+
+        function confirmOrder() {
+            const user = window.currentUser || JSON.parse(localStorage.getItem('wilson-user') || 'null');
+            const name = document.getElementById('conf-name').value.trim();
+            const hno = document.getElementById('conf-hno').value.trim();
+            const street = document.getElementById('conf-street').value.trim();
+            const pincode = document.getElementById('conf-pincode').value.trim();
+            const district = document.getElementById('conf-district').value.trim();
+
+            if (!name || !hno || !street || !pincode || !district) {
+                alert("Please fill all delivery details");
+                return;
+            }
+
+            // Update user details permanently for this and future orders
+            const updatedUser = { ...user, name, hno, street, pincode, district };
+            window.currentUser = updatedUser;
+            localStorage.setItem('wilson-user', JSON.stringify(updatedUser));
+
+            if (typeof window._saveUserToFirestore === 'function') {
+                window._saveUserToFirestore(updatedUser, null);
+            }
+
+            const updatedAddr = `${hno}, ${street}, ${district} - ${pincode}`;
+            const qty = document.getElementById('qty-select').value;
+
+            const message = `Hi Wilson Health Care, I'm booking an order:
+*Product:* ${currentProduct.name}
+*Quantity:* ${qty}
+*Total:* Rs ${(currentProduct.price * qty).toLocaleString('en-IN')}
+
+*Delivery Details:*
+*Name:* ${name}
+*Address:* ${updatedAddr}
+*Contact:* ${user.mobile || 'N/A'}`;
+
+            closeModal('confirm');
+            window.open(`https://wa.me/917032687122?text=${encodeURIComponent(message)}`, '_blank');
         }
 
         function handleWishlist() {
-            showToast("Added to your wishlist!");
+            const user = window.currentUser || JSON.parse(localStorage.getItem('wilson-user') || 'null');
+            if (!user) {
+                showToast("Please sign in to use wishlist");
+                if (typeof window.openAuthModal === 'function') setTimeout(() => window.openAuthModal(), 400);
+                return;
+            }
+            let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+            if (!wishlist.includes(String(currentProduct.id))) {
+                wishlist.push(String(currentProduct.id));
+                localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+                showToast("Added to your wishlist! ♥");
+            } else {
+                showToast("Already in your wishlist!");
+            }
         }
 
         function showToast(msg) {
@@ -729,17 +1383,55 @@
 
         function renderRelated() {
             const grid = document.getElementById('related-grid');
-            const related = products.filter(p => p.category === currentProduct.category && p.id !== currentProduct.id).slice(0, 5);
+            if (!currentProduct) return;
+            const related = (window.products || []).filter(p => p.category === currentProduct.category && String(p.id) !== String(currentProduct.id)).slice(0, 5);
             grid.innerHTML = related.map(p => `
                 <a href="product-detail.html?id=${p.id}" class="related-card">
                     <img src="${p.image}" alt="${p.name}">
                     <div class="related-title">${p.name}</div>
-                    <div style="font-weight: 700; color: #B12704; margin-top: 5px;">₹${p.price.toLocaleString('en-IN')}</div>
+                    <div style="font-weight: 700; color: #059669; margin-top: 5px;">₹${(p.price || 0).toLocaleString('en-IN')}</div>
                 </a>
             `).join('');
         }
 
         init();
+    </script>
+    <!-- Mobile Bottom Navigation Bar (Deep Link to Index Items) -->
+    <nav class="mobile-bottom-nav">
+        <a class="mnav-item" href="index.html" title="Home">
+            <i class="fas fa-home"></i>
+            <span class="mnav-label">Home</span>
+        </a>
+        <a class="mnav-item" href="index.html" onclick="localStorage.setItem('wilson-search-focus', 'true');"
+            title="Search">
+            <i class="fas fa-search"></i>
+            <span class="mnav-label">Search</span>
+        </a>
+        <a class="mnav-item" href="index.html#open-wishlist" title="Wishlist">
+            <i class="far fa-heart"></i>
+            <span class="mnav-label">Wishlist</span>
+        </a>
+        <a class="mnav-item" href="index.html#open-cart" title="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="mnav-badge" id="mobile-cart-count" style="display:none;">0</span>
+            <span class="mnav-label">Cart</span>
+        </a>
+        <a class="mnav-item" href="index.html#open-orders" title="Orders">
+            <i class="fas fa-box"></i>
+            <span class="mnav-label">Orders</span>
+        </a>
+    </nav>
+
+    <script>
+        // Sync mobile badge
+        setInterval(() => {
+            const cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+            const badge = document.getElementById('mobile-cart-count');
+            if (badge) {
+                badge.innerText = cart.length;
+                badge.style.display = cart.length > 0 ? 'flex' : 'none';
+            }
+        }, 1000);
     </script>
 </body>
 

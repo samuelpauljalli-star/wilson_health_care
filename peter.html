@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,10 +16,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --primary: #0ea5e9;
-            --primary-dark: #0284c7;
-            --secondary: #1e3a8a;
-            --accent: #22c55e;
+            --primary: #059669;
+            --primary-dark: #047857;
+            --secondary: #134e4a;
+            --accent: #f59e0b;
             --bg-dark: #0f172a;
             --card-dark: #1e293b;
             --white: #ffffff;
@@ -344,31 +344,21 @@
         <div class="login-card">
             <img src="logo.jpg" class="login-logo" alt="Wilson Logo">
             <h1>Admin Portal</h1>
-            <p>Enter your credentials to access the secure dashboard.</p>
+            <p id="login-subtitle">Checking authorization...</p>
 
-            <form id="admin-login-form">
-                <div class="input-group">
-                    <label>Admin Code</label>
-                    <input type="text" id="admin-code" placeholder="Enter code" required>
-                </div>
-                <div class="input-group">
-                    <label>Access Key</label>
-                    <input type="password" id="admin-pass" placeholder="••••••••" required>
-                </div>
-                <button type="submit" class="login-btn">Secure Login</button>
-            </form>
-
-            <div style="margin: 1.5rem 0; display: flex; align-items: center; gap: 10px; color: var(--text-dim);">
-                <div style="flex: 1; height: 1px; background: rgba(255,255,255,0.1);"></div>
-                <span style="font-size: 0.8rem;">OR</span>
-                <div style="flex: 1; height: 1px; background: rgba(255,255,255,0.1);"></div>
+            <div id="login-loading" style="margin: 2rem 0; color: var(--text-dim);">
+                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--primary);"></i>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Verifying your session...</p>
             </div>
 
-            <button class="google-btn" onclick="adminLoginWithGoogle()">
+            <button id="google-login-btn" class="google-btn" onclick="adminLoginWithGoogle()"
+                style="display:none; margin-top:1rem;">
                 <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png"
                     style="width: 20px;">
-                Authenticate with Gmail
+                Sign in with Google
             </button>
+
+            <p id="login-error" style="color:#ef4444; font-size:0.8rem; margin-top:1rem; display:none;"></p>
         </div>
     </div>
 
@@ -397,7 +387,7 @@
             </div>
 
             <div style="margin-top: auto;">
-                <div class="nav-item" onclick="location.reload()" style="color: #ef4444;">
+                <div class="nav-item" onclick="window.signOutAdmin && window.signOutAdmin()" style="color: #ef4444;">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </div>
             </div>
@@ -431,12 +421,33 @@
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
                     <div class="data-card">
-                        <h2>Sales Analytics (Monthly)</h2>
+                        <div
+                            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                            <h2 style="margin:0;">Revenue (₹)</h2>
+                            <select id="revenue-year" onchange="initCharts()"
+                                style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:4px 10px; border-radius:8px; color:white; font-size:0.8rem;"></select>
+                        </div>
                         <canvas id="monthlyChart"></canvas>
                     </div>
                     <div class="data-card">
-                        <h2>Order Volume (Yearly)</h2>
+                        <div
+                            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                            <h2 style="margin:0;">Orders Count</h2>
+                            <select id="orders-year" onchange="initCharts()"
+                                style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:4px 10px; border-radius:8px; color:white; font-size:0.8rem;"></select>
+                        </div>
                         <canvas id="yearlyChart"></canvas>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <div class="data-card">
+                        <div
+                            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                            <h2 style="margin:0;">New Users Per Month</h2>
+                            <select id="users-year" onchange="initCharts()"
+                                style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); padding:4px 10px; border-radius:8px; color:white; font-size:0.8rem;"></select>
+                        </div>
+                        <canvas id="usersChart" style="max-height:220px;"></canvas>
                     </div>
                 </div>
             </div>
@@ -445,12 +456,18 @@
             <div id="tab-orders" class="tab-content" style="display: none;">
                 <div class="data-card">
                     <h2>Orders Management
-                        <div style="display: flex; gap: 10px;">
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <input type="text" id="order-search" placeholder="Search orders..." oninput="filterOrders()"
+                                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 10px; color: white; font-size: 0.8rem; width: 180px;">
+                            <button onclick="loadFirebaseOrders()"
+                                style="background: var(--primary); border: none; color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer; font-weight:700;">
+                                <i class="fas fa-sync"></i> Refresh
+                            </button>
                             <button
                                 style="background: #ef4444; border: none; color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;"
-                                onclick="clearData('orders')">Clear Orders</button>
+                                onclick="clearData('orders')">Clear Local</button>
                             <button
-                                style="background: var(--primary); border: none; color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;"
+                                style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;"
                                 onclick="exportToExcel()">Export Report</button>
                         </div>
                     </h2>
@@ -459,7 +476,8 @@
                             <thead>
                                 <tr>
                                     <th>Order ID</th>
-                                    <th>Customer & Address</th>
+                                    <th>Customer &amp; Contact</th>
+                                    <th>Ordered Items</th>
                                     <th>Date</th>
                                     <th>Amount</th>
                                     <th>Status</th>
@@ -467,43 +485,54 @@
                                 </tr>
                             </thead>
                             <tbody id="orders-body">
-                                <!-- Orders dynamic -->
+                                <tr>
+                                    <td colspan="7" style="text-align:center; color:var(--text-dim); padding:2rem;">
+                                        Loading orders from Firebase...</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
 
+
             <!-- Customers Tab -->
             <div id="tab-customers" class="tab-content" style="display: none;">
                 <div class="data-card">
                     <h2>Customer Management
                         <div style="display: flex; gap: 10px;">
-                            <input type="text" id="customer-search" placeholder="Search by name, mobile, email..."
-                                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 10px; color: white; font-size: 0.8rem; width: 250px;"
+                            <input type="text" id="customer-search" placeholder="Search by name, email..."
+                                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 10px; color: white; font-size: 0.8rem; width: 220px;"
                                 oninput="filterCustomers()">
+                            <button onclick="loadFirebaseUsers()"
+                                style="background: var(--primary); border: none; color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer; font-weight:700;">
+                                <i class="fas fa-sync"></i> Refresh
+                            </button>
                             <button
                                 style="background: #ef4444; border: none; color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;"
-                                onclick="clearData('users')">Clear Users</button>
+                                onclick="clearData('users')">Clear Local</button>
                         </div>
                     </h2>
                     <div style="overflow-x: auto;">
                         <table id="users-table">
                             <thead>
                                 <tr>
-                                    <th onclick="sortUsers('name')" style="cursor: pointer;">Name <i
-                                            class="fas fa-sort"></i></th>
-                                    <th onclick="sortUsers('mobile')" style="cursor: pointer;">Mobile <i
-                                            class="fas fa-sort"></i></th>
+                                    <th>Avatar</th>
+                                    <th>Name</th>
                                     <th>Email</th>
-                                    <th onclick="sortUsers('lastLogin')" style="cursor: pointer;">Last Login <i
-                                            class="fas fa-sort"></i></th>
-                                    <th>Location</th>
+                                    <th>Phone</th>
+                                    <th>Provider</th>
+                                    <th>Last Login</th>
+                                    <th>Orders</th>
+                                    <th>Total Spent</th>
                                     <th style="text-align:right;">Action</th>
                                 </tr>
                             </thead>
                             <tbody id="users-body">
-                                <!-- Users dynamic -->
+                                <tr>
+                                    <td colspan="9" style="text-align:center; color: var(--text-dim); padding:2rem;">
+                                        Loading users from Firebase...</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -513,8 +542,64 @@
             <!-- Products Tab -->
             <div id="tab-products" class="tab-content" style="display: none;">
                 <div class="data-card">
-                    <h2>Inventory Status</h2>
-                    <p style="color: var(--text-dim);">Product management coming soon...</p>
+                    <h2>Inventory Status
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+                            <a href="product-manager.html" target="_blank"
+                                style="background: #059669; border: none; color: white; padding: 6px 14px; border-radius: 10px; font-size: 0.8rem; cursor: pointer; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+                                <i class="fas fa-table"></i> Open Excel Editor
+                            </a>
+                            <input type="text" id="product-search" placeholder="Search..." oninput="applyFilters()"
+                                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 10px; color: white; font-size: 0.8rem; width: 150px;">
+
+                            <select id="category-filter" onchange="applyFilters()"
+                                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 10px; color: white; font-size: 0.8rem; cursor: pointer;">
+                                <option value="All">All Categories</option>
+                            </select>
+
+                            <select id="sort-products" onchange="applyFilters()"
+                                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 10px; color: white; font-size: 0.8rem; cursor: pointer;">
+                                <option value="id-asc">Sort by ID</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="name-asc">Name: A-Z</option>
+                            </select>
+
+                            <button onclick="syncAllToDB()"
+                                style="background: var(--accent); border: none; color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer; font-weight: 700;"
+                                title="Sync products from data.js to Database">
+                                <i class="fas fa-cloud-upload-alt"></i> Sync All
+                            </button>
+                            <button onclick="openAddModal()"
+                                style="background: var(--primary); border: none; color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer; font-weight: 700;">
+                                <i class="fas fa-plus"></i> Add Product
+                            </button>
+                            <button onclick="loadProducts()"
+                                style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 5px 15px; border-radius: 10px; font-size: 0.8rem; cursor: pointer;">
+                                <i class="fas fa-sync"></i>
+                            </button>
+                        </div>
+                    </h2>
+
+                    <div style="overflow-x: auto; margin-top: 1rem;">
+                        <table id="products-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Stock Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="products-body">
+                                <tr>
+                                    <td colspan="6" style="text-align:center; padding: 2rem;">Loading products from
+                                        Firestore...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -523,6 +608,19 @@
                 <div class="data-card">
                     <h2>Admin Settings</h2>
                     <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                        <div
+                            style="padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;">Site Announcement</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">Update the
+                                scrolling marquee at the top of the home page.</p>
+                            <div style="display: flex; gap: 10px;">
+                                <input type="text" id="announcement-text" placeholder="Type announcement here..."
+                                    style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 10px; color: white;">
+                                <button onclick="saveAnnouncement()"
+                                    style="background: var(--primary); border: none; color: white; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: 600;">Update</button>
+                            </div>
+                        </div>
+
                         <div
                             style="padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 15px; border: 1px solid rgba(255,255,255,0.05);">
                             <h4 style="margin-bottom: 0.5rem;">Database Maintenance</h4>
@@ -540,35 +638,462 @@
 
     <div class="toast" id="toast">Invalid Credentials</div>
 
+    <style>
+        /* Fix Dropdown Colors for Dark Theme */
+        select option {
+            background-color: var(--card-dark);
+            color: var(--text-main);
+        }
+    </style>
+
+    <!-- Edit/Add Product Modal -->
+    <div class="modal-overlay" id="edit-product-modal"
+        style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center;">
+        <div class="modal-content"
+            style="background: var(--card-dark); padding: 2rem; border-radius: 20px; width: 95%; max-width: 650px; border: 1px solid rgba(255,255,255,0.1); max-height: 90vh; overflow-y: auto;">
+            <h2 id="modal-title" style="margin-bottom: 1.5rem;">Edit Product</h2>
+            <div id="id-group" class="input-group">
+                <label>Product ID (Unique Number)</label>
+                <input type="number" id="edit-id">
+            </div>
+
+            <div class="input-group">
+                <label>Product Name</label>
+                <input type="text" id="edit-name">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="input-group">
+                    <label>Category</label>
+                    <select id="edit-category"
+                        style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: white; outline: none;">
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Stock Status</label>
+                    <select id="edit-stock"
+                        style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: white; outline: none;">
+                        <option value="true">In Stock</option>
+                        <option value="false">Out of Stock</option>
+                    </select>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                <div class="input-group">
+                    <label>Current Price (₹)</label>
+                    <input type="number" id="edit-price">
+                </div>
+                <div class="input-group">
+                    <label>Old Price (₹)</label>
+                    <input type="number" id="edit-old-price" placeholder="M.R.P.">
+                </div>
+                <div class="input-group">
+                    <label>Rating (e.g. 4.5)</label>
+                    <input type="number" step="0.1" id="edit-rating">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Discount Tag (e.g. 25% OFF)</label>
+                <input type="text" id="edit-discount">
+            </div>
+
+            <div class="input-group">
+                <label>Main Image URL</label>
+                <input type="text" id="edit-image-url" placeholder="https://...">
+            </div>
+
+            <div class="input-group">
+                <label>Description</label>
+                <textarea id="edit-desc"
+                    style="width: 100%; height: 80px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; color: white; padding: 1rem; font-family: inherit; resize: none;"></textarea>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 1rem;">
+                <button onclick="saveProductChanges()"
+                    style="flex: 1; padding: 1rem; background: var(--primary); border: none; border-radius: 10px; color: white; font-weight: bold; cursor: pointer;">Save
+                    Changes</button>
+                <button onclick="document.getElementById('edit-product-modal').style.display='none'"
+                    style="flex: 1; padding: 1rem; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; color: white; font-weight: bold; cursor: pointer;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Firebase Authentication Script -->
     <script type="module">
-        import { auth, provider, signInWithPopup, signOut } from './firebase-config.js';
+        import { auth, provider, signInWithPopup, signOut, onAuthStateChanged, db, collection, getDocs, doc, deleteDoc, updateDoc, setDoc, getDoc, query, orderBy } from './firebase-config.js';
 
         const AUTHORIZED_EMAILS = ['samuelpauljalli@gmail.com', 'wilsonhealthcare7@gmail.com'];
+        let globalProducts = [];
 
-        // Google Sign-In
-        window.adminLoginWithGoogle = async function () {
-            try {
-                const result = await signInWithPopup(auth, provider);
-                const user = result.user;
-                const email = user.email.toLowerCase();
+        // ── Auto-check if admin is already signed in ─────────────────────────
+        onAuthStateChanged(auth, (user) => {
+            const loading = document.getElementById('login-loading');
+            const btn = document.getElementById('google-login-btn');
+            const subtitle = document.getElementById('login-subtitle');
+            const errEl = document.getElementById('login-error');
 
-                console.log('Signed in user:', email);
-
-                // Check if email is in the authorized list (strict check)
+            if (user) {
+                const email = user.email?.toLowerCase() || '';
                 if (AUTHORIZED_EMAILS.includes(email)) {
-                    showSuccess(`Welcome Admin, ${user.displayName || email}`);
-                    unlockDashboard(user);
+                    // Already authorized — unlock immediately via window global
+                    if (subtitle) subtitle.textContent = `Welcome, ${user.displayName || email}!`;
+                    // Use window.unlockDashboard to cross the module boundary
+                    if (typeof window.unlockDashboard === 'function') {
+                        window.unlockDashboard(user);
+                    } else {
+                        // Fallback: poll until non-module script is ready
+                        const pollInterval = setInterval(() => {
+                            if (typeof window.unlockDashboard === 'function') {
+                                clearInterval(pollInterval);
+                                window.unlockDashboard(user);
+                            }
+                        }, 50);
+                    }
                 } else {
-                    // Sign out unauthorized user immediately
-                    await signOut(auth);
-                    showToast("Access Denied. Only authorized admins can access this dashboard.");
+                    // Signed in but NOT authorized
+                    signOut(auth);
+                    if (loading) loading.style.display = 'none';
+                    if (btn) btn.style.display = 'flex';
+                    if (subtitle) subtitle.textContent = 'Admin access only.';
+                    if (errEl) {
+                        errEl.textContent = `❌ ${user.email} is not authorized as admin.`;
+                        errEl.style.display = 'block';
+                    }
                 }
+            } else {
+                // Not signed in — show the Google button
+                if (loading) loading.style.display = 'none';
+                if (btn) btn.style.display = 'flex';
+                if (subtitle) subtitle.textContent = 'Sign in with your authorized Google account.';
+            }
+        });
+
+        // ── Google Sign-In ────────────────────────────────────────────────────
+        window.adminLoginWithGoogle = async function () {
+            const btn = document.getElementById('google-login-btn');
+            const errEl = document.getElementById('login-error');
+            if (btn) { btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing in...'; btn.disabled = true; }
+            if (errEl) errEl.style.display = 'none';
+            try {
+                await signInWithPopup(auth, provider);
+                // onAuthStateChanged will handle everything after this
             } catch (error) {
                 console.error('Authentication error:', error);
-                showToast(`Authentication Failed: ${error.message}`);
+                if (btn) { btn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png" style="width:20px;"> Sign in with Google'; btn.disabled = false; }
+                if (errEl) { errEl.textContent = error.code === 'auth/popup-closed-by-user' ? 'Sign-in cancelled.' : `Error: ${error.message}`; errEl.style.display = 'block'; }
             }
         };
+
+        // ── Logout / Sign Out ────────────────────────────────────────────────
+        window.signOutAdmin = async function () {
+            if (!confirm('Sign out of admin panel?')) return;
+            try {
+                await signOut(auth);
+                // onAuthStateChanged will hide dashboard and show login gate
+                document.getElementById('dashboard').style.display = 'none';
+                document.getElementById('login-gate').style.display = 'flex';
+                document.getElementById('login-gate').style.opacity = '1';
+                const subtitle = document.getElementById('login-subtitle');
+                if (subtitle) subtitle.textContent = 'Sign in with your authorized Google account.';
+            } catch (e) {
+                console.error('Sign out error:', e);
+            }
+        };
+
+
+        async function loadProducts() {
+            const tbody = document.getElementById('products-body');
+            tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding: 2rem;"><i class="fas fa-spinner fa-spin"></i> Fetching live inventory...</td></tr>';
+
+            // Check if Firebase DB is initialized
+            if (typeof db === 'undefined' || !db) {
+                console.error("Firestore 'db' is not defined. Firebase module likely failed to load.");
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align:center; padding: 3rem; color: #ef4444;">
+                            <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                            <h3>Database Connection Failed</h3>
+                            <p>Firebase modules are being blocked by your browser.</p>
+                            <div style="margin-top: 1rem; font-size: 0.8rem; background: rgba(239, 68, 68, 0.1); padding: 10px; border-radius: 10px; display: inline-block;">
+                                <b>Reason:</b> ${window.location.protocol === 'file:' ? 'Browser security blocks Firebase over file:// protocol.' : 'Check your internet or Firebase config.'}
+                                <br><b>Solution:</b> Use "http://localhost" or a web server to view this page.
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            try {
+                const querySnapshot = await getDocs(collection(db, "products"));
+                globalProducts = [];
+                querySnapshot.forEach((doc) => {
+                    globalProducts.push({ id: doc.id, ...doc.data() });
+                });
+
+                // If Firestore is empty, suggest Auto-Sync
+                if (globalProducts.length === 0 && typeof products !== 'undefined' && products.length > 0) {
+                    console.warn("Firestore products collection is empty.");
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="6" style="text-align:center; padding: 3rem;">
+                                <div style="color: var(--text-dim); margin-bottom: 1rem;">No products found in live database.</div>
+                                <button onclick="syncAllToDB()" style="background: var(--accent); color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: 700;">
+                                    <i class="fas fa-magic"></i> Auto-Sync ${products.length} Items from Local Data
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                    return;
+                }
+
+                // Populate Categories
+                const categories = [...new Set(globalProducts.map(p => p.category))].sort();
+                const filterSelect = document.getElementById('category-filter');
+                filterSelect.innerHTML = '<option value="All">All Categories</option>';
+                const editSelect = document.getElementById('edit-category');
+                editSelect.innerHTML = '';
+
+                categories.forEach(cat => {
+                    if (!cat) return;
+                    const opt = document.createElement('option');
+                    opt.value = cat; opt.innerText = cat;
+                    filterSelect.appendChild(opt);
+                    const opt2 = document.createElement('option');
+                    opt2.value = cat; opt2.innerText = cat;
+                    editSelect.appendChild(opt2);
+                });
+
+                applyFilters();
+                showSuccess(`Loaded ${globalProducts.length} products`);
+            } catch (error) {
+                console.error("Error loading products:", error);
+                tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; color: #ef4444;">Error loading products: ${error.message}</td></tr>`;
+            }
+        }
+
+        window.syncAllToDB = async function () {
+            if (typeof products === 'undefined' || products.length === 0) {
+                showToast("No local data found to sync!");
+                return;
+            }
+
+            if (!confirm(`This will upload ${products.length} items to Firestore. Continue?`)) return;
+
+            const syncBtn = event?.target?.closest('button') || document.querySelector('button[onclick="syncAllToDB()"]');
+            const originalHTML = syncBtn ? syncBtn.innerHTML : '';
+            if (syncBtn) {
+                syncBtn.disabled = true;
+                syncBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Syncing...';
+            }
+
+            let count = 0;
+            try {
+                for (const p of products) {
+                    const productRef = doc(db, "products", String(p.id));
+                    await setDoc(productRef, {
+                        ...p,
+                        id: parseInt(p.id),
+                        updatedAt: new Date().toISOString()
+                    }, { merge: true });
+                    count++;
+                }
+                showSuccess(`Successfully synced ${count} products!`);
+                loadProducts();
+            } catch (e) {
+                console.error("Sync Error:", e);
+                showToast(`Sync failed at item ${count}: ${e.message}`);
+            } finally {
+                if (syncBtn) {
+                    syncBtn.disabled = false;
+                    syncBtn.innerHTML = originalHTML;
+                }
+            }
+        }
+
+        /* --- Product Management Functions --- */
+
+        window.applyFilters = function () {
+            const query = document.getElementById('product-search')?.value.toLowerCase() || '';
+            const category = document.getElementById('category-filter')?.value || 'All';
+            const sortVal = document.getElementById('sort-products')?.value || 'id-asc';
+
+            let filtered = globalProducts.filter(p => {
+                const matchesSearch = (p.name || '').toLowerCase().includes(query) || (String(p.id) || '').includes(query);
+                const matchesCategory = category === 'All' || p.category === category;
+                return matchesSearch && matchesCategory;
+            });
+
+            // Sorting
+            filtered.sort((a, b) => {
+                let vA, vB;
+                switch (sortVal) {
+                    case 'price-asc':
+                        return (a.price || 0) - (b.price || 0);
+                    case 'price-desc':
+                        return (b.price || 0) - (a.price || 0);
+                    case 'name-asc':
+                        return (a.name || '').localeCompare(b.name || '');
+                    case 'id-asc':
+                    default:
+                        // Assuming numeric IDs if possible, else string comparison
+                        return Number(a.id) - Number(b.id) || String(a.id).localeCompare(String(b.id));
+                }
+            });
+
+            renderProductsTable(filtered);
+        }
+
+        function renderProductsTable(products) {
+            const tbody = document.getElementById('products-body');
+            if (products.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding: 2rem; color: var(--text-dim);">No matching products found.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = products.map(p => `
+                <tr>
+                    <td>
+                        <img src="${p.image || 'placeholder.jpg'}" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
+                    </td>
+                    <td>
+                        <div style="font-weight: 600;">${p.name}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-dim);">ID: ${p.id}</div>
+                    </td>
+                    <td><span class="badge-status" style="background: rgba(255, 255, 255, 0.1); color: var(--text-main);">${p.category}</span></td>
+                    <td>₹${(p.price || 0).toLocaleString('en-IN')}</td>
+                    <td>
+                        ${(p.inStock !== false) ?
+                    '<span class="badge-status" style="background: rgba(34, 197, 94, 0.2); color: #22c55e;">In Stock</span>' :
+                    '<span class="badge-status" style="background: rgba(239, 68, 68, 0.2); color: #ef4444;">Out of Stock</span>'
+                }
+                    </td>
+                    <td>
+                        <i class="fas fa-edit" onclick="openEditModal('${p.id}')" style="cursor: pointer; color: var(--primary); margin-right: 15px;" title="Edit"></i>
+                        <i class="fas fa-trash" onclick="deleteProductFromDB('${p.id}')" style="cursor: pointer; color: #ef4444;" title="Delete"></i>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        window.deleteProductFromDB = async function (id) {
+            if (!confirm(`Are you sure you want to PERMANENTLY delete product ID: ${id}?`)) return;
+
+            try {
+                await deleteDoc(doc(db, "products", String(id)));
+                showSuccess("Product deleted successfully!");
+                // Remove from local array and re-render to avoid full reload
+                globalProducts = globalProducts.filter(p => String(p.id) !== String(id));
+                applyFilters();
+            } catch (e) {
+                console.error(e);
+                showToast(`Delete failed: ${e.message}`);
+            }
+        }
+
+        window.openAddModal = function () {
+            document.getElementById('modal-title').innerText = "Add New Product";
+            document.getElementById('id-group').style.display = "block";
+            document.getElementById('edit-id').value = "";
+            document.getElementById('edit-id').readOnly = false;
+            document.getElementById('edit-name').value = "";
+            document.getElementById('edit-category').value = document.getElementById('edit-category').options[0]?.value || "";
+            document.getElementById('edit-price').value = "";
+            document.getElementById('edit-old-price').value = "";
+            document.getElementById('edit-rating').value = "4.5";
+            document.getElementById('edit-discount').value = "";
+            document.getElementById('edit-image-url').value = "";
+            document.getElementById('edit-desc').value = "";
+            document.getElementById('edit-stock').value = "true";
+
+            document.getElementById('edit-product-modal').style.display = 'flex';
+        }
+
+        window.openEditModal = function (id) {
+            const product = globalProducts.find(p => String(p.id) === String(id));
+            if (!product) return;
+
+            document.getElementById('modal-title').innerText = "Edit Product";
+            document.getElementById('id-group').style.display = "block";
+            document.getElementById('edit-id').value = product.id;
+            document.getElementById('edit-id').readOnly = true;
+            document.getElementById('edit-name').value = product.name || "";
+            document.getElementById('edit-category').value = product.category || "";
+            document.getElementById('edit-price').value = product.price || "";
+            document.getElementById('edit-old-price').value = product.oldPrice || "";
+            document.getElementById('edit-rating').value = product.rating || "4.5";
+            document.getElementById('edit-discount').value = product.discount || "";
+            document.getElementById('edit-image-url').value = product.image || "";
+            document.getElementById('edit-desc').value = product.desc || "";
+            document.getElementById('edit-stock').value = product.inStock !== false ? "true" : "false";
+
+            document.getElementById('edit-product-modal').style.display = 'flex';
+        }
+
+        window.saveProductChanges = async function () {
+            const id = document.getElementById('edit-id').value;
+            const name = document.getElementById('edit-name').value;
+            const category = document.getElementById('edit-category').value;
+            const price = parseFloat(document.getElementById('edit-price').value);
+            const oldPrice = parseFloat(document.getElementById('edit-old-price').value) || (price * 1.2);
+            const rating = parseFloat(document.getElementById('edit-rating').value) || 4.5;
+            const discount = document.getElementById('edit-discount').value;
+            const image = document.getElementById('edit-image-url').value;
+            const desc = document.getElementById('edit-desc').value;
+            const inStock = document.getElementById('edit-stock').value === "true";
+
+            if (!id || !name || isNaN(price)) {
+                showToast("Please fill in ID, Name and Price");
+                return;
+            }
+
+            try {
+                const productRef = doc(db, "products", String(id));
+                const data = {
+                    id: parseInt(id),
+                    name,
+                    category,
+                    price,
+                    oldPrice,
+                    rating,
+                    discount,
+                    image,
+                    desc,
+                    inStock,
+                    tag: category,
+                    ratingCount: Math.floor(Math.random() * 500) + 50
+                };
+
+                // Use setDoc for both add and edit since ID is the document name
+                await setDoc(productRef, data, { merge: true });
+                showSuccess("Product saved successfully!");
+                document.getElementById('edit-product-modal').style.display = 'none';
+
+                // Refresh local data
+                loadProducts();
+            } catch (e) {
+                console.error(e);
+                showToast(`Save failed: ${e.message}`);
+            }
+        }
+
+        window.saveAnnouncement = async function () {
+            const text = document.getElementById('announcement-text').value.trim();
+
+            try {
+                await setDoc(doc(db, "settings", "announcement"), {
+                    text: text,
+                    updatedAt: new Date().toISOString()
+                });
+                showSuccess(text ? "Announcement updated!" : "Announcement cleared!");
+            } catch (e) {
+                console.error(e);
+                showToast("Failed to update announcement");
+            }
+        }
 
         function clearData(type) {
             if (confirm(`Are you sure you want to clear all ${type}? This cannot be undone.`)) {
@@ -636,10 +1161,105 @@
         // Expose to global scope
         window.clearData = clearData;
         window.deleteRecord = deleteRecord;
+        window.loadProducts = loadProducts;
+        window.applyFilters = applyFilters;
+        window.syncAllToDB = syncAllToDB;
+
+        // ---- Firebase Orders Loader ------------------------------------------------
+        let allFirebaseOrders_module = [];
+        window.loadFirebaseOrders = async function () {
+            const tbody = document.getElementById('orders-body');
+            tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:2rem;"><i class="fas fa-spinner fa-spin"></i> Loading orders from Firebase...</td></tr>';
+            try {
+                const snap = await getDocs(collection(db, 'orders'));
+                allFirebaseOrders_module = [];
+                snap.forEach(docSnap => {
+                    allFirebaseOrders_module.push({ orderId: docSnap.id, ...docSnap.data() });
+                });
+
+                // Merge with any localStorage orders not yet synced
+                const localOrders = JSON.parse(localStorage.getItem('wilson-orders') || '[]');
+                const fbIds = new Set(allFirebaseOrders_module.map(o => o.orderId));
+                localOrders.forEach(o => {
+                    if (o.orderId && !fbIds.has(o.orderId)) {
+                        allFirebaseOrders_module.push(o);
+                    }
+                });
+
+                // Sort newest first
+                allFirebaseOrders_module.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+
+                // Update overview stat counters
+                const totalOrdersEl = document.getElementById('total-orders');
+                if (totalOrdersEl) totalOrdersEl.innerText = allFirebaseOrders_module.length;
+                const revenue = allFirebaseOrders_module.reduce((s, o) => s + (o.total || 0), 0);
+                const revenueEl = document.getElementById('total-revenue');
+                if (revenueEl) revenueEl.innerText = '₹' + revenue.toLocaleString('en-IN');
+
+                // Keep global in sync
+                window.allFirebaseOrders = allFirebaseOrders_module;
+
+                if (typeof renderOrdersTable === 'function') renderOrdersTable(allFirebaseOrders_module);
+                else if (typeof window.renderOrdersTable === 'function') window.renderOrdersTable(allFirebaseOrders_module);
+                showSuccess(`Loaded ${allFirebaseOrders_module.length} orders from Firebase`);
+            } catch (e) {
+                console.error('Firebase orders load error:', e);
+                // Fallback to localStorage
+                const localOrders = JSON.parse(localStorage.getItem('wilson-orders') || '[]');
+                allFirebaseOrders_module = localOrders;
+                window.allFirebaseOrders = localOrders;
+                if (typeof renderOrdersTable === 'function') renderOrdersTable(localOrders);
+                else if (typeof window.renderOrdersTable === 'function') window.renderOrdersTable(localOrders);
+                showToast('Could not reach Firebase — showing local orders only');
+            }
+        };
+        window.allFirebaseOrders = allFirebaseOrders_module;
+
+        // ---- Firebase Users Loader (needs getDocs/collection from this module) ----
+        let allFirebaseUsers_module = [];
+        window.loadFirebaseUsers = async function () {
+            const tbody = document.getElementById('users-body');
+            tbody.innerHTML = '<tr><td colspan="9" style="text-align:center; padding:2rem;"><i class="fas fa-spinner fa-spin"></i> Loading from Firebase...</td></tr>';
+            try {
+                const snap = await getDocs(collection(db, 'users'));
+                allFirebaseUsers_module = [];
+                const orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
+                snap.forEach(docSnap => {
+                    const d = docSnap.data();
+                    const userOrders = orders.filter(o => o.customer?.email === (d.email || ''));
+                    const totalSpent = userOrders.reduce((s, o) => s + (o.total || 0), 0);
+                    allFirebaseUsers_module.push({ ...d, uid: docSnap.id, totalSpent, orderCount: userOrders.length });
+                });
+                if (allFirebaseUsers_module.length === 0) {
+                    const local = JSON.parse(localStorage.getItem('wilson-user-history')) || [];
+                    const ordArr = JSON.parse(localStorage.getItem('wilson-orders')) || [];
+                    allFirebaseUsers_module = local.map(u => {
+                        const uo = ordArr.filter(o => o.customer?.email === u.email);
+                        return { ...u, totalSpent: uo.reduce((s, o) => s + (o.total || 0), 0), orderCount: uo.length };
+                    });
+                }
+                window.allFirebaseUsers = allFirebaseUsers_module;
+                // Also enrich orders count using Firebase orders if available
+                if (typeof renderUsersGlobal === 'function') renderUsersGlobal(allFirebaseUsers_module);
+            } catch (e) {
+                console.error('Firebase users load error:', e);
+                window.allFirebaseUsers = [];
+                if (typeof renderUsersGlobal === 'function') renderUsersGlobal([]);
+                if (typeof showToastGlobal === 'function') showToastGlobal('Could not reach Firebase, showing local data');
+            }
+        };
+
+        // Protocol Check
+        if (window.location.protocol === 'file:') {
+            console.error("Firebase Modules cannot load over file:// protocol. Please use a local server (http://localhost).");
+            setTimeout(() => {
+                showToast("CRITICAL: Firebase blocked by browser (file:// protocol). Use a local server!", 'error');
+            }, 2000);
+        }
     </script>
 
     <script>
-        // Security Deterrents
+        // Security Deterrents (keep devtools locked)
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.onkeydown = function (e) {
             if (e.keyCode == 123) return false;
@@ -649,24 +1269,8 @@
             if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
         };
 
-        // Obfuscated logic for credentials
-        const _v1 = "heleena glory";
-        const _v2 = "peter paul";
-
-        document.getElementById('admin-login-form').onsubmit = function (e) {
-            e.preventDefault();
-            const c = document.getElementById('admin-code').value;
-            const p = document.getElementById('admin-pass').value;
-
-            if (c === _v1 && p === _v2) {
-                unlockDashboard();
-            } else {
-                window.location.href = '404_error.html';
-            }
-        };
 
 
-        let salesChart, orderChart;
 
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
@@ -684,62 +1288,69 @@
             });
 
             if (tabId === 'overview') setTimeout(initCharts, 100);
+            if (tabId === 'products') loadProducts();
+            if (tabId === 'orders') loadFirebaseOrders();
+            if (tabId === 'customers') loadFirebaseUsers();
         }
 
         function getEnrichedUsers() {
             const users = JSON.parse(localStorage.getItem('wilson-user-history')) || [];
             const orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
-
             return users.map(u => {
                 const userOrders = orders.filter(o => o.customer?.email === u.email);
                 const totalSpent = userOrders.reduce((sum, o) => sum + (o.total || 0), 0);
-                return { ...u, totalSpent, orderCount: userOrders.length };
+                return { ...u, totalSpent, orderCount: userOrders.length, source: 'local' };
             });
         }
 
-        function filterCustomers() {
-            const query = document.getElementById('customer-search').value.toLowerCase();
-            const enriched = getEnrichedUsers();
-            const filtered = enriched.filter(u =>
-                (u.name || '').toLowerCase().includes(query) ||
-                (u.mobile || '').toLowerCase().includes(query) ||
-                (u.email || '').toLowerCase().includes(query) ||
-                (u.id || '').toLowerCase().includes(query)
+        let allFirebaseUsers = [];
+
+        window.filterCustomers = function () {
+            const q = document.getElementById('customer-search').value.toLowerCase();
+            const list = (window.allFirebaseUsers && window.allFirebaseUsers.length > 0) ? window.allFirebaseUsers : getEnrichedUsers();
+            const filtered = list.filter(u =>
+                (u.name || u.displayName || '').toLowerCase().includes(q) ||
+                (u.email || '').toLowerCase().includes(q) ||
+                (u.phone || u.mobile || u.phoneNumber || '').includes(q)
             );
             renderUsers(filtered);
-        }
+        };
 
-        let userSortDir = 1;
-        function sortUsers(key) {
-            const users = getEnrichedUsers();
-            userSortDir *= -1;
-            users.sort((a, b) => {
-                let vA = a[key], vB = b[key];
-                if (key === 'lastLogin') { vA = new Date(vA); vB = new Date(vB); }
-                if (typeof vA === 'string') { vA = vA.toLowerCase(); vB = vB.toLowerCase(); }
-                return vA > vB ? (1 * userSortDir) : (-1 * userSortDir);
-            });
-            renderUsers(users);
-        }
+        // Allow module script to call renderUsers via global alias
+        window.renderUsersGlobal = function (list) { renderUsers(list); };
+        window.showToastGlobal = function (msg) { showToast(msg); };
 
         function renderUsers(usersList) {
             const usersBody = document.getElementById('users-body');
-            usersBody.innerHTML = usersList.map(u => `
-                <tr>
-                    <td>
-                        <div style="font-weight:600;">${u.name}</div>
-                        <div style="font-size:0.7rem; color:var(--text-dim);">UID: ${u.id || 'N/A'}</div>
-                    </td>
-                    <td>+${u.mobile}</td>
-                    <td>${u.email}</td>
-                    <td>₹${(u.totalSpent || 0).toLocaleString('en-IN')} (${u.orderCount} orders)</td>
-                    <td>${u.lastLogin ? new Date(u.lastLogin).toLocaleString() : 'N/A'}</td>
-                    <td>Hyderabad, IN</td>
+            if (!usersList || usersList.length === 0) {
+                usersBody.innerHTML = '<tr><td colspan="9" style="text-align:center; color:var(--text-dim); padding:2rem;">No users found. Click Refresh to load from Firebase.</td></tr>';
+                return;
+            }
+            usersBody.innerHTML = usersList.map(u => {
+                const name = u.displayName || u.name || 'Unknown';
+                const email = u.email || '—';
+                const phone = u.phoneNumber || u.phone || u.mobile || '—';
+                const photo = u.photoURL || u.avatar || '';
+                const provider = u.providerData?.[0]?.providerId || u.provider || 'password';
+                const providerIcon = provider.includes('google') ? '🔵 Google' : provider.includes('phone') ? '📱 Phone' : '✉ Email';
+                const lastLogin = u.lastLoginAt || u.lastLogin || u.lastSignInTime || null;
+                const lastLoginStr = lastLogin ? new Date(lastLogin).toLocaleString('en-IN', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'N/A';
+                const totalSpent = u.totalSpent || 0;
+                const orderCount = u.orderCount || 0;
+                return `<tr>
+                    <td><img src="${photo}" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);" onerror="this.src='';this.style.display='none';"></td>
+                    <td><div style="font-weight:600;">${name}</div><div style="font-size:0.7rem;color:var(--text-dim);">UID: ${u.uid || u.id || 'N/A'}</div></td>
+                    <td style="font-size:0.85rem;">${email}</td>
+                    <td style="font-size:0.85rem;">${phone !== '—' ? '+' + phone.replace(/^\+/, '') : '—'}</td>
+                    <td><span style="font-size:0.75rem;">${providerIcon}</span></td>
+                    <td style="font-size:0.8rem; color:var(--text-dim);">${lastLoginStr}</td>
+                    <td style="text-align:center;">${orderCount}</td>
+                    <td style="font-weight:700; color:var(--primary);">₹${totalSpent.toLocaleString('en-IN')}</td>
                     <td style="text-align:right;">
-                        <i class="fas fa-trash" style="cursor:pointer; color:#ef4444; font-size: 0.9rem;" onclick="deleteRecord('users', '${u.email}')"></i>
+                        <i class="fas fa-trash" style="cursor:pointer; color:#ef4444; font-size:0.9rem;" onclick="deleteRecord('users', '${email}')"></i>
                     </td>
-                </tr>
-            `).join('');
+                </tr>`;
+            }).join('');
         }
 
         function unlockDashboard(user) {
@@ -748,120 +1359,208 @@
                 document.getElementById('login-gate').style.display = 'none';
                 document.getElementById('dashboard').style.display = 'grid';
                 loadDashboardData();
+                if (typeof window.loadProducts === 'function') window.loadProducts();
                 initCharts();
+                if (typeof window.loadFirebaseUsers === 'function') window.loadFirebaseUsers();
+                // Load orders from Firestore on login so overview stats reflect real data
+                if (typeof window.loadFirebaseOrders === 'function') window.loadFirebaseOrders();
 
                 if (user) {
                     console.log('Admin logged in:', user.displayName, user.email);
+                    // Show name in sidebar
+                    const nameEl = document.getElementById('admin-name-display');
+                    if (nameEl) nameEl.textContent = user.displayName || user.email;
                 }
             }, 500);
         }
+        // Expose globally so the ES module script can call it
+        window.unlockDashboard = unlockDashboard;
+        window.initCharts = function () { initCharts(); };
+        window.loadDashboardData = function () { loadDashboardData(); };
 
         function loadDashboardData() {
-            const orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
+            // Use Firebase orders if already loaded, otherwise fall back to localStorage
+            const fbOrders = (window.allFirebaseOrders && window.allFirebaseOrders.length > 0)
+                ? window.allFirebaseOrders
+                : (JSON.parse(localStorage.getItem('wilson-orders')) || []);
             const enrichedUsers = getEnrichedUsers();
 
-            document.getElementById('total-orders').innerText = orders.length;
-            const revenue = orders.reduce((sum, o) => sum + (o.total || 0), 0);
+            document.getElementById('total-orders').innerText = fbOrders.length;
+            const revenue = fbOrders.reduce((sum, o) => sum + (o.total || 0), 0);
             document.getElementById('total-revenue').innerText = "₹" + revenue.toLocaleString('en-IN');
             document.getElementById('total-users').innerText = enrichedUsers.length;
             document.getElementById('total-visits').innerText = Math.floor(Math.random() * 5000) + 1200;
 
-            // Orders Table
-            const ordersBody = document.getElementById('orders-body');
-            if (orders.length === 0) {
-                ordersBody.innerHTML = '<tr><td colspan="6" style="text-align:center; color: var(--text-dim);">No orders found</td></tr>';
-            } else {
-                ordersBody.innerHTML = orders.slice().reverse().map(o => `
-                    <tr>
-                        <td>#${o.orderId}</td>
-                        <td>
-                            <div style="font-weight:600;">${o.customer?.name || 'Guest'}</div>
-                            <div style="font-size:0.75rem; color:var(--text-dim); margin-top:2px;">
-                                ${o.customer?.hno || ''} ${o.customer?.street || ''} <br>
-                                ${o.customer?.district || ''}, ${o.customer?.state || ''} ${o.customer?.pincode || ''}
-                            </div>
-                            <div style="font-size:0.7rem; color:var(--primary);">+${o.customer?.mobile || ''}</div>
-                        </td>
-                        <td>${new Date(o.date).toLocaleDateString()}</td>
-                        <td>₹${(o.total || 0).toLocaleString('en-IN')}</td>
-                        <td><span class="badge-status" style="background: ${o.status === 'Cancelled' ? 'rgba(239, 68, 68, 0.2)' : 'rgba(0, 168, 168, 0.2)'}; color: ${o.status === 'Cancelled' ? '#ef4444' : 'var(--primary)'};">${o.status || 'Placed'}</span></td>
-                        <td>
-                            <a href="invoice.html?id=${o.orderId}" target="_blank" title="View Order Items"><i class="fas fa-file-alt" style="cursor:pointer; color:var(--text-dim); margin-right: 15px;"></i></a>
-                            <i class="fas fa-trash" style="cursor:pointer; color:#ef4444;" onclick="deleteRecord('orders', '${o.orderId}')"></i>
-                        </td>
-                    </tr>
-                `).join('');
-            }
+            renderOrdersTable(fbOrders);
             renderUsers(enrichedUsers);
         }
 
+        window.filterOrders = function () {
+            const q = (document.getElementById('order-search')?.value || '').toLowerCase();
+            // Search across Firebase-loaded orders first, fall back to localStorage
+            const orders = (window.allFirebaseOrders && window.allFirebaseOrders.length > 0)
+                ? window.allFirebaseOrders
+                : (JSON.parse(localStorage.getItem('wilson-orders')) || []);
+            const filtered = orders.filter(o =>
+                String(o.orderId).includes(q) ||
+                (o.customer?.name || '').toLowerCase().includes(q) ||
+                (o.customer?.mobile || '').includes(q) ||
+                (o.customer?.email || '').toLowerCase().includes(q)
+            );
+            renderOrdersTable(filtered);
+        };
+
+        function renderOrdersTable(orders) {
+            const ordersBody = document.getElementById('orders-body');
+            if (!orders || orders.length === 0) {
+                ordersBody.innerHTML = '<tr><td colspan="7" style="text-align:center; color: var(--text-dim);">No orders found</td></tr>';
+                return;
+            }
+            ordersBody.innerHTML = orders.map(o => {
+                const items = o.items || o.cart || [];
+                const itemsHTML = items.length > 0
+                    ? `<div style="max-height:90px; overflow-y:auto;">${items.map(item => `
+                        <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px; font-size:0.78rem;">
+                            <img src="${item.image || item.img || ''}" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;" onerror="this.style.display='none'">
+                            <div>
+                                <div style="font-weight:600; color:var(--text-main);">${item.name || item.productName || 'Item'}</div>
+                                <div style="color:var(--text-dim);">₹${((item.price || item.currentPrice || 0)).toLocaleString('en-IN')} × ${item.qty || item.quantity || 1}</div>
+                            </div>
+                        </div>`).join('')}</div>`
+                    : `<span style="color:var(--text-dim); font-size:0.8rem;">No item details</span>`;
+
+                return `<tr>
+                    <td style="font-weight:700; color:var(--primary);">#${o.orderId}</td>
+                    <td>
+                        <div style="font-weight:600;">${o.customer?.name || 'Guest'}</div>
+                        <div style="font-size:0.72rem; color:var(--text-dim);">
+                            ${o.customer?.mobile ? '📞 +' + o.customer.mobile : ''}
+                            ${o.customer?.email ? '<br>✉ ' + o.customer.email : ''}
+                        </div>
+                        <div style="font-size:0.7rem; color:var(--text-dim); margin-top:2px;">
+                            ${[o.customer?.hno, o.customer?.street, o.customer?.district, o.customer?.state, o.customer?.pincode].filter(Boolean).join(', ')}
+                        </div>
+                    </td>
+                    <td>${itemsHTML}</td>
+                    <td>${new Date(o.date).toLocaleDateString()}</td>
+                    <td style="font-weight:700;">₹${(o.total || 0).toLocaleString('en-IN')}</td>
+                    <td><span class="badge-status" style="background: ${o.status === 'Cancelled' ? 'rgba(239,68,68,0.2)' : 'rgba(0,168,168,0.2)'}; color: ${o.status === 'Cancelled' ? '#ef4444' : 'var(--primary)'};"> ${o.status || 'Placed'}</span></td>
+                    <td>
+                        <a href="invoice.html?id=${o.orderId}" target="_blank" title="View Invoice"><i class="fas fa-file-alt" style="cursor:pointer; color:var(--text-dim); margin-right:15px;"></i></a>
+                        <i class="fas fa-trash" style="cursor:pointer; color:#ef4444;" onclick="deleteRecord('orders', '${o.orderId}')"></i>
+                    </td>
+                </tr>`;
+            }).join('');
+        }
+
+        function populateYearDropdowns(orders) {
+            const years = [...new Set(orders.map(o => new Date(o.date).getFullYear()))].sort((a, b) => b - a);
+            const currentYear = new Date().getFullYear();
+            if (!years.includes(currentYear)) years.unshift(currentYear);
+            ['revenue-year', 'orders-year', 'users-year'].forEach(id => {
+                const sel = document.getElementById(id);
+                if (!sel) return;
+                const prev = parseInt(sel.value) || currentYear;
+                sel.innerHTML = years.map(y => `<option value="${y}" ${y === prev ? 'selected' : ''}>${y}</option>`).join('');
+            });
+        }
+
+        let salesChart, orderChart, usersChart;
+
         function initCharts() {
             const orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
-
+            const localUsers = JSON.parse(localStorage.getItem('wilson-user-history')) || [];
             const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            populateYearDropdowns(orders);
+
+            const revenueYear = parseInt(document.getElementById('revenue-year')?.value) || new Date().getFullYear();
+            const ordersYear = parseInt(document.getElementById('orders-year')?.value) || new Date().getFullYear();
+            const usersYear = parseInt(document.getElementById('users-year')?.value) || new Date().getFullYear();
+
             const monthlySales = new Array(12).fill(0);
             const monthlyOrders = new Array(12).fill(0);
+            const monthlyUsers = new Array(12).fill(0);
 
             orders.forEach(o => {
                 const d = new Date(o.date);
-                if (d.getFullYear() === new Date().getFullYear()) {
-                    monthlySales[d.getMonth()] += o.total || 0;
-                    monthlyOrders[d.getMonth()] += 1;
+                if (d.getFullYear() === revenueYear) monthlySales[d.getMonth()] += o.total || 0;
+                if (d.getFullYear() === ordersYear) monthlyOrders[d.getMonth()] += 1;
+            });
+
+            localUsers.forEach(u => {
+                const d = new Date(u.lastLogin || u.createdAt);
+                if (!isNaN(d) && d.getFullYear() === usersYear) monthlyUsers[d.getMonth()] += 1;
+            });
+
+            const chartOptions = (color, isCurrency) => ({
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx => isCurrency ? '₹' + ctx.parsed.y.toLocaleString('en-IN') : ctx.parsed.y
+                        }
+                    }
+                },
+                scales: {
+                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' }, beginAtZero: true },
+                    x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
                 }
             });
 
             if (salesChart) salesChart.destroy();
             if (orderChart) orderChart.destroy();
+            if (usersChart) usersChart.destroy();
 
-            const canvas1 = document.getElementById('monthlyChart');
-            const canvas2 = document.getElementById('yearlyChart');
+            const c1 = document.getElementById('monthlyChart');
+            const c2 = document.getElementById('yearlyChart');
+            const c3 = document.getElementById('usersChart');
+            if (!c1 || !c2 || !c3) return;
 
-            if (!canvas1 || !canvas2) return;
-
-            const ctx1 = canvas1.getContext('2d');
-            salesChart = new Chart(ctx1, {
-                type: 'line',
+            salesChart = new Chart(c1, {
+                type: 'bar',
                 data: {
                     labels: months,
                     datasets: [{
                         label: 'Revenue (₹)',
                         data: monthlySales,
-                        borderColor: '#00a8a8',
-                        backgroundColor: 'rgba(0, 168, 168, 0.1)',
-                        fill: true,
-                        tension: 0.4
+                        backgroundColor: months.map((_, i) => `hsla(${160 + i * 5}, 70%, 50%, 0.75)`),
+                        borderRadius: 8,
+                        borderSkipped: false
                     }]
                 },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        y: { grid: { color: 'rgba(255,255,255,0.05)', display: false }, ticks: { color: '#94a3b8' } },
-                        x: { ticks: { color: '#94a3b8' } }
-                    }
-                }
+                options: chartOptions('#059669', true)
             });
 
-            const ctx2 = canvas2.getContext('2d');
-            orderChart = new Chart(ctx2, {
+            orderChart = new Chart(c2, {
                 type: 'bar',
                 data: {
                     labels: months,
                     datasets: [{
                         label: 'Orders',
                         data: monthlyOrders,
-                        backgroundColor: '#f59e0b',
-                        borderRadius: 8
+                        backgroundColor: months.map((_, i) => `hsla(${38 + i * 3}, 90%, 60%, 0.75)`),
+                        borderRadius: 8,
+                        borderSkipped: false
                     }]
                 },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        y: { grid: { color: 'rgba(255,255,255,0.05)', display: false }, ticks: { color: '#94a3b8' } },
-                        x: { ticks: { color: '#94a3b8' } }
-                    }
-                }
+                options: chartOptions('#f59e0b', false)
+            });
+
+            usersChart = new Chart(c3, {
+                type: 'bar',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: 'New Users',
+                        data: monthlyUsers,
+                        backgroundColor: months.map((_, i) => `hsla(${210 + i * 4}, 80%, 60%, 0.75)`),
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }]
+                },
+                options: chartOptions('#3b82f6', false)
             });
         }
 

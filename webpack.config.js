@@ -10,7 +10,11 @@ export default {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    mode: 'production',
+    mode: 'development',
+    devServer: {
+        static: './',
+        port: 8080,
+    },
     experiments: {
         buildHttp: {
             allowedUris: [() => true],
