@@ -15,12 +15,8 @@
 
 html {
     scroll-behavior: smooth;
-    /* Dark surrounding background to mimic a phone frame/bezel on desktop */
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    background-color: var(--bg-light);
 }
 
 * {
@@ -36,40 +32,10 @@ body {
     overflow-x: hidden;
     line-height: 1.6;
     font-size: 0.95rem;
-
-    /* Mobile Emulator Frame Enforcement */
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-    position: relative;
     min-height: 100vh;
-    /* Flex column so sticky bottom nav anchors to the bottom of the frame */
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
-    border-radius: 0;
 }
 
-/* Make all direct children of body grow to fill vertical space */
-body>*:not(.mobile-bottom-nav) {
-    flex-shrink: 0;
-}
-
-/* The main content wrapper grows to push bottom nav down */
-body>main,
-body>section,
-body>.products,
-body>.categories,
-body>.hero,
-body>.future-innovation,
-body>footer {
-    flex-shrink: 0;
-}
-
-
-
-
-/* Custom Scrollbar for iOS feel */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -87,32 +53,30 @@ body>footer {
     background: var(--primary);
 }
 
+/* ── Navigation ── */
 nav {
     background: var(--white);
-    padding: 0.6rem 5%;
+    padding: 0.5rem 5%;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     width: 100%;
-    max-width: 480px;
-    /* Constrain inside mobile frame */
-    margin: 0 auto;
-    left: 0;
-    right: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 800;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     text-decoration: none;
     letter-spacing: -0.5px;
+    flex-shrink: 0;
 }
 
 .logo .brand-wilson {
@@ -159,8 +123,8 @@ nav {
 }
 
 .logo img {
-    height: 65px;
-    width: 65px;
+    height: 58px;
+    width: 58px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--primary);
@@ -232,43 +196,60 @@ nav {
 
 .nav-actions {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .nav-btn {
     background: none;
     border: none;
-    font-size: 1.5rem;
-    /* Increased size */
+    font-size: 1.3rem;
     color: var(--secondary);
     cursor: pointer;
     position: relative;
     transition: var(--spring);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.nav-btn i {
+    display: block;
 }
 
 .nav-btn:hover {
     color: var(--primary);
-    transform: scale(1.15);
+    background: rgba(5, 150, 105, 0.06);
+    transform: scale(1.1);
 }
 
 .badge {
     position: absolute;
-    top: -8px;
-    right: -10px;
+    top: -4px;
+    right: -4px;
     background: var(--primary);
     color: white;
-    font-size: 0.7rem;
-    padding: 1px 6px;
-    border-radius: 50%;
-    font-weight: 600;
+    font-size: 0.6rem;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 /* Hero Section */
 .hero {
-    margin-top: 80px;
-    height: 45vh;
-    /* Decreased size */
+    margin-top: 0;
+    /* Nav is sticky – no spacer needed */
+    height: 50vh;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -363,15 +344,13 @@ nav {
     box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
 }
 
-/* Chat Bot */
+/* Chat Bot — always fixed to bottom-right of viewport */
 .chat-bot {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 80px;
+    /* Above mobile bottom nav */
+    right: 16px;
     z-index: 5000;
-    /* Keep it pinned to the mobile frame right edge, not the window right edge */
-    right: auto;
-    left: max(30px, calc(50% + 240px - 90px));
 }
 
 .chat-toggle {
@@ -671,6 +650,216 @@ nav {
 .category-card:hover i {
     color: white;
 }
+
+/* ── Animated Features Strip ─────────────────────────────── */
+.features-strip {
+    background: white;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid rgba(5, 150, 105, 0.08);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (min-width: 600px) {
+    .features-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+    }
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 8px;
+    border-radius: 16px;
+    background: var(--bg-light);
+    border: 1px solid rgba(5, 150, 105, 0.08);
+    cursor: default;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.feature-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-item:hover {
+    background: var(--primary);
+    box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
+    transform: translateY(-4px) scale(1.04);
+}
+
+.feature-icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(5, 150, 105, 0.06));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.feature-item:nth-child(2) .feature-icon-wrap {
+    animation-delay: 0.3s;
+}
+
+.feature-item:nth-child(3) .feature-icon-wrap {
+    animation-delay: 0.6s;
+}
+
+.feature-item:nth-child(4) .feature-icon-wrap {
+    animation-delay: 0.9s;
+}
+
+.feature-item:nth-child(5) .feature-icon-wrap {
+    animation-delay: 1.2s;
+}
+
+.feature-item:nth-child(6) .feature-icon-wrap {
+    animation-delay: 1.5s;
+}
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.feature-item:hover .feature-icon-wrap {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    animation: iconPulse 0.6s ease infinite alternate;
+}
+
+@keyframes iconPulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15) rotate(8deg);
+    }
+}
+
+.feature-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--secondary);
+    text-align: center;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.feature-item:hover .feature-label {
+    color: white;
+}
+
+/* ── Desktop Layout Overrides ─────────────────────────────── */
+@media (min-width: 481px) {
+    .hero {
+        height: 55vh;
+        margin-top: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product-img {
+        height: 200px;
+    }
+
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .categories {
+        padding: 3rem 5%;
+    }
+
+    .category-grid {
+        gap: 24px;
+    }
+
+    .category-card {
+        min-width: 130px;
+        padding: 1.5rem;
+    }
+
+    .category-card i {
+        font-size: 2.5rem;
+    }
+
+    .logo img {
+        height: 52px;
+        width: 52px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-btn {
+        font-size: 1.2rem;
+    }
+
+    .nav-actions {
+        gap: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    .features-strip {
+        padding: 2rem 5%;
+    }
+
+    .feature-item {
+        padding: 20px 12px;
+    }
+
+    .feature-icon-wrap {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+    .feature-label {
+        font-size: 0.78rem;
+    }
+}
+
 
 /* Products Section */
 .products {
@@ -1697,10 +1886,10 @@ footer {
 }
 
 /* ── Mobile Bottom Navigation Bar ─────────────────────────── */
-/* Always show – constrained inside the mobile frame body */
+/* Hidden on desktop — only visible on mobile (≤640px) */
 .mobile-bottom-nav {
-    display: flex;
-    position: sticky;
+    display: none;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1715,95 +1904,138 @@ footer {
     justify-content: space-around;
     align-items: center;
     gap: 0;
-    margin-top: auto;
 }
 
-@media (max-width: 768px) {
-    /* Already visible globally, no override needed */
-
-    .mobile-bottom-nav .mnav-item {
+@media (max-width: 640px) {
+    .mobile-bottom-nav {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3px;
-        flex: 1;
-        cursor: pointer;
-        padding: 6px 4px;
-        border-radius: 12px;
-        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        background: none;
-        border: none;
-        text-decoration: none;
-        position: relative;
-        color: #64748b;
     }
 
-    .mobile-bottom-nav .mnav-item:hover,
-    .mobile-bottom-nav .mnav-item.active {
-        color: var(--primary);
-        transform: translateY(-3px);
-    }
-
-    .mobile-bottom-nav .mnav-item i {
-        font-size: 1.35rem;
-        transition: all 0.25s ease;
-    }
-
-    .mobile-bottom-nav .mnav-item:hover i,
-    .mobile-bottom-nav .mnav-item.active i {
-        transform: scale(1.2);
-    }
-
-    .mobile-bottom-nav .mnav-label {
-        font-size: 0.6rem;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-        text-transform: uppercase;
-    }
-
-    .mobile-bottom-nav .mnav-badge {
-        position: absolute;
-        top: 2px;
-        right: calc(50% - 18px);
-        background: var(--primary);
-        color: white;
-        font-size: 0.6rem;
-        min-width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        padding: 0 3px;
-    }
-
-    /* Pad body bottom so content not hidden behind nav */
     body {
         padding-bottom: 72px;
     }
 
-    /* Hide desktop nav icons on mobile (keep logo & search) */
-    .nav-actions {
+    /* Chatbot above the nav on mobile */
+    .chat-bot {
+        bottom: 86px;
+    }
+}
+
+.mobile-bottom-nav .mnav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1;
+    cursor: pointer;
+    padding: 6px 4px;
+    border-radius: 12px;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: none;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    color: #64748b;
+}
+
+.mobile-bottom-nav .mnav-item:hover,
+.mobile-bottom-nav .mnav-item.active {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.mobile-bottom-nav .mnav-item i {
+    font-size: 1.35rem;
+    transition: all 0.25s ease;
+}
+
+.mobile-bottom-nav .mnav-item:hover i,
+.mobile-bottom-nav .mnav-item.active i {
+    transform: scale(1.2);
+}
+
+.mobile-bottom-nav .mnav-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.mobile-bottom-nav .mnav-badge {
+    position: absolute;
+    top: 2px;
+    right: calc(50% - 18px);
+    background: var(--primary);
+    color: white;
+    font-size: 0.6rem;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    padding: 0 3px;
+}
+
+
+/* ── Mobile styles (≤640px) — matches screenshot ──────── */
+@media (max-width: 640px) {
+
+    /* ─── Navbar ─── */
+    nav {
+        padding: 6px 14px;
+        height: auto;
+        min-height: 70px;
+        /* Tall enough for large logo */
+    }
+
+    /* Show only the logo circle — hide text */
+    .logo .brand-wilson,
+    .logo .brand-healthcare {
         display: none !important;
     }
 
-    /* Make hero smaller on mobile */
+    /* Large logo image like in the screenshot */
+    .logo img {
+        height: 70px;
+        width: 70px;
+        border: 3px solid var(--primary);
+        padding: 2px;
+    }
+
+    /* Large, clearly visible icons */
+    .nav-actions {
+        gap: 1rem;
+    }
+
+    .nav-btn {
+        font-size: 1.6rem;
+        padding: 4px;
+    }
+
+    /* Hide the search bar input (search icon in nav opens it) */
+    .nav-search {
+        display: none !important;
+    }
+
+    /* ─── Hero ─── */
     .hero {
-        height: 35vh;
+        height: 38vh;
         margin-top: 0;
     }
 
     .hero-content h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+        line-height: 1.15;
     }
 
     .hero-content p {
-        font-size: 0.85rem;
+        font-size: 0.88rem;
     }
 
-    /* Better product grid on mobile */
+    /* ─── Products ─── */
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -1814,7 +2046,7 @@ footer {
         padding: 10px;
     }
 
-    /* Better category grid on mobile */
+    /* ─── Categories ─── */
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
@@ -1832,76 +2064,31 @@ footer {
         font-size: 0.7rem;
     }
 
-    /* Nav on mobile */
-    nav {
-        padding: 8px 12px;
-        height: auto;
-        min-height: 64px;
-    }
-
-    .logo {
-        gap: 8px;
-    }
-
-    .logo img {
-        height: 44px;
-        width: 44px;
-        border: 2px solid var(--primary);
-        padding: 1px;
-    }
-
-    .logo .brand-wilson {
-        font-size: 1.3rem !important;
-        letter-spacing: -0.5px;
-    }
-
-    .logo .brand-healthcare {
-        font-size: 0.6rem !important;
-        letter-spacing: 1.2px !important;
-        margin-top: -3px;
-        color: var(--primary) !important;
-        /* Make healthcare text same as Wilson for visibility */
-        opacity: 0.9;
-    }
-
-    /* Hide desktop search on mobile (moved to bottom nav) */
-    .nav-search {
-        display: none !important;
-    }
-
-    /* Simplified header actions for mobile */
-    .nav-actions {
-        gap: 8px !important;
-    }
-
-    .nav-btn {
-        padding: 8px !important;
-    }
-
-    /* Better measurements for mobile borders */
+    /* ─── Sections ─── */
     .products,
     .categories,
-    .future-innovation,
     .related-section {
-        padding: 2.5rem 12px;
+        padding: 2rem 12px;
         overflow-x: hidden;
     }
 
     .section-title {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         padding: 0 5px;
     }
 
-    /* Modals fullscreen on mobile */
+    /* ─── Modals go full-screen sheet ─── */
     .modal-content {
         width: 100% !important;
         max-width: 100% !important;
-        height: 85% !important;
+        height: 88% !important;
         margin: auto 0 0 !important;
         border-radius: 20px 20px 0 0 !important;
         padding: 1.2rem !important;
     }
 }
+
+
 
 /* Extra small screens */
 @media (max-width: 380px) {

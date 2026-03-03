@@ -85,7 +85,7 @@
         };
     </script>
 
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -166,28 +166,25 @@
             </div>
 
             <div class="nav-actions">
-                <a href="#" class="nav-btn" title="Home">
+                <a href="#" class="nav-btn" title="Home"
+                    onclick="renderProducts('All'); document.getElementById('products-heading')?.scrollIntoView({behavior:'smooth'}); return false;">
                     <i class="fas fa-home"></i>
                 </a>
                 <button class="nav-btn" onclick="toggleSearch()" title="Search">
                     <i class="fas fa-search"></i>
                 </button>
-                <button class="nav-btn" onclick="openModal('wishlist')">
+                <button class="nav-btn" onclick="openModal('wishlist')" title="Wishlist">
                     <i class="far fa-heart"></i>
                     <span class="badge" id="wishlist-count">0</span>
                 </button>
-                <button class="nav-btn" onclick="openModal('cart')">
+                <button class="nav-btn" onclick="openModal('cart')" title="Cart">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="badge" id="cart-count">0</span>
                 </button>
-                <button class="nav-btn" onclick="openModal('orders')">
+                <button class="nav-btn" onclick="openModal('orders')" title="Orders">
                     <i class="fas fa-box"></i>
                 </button>
-                <button class="nav-btn" id="install-btn" onclick="installApp()" style="display: none;"
-                    title="Install App">
-                    <i class="fas fa-download"></i>
-                </button>
-                <button class="nav-btn" id="login-nav-btn" onclick="openModal('login')">
+                <button class="nav-btn" id="login-nav-btn" onclick="openModal('login')" title="Account">
                     <i class="fas fa-user-circle"></i>
                 </button>
             </div>
@@ -241,6 +238,48 @@
             <button class="cta-btn"
                 onclick="renderProducts('All'); document.getElementById('products-heading').scrollIntoView({behavior: 'smooth'})">View
                 Catalog</button>
+        </div>
+    </section>
+
+    <!-- ── Animated Features Strip ─────────────────────── -->
+    <section class="features-strip">
+        <div class="features-grid">
+            <div class="feature-item" data-delay="0">
+                <div class="feature-icon-wrap">
+                    <i class="fas fa-truck-fast"></i>
+                </div>
+                <span class="feature-label">Fast Delivery</span>
+            </div>
+            <div class="feature-item" data-delay="100">
+                <div class="feature-icon-wrap">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <span class="feature-label">Certified</span>
+            </div>
+            <div class="feature-item" data-delay="200">
+                <div class="feature-icon-wrap">
+                    <i class="fas fa-shield-heart"></i>
+                </div>
+                <span class="feature-label">Warranty</span>
+            </div>
+            <div class="feature-item" data-delay="300">
+                <div class="feature-icon-wrap">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <span class="feature-label">24/7 Support</span>
+            </div>
+            <div class="feature-item" data-delay="400">
+                <div class="feature-icon-wrap">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <span class="feature-label">500+ Hospitals</span>
+            </div>
+            <div class="feature-item" data-delay="500">
+                <div class="feature-icon-wrap">
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="feature-label">Top Rated</span>
+            </div>
         </div>
     </section>
 
@@ -331,40 +370,7 @@
         </div>
     </section>
 
-    <!-- Future Innovation Section -->
-    <section class="future-innovation">
-        <div class="future-title">
-            <span class="badge-premium">Tomorrow's Care</span>
-            <h2>Future Healthcare Innovations</h2>
-            <p>Exploring the next generation of medical technology to redefine patient care.</p>
-        </div>
 
-        <div class="future-grid">
-            <div class="future-card" data-aos="fade-up">
-                <div class="coming-soon-badge">2026</div>
-                <div class="future-icon"><i class="fas fa-microchip"></i></div>
-                <h3>AI Diagnostics</h3>
-                <p>Next-gen patient monitors with built-in predictive analytics for early detection of vital anomalies.
-                </p>
-            </div>
-
-            <div class="future-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="coming-soon-badge">PREVIEW</div>
-                <div class="future-icon"><i class="fas fa-satellite-dish"></i></div>
-                <h3>Remote ICU Hub</h3>
-                <p>Cloud-integrated surgical tools allowing specialists to monitor and guide operations from anywhere in
-                    the world.</p>
-            </div>
-
-            <div class="future-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="coming-soon-badge">CONCEPT</div>
-                <div class="future-icon"><i class="fas fa-biohazard"></i></div>
-                <h3>Smart Sterilization</h3>
-                <p>Ozone-based hyper-speed sterilization chambers for zero-touch infection control in modern operating
-                    rooms.</p>
-            </div>
-        </div>
-    </section>
 
     <!-- Cart Modal -->
     <div class="modal-overlay" id="cart-modal">
@@ -685,7 +691,7 @@
         </div>
     </footer>
 
-    
+
     <script src="main.js"></script>
 
     <!-- Mobile Bottom Navigation Bar (visible on phones only) -->
@@ -740,6 +746,25 @@
                 }
             };
             setInterval(update, 500);
+        })();
+
+        // Animate feature strip items on scroll
+        (function initFeatureAnimations() {
+            const items = document.querySelectorAll('.feature-item');
+            if (!items.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const delay = parseInt(el.dataset.delay || 0);
+                        setTimeout(() => el.classList.add('revealed'), delay);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            items.forEach(item => observer.observe(item));
         })();
     </script>
 
