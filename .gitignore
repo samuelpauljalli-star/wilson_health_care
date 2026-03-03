@@ -24,3 +24,21 @@ yarn-debug.log*
 yarn-error.log*
 logs/
 *.log
+
+# Dev-only scripts (not needed on Vercel)
+scripts/
+rollup.config.js
+webpack.config.js
+
+# Excel data files (server-side tools only)
+*.xlsx
+
+# Dev utilities
+check_js.py
+add_gst.ps1
+
+# Docs
+AUTH_SUMMARY.md
+CUSTOMER_AUTH_GUIDE.md
+README_FIREBASE.md
+firestore_rules.txt
