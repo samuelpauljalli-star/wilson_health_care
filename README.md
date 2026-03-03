@@ -46,6 +46,67 @@ This platform is built with a focus on **Rich Aesthetics** and **Visual Excellen
 
 ---
 
+## 📂 Project Structure
+
+```
+wilson_health_care/
+│
+├── 📄 index.html                  # Main storefront — product catalog & homepage
+├── 📄 style.css                   # Global styles, design tokens & animations
+├── 📄 main.js                     # Core frontend logic (cart, search, filters, UI)
+│
+├── 📄 product-detail.html         # Individual product detail page
+├── 📄 product-detail.css          # Styles specific to the product detail page
+├── 📄 product-detail.js           # JS logic for product detail (specs, gallery, CTAs)
+│
+├── 📄 peter.html                  # 🔒 Admin dashboard (orders, revenue, analytics)
+├── 📄 product-manager.html        # 🔒 Admin product manager (add/edit/delete inventory)
+├── 📄 sync-firebase.html          # 🔒 Manual Firebase data sync utility page
+├── 📄 upload_products.html        # 🔒 Bulk product upload utility page
+│
+├── 📄 invoice.html                # Printable order invoice page
+├── 📄 chatbot.html                # AI chatbot interface page
+├── 📄 404.html                    # Custom 404 error page
+│
+├── 📄 auth.js                     # Admin Firebase authentication logic
+├── 📄 customer-auth.js            # Customer-facing authentication logic
+├── 📄 firebase-config.js          # Firebase project configuration & SDK init
+├── 📄 data.js                     # Static product data fallback (offline/Firestore backup)
+│
+├── 📄 service-worker.js           # PWA service worker (offline caching)
+├── 📄 manifest.json               # PWA web app manifest (icons, theme, display mode)
+│
+├── 📄 vercel.json                 # Vercel deployment & routing configuration
+├── 📄 package.json                # NPM dependencies & build scripts
+├── 📄 webpack.config.js           # Webpack bundler configuration
+├── 📄 rollup.config.js            # Rollup bundler configuration (alternative build)
+│
+├── 📄 products-tripled.xlsx       # Excel source file for product data
+├── 📄 logo.jpg                    # Wilson Health Care brand logo
+├── 📄 firestore_rules.txt         # Firebase Firestore security rules
+│
+├── 📁 scripts/                    # Node.js utility scripts (run via npm)
+│   ├── export-to-excel.mjs        # Export Firestore products → Excel
+│   ├── import-from-excel.mjs      # Import products from Excel → Firestore
+│   ├── sync-to-firebase.mjs       # Sync local product data to Firestore
+│   ├── triple-products.mjs        # Triples product entries for data generation
+│   └── watch-excel.mjs            # Watch Excel file & auto-sync on changes
+│
+├── 📁 dist/                       # Webpack build output (auto-generated)
+│   ├── bundle.js                  # Compiled & minified JS bundle
+│   └── bundle.js.LICENSE.txt      # Third-party license notices
+│
+├── 📁 node_modules/               # NPM dependencies (auto-generated, not committed)
+├── 📄 .gitignore                  # Git ignored files & folders
+│
+├── 📄 README.md                   # Project overview & documentation (this file)
+├── 📄 README_FIREBASE.md          # Firebase setup & integration guide
+├── 📄 AUTH_SUMMARY.md             # Authentication architecture summary
+└── 📄 CUSTOMER_AUTH_GUIDE.md      # Customer authentication user guide
+```
+
+---
+
 ## 📂 Deployment & Maintenance
 
 ### 1. One-Click Vercel Deployment
