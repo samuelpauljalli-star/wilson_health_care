@@ -155,7 +155,7 @@ function injectAuthModal() {
                 transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1); margin-bottom:1.2rem;
             " onmouseover="this.style.background='#f8fafc'; this.style.borderColor='#059669'; this.style.transform='translateY(-2px)';"
                onmouseout="this.style.background='#fff'; this.style.borderColor='#e2e8f0'; this.style.transform='';">
-                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png"
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
                      style="width:24px; height:24px;">
                 Continue with Google
             </button>
@@ -218,7 +218,7 @@ window.wilsonSignInWithGoogle = async function () {
         showAuthError(err.code === 'auth/popup-closed-by-user'
             ? 'Sign-in cancelled.'
             : 'Google sign-in failed. Please try again.');
-        if (btn) { btn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png" style="width:22px;"> Continue with Google'; btn.disabled = false; }
+        if (btn) { btn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width:22px;"> Continue with Google'; btn.disabled = false; }
     }
 };
 

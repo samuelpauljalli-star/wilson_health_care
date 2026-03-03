@@ -2119,295 +2119,295 @@
         ]; */
 
 
-        /* Loading & UI Utility Functions */
-        function showLoading() {
-            let loader = document.getElementById('global-loader');
-            if (!loader) {
-                loader = document.createElement('div');
-                loader.id = 'global-loader';
-                loader.innerHTML = '<div class="spinner"></div>';
-                loader.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:15px;';
-                const text = document.createElement('div');
-                text.innerText = 'Loading Premium Experience...';
-                text.style.cssText = 'font-weight:600;color:var(--primary);font-size:1.1rem;';
-                loader.appendChild(text);
+/* Loading & UI Utility Functions */
+function showLoading() {
+    let loader = document.getElementById('global-loader');
+    if (!loader) {
+        loader = document.createElement('div');
+        loader.id = 'global-loader';
+        loader.innerHTML = '<div class="spinner"></div>';
+        loader.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:15px;';
+        const text = document.createElement('div');
+        text.innerText = 'Loading Premium Experience...';
+        text.style.cssText = 'font-weight:600;color:var(--primary);font-size:1.1rem;';
+        loader.appendChild(text);
 
-                const style = document.createElement('style');
-                style.innerHTML = '.spinner { width: 45px; height: 45px; border: 4px solid #e2e8f0; border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; } @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }';
-                document.head.appendChild(style);
-                document.body.appendChild(loader);
-            }
-            loader.style.display = 'flex';
-        }
+        const style = document.createElement('style');
+        style.innerHTML = '.spinner { width: 45px; height: 45px; border: 4px solid #e2e8f0; border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; } @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }';
+        document.head.appendChild(style);
+        document.body.appendChild(loader);
+    }
+    loader.style.display = 'flex';
+}
 
-        function hideLoading() {
-            const loader = document.getElementById('global-loader');
-            if (loader) {
-                loader.style.opacity = '0';
-                setTimeout(() => { loader.style.display = 'none'; loader.style.opacity = '1'; }, 300);
-            }
-        }
+function hideLoading() {
+    const loader = document.getElementById('global-loader');
+    if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => { loader.style.display = 'none'; loader.style.opacity = '1'; }, 300);
+    }
+}
 
-        function renderCategories() {
-            // Categories are statically defined in HTML
-        }
+function renderCategories() {
+    // Categories are statically defined in HTML
+}
 
-        // Aliases for display updates to prevent reference errors
-        function updateCartDisplay() { updateStats(); }
-        function updateWishlistDisplay() { updateStats(); }
+// Aliases for display updates to prevent reference errors
+function updateCartDisplay() { updateStats(); }
+function updateWishlistDisplay() { updateStats(); }
 
-        let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
-        let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
-        let orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
-        let currentUser = JSON.parse(localStorage.getItem('wilson-user')) || null;
-        let currentCategory = 'All';
+let cart = JSON.parse(localStorage.getItem('wilson-cart')) || [];
+let wishlist = JSON.parse(localStorage.getItem('wilson-wishlist')) || [];
+let orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
+let currentUser = JSON.parse(localStorage.getItem('wilson-user')) || null;
+let currentCategory = 'All';
 
-        // Add ratings to products if not present
-        function patchProducts() {
-            const target = window.products || (typeof products !== 'undefined' ? products : []);
-            if (target && Array.isArray(target)) {
-                target.forEach(p => {
-                    if (!p.rating) {
-                        p.rating = (4.2 + Math.random() * 0.7).toFixed(1);
-                        p.ratingCount = Math.floor(50 + Math.random() * 450);
-                    }
-                });
-                window.products = target;
-            }
-        }
-        patchProducts();
-
-        async function loadDynamicContent() {
-            try {
-                // Live Announcement Listener
-                // Use window.onSnapshot if explicit import not available in this scope, but import is in module above.
-                // Since this script is non-module, we access global 'onSnapshot' if exposed?
-                // Wait, import in module script (top) does NOT expose to global scope automatically! 
-                // We need to attach to window in the top script if we want to use it here.
-
-                // Checking if DB functions are available
-                if (window.db && window.doc && window.onSnapshot) {
-                    // Live Announcement
-                    window.onSnapshot(window.doc(window.db, "settings", "announcement"), (docSnap) => {
-                        const track = document.getElementById('announcement-track');
-                        const bar = document.getElementById('dynamic-announcement');
-
-                        if (docSnap.exists() && docSnap.data().text && docSnap.data().text.trim()) {
-                            const text = docSnap.data().text.trim();
-                            if (track) {
-                                // Repeat content multiple times for seamless marquee on large screens
-                                const item = `<div class="marquee-item"><i class="fas fa-bullhorn"></i> ${text}</div>`;
-                                track.innerHTML = item.repeat(8);
-                                bar.style.display = 'block';
-                                console.log("📢 Announcement updated:", text);
-                            }
-                        } else {
-                            if (bar) bar.style.display = 'none';
-                        }
-                    }, (err) => {
-                        console.error("Announcement Sync Error:", err);
-                    });
-
-                    // Live Products Listener
-                    window.onSnapshot(window.collection(window.db, "products"), (snapshot) => {
-                        const firestoreProducts = [];
-                        snapshot.forEach((doc) => {
-                            firestoreProducts.push({ ...doc.data(), id: parseInt(doc.id) || doc.id });
-                        });
-
-                        if (firestoreProducts.length > 0) {
-                            // Filter out any products without valid IDs to prevent navigation issues
-                            const validProducts = firestoreProducts.filter(p =>
-                                p && p.id !== null && p.id !== undefined && p.id !== ''
-                            );
-
-                            if (validProducts.length > 0) {
-                                window.products = validProducts;
-                                renderProducts(currentCategory);
-                                console.log(`Products synced real-time: ${validProducts.length} valid items found`);
-                            }
-                        }
-                    });
-                } else {
-                    console.warn("Firestore functions not fully loaded globally. Retrying...");
-                    setTimeout(loadDynamicContent, 500);
-                }
-
-            } catch (e) {
-                console.error("Error loading dynamic content:", e);
-            }
-        }
-
-        // Initialize
-        async function init() {
-            try {
-                showLoading();
-                checkUserStatus(); // calls renderProducts()
-                try { updateCartDisplay(); } catch (e) { console.warn("Cart Display Error", e); }
-                try { updateWishlistDisplay(); } catch (e) { console.warn("Wishlist Display Error", e); }
-
-                // Load Firestore dynamic content
-                await loadDynamicContent();
-
-                // Ensure products from data.js are loaded if Firestore hasn't provided them yet
-                if ((!window.products || window.products.length === 0) && typeof products !== 'undefined') {
-                    window.products = products;
-                }
-
-                renderProducts();
-                renderCategories();
-                hideLoading();
-                renderRecentlyViewed();
-                observeCategories();
-                startHeroSlideshow();
-
-                // Safety check: if products still not rendered after a delay, try once more
-                setTimeout(() => {
-                    const container = document.getElementById('product-container');
-                    const productsCount = (window.products || []).length;
-                    console.log("Health Check - Products count:", productsCount);
-                    if (container && (container.children.length === 0 || container.innerHTML.length < 50)) {
-                        console.warn("Safety render triggered - Container empty or low content");
-                        if (productsCount === 0 && typeof products !== 'undefined') {
-                            window.products = products;
-                        }
-                        renderProducts();
-                    }
-
-                    // Force reveal categories if they haven't appeared
-                    document.querySelectorAll('.category-card').forEach(card => {
-                        if (!card.classList.contains('reveal')) card.classList.add('reveal');
-                    });
-
-                    // Show a brief debug message on the page for 6 seconds
-                    const debugDiv = document.createElement('div');
-                    debugDiv.style.cssText = 'position:fixed;bottom:10px;right:10px;background:rgba(14, 165, 233, 0.9);color:white;padding:8px 15px;border-radius:10px;font-size:12px;z-index:10000;box-shadow: 0 4px 15px rgba(0,0,0,0.2);font-weight:600;';
-                    debugDiv.id = 'debug-status';
-                    debugDiv.innerText = `Wilson Health: ${productsCount} products ready`;
-                    document.body.appendChild(debugDiv);
-                    setTimeout(() => {
-                        debugDiv.style.opacity = '0';
-                        debugDiv.style.transition = 'opacity 1s ease';
-                        setTimeout(() => debugDiv.remove(), 1000);
-                    }, 5000);
-                }, 1000);
-            } catch (error) {
-                console.error("Initialization Critical Error:", error);
-                hideLoading();
-                if (typeof products !== 'undefined' && (!window.products || window.products.length === 0)) {
-                    window.products = products;
-                }
-                renderProducts();
-            }
-        }
-
-        function updateStats() {
-            const cartCount = document.getElementById('cart-count');
-            const wishlistCount = document.getElementById('wishlist-count');
-            if (cartCount) cartCount.innerText = cart.length;
-            if (wishlistCount) wishlistCount.innerText = wishlist.length;
-
-            localStorage.setItem('wilson-cart', JSON.stringify(cart));
-            localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
-            localStorage.setItem('wilson-orders', JSON.stringify(orders));
-        }
-
-        window.addEventListener('hashchange', () => {
-            const hash = window.location.hash;
-            if (hash.startsWith('#product-')) {
-                const id = parseInt(hash.replace('#product-', ''));
-                if (id) showProductInfo(id);
-            } else if (hash === '#open-cart') {
-                openModal('cart');
-            } else if (hash === '#open-wishlist') {
-                openModal('wishlist');
-            } else if (hash === '#open-orders') {
-                openModal('orders');
-            } else if (hash === '#open-login') {
-                openModal('login');
-            } else if (hash === '#' || hash === '') {
-                closeModal('info');
+// Add ratings to products if not present
+function patchProducts() {
+    const target = window.products || (typeof products !== 'undefined' ? products : []);
+    if (target && Array.isArray(target)) {
+        target.forEach(p => {
+            if (!p.rating) {
+                p.rating = (4.2 + Math.random() * 0.7).toFixed(1);
+                p.ratingCount = Math.floor(50 + Math.random() * 450);
             }
         });
+        window.products = target;
+    }
+}
+patchProducts();
 
-        // Initial check if page loaded with a hash
-        const initialHash = window.location.hash;
-        if (initialHash.startsWith('#product-')) {
-            const id = parseInt(initialHash.replace('#product-', ''));
-            if (id) showProductInfo(id);
-        } else if (initialHash === '#open-cart') {
-            openModal('cart');
-        } else if (initialHash === '#open-wishlist') {
-            openModal('wishlist');
-        } else if (initialHash === '#open-orders') {
-            openModal('orders');
-        } else if (initialHash === '#open-login') {
-            openModal('login');
-        }
+async function loadDynamicContent() {
+    try {
+        // Live Announcement Listener
+        // Use window.onSnapshot if explicit import not available in this scope, but import is in module above.
+        // Since this script is non-module, we access global 'onSnapshot' if exposed?
+        // Wait, import in module script (top) does NOT expose to global scope automatically! 
+        // We need to attach to window in the top script if we want to use it here.
 
-        // Check for Buy Now from subpage
-        if (localStorage.getItem('wilson-auto-checkout') === 'true') {
-            localStorage.removeItem('wilson-auto-checkout');
-            openModal('cart');
-            checkout();
-        }
+        // Checking if DB functions are available
+        if (window.db && window.doc && window.onSnapshot) {
+            // Live Announcement
+            window.onSnapshot(window.doc(window.db, "settings", "announcement"), (docSnap) => {
+                const track = document.getElementById('announcement-track');
+                const bar = document.getElementById('dynamic-announcement');
 
-        function observeCategories() {
-            const cards = document.querySelectorAll('.category-card, .future-card');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.classList.add('reveal');
-                        }, index * 100);
+                if (docSnap.exists() && docSnap.data().text && docSnap.data().text.trim()) {
+                    const text = docSnap.data().text.trim();
+                    if (track) {
+                        // Repeat content multiple times for seamless marquee on large screens
+                        const item = `<div class="marquee-item"><i class="fas fa-bullhorn"></i> ${text}</div>`;
+                        track.innerHTML = item.repeat(8);
+                        bar.style.display = 'block';
+                        console.log("📢 Announcement updated:", text);
                     }
+                } else {
+                    if (bar) bar.style.display = 'none';
+                }
+            }, (err) => {
+                console.error("Announcement Sync Error:", err);
+            });
+
+            // Live Products Listener
+            window.onSnapshot(window.collection(window.db, "products"), (snapshot) => {
+                const firestoreProducts = [];
+                snapshot.forEach((doc) => {
+                    firestoreProducts.push({ ...doc.data(), id: parseInt(doc.id) || doc.id });
                 });
-            }, { threshold: 0.1 });
 
-            cards.forEach(card => observer.observe(card));
+                if (firestoreProducts.length > 0) {
+                    // Filter out any products without valid IDs to prevent navigation issues
+                    const validProducts = firestoreProducts.filter(p =>
+                        p && p.id !== null && p.id !== undefined && p.id !== ''
+                    );
+
+                    if (validProducts.length > 0) {
+                        window.products = validProducts;
+                        renderProducts(currentCategory);
+                        console.log(`Products synced real-time: ${validProducts.length} valid items found`);
+                    }
+                }
+            });
+        } else {
+            console.warn("Firestore functions not fully loaded globally. Retrying...");
+            setTimeout(loadDynamicContent, 500);
         }
 
-        // Hero Slideshow Logic
-        let currentHeroSlide = 0;
-        function startHeroSlideshow() {
-            const slides = document.querySelectorAll('.hero-slide');
-            if (slides.length <= 1) return;
+    } catch (e) {
+        console.error("Error loading dynamic content:", e);
+    }
+}
 
-            setInterval(() => {
-                slides[currentHeroSlide].classList.remove('active');
-                currentHeroSlide = (currentHeroSlide + 1) % slides.length;
-                slides[currentHeroSlide].classList.add('active');
-            }, 3000);
+// Initialize
+async function init() {
+    try {
+        showLoading();
+        checkUserStatus(); // calls renderProducts()
+        try { updateCartDisplay(); } catch (e) { console.warn("Cart Display Error", e); }
+        try { updateWishlistDisplay(); } catch (e) { console.warn("Wishlist Display Error", e); }
+
+        // Load Firestore dynamic content
+        await loadDynamicContent();
+
+        // Ensure products from data.js are loaded if Firestore hasn't provided them yet
+        if ((!window.products || window.products.length === 0) && typeof products !== 'undefined') {
+            window.products = products;
         }
 
-        const BUSINESS_WHATSAPP = "917032687122";
+        renderProducts();
+        renderCategories();
+        hideLoading();
+        renderRecentlyViewed();
+        observeCategories();
+        startHeroSlideshow();
 
-        function checkUserStatus() {
-            const loginBtn = document.getElementById('login-nav-btn');
-            if (currentUser) {
-                loginBtn.innerHTML = '<i class="fas fa-user"></i>';
-                loginBtn.style.color = 'var(--primary)';
-            } else {
-                loginBtn.innerHTML = '<i class="fas fa-user-circle"></i>';
-                loginBtn.style.color = 'inherit';
+        // Safety check: if products still not rendered after a delay, try once more
+        setTimeout(() => {
+            const container = document.getElementById('product-container');
+            const productsCount = (window.products || []).length;
+            console.log("Health Check - Products count:", productsCount);
+            if (container && (container.children.length === 0 || container.innerHTML.length < 50)) {
+                console.warn("Safety render triggered - Container empty or low content");
+                if (productsCount === 0 && typeof products !== 'undefined') {
+                    window.products = products;
+                }
+                renderProducts();
             }
-            // Always refresh products view to show/hide based on login
-            renderProducts();
+
+            // Force reveal categories if they haven't appeared
+            document.querySelectorAll('.category-card').forEach(card => {
+                if (!card.classList.contains('reveal')) card.classList.add('reveal');
+            });
+
+            // Show a brief debug message on the page for 6 seconds
+            const debugDiv = document.createElement('div');
+            debugDiv.style.cssText = 'position:fixed;bottom:10px;right:10px;background:rgba(14, 165, 233, 0.9);color:white;padding:8px 15px;border-radius:10px;font-size:12px;z-index:10000;box-shadow: 0 4px 15px rgba(0,0,0,0.2);font-weight:600;';
+            debugDiv.id = 'debug-status';
+            debugDiv.innerText = `Wilson Health: ${productsCount} products ready`;
+            document.body.appendChild(debugDiv);
+            setTimeout(() => {
+                debugDiv.style.opacity = '0';
+                debugDiv.style.transition = 'opacity 1s ease';
+                setTimeout(() => debugDiv.remove(), 1000);
+            }, 5000);
+        }, 1000);
+    } catch (error) {
+        console.error("Initialization Critical Error:", error);
+        hideLoading();
+        if (typeof products !== 'undefined' && (!window.products || window.products.length === 0)) {
+            window.products = products;
         }
+        renderProducts();
+    }
+}
 
-        // handleLogin removed (Google-only authentication enabled)
+function updateStats() {
+    const cartCount = document.getElementById('cart-count');
+    const wishlistCount = document.getElementById('wishlist-count');
+    if (cartCount) cartCount.innerText = cart.length;
+    if (wishlistCount) wishlistCount.innerText = wishlist.length;
 
-        function renderLoginStep() {
-            const container = document.getElementById('login-container');
-            const title = document.getElementById('login-modal-title');
+    localStorage.setItem('wilson-cart', JSON.stringify(cart));
+    localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+    localStorage.setItem('wilson-orders', JSON.stringify(orders));
+}
 
-            if (currentUser) {
-                renderUserProfile();
-                return;
+window.addEventListener('hashchange', () => {
+    const hash = window.location.hash;
+    if (hash.startsWith('#product-')) {
+        const id = parseInt(hash.replace('#product-', ''));
+        if (id) showProductInfo(id);
+    } else if (hash === '#open-cart') {
+        openModal('cart');
+    } else if (hash === '#open-wishlist') {
+        openModal('wishlist');
+    } else if (hash === '#open-orders') {
+        openModal('orders');
+    } else if (hash === '#open-login') {
+        openModal('login');
+    } else if (hash === '#' || hash === '') {
+        closeModal('info');
+    }
+});
+
+// Initial check if page loaded with a hash
+const initialHash = window.location.hash;
+if (initialHash.startsWith('#product-')) {
+    const id = parseInt(initialHash.replace('#product-', ''));
+    if (id) showProductInfo(id);
+} else if (initialHash === '#open-cart') {
+    openModal('cart');
+} else if (initialHash === '#open-wishlist') {
+    openModal('wishlist');
+} else if (initialHash === '#open-orders') {
+    openModal('orders');
+} else if (initialHash === '#open-login') {
+    openModal('login');
+}
+
+// Check for Buy Now from subpage
+if (localStorage.getItem('wilson-auto-checkout') === 'true') {
+    localStorage.removeItem('wilson-auto-checkout');
+    openModal('cart');
+    checkout();
+}
+
+function observeCategories() {
+    const cards = document.querySelectorAll('.category-card, .future-card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('reveal');
+                }, index * 100);
             }
+        });
+    }, { threshold: 0.1 });
 
-            title.innerText = 'Member Login';
-            container.innerHTML = `
+    cards.forEach(card => observer.observe(card));
+}
+
+// Hero Slideshow Logic
+let currentHeroSlide = 0;
+function startHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length <= 1) return;
+
+    setInterval(() => {
+        slides[currentHeroSlide].classList.remove('active');
+        currentHeroSlide = (currentHeroSlide + 1) % slides.length;
+        slides[currentHeroSlide].classList.add('active');
+    }, 3000);
+}
+
+const BUSINESS_WHATSAPP = "917032687122";
+
+function checkUserStatus() {
+    const loginBtn = document.getElementById('login-nav-btn');
+    if (currentUser) {
+        loginBtn.innerHTML = '<i class="fas fa-user"></i>';
+        loginBtn.style.color = 'var(--primary)';
+    } else {
+        loginBtn.innerHTML = '<i class="fas fa-user-circle"></i>';
+        loginBtn.style.color = 'inherit';
+    }
+    // Always refresh products view to show/hide based on login
+    renderProducts();
+}
+
+// handleLogin removed (Google-only authentication enabled)
+
+function renderLoginStep() {
+    const container = document.getElementById('login-container');
+    const title = document.getElementById('login-modal-title');
+
+    if (currentUser) {
+        renderUserProfile();
+        return;
+    }
+
+    title.innerText = 'Member Login';
+    container.innerHTML = `
                 <div style="text-align: center; padding: 1.5rem 0;">
                     <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.5;">
                         To provide personalized pricing and order tracking, we require all users to sign in via Google.
@@ -2418,7 +2418,7 @@
                         onclick="loginWithGoogle()"
                         onmouseover="this.style.borderColor='#059669'; this.style.background='#f8fafc';"
                         onmouseout="this.style.borderColor='#e2e8f0'; this.style.background='#fff';">
-                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png" style="width: 22px;">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width: 22px;">
                         Sign in with Google
                     </button>
                     
@@ -2427,56 +2427,56 @@
                     </p>
                 </div>
             `;
+}
+
+function logout() {
+    currentUser = null;
+    localStorage.removeItem('wilson-user');
+    checkUserStatus();
+    closeModal('login');
+    showToast('Logged out successfully');
+}
+
+function openModal(type) {
+    const modal = document.getElementById(`${type}-modal`);
+    const content = modal.querySelector('.modal-content');
+
+    if (type === 'login') {
+        if (currentUser) {
+            content.classList.add('wide');
+            renderUserProfile();
+        } else {
+            content.classList.remove('wide');
+            renderLoginStep();
         }
+    }
+    modal.style.display = 'flex';
+    if (type === 'cart') renderCart();
+    if (type === 'wishlist') renderWishlist();
+    if (type === 'orders') renderOrders();
+}
 
-        function logout() {
-            currentUser = null;
-            localStorage.removeItem('wilson-user');
-            checkUserStatus();
-            closeModal('login');
-            showToast('Logged out successfully');
-        }
+function renderUserProfile() {
+    const container = document.getElementById('login-container');
+    const title = document.getElementById('login-modal-title');
+    title.innerText = 'My Account';
 
-        function openModal(type) {
-            const modal = document.getElementById(`${type}-modal`);
-            const content = modal.querySelector('.modal-content');
+    // Ensure fields exist in currentUser object
+    const user = {
+        name: currentUser.name || '',
+        mobile: currentUser.mobile || '',
+        email: currentUser.email || '',
+        hno: currentUser.hno || '',
+        street: currentUser.street || '',
+        landmark: currentUser.landmark || '',
+        pincode: currentUser.pincode || '',
+        district: currentUser.district || '',
+        state: currentUser.state || '',
+        country: currentUser.country || 'India',
+        profilePic: currentUser.profilePic || ''
+    };
 
-            if (type === 'login') {
-                if (currentUser) {
-                    content.classList.add('wide');
-                    renderUserProfile();
-                } else {
-                    content.classList.remove('wide');
-                    renderLoginStep();
-                }
-            }
-            modal.style.display = 'flex';
-            if (type === 'cart') renderCart();
-            if (type === 'wishlist') renderWishlist();
-            if (type === 'orders') renderOrders();
-        }
-
-        function renderUserProfile() {
-            const container = document.getElementById('login-container');
-            const title = document.getElementById('login-modal-title');
-            title.innerText = 'My Account';
-
-            // Ensure fields exist in currentUser object
-            const user = {
-                name: currentUser.name || '',
-                mobile: currentUser.mobile || '',
-                email: currentUser.email || '',
-                hno: currentUser.hno || '',
-                street: currentUser.street || '',
-                landmark: currentUser.landmark || '',
-                pincode: currentUser.pincode || '',
-                district: currentUser.district || '',
-                state: currentUser.state || '',
-                country: currentUser.country || 'India',
-                profilePic: currentUser.profilePic || ''
-            };
-
-            container.innerHTML = `
+    container.innerHTML = `
                 <div class="user-logged-in" style="max-height: 80vh; overflow-y: auto; padding: 10px 20px 20px 5px;">
                     <div class="user-avatar-container" style="position: relative; width: 100px; height: 100px; margin: 0 auto 1rem; cursor: pointer;" onclick="document.getElementById('profile-upload').click()">
                         <div class="user-avatar" id="profile-display" style="width: 100%; height: 100%; overflow: hidden; border-radius: 50%; border: 4px solid var(--primary); display: flex; align-items: center; justify-content: center; background: var(--bg-light); box-shadow: var(--shadow);">
@@ -2577,271 +2577,271 @@
                     </div>
                 </div>
             `;
-        }
+}
 
 
 
-        function handleProfilePic(input) {
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const profileDisplay = document.getElementById('profile-display');
-                    profileDisplay.innerHTML = `<img src="${e.target.result}" style="width: 100%; height: 100%; object-fit: cover;">`;
-                    currentUser.profilePic = e.target.result;
-                    // Auto-save pic immediately
-                    localStorage.setItem('wilson-user', JSON.stringify(currentUser));
-                    showToast("Profile Picture Updated!");
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        async function fetchAddressByPincode(pincode) {
-            if (pincode.length !== 6) return;
-            showToast("Fetching address info...");
-            try {
-                const response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
-                const data = await response.json();
-                if (data[0].Status === "Success") {
-                    const postOffice = data[0].PostOffice[0];
-                    document.getElementById('prof-district').value = postOffice.District;
-                    document.getElementById('prof-state').value = postOffice.State;
-                    showToast("Address auto-filled!");
-                }
-            } catch (e) {
-                console.error("Pincode API Error:", e);
-            }
-        }
-
-        // Add event listener for pincode
-        document.addEventListener('input', (e) => {
-            if (e.target.id === 'prof-pincode') {
-                if (e.target.value.length === 6) {
-                    fetchAddressByPincode(e.target.value);
-                }
-            }
-        });
-
-        function saveProfileDetails(event) {
-            event.preventDefault();
-
-            currentUser.name = document.getElementById('prof-name').value;
-            currentUser.mobile = document.getElementById('prof-mobile').value;
-            currentUser.email = document.getElementById('prof-email').value;
-            currentUser.hno = document.getElementById('prof-hno').value;
-            currentUser.street = document.getElementById('prof-street').value;
-            currentUser.landmark = document.getElementById('prof-landmark').value;
-            currentUser.pincode = document.getElementById('prof-pincode').value;
-            currentUser.district = document.getElementById('prof-district').value;
-            currentUser.state = document.getElementById('prof-state').value;
-            currentUser.country = document.getElementById('prof-country').value;
-
+function handleProfilePic(input) {
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const profileDisplay = document.getElementById('profile-display');
+            profileDisplay.innerHTML = `<img src="${e.target.result}" style="width: 100%; height: 100%; object-fit: cover;">`;
+            currentUser.profilePic = e.target.result;
+            // Auto-save pic immediately
             localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+            showToast("Profile Picture Updated!");
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 
-            // Sync profile update to Firestore
-            if (typeof window._saveUserToFirestore === 'function') {
-                window._saveUserToFirestore(currentUser, null);
-            }
-
-            showToast("Profile Updated!");
-            checkUserStatus();
-            renderUserProfile();
+async function fetchAddressByPincode(pincode) {
+    if (pincode.length !== 6) return;
+    showToast("Fetching address info...");
+    try {
+        const response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
+        const data = await response.json();
+        if (data[0].Status === "Success") {
+            const postOffice = data[0].PostOffice[0];
+            document.getElementById('prof-district').value = postOffice.District;
+            document.getElementById('prof-state').value = postOffice.State;
+            showToast("Address auto-filled!");
         }
+    } catch (e) {
+        console.error("Pincode API Error:", e);
+    }
+}
 
-        function checkAddressOnMaps() {
-            const hno = document.getElementById('prof-hno').value;
-            const street = document.getElementById('prof-street').value;
-            const district = document.getElementById('prof-district').value;
-            const state = document.getElementById('prof-state').value;
-            const query = `${hno}, ${street}, ${district}, ${state}`;
-            if (query.length > 5) {
-                window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`, '_blank');
-            } else {
-                showToast("Please fill address details first");
-            }
+// Add event listener for pincode
+document.addEventListener('input', (e) => {
+    if (e.target.id === 'prof-pincode') {
+        if (e.target.value.length === 6) {
+            fetchAddressByPincode(e.target.value);
         }
+    }
+});
 
-        // loginWithGoogle is bridged by module script above → calls wilsonSignInWithGoogle() from auth.js
-        function loginWithGoogle() {
-            if (typeof window.wilsonSignInWithGoogle === 'function') window.wilsonSignInWithGoogle();
-            else if (typeof window.openAuthModal === 'function') window.openAuthModal();
-        }
+function saveProfileDetails(event) {
+    event.preventDefault();
+
+    currentUser.name = document.getElementById('prof-name').value;
+    currentUser.mobile = document.getElementById('prof-mobile').value;
+    currentUser.email = document.getElementById('prof-email').value;
+    currentUser.hno = document.getElementById('prof-hno').value;
+    currentUser.street = document.getElementById('prof-street').value;
+    currentUser.landmark = document.getElementById('prof-landmark').value;
+    currentUser.pincode = document.getElementById('prof-pincode').value;
+    currentUser.district = document.getElementById('prof-district').value;
+    currentUser.state = document.getElementById('prof-state').value;
+    currentUser.country = document.getElementById('prof-country').value;
+
+    localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+
+    // Sync profile update to Firestore
+    if (typeof window._saveUserToFirestore === 'function') {
+        window._saveUserToFirestore(currentUser, null);
+    }
+
+    showToast("Profile Updated!");
+    checkUserStatus();
+    renderUserProfile();
+}
+
+function checkAddressOnMaps() {
+    const hno = document.getElementById('prof-hno').value;
+    const street = document.getElementById('prof-street').value;
+    const district = document.getElementById('prof-district').value;
+    const state = document.getElementById('prof-state').value;
+    const query = `${hno}, ${street}, ${district}, ${state}`;
+    if (query.length > 5) {
+        window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`, '_blank');
+    } else {
+        showToast("Please fill address details first");
+    }
+}
+
+// loginWithGoogle is bridged by module script above → calls wilsonSignInWithGoogle() from auth.js
+function loginWithGoogle() {
+    if (typeof window.wilsonSignInWithGoogle === 'function') window.wilsonSignInWithGoogle();
+    else if (typeof window.openAuthModal === 'function') window.openAuthModal();
+}
 
 
-        /* Chatbot Logic */
-        function toggleChat() {
-            document.getElementById('chat-window').classList.toggle('open');
-        }
+/* Chatbot Logic */
+function toggleChat() {
+    document.getElementById('chat-window').classList.toggle('open');
+}
 
-        function handleManualChat() {
-            const input = document.getElementById('chat-input');
-            const text = input.value.trim();
-            if (text) {
-                askBot(text);
-                input.value = '';
-            }
-        }
+function handleManualChat() {
+    const input = document.getElementById('chat-input');
+    const text = input.value.trim();
+    if (text) {
+        askBot(text);
+        input.value = '';
+    }
+}
 
-        // Allow Enter key in chat input
-        document.addEventListener('DOMContentLoaded', () => {
-            const chatInput = document.getElementById('chat-input');
-            if (chatInput) {
-                chatInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') handleManualChat();
-                });
-            }
+// Allow Enter key in chat input
+document.addEventListener('DOMContentLoaded', () => {
+    const chatInput = document.getElementById('chat-input');
+    if (chatInput) {
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleManualChat();
         });
+    }
+});
 
-        function askBot(typeOrText) {
-            const msgContainer = document.getElementById('chat-messages');
-            let userText = '';
-            let botResponse = '';
+function askBot(typeOrText) {
+    const msgContainer = document.getElementById('chat-messages');
+    let userText = '';
+    let botResponse = '';
 
-            if (typeOrText === 'order') {
-                userText = 'Where is my order?';
-                if (currentUser && orders.length > 0) {
-                    const lastOrder = orders[orders.length - 1];
-                    botResponse = `Your last order #${lastOrder.orderId || 'N/A'} is currently ${lastOrder.status || 'Processing'}.`;
-                } else {
-                    botResponse = 'Please login to track your orders, or provide your Order ID.';
-                }
-            } else if (typeOrText === 'product') {
-                userText = 'Product Details';
-                botResponse = 'You can click on any product card to see full specifications, images, and usage guides.';
-            } else if (typeOrText === 'contact') {
-                userText = 'Contact Support';
-                botResponse = 'Our support team is available at +91 70326 87122 or via email: support@wilsonhealthcare.com';
-            } else {
-                // Manual text input
-                userText = typeOrText;
-                const query = typeOrText.toLowerCase();
-
-                if (query === 'thumati wilson babu with wilson health care') {
-                    botResponse = 'Authenticating… Please wait.';
-                    setTimeout(() => window.location.href = 'peter.html', 1200);
-                } else if (query.includes('hello') || query.includes('hi')) {
-
-                    botResponse = "Hello! How can Wilson Health Care assist you today?";
-                } else if (query.includes('price') || query.includes('cost')) {
-                    botResponse = "Prices are listed on each product card. We offer special discounts for bulk hospital orders!";
-                } else {
-                    // Try to find a product
-                    const match = (window.products || []).find(p => p.name.toLowerCase().includes(query));
-                    if (match) {
-                        botResponse = `I found "${match.name}". It's in the ${match.category} category. Would you like to see its details?`;
-                    } else {
-                        botResponse = "I'm not exactly sure about that. Try asking about a product name, or click 'Contact Support'.";
-                    }
-                }
-            }
-
-            // User Msg
-            const userDiv = document.createElement('div');
-            userDiv.className = 'chat-msg user-msg';
-            userDiv.innerText = userText;
-            msgContainer.appendChild(userDiv);
-            msgContainer.scrollTop = msgContainer.scrollHeight;
-
-            // Bot Msg
-            setTimeout(() => {
-                const botDiv = document.createElement('div');
-                botDiv.className = 'chat-msg bot-msg';
-                botDiv.innerText = botResponse;
-                msgContainer.appendChild(botDiv);
-                msgContainer.scrollTop = msgContainer.scrollHeight;
-            }, 600);
+    if (typeOrText === 'order') {
+        userText = 'Where is my order?';
+        if (currentUser && orders.length > 0) {
+            const lastOrder = orders[orders.length - 1];
+            botResponse = `Your last order #${lastOrder.orderId || 'N/A'} is currently ${lastOrder.status || 'Processing'}.`;
+        } else {
+            botResponse = 'Please login to track your orders, or provide your Order ID.';
         }
+    } else if (typeOrText === 'product') {
+        userText = 'Product Details';
+        botResponse = 'You can click on any product card to see full specifications, images, and usage guides.';
+    } else if (typeOrText === 'contact') {
+        userText = 'Contact Support';
+        botResponse = 'Our support team is available at +91 70326 87122 or via email: support@wilsonhealthcare.com';
+    } else {
+        // Manual text input
+        userText = typeOrText;
+        const query = typeOrText.toLowerCase();
 
-        // Initialize Products
-        function renderProducts(filter = 'All', searchQuery = '', sortBy = 'default') {
-            currentCategory = filter;
-            const container = document.getElementById('product-container');
-            const heading = document.getElementById('products-heading');
-            const subheading = document.getElementById('products-subheading');
-            const searchInput = document.getElementById('search-input');
+        if (query === 'thumati wilson babu with wilson health care') {
+            botResponse = 'Authenticating… Please wait.';
+            setTimeout(() => window.location.href = 'peter.html', 1200);
+        } else if (query.includes('hello') || query.includes('hi')) {
 
-            if (!container) return;
-
-            // Ensure products are available
-            if ((!window.products || window.products.length === 0) && typeof products !== 'undefined') {
-                window.products = products;
+            botResponse = "Hello! How can Wilson Health Care assist you today?";
+        } else if (query.includes('price') || query.includes('cost')) {
+            botResponse = "Prices are listed on each product card. We offer special discounts for bulk hospital orders!";
+        } else {
+            // Try to find a product
+            const match = (window.products || []).find(p => p.name.toLowerCase().includes(query));
+            if (match) {
+                botResponse = `I found "${match.name}". It's in the ${match.category} category. Would you like to see its details?`;
+            } else {
+                botResponse = "I'm not exactly sure about that. Try asking about a product name, or click 'Contact Support'.";
             }
+        }
+    }
 
-            const allProducts = window.products || [];
-            console.log(`Render Request: Filter=${filter}, searchQuery=${searchQuery}, AvailableCount=${allProducts.length}`);
+    // User Msg
+    const userDiv = document.createElement('div');
+    userDiv.className = 'chat-msg user-msg';
+    userDiv.innerText = userText;
+    msgContainer.appendChild(userDiv);
+    msgContainer.scrollTop = msgContainer.scrollHeight;
 
-            if (filter !== 'All' && !searchQuery) {
-                if (searchInput) searchInput.value = '';
-            } else if (filter === 'All' && !searchQuery) {
-                if (searchInput) searchInput.value = '';
-            }
+    // Bot Msg
+    setTimeout(() => {
+        const botDiv = document.createElement('div');
+        botDiv.className = 'chat-msg bot-msg';
+        botDiv.innerText = botResponse;
+        msgContainer.appendChild(botDiv);
+        msgContainer.scrollTop = msgContainer.scrollHeight;
+    }, 600);
+}
 
-            let filtered = filter === 'All' ? [...allProducts] : allProducts.filter(p => p && p.category === filter);
+// Initialize Products
+function renderProducts(filter = 'All', searchQuery = '', sortBy = 'default') {
+    currentCategory = filter;
+    const container = document.getElementById('product-container');
+    const heading = document.getElementById('products-heading');
+    const subheading = document.getElementById('products-subheading');
+    const searchInput = document.getElementById('search-input');
 
-            if (searchQuery) {
-                const query = searchQuery.toLowerCase();
-                filtered = filtered.filter(p => p && (
-                    (p.name || "").toLowerCase().includes(query) ||
-                    (p.desc || "").toLowerCase().includes(query) ||
-                    (p.category || "").toLowerCase().includes(query)
-                ));
-            }
+    if (!container) return;
 
-            // Apply Sorting
-            if (sortBy === 'price-low') {
-                filtered.sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0));
-            } else if (sortBy === 'price-high') {
-                filtered.sort((a, b) => (Number(b.price) || 0) - (Number(a.price) || 0));
-            } else if (sortBy === 'rating') {
-                filtered.sort((a, b) => (parseFloat(b.rating) || 0) - (parseFloat(a.rating) || 0));
-            } else if (sortBy === 'discount') {
-                filtered.sort((a, b) => {
-                    const discA = parseInt(a.discount) || 0;
-                    const discB = parseInt(b.discount) || 0;
-                    return discB - discA;
-                });
-            }
+    // Ensure products are available
+    if ((!window.products || window.products.length === 0) && typeof products !== 'undefined') {
+        window.products = products;
+    }
 
-            // Update heading text
-            if (heading) {
-                if (searchQuery) {
-                    heading.innerText = `Search Results: "${searchQuery}"`;
-                    if (subheading) subheading.innerText = `Found ${filtered.length} products matching your search`;
-                } else if (filter === 'All') {
-                    heading.innerText = "Featured Products";
-                    if (subheading) subheading.innerText = `Wilson Premium Collection (${filtered.length} items)`;
-                } else {
-                    heading.innerText = filter;
-                    if (subheading) subheading.innerText = `Premium ${filter} for professional care (${filtered.length} items)`;
-                }
-            }
+    const allProducts = window.products || [];
+    console.log(`Render Request: Filter=${filter}, searchQuery=${searchQuery}, AvailableCount=${allProducts.length}`);
 
-            if (filtered.length === 0) {
-                container.innerHTML = `
+    if (filter !== 'All' && !searchQuery) {
+        if (searchInput) searchInput.value = '';
+    } else if (filter === 'All' && !searchQuery) {
+        if (searchInput) searchInput.value = '';
+    }
+
+    let filtered = filter === 'All' ? [...allProducts] : allProducts.filter(p => p && p.category === filter);
+
+    if (searchQuery) {
+        const query = searchQuery.toLowerCase();
+        filtered = filtered.filter(p => p && (
+            (p.name || "").toLowerCase().includes(query) ||
+            (p.desc || "").toLowerCase().includes(query) ||
+            (p.category || "").toLowerCase().includes(query)
+        ));
+    }
+
+    // Apply Sorting
+    if (sortBy === 'price-low') {
+        filtered.sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0));
+    } else if (sortBy === 'price-high') {
+        filtered.sort((a, b) => (Number(b.price) || 0) - (Number(a.price) || 0));
+    } else if (sortBy === 'rating') {
+        filtered.sort((a, b) => (parseFloat(b.rating) || 0) - (parseFloat(a.rating) || 0));
+    } else if (sortBy === 'discount') {
+        filtered.sort((a, b) => {
+            const discA = parseInt(a.discount) || 0;
+            const discB = parseInt(b.discount) || 0;
+            return discB - discA;
+        });
+    }
+
+    // Update heading text
+    if (heading) {
+        if (searchQuery) {
+            heading.innerText = `Search Results: "${searchQuery}"`;
+            if (subheading) subheading.innerText = `Found ${filtered.length} products matching your search`;
+        } else if (filter === 'All') {
+            heading.innerText = "Featured Products";
+            if (subheading) subheading.innerText = `Wilson Premium Collection (${filtered.length} items)`;
+        } else {
+            heading.innerText = filter;
+            if (subheading) subheading.innerText = `Premium ${filter} for professional care (${filtered.length} items)`;
+        }
+    }
+
+    if (filtered.length === 0) {
+        container.innerHTML = `
                 <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-light);">
                     <i class="fas fa-box-open" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
                     <h3>No products found</h3>
                     <p>Try exploring our other medical equipment categories.</p>
                 </div>
             `;
-                return;
-            }
+        return;
+    }
 
-            let html = '';
-            filtered.forEach((p, index) => {
-                if (!p) return;
-                // Warranty logic (1-based position)
-                const pos = index + 1;
-                let warrantyBadge = '';
-                if (pos % 3 === 0) {
-                    // Positions 3, 6, 9, 12, 15 … → 1 Year Warranty
-                    warrantyBadge = `<div class="warranty-badge one-year"><i class="fas fa-shield-alt"></i> 1 Year Warranty</div>`;
-                } else if (pos % 3 === 2) {
-                    // Positions 2, 5, 8, 11, 14 … → 6 Month Warranty
-                    warrantyBadge = `<div class="warranty-badge six-month"><i class="fas fa-shield-alt"></i> 6 Month Warranty</div>`;
-                }
-                try {
-                    html += `
+    let html = '';
+    filtered.forEach((p, index) => {
+        if (!p) return;
+        // Warranty logic (1-based position)
+        const pos = index + 1;
+        let warrantyBadge = '';
+        if (pos % 3 === 0) {
+            // Positions 3, 6, 9, 12, 15 … → 1 Year Warranty
+            warrantyBadge = `<div class="warranty-badge one-year"><i class="fas fa-shield-alt"></i> 1 Year Warranty</div>`;
+        } else if (pos % 3 === 2) {
+            // Positions 2, 5, 8, 11, 14 … → 6 Month Warranty
+            warrantyBadge = `<div class="warranty-badge six-month"><i class="fas fa-shield-alt"></i> 6 Month Warranty</div>`;
+        }
+        try {
+            html += `
                 <div class="product-card" onclick="if(!event.target.closest('button')) showProductInfo('${p.id}')">
                     ${p.discount ? `<div class="discount-badge">${p.discount}</div>` : ''}
                     ${warrantyBadge}
@@ -2873,63 +2873,63 @@
                     </div>
                 </div>
                 `;
-                } catch (err) {
-                    console.error("Error drawing card", err, p);
-                }
-            });
-            container.innerHTML = html;
-            console.log(`Successfully injected ${filtered.length} products`);
+        } catch (err) {
+            console.error("Error drawing card", err, p);
         }
+    });
+    container.innerHTML = html;
+    console.log(`Successfully injected ${filtered.length} products`);
+}
 
-        let currentSlideIndex = 0;
-        function showProductInfo(id) {
-            if (!id || id === 'null' || id === 'undefined') {
-                console.error("Attempted to navigate with invalid product ID:", id);
-                return;
-            }
-            addToRecentlyViewed(id);
-            // Use path-based navigation if desired, but query param is safest for static servers
-            window.location.href = `product-detail.html?id=${id}`;
-        }
+let currentSlideIndex = 0;
+function showProductInfo(id) {
+    if (!id || id === 'null' || id === 'undefined') {
+        console.error("Attempted to navigate with invalid product ID:", id);
+        return;
+    }
+    addToRecentlyViewed(id);
+    // Use path-based navigation if desired, but query param is safest for static servers
+    window.location.href = `product-detail.html?id=${id}`;
+}
 
 
-        function moveSlider(dir) {
-            const track = document.getElementById('slider-track');
-            const total = track.children.length;
-            currentSlideIndex = (currentSlideIndex + dir + total) % total;
-            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-        }
+function moveSlider(dir) {
+    const track = document.getElementById('slider-track');
+    const total = track.children.length;
+    currentSlideIndex = (currentSlideIndex + dir + total) % total;
+    track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+}
 
-        function addToRecentlyViewed(id) {
-            let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
-            rv = rv.filter(itemId => itemId !== id);
-            rv.unshift(id);
-            rv = rv.slice(0, 10); // Keep last 10
-            localStorage.setItem('wilson-rv', JSON.stringify(rv));
-            renderRecentlyViewed();
-        }
+function addToRecentlyViewed(id) {
+    let rv = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+    rv = rv.filter(itemId => itemId !== id);
+    rv.unshift(id);
+    rv = rv.slice(0, 10); // Keep last 10
+    localStorage.setItem('wilson-rv', JSON.stringify(rv));
+    renderRecentlyViewed();
+}
 
-        function renderRecentlyViewed() {
-            const container = document.getElementById('recently-viewed-section');
-            const track = document.getElementById('rv-track');
-            const rvIds = JSON.parse(localStorage.getItem('wilson-rv')) || [];
+function renderRecentlyViewed() {
+    const container = document.getElementById('recently-viewed-section');
+    const track = document.getElementById('rv-track');
+    const rvIds = JSON.parse(localStorage.getItem('wilson-rv')) || [];
 
-            if (rvIds.length === 0) {
-                container.style.display = 'none';
-                return;
-            }
+    if (rvIds.length === 0) {
+        container.style.display = 'none';
+        return;
+    }
 
-            container.style.display = 'block';
-            const items = rvIds.map(id => (window.products || []).find(p => p.id == id)).filter(p => p);
+    container.style.display = 'block';
+    const items = rvIds.map(id => (window.products || []).find(p => p.id == id)).filter(p => p);
 
-            // Double the items for seamless loop
-            const displayItems = [...items, ...items];
-            if (displayItems.length === 0) {
-                container.style.display = 'none';
-                return;
-            }
+    // Double the items for seamless loop
+    const displayItems = [...items, ...items];
+    if (displayItems.length === 0) {
+        container.style.display = 'none';
+        return;
+    }
 
-            track.innerHTML = displayItems.map(p => `
+    track.innerHTML = displayItems.map(p => `
                 <div class="rv-item" onclick="showProductInfo('${p.id}')">
                     <img src="${p.image}" alt="${p.name}">
                     <div class="rv-item-info">
@@ -2939,97 +2939,97 @@
                 </div>
             `).join('');
 
-            // Adjust speed based on item count
-            track.style.animationDuration = `${displayItems.length * 3}s`;
-        }
+    // Adjust speed based on item count
+    track.style.animationDuration = `${displayItems.length * 3}s`;
+}
 
-        function changeMainImage(thumb, imgSrc) {
-            document.getElementById('main-product-img').src = imgSrc;
-            document.querySelectorAll('.thumb-item').forEach(item => item.classList.remove('active'));
-            thumb.classList.add('active');
-        }
+function changeMainImage(thumb, imgSrc) {
+    document.getElementById('main-product-img').src = imgSrc;
+    document.querySelectorAll('.thumb-item').forEach(item => item.classList.remove('active'));
+    thumb.classList.add('active');
+}
 
-        function handleSearch(query) {
-            const hero = document.querySelector('.hero');
-            if (query.trim().length > 0) {
-                hero.classList.add('hidden');
-                // Scroll to results
-                setTimeout(() => {
-                    document.getElementById('products-heading').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 400);
-            } else {
-                hero.classList.remove('hidden');
-            }
-            renderProducts('All', query);
-        }
+function handleSearch(query) {
+    const hero = document.querySelector('.hero');
+    if (query.trim().length > 0) {
+        hero.classList.add('hidden');
+        // Scroll to results
+        setTimeout(() => {
+            document.getElementById('products-heading').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 400);
+    } else {
+        hero.classList.remove('hidden');
+    }
+    renderProducts('All', query);
+}
 
-        function buyNow(id) {
-            if (!currentUser) {
-                showToast("Please login to buy items");
-                openModal('login');
-                return;
-            }
-            const product = (window.products || []).find(p => p.id == id);
-            if (!product) return;
-            // Clear cart if desired, or just add and go to checkout
-            // For better UX, we'll just add this specific item (or increase its qty) and open checkout
-            const existingItem = cart.find(item => item.id == id);
-            if (!existingItem) {
-                cart.push({ ...product, cartId: Date.now(), quantity: 1 });
-            }
-            updateStats();
-            openModal('cart');
-            checkout();
-        }
+function buyNow(id) {
+    if (!currentUser) {
+        showToast("Please login to buy items");
+        openModal('login');
+        return;
+    }
+    const product = (window.products || []).find(p => p.id == id);
+    if (!product) return;
+    // Clear cart if desired, or just add and go to checkout
+    // For better UX, we'll just add this specific item (or increase its qty) and open checkout
+    const existingItem = cart.find(item => item.id == id);
+    if (!existingItem) {
+        cart.push({ ...product, cartId: Date.now(), quantity: 1 });
+    }
+    updateStats();
+    openModal('cart');
+    checkout();
+}
 
-        // Cart Logic
-        function addToCart(id) {
-            if (!currentUser) {
-                showToast("Please login to add items to cart");
-                openModal('login');
-                return;
-            }
-            const product = (window.products || []).find(p => p.id == id);
-            if (!product) return;
-            const existingItem = cart.find(item => item.id == id);
+// Cart Logic
+function addToCart(id) {
+    if (!currentUser) {
+        showToast("Please login to add items to cart");
+        openModal('login');
+        return;
+    }
+    const product = (window.products || []).find(p => p.id == id);
+    if (!product) return;
+    const existingItem = cart.find(item => item.id == id);
 
-            if (existingItem) {
-                existingItem.quantity = (existingItem.quantity || 1) + 1;
-                showToast(`Increased ${product.name} quantity to ${existingItem.quantity}!`);
-            } else {
-                cart.push({ ...product, cartId: Date.now(), quantity: 1 });
-                showToast(`Added ${product.name} to cart!`);
-            }
-            updateStats();
-        }
+    if (existingItem) {
+        existingItem.quantity = (existingItem.quantity || 1) + 1;
+        showToast(`Increased ${product.name} quantity to ${existingItem.quantity}!`);
+    } else {
+        cart.push({ ...product, cartId: Date.now(), quantity: 1 });
+        showToast(`Added ${product.name} to cart!`);
+    }
+    updateStats();
+}
 
-        function changeQuantity(cartId, delta) {
-            const item = cart.find(i => i.cartId === cartId);
-            if (item) {
-                item.quantity = (item.quantity || 1) + delta;
-                if (item.quantity <= 0) {
-                    removeFromCart(cartId);
-                } else {
-                    updateStats();
-                    renderCart();
-                }
-            }
-        }
-
-        function removeFromCart(cartId) {
-            cart = cart.filter(item => item.cartId !== cartId);
+function changeQuantity(cartId, delta) {
+    const item = cart.find(i => i.cartId === cartId);
+    if (item) {
+        item.quantity = (item.quantity || 1) + delta;
+        if (item.quantity <= 0) {
+            removeFromCart(cartId);
+        } else {
             updateStats();
             renderCart();
         }
+    }
+}
 
-        function renderCart() {
-            const container = document.getElementById('cart-items');
-            if (cart.length === 0) {
-                container.innerHTML = '<p style="text-align:center; color:#64748b; margin-top: 2rem;">Your cart is empty.</p>';
-                document.getElementById('cart-total') ? document.getElementById('cart-total').innerText = '₹0.00' : null;
-                return;
-            }
-            container.innerHTML = cart.map(item => `
+function removeFromCart(cartId) {
+    cart = cart.filter(item => item.cartId !== cartId);
+    updateStats();
+    renderCart();
+}
+
+function renderCart() {
+    const container = document.getElementById('cart-items');
+    if (cart.length === 0) {
+        container.innerHTML = '<p style="text-align:center; color:#64748b; margin-top: 2rem;">Your cart is empty.</p>';
+        document.getElementById('cart-total') ? document.getElementById('cart-total').innerText = '₹0.00' : null;
+        return;
+    }
+    container.innerHTML = cart.map(item => `
                 <div class="cart-item">
                     <img src="${item.image}" alt="${item.name}">
                     <div class="cart-item-info">
@@ -3047,19 +3047,19 @@
                 </div>
             `).join('');
 
-            let subtotal = 0;
-            let totalTax = 0;
+    let subtotal = 0;
+    let totalTax = 0;
 
-            cart.forEach(item => {
-                const price = (item.price || 0) * (item.quantity || 1);
-                subtotal += price;
-                totalTax += (price * (item.gst || 0) / 100);
-            });
+    cart.forEach(item => {
+        const price = (item.price || 0) * (item.quantity || 1);
+        subtotal += price;
+        totalTax += (price * (item.gst || 0) / 100);
+    });
 
-            const grandTotal = subtotal + totalTax;
+    const grandTotal = subtotal + totalTax;
 
-            // Build the cost summary HTML
-            const summaryHTML = `
+    // Build the cost summary HTML
+    const summaryHTML = `
                 <div class="total-row">
                     <span>Subtotal:</span>
                     <span>₹${subtotal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
@@ -3074,35 +3074,35 @@
                 </div>
             `;
 
-            document.getElementById('cart-summary').innerHTML = summaryHTML;
-        }
+    document.getElementById('cart-summary').innerHTML = summaryHTML;
+}
 
-        // Wishlist Logic
-        function toggleWishlist(id) {
-            if (!currentUser) {
-                showToast("Please login to add items to wishlist");
-                openModal('login');
-                return;
-            }
-            if (wishlist.includes(id)) {
-                wishlist = wishlist.filter(itemId => itemId !== id);
-            } else {
-                wishlist.push(id);
-                showToast("Added to wishlist!");
-            }
-            updateStats();
-            renderProducts();
-            renderWishlist();
-        }
+// Wishlist Logic
+function toggleWishlist(id) {
+    if (!currentUser) {
+        showToast("Please login to add items to wishlist");
+        openModal('login');
+        return;
+    }
+    if (wishlist.includes(id)) {
+        wishlist = wishlist.filter(itemId => itemId !== id);
+    } else {
+        wishlist.push(id);
+        showToast("Added to wishlist!");
+    }
+    updateStats();
+    renderProducts();
+    renderWishlist();
+}
 
-        function renderWishlist() {
-            const container = document.getElementById('wishlist-items');
-            const items = (window.products || []).filter(p => wishlist.includes(p.id) || wishlist.includes(String(p.id)));
-            if (items.length === 0) {
-                container.innerHTML = '<p style="text-align:center; color:#64748b; margin-top: 2rem;">Your wishlist is empty.</p>';
-                return;
-            }
-            container.innerHTML = items.map(p => `
+function renderWishlist() {
+    const container = document.getElementById('wishlist-items');
+    const items = (window.products || []).filter(p => wishlist.includes(p.id) || wishlist.includes(String(p.id)));
+    if (items.length === 0) {
+        container.innerHTML = '<p style="text-align:center; color:#64748b; margin-top: 2rem;">Your wishlist is empty.</p>';
+        return;
+    }
+    container.innerHTML = items.map(p => `
                 <div class="cart-item wishlist-item">
                     <img src="${p.image}" alt="${p.name}">
                     <div class="cart-item-info">
@@ -3117,31 +3117,31 @@
                     </div>
                 </div>
             `).join('');
-        }
+}
 
-        // Orders Logic
-        function checkout() {
-            if (cart.length === 0) return;
+// Orders Logic
+function checkout() {
+    if (cart.length === 0) return;
 
-            if (!currentUser) {
-                showToast("Please login to place an order");
-                openModal('login');
-                return;
-            }
+    if (!currentUser) {
+        showToast("Please login to place an order");
+        openModal('login');
+        return;
+    }
 
-            // Check if address and name are filled initially
-            const requiredFields = ['name', 'hno', 'street', 'pincode', 'district', 'state'];
-            const isAddressIncomplete = requiredFields.some(field => !currentUser[field]);
+    // Check if address and name are filled initially
+    const requiredFields = ['name', 'hno', 'street', 'pincode', 'district', 'state'];
+    const isAddressIncomplete = requiredFields.some(field => !currentUser[field]);
 
-            if (isAddressIncomplete) {
-                showToast("Please complete your delivery address in profile");
-                openModal('login');
-                return;
-            }
+    if (isAddressIncomplete) {
+        showToast("Please complete your delivery address in profile");
+        openModal('login');
+        return;
+    }
 
-            // Populate Item Preview
-            const preview = document.getElementById('confirm-items-preview');
-            preview.innerHTML = cart.map(item => `
+    // Populate Item Preview
+    const preview = document.getElementById('confirm-items-preview');
+    preview.innerHTML = cart.map(item => `
                 <div style="display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f8fafc; text-align: left;">
                     <img src="${item.image}" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
                     <div style="flex: 1;">
@@ -3151,238 +3151,238 @@
                 </div>
             `).join('');
 
-            // Populate Editable Address Fields
-            document.getElementById('conf-name').value = currentUser.name || '';
-            document.getElementById('conf-hno').value = currentUser.hno || '';
-            document.getElementById('conf-street').value = currentUser.street || '';
-            document.getElementById('conf-pincode').value = currentUser.pincode || '';
-            document.getElementById('conf-district').value = currentUser.district || '';
+    // Populate Editable Address Fields
+    document.getElementById('conf-name').value = currentUser.name || '';
+    document.getElementById('conf-hno').value = currentUser.hno || '';
+    document.getElementById('conf-street').value = currentUser.street || '';
+    document.getElementById('conf-pincode').value = currentUser.pincode || '';
+    document.getElementById('conf-district').value = currentUser.district || '';
 
-            // Reset inputs to disabled by default
-            document.querySelectorAll('.address-input').forEach(i => i.disabled = true);
+    // Reset inputs to disabled by default
+    document.querySelectorAll('.address-input').forEach(i => i.disabled = true);
 
-            openModal('confirm');
+    openModal('confirm');
+}
+
+function confirmOrder() {
+    // Update currentUser with values from the confirmation modal if they were edited
+    const updatedName = document.getElementById('conf-name').value.trim();
+    const updatedHno = document.getElementById('conf-hno').value.trim();
+    const updatedStreet = document.getElementById('conf-street').value.trim();
+    const updatedPincode = document.getElementById('conf-pincode').value.trim();
+    const updatedDistrict = document.getElementById('conf-district').value.trim();
+
+    if (!updatedName || !updatedHno || !updatedStreet || !updatedPincode || !updatedDistrict) {
+        showToast("Please ensure all delivery fields are filled");
+        return;
+    }
+
+    // Sync these to currentUser so processOrder() uses them
+    currentUser.name = updatedName;
+    currentUser.hno = updatedHno;
+    currentUser.street = updatedStreet;
+    currentUser.pincode = updatedPincode;
+    currentUser.district = updatedDistrict;
+
+    // Update user details in all storage
+    localStorage.setItem('wilson-user', JSON.stringify(currentUser));
+    if (typeof window._saveUserToFirestore === 'function') {
+        window._saveUserToFirestore(currentUser, null);
+    }
+
+    closeModal('confirm');
+    processOrder();
+}
+
+function createInvoiceDoc(orderId, items, subtotal, totalTax, grandTotal) {
+    if (!items || items.length === 0) return;
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const primaryColor = [0, 168, 168];
+    const secondaryColor = [30, 41, 59];
+
+    // Header Banner
+    doc.setFillColor(...primaryColor);
+    doc.rect(0, 0, 210, 45, 'F');
+
+    // Add Logo Icon if available in the DOM
+    const logoImg = document.querySelector('.logo img');
+    if (logoImg) {
+        try {
+            doc.addImage(logoImg, 'JPEG', 14, 8, 28, 28);
+        } catch (e) {
+            console.warn("Logo add failed");
         }
+    }
 
-        function confirmOrder() {
-            // Update currentUser with values from the confirmation modal if they were edited
-            const updatedName = document.getElementById('conf-name').value.trim();
-            const updatedHno = document.getElementById('conf-hno').value.trim();
-            const updatedStreet = document.getElementById('conf-street').value.trim();
-            const updatedPincode = document.getElementById('conf-pincode').value.trim();
-            const updatedDistrict = document.getElementById('conf-district').value.trim();
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(22);
+    doc.setFont("helvetica", "bold");
+    doc.text("WILSON HEALTH CARE", 48, 22);
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "normal");
+    doc.text("Premium Certified Medical Equipments Provider", 48, 29);
+    doc.setFontSize(20);
+    doc.text("ORDER ITEMS", 195, 28, { align: "right" });
 
-            if (!updatedName || !updatedHno || !updatedStreet || !updatedPincode || !updatedDistrict) {
-                showToast("Please ensure all delivery fields are filled");
-                return;
-            }
+    // Profile & Order Section
+    doc.setTextColor(...secondaryColor);
+    doc.setFontSize(11);
+    doc.setFont("helvetica", "bold");
+    doc.text("ORDER INFORMATION", 14, 55);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+    doc.text(`Order ID: ${orderId}`, 14, 62);
+    doc.text(`Date of Issue: ${new Date().toLocaleDateString()}`, 14, 68);
+    doc.text(`Payment Status: Completed`, 14, 74);
 
-            // Sync these to currentUser so processOrder() uses them
-            currentUser.name = updatedName;
-            currentUser.hno = updatedHno;
-            currentUser.street = updatedStreet;
-            currentUser.pincode = updatedPincode;
-            currentUser.district = updatedDistrict;
+    if (currentUser) {
+        doc.setFontSize(11);
+        doc.setFont("helvetica", "bold");
+        doc.text("CUSTOMER PROFILE", 130, 55);
+        doc.setFontSize(10);
+        doc.setFont("helvetica", "bold");
+        doc.text(currentUser.name || "Customer", 130, 62);
+        doc.setFont("helvetica", "normal");
+        doc.setTextColor(80);
+        doc.text(`ID/Mob: +${currentUser.mobile || 'N/A'}`, 130, 68);
+        doc.text(`Email: ${currentUser.email || 'N/A'}`, 130, 74);
 
-            // Update user details in all storage
-            localStorage.setItem('wilson-user', JSON.stringify(currentUser));
-            if (typeof window._saveUserToFirestore === 'function') {
-                window._saveUserToFirestore(currentUser, null);
-            }
+        const addr = [currentUser.hno, currentUser.street, currentUser.landmark, currentUser.district, currentUser.state, currentUser.pincode].filter(Boolean).join(', ');
+        const splitAddr = doc.splitTextToSize(addr, 70);
+        doc.text("Shipping Address:", 130, 82);
+        doc.setFontSize(9);
+        doc.text(splitAddr, 130, 87);
+    }
 
-            closeModal('confirm');
-            processOrder();
+    // Enhanced Table (Simplified - No Images as requested)
+    const tableRows = items.map(item => {
+        const taxVal = item.price * item.quantity;
+        const total = taxVal + (taxVal * item.gst / 100);
+        return [
+            item.name,
+            `Rs ${item.price.toLocaleString('en-IN')}`,
+            item.quantity.toString(),
+            `Rs ${taxVal.toLocaleString('en-IN')}`,
+            `${item.gst}%`,
+            `Rs ${total.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`
+        ];
+    });
+
+    doc.autoTable({
+        head: [["Product Description", "Basic Rate", "Qty", "Taxable Amt", "GST %", "Final Total"]],
+        body: tableRows,
+        startY: 105,
+        theme: 'striped',
+        headStyles: { fillColor: primaryColor, textColor: 255, fontSize: 8.5 },
+        bodyStyles: { fontSize: 8.5 },
+        columnStyles: { 0: { cellWidth: 70 }, 1: { halign: 'right' } }
+    });
+
+    // Note about product images
+    doc.setFontSize(8);
+    doc.setTextColor(150);
+    doc.text("* Product images and detailed usage guides are available digitally on our portal.", 14, doc.lastAutoTable.finalY + 5);
+
+    const finalY = doc.lastAutoTable.finalY + 15;
+    doc.setTextColor(...secondaryColor);
+    doc.setFontSize(10);
+    doc.text("Taxable Subtotal:", 140, finalY);
+    doc.text(`Rs ${subtotal.toLocaleString('en-IN')}`, 195, finalY, { align: "right" });
+    doc.text("Total GST:", 140, finalY + 6);
+    doc.text(`Rs ${totalTax.toLocaleString('en-IN')}`, 195, finalY + 6, { align: "right" });
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(...primaryColor);
+    doc.text("Grand Total:", 140, finalY + 14);
+    doc.text(`Rs ${grandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`, 195, finalY + 14, { align: "right" });
+
+    // Branding Footer
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(8);
+    doc.setTextColor(100);
+    doc.text("This is a computer generated invoice. No signature required.", 105, 275, { align: "center" });
+    doc.text("Wilson Health Care | Uppal, Hyderabad | Support: +91 70326 87122", 105, 280, { align: "center" });
+
+    return doc;
+}
+
+async function processOrder() {
+    let subtotal = 0;
+    let totalTax = 0;
+
+    cart.forEach(item => {
+        const price = (item.price || 0) * (item.quantity || 1);
+        subtotal += price;
+        totalTax += (price * (item.gst || 0) / 100);
+    });
+
+    const grandTotal = subtotal + totalTax;
+    const orderId = 'ORD-' + Math.floor(1000 + Math.random() * 9000);
+
+    const newOrder = {
+        orderId,
+        status: 'Placed',
+        date: new Date().toISOString(),
+        total: grandTotal,
+        subtotal,
+        totalTax,
+        paymentMethod: 'COD',
+        items: [...cart],
+        customerName: currentUser.name || '',
+        customerEmail: currentUser.email || '',
+        customerPhone: currentUser.mobile || '',
+        uid: currentUser.uid || '',
+        address: {
+            hno: currentUser.hno || '',
+            street: currentUser.street || '',
+            landmark: currentUser.landmark || '',
+            pincode: currentUser.pincode || '',
+            district: currentUser.district || '',
+            state: currentUser.state || '',
+            country: currentUser.country || 'India'
         }
+    };
 
-        function createInvoiceDoc(orderId, items, subtotal, totalTax, grandTotal) {
-            if (!items || items.length === 0) return;
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            const primaryColor = [0, 168, 168];
-            const secondaryColor = [30, 41, 59];
+    // ── Save to Firestore using orderId as document ID (allows update later)
+    if (window.saveOrderToFirebase) {
+        window.saveOrderToFirebase({ ...newOrder });
+    }
 
-            // Header Banner
-            doc.setFillColor(...primaryColor);
-            doc.rect(0, 0, 210, 45, 'F');
+    try {
+        const inv = createInvoiceDoc(orderId, newOrder.items, subtotal, totalTax, grandTotal);
+        if (inv) inv.save(`Order_${orderId}.pdf`);
+    } catch (e) {
+        console.error("PDF Error:", e);
+        showToast("Error generating PDF.");
+    }
 
-            // Add Logo Icon if available in the DOM
-            const logoImg = document.querySelector('.logo img');
-            if (logoImg) {
-                try {
-                    doc.addImage(logoImg, 'JPEG', 14, 8, 28, 28);
-                } catch (e) {
-                    console.warn("Logo add failed");
-                }
-            }
-
-            doc.setTextColor(255, 255, 255);
-            doc.setFontSize(22);
-            doc.setFont("helvetica", "bold");
-            doc.text("WILSON HEALTH CARE", 48, 22);
-            doc.setFontSize(10);
-            doc.setFont("helvetica", "normal");
-            doc.text("Premium Certified Medical Equipments Provider", 48, 29);
-            doc.setFontSize(20);
-            doc.text("ORDER ITEMS", 195, 28, { align: "right" });
-
-            // Profile & Order Section
-            doc.setTextColor(...secondaryColor);
-            doc.setFontSize(11);
-            doc.setFont("helvetica", "bold");
-            doc.text("ORDER INFORMATION", 14, 55);
-            doc.setFont("helvetica", "normal");
-            doc.setFontSize(10);
-            doc.text(`Order ID: ${orderId}`, 14, 62);
-            doc.text(`Date of Issue: ${new Date().toLocaleDateString()}`, 14, 68);
-            doc.text(`Payment Status: Completed`, 14, 74);
-
-            if (currentUser) {
-                doc.setFontSize(11);
-                doc.setFont("helvetica", "bold");
-                doc.text("CUSTOMER PROFILE", 130, 55);
-                doc.setFontSize(10);
-                doc.setFont("helvetica", "bold");
-                doc.text(currentUser.name || "Customer", 130, 62);
-                doc.setFont("helvetica", "normal");
-                doc.setTextColor(80);
-                doc.text(`ID/Mob: +${currentUser.mobile || 'N/A'}`, 130, 68);
-                doc.text(`Email: ${currentUser.email || 'N/A'}`, 130, 74);
-
-                const addr = [currentUser.hno, currentUser.street, currentUser.landmark, currentUser.district, currentUser.state, currentUser.pincode].filter(Boolean).join(', ');
-                const splitAddr = doc.splitTextToSize(addr, 70);
-                doc.text("Shipping Address:", 130, 82);
-                doc.setFontSize(9);
-                doc.text(splitAddr, 130, 87);
-            }
-
-            // Enhanced Table (Simplified - No Images as requested)
-            const tableRows = items.map(item => {
-                const taxVal = item.price * item.quantity;
-                const total = taxVal + (taxVal * item.gst / 100);
-                return [
-                    item.name,
-                    `Rs ${item.price.toLocaleString('en-IN')}`,
-                    item.quantity.toString(),
-                    `Rs ${taxVal.toLocaleString('en-IN')}`,
-                    `${item.gst}%`,
-                    `Rs ${total.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`
-                ];
-            });
-
-            doc.autoTable({
-                head: [["Product Description", "Basic Rate", "Qty", "Taxable Amt", "GST %", "Final Total"]],
-                body: tableRows,
-                startY: 105,
-                theme: 'striped',
-                headStyles: { fillColor: primaryColor, textColor: 255, fontSize: 8.5 },
-                bodyStyles: { fontSize: 8.5 },
-                columnStyles: { 0: { cellWidth: 70 }, 1: { halign: 'right' } }
-            });
-
-            // Note about product images
-            doc.setFontSize(8);
-            doc.setTextColor(150);
-            doc.text("* Product images and detailed usage guides are available digitally on our portal.", 14, doc.lastAutoTable.finalY + 5);
-
-            const finalY = doc.lastAutoTable.finalY + 15;
-            doc.setTextColor(...secondaryColor);
-            doc.setFontSize(10);
-            doc.text("Taxable Subtotal:", 140, finalY);
-            doc.text(`Rs ${subtotal.toLocaleString('en-IN')}`, 195, finalY, { align: "right" });
-            doc.text("Total GST:", 140, finalY + 6);
-            doc.text(`Rs ${totalTax.toLocaleString('en-IN')}`, 195, finalY + 6, { align: "right" });
-            doc.setFont("helvetica", "bold");
-            doc.setTextColor(...primaryColor);
-            doc.text("Grand Total:", 140, finalY + 14);
-            doc.text(`Rs ${grandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`, 195, finalY + 14, { align: "right" });
-
-            // Branding Footer
-            doc.setFont("helvetica", "normal");
-            doc.setFontSize(8);
-            doc.setTextColor(100);
-            doc.text("This is a computer generated invoice. No signature required.", 105, 275, { align: "center" });
-            doc.text("Wilson Health Care | Uppal, Hyderabad | Support: +91 70326 87122", 105, 280, { align: "center" });
-
-            return doc;
-        }
-
-        async function processOrder() {
-            let subtotal = 0;
-            let totalTax = 0;
-
-            cart.forEach(item => {
-                const price = (item.price || 0) * (item.quantity || 1);
-                subtotal += price;
-                totalTax += (price * (item.gst || 0) / 100);
-            });
-
-            const grandTotal = subtotal + totalTax;
-            const orderId = 'ORD-' + Math.floor(1000 + Math.random() * 9000);
-
-            const newOrder = {
-                orderId,
-                status: 'Placed',
-                date: new Date().toISOString(),
-                total: grandTotal,
-                subtotal,
-                totalTax,
-                paymentMethod: 'COD',
-                items: [...cart],
-                customerName: currentUser.name || '',
-                customerEmail: currentUser.email || '',
-                customerPhone: currentUser.mobile || '',
-                uid: currentUser.uid || '',
-                address: {
-                    hno: currentUser.hno || '',
-                    street: currentUser.street || '',
-                    landmark: currentUser.landmark || '',
-                    pincode: currentUser.pincode || '',
-                    district: currentUser.district || '',
-                    state: currentUser.state || '',
-                    country: currentUser.country || 'India'
-                }
-            };
-
-            // ── Save to Firestore using orderId as document ID (allows update later)
-            if (window.saveOrderToFirebase) {
-                window.saveOrderToFirebase({ ...newOrder });
-            }
-
-            try {
-                const inv = createInvoiceDoc(orderId, newOrder.items, subtotal, totalTax, grandTotal);
-                if (inv) inv.save(`Order_${orderId}.pdf`);
-            } catch (e) {
-                console.error("PDF Error:", e);
-                showToast("Error generating PDF.");
-            }
-
-            orders.push(newOrder);
-            cart = [];
-            updateStats();
-            closeModal('cart');
-            showToast("✅ Order Placed Successfully!");
-        }
+    orders.push(newOrder);
+    cart = [];
+    updateStats();
+    closeModal('cart');
+    showToast("✅ Order Placed Successfully!");
+}
 
 
-        function clearOrderHistory() {
-            if (confirm("Are you sure you want to clear your entire order history?")) {
-                orders = [];
-                updateStats();
-                renderOrders();
-                showToast("Order history cleared");
-            }
-        }
+function clearOrderHistory() {
+    if (confirm("Are you sure you want to clear your entire order history?")) {
+        orders = [];
+        updateStats();
+        renderOrders();
+        showToast("Order history cleared");
+    }
+}
 
-        function renderOrders() {
-            // Always re-read from localStorage so new orders appear immediately
-            orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
-            const container = document.getElementById('order-history');
-            if (orders.length === 0) {
-                container.innerHTML = '<p style="text-align:center; color:#64748b; margin-top: 2rem;">No orders yet.</p>';
-                return;
-            }
+function renderOrders() {
+    // Always re-read from localStorage so new orders appear immediately
+    orders = JSON.parse(localStorage.getItem('wilson-orders')) || [];
+    const container = document.getElementById('order-history');
+    if (orders.length === 0) {
+        container.innerHTML = '<p style="text-align:center; color:#64748b; margin-top: 2rem;">No orders yet.</p>';
+        return;
+    }
 
-            const clearBtnHtml = `
+    const clearBtnHtml = `
                 <div style="display: flex; justify-content: flex-end; margin-bottom: 1.5rem;">
                     <button onclick="clearOrderHistory()" style="background: #fee2e2; color: #ef4444; border: 1px solid #fecaca; padding: 0.6rem 1rem; border-radius: 10px; cursor: pointer; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: var(--transition);">
                         <i class="fas fa-trash-alt"></i> Clear Order History
@@ -3390,7 +3390,7 @@
                 </div>
             `;
 
-            container.innerHTML = clearBtnHtml + orders.map(order => `
+    container.innerHTML = clearBtnHtml + orders.map(order => `
                 <div class="order-card" id="order-${order.orderId}">
                     <div class="order-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
                         <span style="font-weight: 700; color: var(--primary);">${order.orderId}</span>
@@ -3409,136 +3409,130 @@
                     <div class="order-actions" style="display: flex; gap: 10px;">
                         <a href="invoice.html?id=${order.orderId}" target="_blank" style="flex: 1; text-align: center; padding: 6px; border: 1px solid var(--primary); color: var(--primary); border-radius: 6px; font-size: 0.8rem; text-decoration: none;">View Order Items</a>
                         ${order.status !== 'Cancelled' ?
-                    `<button onclick="cancelOrder('${order.orderId}')" style="flex: 1; padding: 6px; background: #fee2e2; color: #ef4444; border: none; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">Cancel Order</button>`
-                    : ''}
+            `<button onclick="cancelOrder('${order.orderId}')" style="flex: 1; padding: 6px; background: #fee2e2; color: #ef4444; border: none; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">Cancel Order</button>`
+            : ''}
                     </div>
                 </div>
             `).join('');
-        }
+}
 
-        function cancelOrder(orderId) {
-            if (confirm("Are you sure you want to cancel this order?")) {
-                const orderIndex = orders.findIndex(o => o.orderId === orderId);
-                if (orderIndex > -1) {
-                    orders[orderIndex].status = 'Cancelled';
-                    localStorage.setItem('wilson-orders', JSON.stringify(orders));
-                    updateStats();
-                    renderOrders();
-                    showToast("Order Cancelled");
-
-                    // ── Sync cancellation to Firestore ──────────────────────────
-                    if (window.saveOrderToFirebase) {
-                        window.saveOrderToFirebase({
-                            orderId,
-                            status: 'Cancelled',
-                            cancelledAt: new Date().toISOString()
-                        });
-                    }
-                }
-            }
-        }
-
-        // UI Helpers
-        function updateStats() {
-            const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
-            document.getElementById('cart-count').innerText = totalQty;
-            document.getElementById('wishlist-count').innerText = wishlist.length;
-            localStorage.setItem('wilson-cart', JSON.stringify(cart));
-            localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+function cancelOrder(orderId) {
+    if (confirm("Are you sure you want to cancel this order?")) {
+        const orderIndex = orders.findIndex(o => o.orderId === orderId);
+        if (orderIndex > -1) {
+            orders[orderIndex].status = 'Cancelled';
             localStorage.setItem('wilson-orders', JSON.stringify(orders));
-        }
-
-        function closeModal(id) {
-            document.getElementById(id + '-modal').style.display = 'none';
-        }
-
-        function toggleSearch() {
-            const searchBar = document.getElementById('search-bar');
-            const searchInput = document.getElementById('search-input');
-            if (searchBar.classList.contains('active')) {
-                searchBar.classList.remove('active');
-            } else {
-                searchBar.classList.add('active');
-                searchInput.focus();
-            }
-        }
-
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            toast.innerText = msg;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 3000);
-        }
-
-        // Initialize page
-        window.onclick = function (event) {
-            if (event.target.classList.contains('modal-overlay')) {
-                event.target.style.display = 'none';
-            }
-        };
-
-        function trackUserLogin(user) {
-            let history = JSON.parse(localStorage.getItem('wilson-user-history')) || [];
-            const existing = history.find(u => u.email === user.email);
-            if (!existing) {
-                history.push({
-                    name: user.name,
-                    email: user.email,
-                    mobile: user.mobile,
-                    lastLogin: new Date().toISOString()
-                });
-            } else {
-                existing.lastLogin = new Date().toISOString();
-            }
-            localStorage.setItem('wilson-user-history', JSON.stringify(history));
-        }
-
-        // Install App Logic (banner disabled)
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-        });
-
-        async function installApp() {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
-                if (outcome === 'accepted') {
-                    deferredPrompt = null;
-                    document.getElementById('install-btn').style.display = 'none';
-                }
-            } else {
-                alert("To install, use your browser's 'Add to Home Screen' option.");
-            }
-        }
-        // Initialize
-        function init() {
-            // Check for search focus from other pages
-            if (localStorage.getItem('wilson-search-focus') === 'true') {
-                localStorage.removeItem('wilson-search-focus');
-                setTimeout(() => {
-                    toggleSearch();
-                    document.getElementById('search-input')?.focus();
-                }, 500);
-            }
-            renderProducts();
-            observeCategories();
             updateStats();
-            startHeroSlideshow();
+            renderOrders();
+            showToast("Order Cancelled");
+
+            // ── Sync cancellation to Firestore ──────────────────────────
+            if (window.saveOrderToFirebase) {
+                window.saveOrderToFirebase({
+                    orderId,
+                    status: 'Cancelled',
+                    cancelledAt: new Date().toISOString()
+                });
+            }
         }
+    }
+}
 
-        init();
+// UI Helpers
+function updateStats() {
+    const totalQty = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    document.getElementById('cart-count').innerText = totalQty;
+    document.getElementById('wishlist-count').innerText = wishlist.length;
+    localStorage.setItem('wilson-cart', JSON.stringify(cart));
+    localStorage.setItem('wilson-wishlist', JSON.stringify(wishlist));
+    localStorage.setItem('wilson-orders', JSON.stringify(orders));
+}
 
-        // FINAL FORCED RENDER after all scripts have parsed
-        setTimeout(() => {
-            console.log("Forcing final product render...");
-            renderProducts();
-        }, 1500);
+function closeModal(id) {
+    document.getElementById(id + '-modal').style.display = 'none';
+}
 
-        // Register Service Worker for PWA
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                .register('./service-worker.js')
-                .then(() => { console.log('Service Worker Registered'); });
+function toggleSearch() {
+    const searchBar = document.getElementById('search-bar');
+    const searchInput = document.getElementById('search-input');
+    if (searchBar.classList.contains('active')) {
+        searchBar.classList.remove('active');
+    } else {
+        searchBar.classList.add('active');
+        searchInput.focus();
+    }
+}
+
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.innerText = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// Initialize page
+window.onclick = function (event) {
+    if (event.target.classList.contains('modal-overlay')) {
+        event.target.style.display = 'none';
+    }
+};
+
+function trackUserLogin(user) {
+    let history = JSON.parse(localStorage.getItem('wilson-user-history')) || [];
+    const existing = history.find(u => u.email === user.email);
+    if (!existing) {
+        history.push({
+            name: user.name,
+            email: user.email,
+            mobile: user.mobile,
+            lastLogin: new Date().toISOString()
+        });
+    } else {
+        existing.lastLogin = new Date().toISOString();
+    }
+    localStorage.setItem('wilson-user-history', JSON.stringify(history));
+}
+
+// Install App Logic (banner disabled)
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+});
+
+async function installApp() {
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+            deferredPrompt = null;
+            document.getElementById('install-btn').style.display = 'none';
         }
+    } else {
+        alert("To install, use your browser's 'Add to Home Screen' option.");
+    }
+}
+// Check for search focus from other pages
+if (localStorage.getItem('wilson-search-focus') === 'true') {
+    localStorage.removeItem('wilson-search-focus');
+    setTimeout(() => {
+        toggleSearch();
+        document.getElementById('search-input')?.focus();
+    }, 500);
+}
+
+// Call the main init function defined earlier
+init();
+
+// FINAL FORCED RENDER after all scripts have parsed
+setTimeout(() => {
+    console.log("Forcing final product render...");
+    renderProducts();
+}, 1500);
+
+// Register Service Worker for PWA
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('./service-worker.js')
+        .then(() => { console.log('Service Worker Registered'); });
+}

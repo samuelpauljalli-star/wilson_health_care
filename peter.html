@@ -353,8 +353,7 @@
 
             <button id="google-login-btn" class="google-btn" onclick="adminLoginWithGoogle()"
                 style="display:none; margin-top:1rem;">
-                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png"
-                    style="width: 20px;">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width: 20px;">
                 Sign in with Google
             </button>
 
@@ -782,7 +781,7 @@
                 // onAuthStateChanged will handle everything after this
             } catch (error) {
                 console.error('Authentication error:', error);
-                if (btn) { btn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png" style="width:20px;"> Sign in with Google'; btn.disabled = false; }
+                if (btn) { btn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width:20px;"> Sign in with Google'; btn.disabled = false; }
                 if (errEl) { errEl.textContent = error.code === 'auth/popup-closed-by-user' ? 'Sign-in cancelled.' : `Error: ${error.message}`; errEl.style.display = 'block'; }
             }
         };

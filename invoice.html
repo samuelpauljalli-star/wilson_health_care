@@ -450,13 +450,13 @@
                 <div class="billing-info">
                     <div class="bill-section">
                         <h3>Customer Details</h3>
-                        <p><strong>${currentOrder.customer?.name || 'Customer'}</strong></p>
-                        <p>${currentOrder.customer?.mobile || ''}</p>
-                        <p>${currentOrder.customer?.email || ''}</p>
+                        <p><strong>${currentOrder.customer?.name || currentOrder.customerName || 'Customer'}</strong></p>
+                        <p>${currentOrder.customer?.mobile || currentOrder.customerPhone || ''}</p>
+                        <p>${currentOrder.customer?.email || currentOrder.customerEmail || ''}</p>
                     </div>
                     <div class="bill-section">
                         <h3>Delivery Address</h3>
-                        ${getAddress(currentOrder.customer)}
+                        ${getAddress(currentOrder.customer || currentOrder.address)}
                     </div>
                 </div>
 

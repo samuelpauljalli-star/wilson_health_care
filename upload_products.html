@@ -55,7 +55,12 @@
     <div style="margin: 20px 0; padding: 15px; background: #e0f2fe; border-radius: 8px;">
         <div id="loggedOutView">
             <p>Please log in to proceed:</p>
-            <button id="loginBtn" class="btn" style="background:#4285F4;">Sign in with Google</button>
+            <button id="loginBtn" class="btn"
+                style="background:white; color:#374151; display:flex; align-items:center; justify-content:center; gap:10px; border:1px solid #d1d5db; font-weight:600; width:100%; max-width:300px; padding:10px 20px;">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width: 20px;"
+                    alt="Google Logo">
+                Sign in with Google
+            </button>
         </div>
         <div id="loggedInView" style="display:none;">
             <p>Logged in as: <strong id="userEmail">...</strong></p>

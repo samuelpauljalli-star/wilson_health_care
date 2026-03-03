@@ -274,8 +274,7 @@
 
             <button id="google-login-btn" onclick="adminLogin()"
                 style="width:100%; display:flex; align-items:center; justify-content:center; gap:12px; background:#fff; color:#1e293b; border:none; padding:12px; border-radius:12px; font-weight:700; cursor:pointer; transition:0.3s;">
-                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png"
-                    style="width:20px;">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width:20px;">
                 Sign in with Google
             </button>
         </div>
@@ -443,7 +442,7 @@
                 await signInWithPopup(auth, provider);
             } catch (error) {
                 console.error('Login error:', error);
-                if (btn) { btn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/pwa_brand/google__72dp.png" style="width:20px;"> Sign in with Google'; btn.disabled = false; }
+                if (btn) { btn.innerHTML = '<img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width:20px;"> Sign in with Google'; btn.disabled = false; }
                 if (errEl) { errEl.textContent = `Error: ${error.message}`; errEl.style.display = 'block'; }
             }
         };
