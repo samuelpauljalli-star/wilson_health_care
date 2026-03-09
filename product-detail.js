@@ -209,10 +209,29 @@ function renderProduct() {
     document.getElementById('mrp-display').innerHTML = `M.R.P.: <span style="text-decoration: line-through;">₹${(currentProduct.oldPrice || currentProduct.price * 1.3).toLocaleString('en-IN')}</span>`;
     document.getElementById('discount-pct').innerText = `-${currentProduct.discount || '20%'}`;
     document.getElementById('category-val').innerText = currentProduct.category;
-    document.getElementById('product-desc').innerText = currentProduct.desc;
+    document.getElementById('product-desc').innerHTML = currentProduct.desc;
+
+    // Warranty Badge logic
+    let warrantyBadgeHTML = '';
+    const war = currentProduct.warranty || '';
+    if (war && war.toUpperCase() !== 'NO WARRANTY') {
+        if (war.includes('1 Y')) {
+            warrantyBadgeHTML = `<div class="warranty-badge one-year" style="display:inline-block; margin-left: 10px; margin-bottom: 10px; padding: 4px 8px; border-radius: 4px; font-weight: bold; background-color: #f59e0b; color: #fff; font-size: 0.8rem;"><i class="fas fa-shield-alt"></i> 1 Year Warranty</div>`;
+        } else if (war.includes('6 M')) {
+            warrantyBadgeHTML = `<div class="warranty-badge six-month" style="display:inline-block; margin-left: 10px; margin-bottom: 10px; padding: 4px 8px; border-radius: 4px; font-weight: bold; background-color: #3b82f6; color: #fff; font-size: 0.8rem;"><i class="fas fa-shield-alt"></i> 6 Month Warranty</div>`;
+        } else {
+            warrantyBadgeHTML = `<div class="warranty-badge" style="display:inline-block; margin-left: 10px; margin-bottom: 10px; padding: 4px 8px; border-radius: 4px; font-weight: bold; background-color: var(--primary); color: #fff; font-size: 0.8rem;"><i class="fas fa-shield-alt"></i> ${war}</div>`;
+        }
+    }
+    const badgeContainer = document.getElementById('warranty-badge-container');
+    if (badgeContainer) badgeContainer.innerHTML = warrantyBadgeHTML;
+
+    const specWarranty = document.getElementById('spec-warranty');
+    if (specWarranty) specWarranty.innerText = war || 'Standard';
 
     const usageList = document.getElementById('usage-list');
-    usageList.innerHTML = `<li>${currentProduct.usage || 'Professional hospital grade equipment.'}</li><li>Tested for accuracy and high performance.</li><li>1-year warranty included.</li>`;
+    const warrantyStatusText = (war && war.toUpperCase() !== 'NO WARRANTY') ? `${war} included.` : 'Tested for accuracy and high performance.';
+    usageList.innerHTML = `<li>${currentProduct.usage || 'Professional hospital grade equipment.'}</li><li>${warrantyStatusText}</li>`;
 
     // Thumbs
     const thumbStrip = document.getElementById('thumb-strip');

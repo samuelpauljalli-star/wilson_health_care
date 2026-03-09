@@ -1,0 +1,24 @@
+﻿node : file:///C:/websites%20000/wilson_health_care/script
+s/check-broken-images.mjs:11
+At line:1 char:1
++ node scripts/check-broken-images.mjs 2>&1 | Out-File 
+-FilePath broken ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (file:///C:/w 
+   ebs...n-images.mjs:11:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+const prods = products;
+              ^
+
+ReferenceError: products is not defined
+    at file:///C:/websites%20000/wilson_health_care/script
+s/check-broken-images.mjs:11:15
+    at ModuleJob.run 
+(node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ 
+(node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader 
+(node:internal/modules/run_main:101:5)
+
+Node.js v24.13.1

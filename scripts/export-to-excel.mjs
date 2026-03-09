@@ -59,13 +59,14 @@ function buildSheet(products) {
         'Usage': p.usage || '',
         'Image URL': p.image || '',
         'Extra Images': (p.images || []).join('|'),
+        'warenty': p.warranty || '',
     }));
 
     const ws = XLSX.utils.json_to_sheet(rows);
     ws['!cols'] = [
         { wch: 8 }, { wch: 42 }, { wch: 20 }, { wch: 14 }, { wch: 15 }, { wch: 9 },
         { wch: 13 }, { wch: 9 }, { wch: 13 }, { wch: 18 }, { wch: 55 }, { wch: 40 },
-        { wch: 65 }, { wch: 80 }
+        { wch: 65 }, { wch: 80 }, { wch: 20 }
     ];
     return ws;
 }

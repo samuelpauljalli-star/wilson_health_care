@@ -1,5 +1,5 @@
 // Wilson Health Care — Product Data
-// Imported from products-tripled.xlsx on 25/2/2026, 6:46:40 pm
+// Imported from products-tripled.xlsx on 9/3/2026, 7:03:15 pm
 // Total: 336 products
 
 var products = [
@@ -12,13 +12,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.3",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": "https://web.tradekorea.com/product/721/1943721/SpO2_Sensor_5.jpg",
+        "desc": "Sp02 Probes – Budget Model<br>This affordable sp02 probes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Sp02 Probes – Basic Model <br>An affordable sp02 probes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
         "images": [
-            "https://web.tradekorea.com/product/721/1943721/SpO2_Sensor_5.jpg"
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2020/06/D100A-SML-324x306.jpg|https://www.infiniummedical.com/wp-content/uploads/2019/05/OMNI2_0815.jpg"
         ]
     },
     {
@@ -30,13 +32,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.2",
-        "ratingCount": 55,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": "https://5.imimg.com/data5/RS/ME/MY-1770653/physio-control-defibrillator-250x250.jpg",
+        "desc": "Sp02 Probes – Standard Model<br>This standard sp02 probes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Sp02 Probes – Standard Model<br>A reliable and durable sp02 probes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
         "images": [
-            "https://5.imimg.com/data5/RS/ME/MY-1770653/physio-control-defibrillator-250x250.jpg"
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2020/06/D100A-SML-324x306.jpg|https://www.infiniummedical.com/wp-content/uploads/2019/05/OMNI2_0815.jpg"
         ]
     },
     {
@@ -48,13 +52,15 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "4.6",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/5/312391370/SV/AJ/HE/46150018/525.jpg",
+        "desc": "Sp02 Probes – Premium Model<br>This premium quality sp02 probes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Sp02 Probes – Premium Model<br>A high-performance sp02 probes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/5/312391370/SV/AJ/HE/46150018/525.jpg"
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2020/06/D100A-SML-324x306.jpg|https://www.infiniummedical.com/wp-content/uploads/2019/05/OMNI2_0815.jpg"
         ]
     },
     {
@@ -66,13 +72,15 @@ var products = [
         "gst": 18,
         "discount": "12% OFF",
         "rating": "4.6",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "",
-        "usage": "",
-        "image": "https://m.media-amazon.com/images/I/41xdNJAMIvL._AC_UF1000,1000_QL80_.jpg",
+        "desc": "Contec Spo2 Probe – Budget Model<br>This affordable contec spo2 probe is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Contec Spo2 Probe – Basic Model <br>An affordable contec spo2 probe designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/41xdNJAMIvL._AC_UF1000,1000_QL80_.jpg"
+            "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
+            "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg|https://image.made-in-china.com/2f0j00QaForHqnhYly/Contec-Medical-Equipment-SpO2-Disposable-Neonatal-Probe-Non-Woven-Probe.jpg|http://tentabs.in/cdn/shop/products/3_d1961d94-6c2d-468e-ac23-8956a2347acf_1200x1200.jpg?v=1635401413"
         ]
     },
     {
@@ -84,13 +92,15 @@ var products = [
         "gst": 18,
         "discount": "22% OFF",
         "rating": "4.1",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "",
-        "usage": "",
-        "image": "https://cdn11.bigcommerce.com/s-klpb3tp0jd/images/stencil/1280x1280/products/4518/8503/image__72325.1694252505.png?c=1",
+        "desc": "Contec Spo2 Probe – Standard Model<br>This standard contec spo2 probe offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Contec Spo2 Probe – Standard Model<br>A reliable and durable contec spo2 probe designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
         "images": [
-            "https://cdn11.bigcommerce.com/s-klpb3tp0jd/images/stencil/1280x1280/products/4518/8503/image__72325.1694252505.png?c=1"
+            "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
+            "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg|https://image.made-in-china.com/2f0j00QaForHqnhYly/Contec-Medical-Equipment-SpO2-Disposable-Neonatal-Probe-Non-Woven-Probe.jpg|http://tentabs.in/cdn/shop/products/3_d1961d94-6c2d-468e-ac23-8956a2347acf_1200x1200.jpg?v=1635401413"
         ]
     },
     {
@@ -102,13 +112,15 @@ var products = [
         "gst": 18,
         "discount": "28% OFF",
         "rating": "4.8",
-        "ratingCount": 25,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "",
-        "usage": "",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2025/6/515869154/SV/NE/TF/203433768/contec-spo2-probe.jpeg",
+        "desc": "Contec Spo2 Probe – Premium Model<br>This premium quality contec spo2 probe provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Contec Spo2 Probe – Premium Model<br>A high-performance contec spo2 probe designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2025/6/515869154/SV/NE/TF/203433768/contec-spo2-probe.jpeg"
+            "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
+            "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg|https://image.made-in-china.com/2f0j00QaForHqnhYly/Contec-Medical-Equipment-SpO2-Disposable-Neonatal-Probe-Non-Woven-Probe.jpg|http://tentabs.in/cdn/shop/products/3_d1961d94-6c2d-468e-ac23-8956a2347acf_1200x1200.jpg?v=1635401413"
         ]
     },
     {
@@ -120,13 +132,15 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.9",
-        "ratingCount": 55,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2025/3/498285806/IS/TI/TM/52684900/spo2-sensor-probe.jpg",
+        "desc": "Sp02 Extension Cables – Budget Model<br>This affordable sp02 extension cables is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Sp02 Extension Cables – Basic Model <br>An affordable sp02 extension cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2025/3/498285806/IS/TI/TM/52684900/spo2-sensor-probe.jpg"
+            "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
+            "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg|http://cdn.shopify.com/s/files/1/0046/5505/4921/products/spo2-extension-cable-compatible-for-silicon-labs-2-3-mtr-biometriccables_556_1200x1200.jpg?v=1551786600|https://www.biometriccables.com/IMG_9471.jpg"
         ]
     },
     {
@@ -138,13 +152,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.3",
-        "ratingCount": 48,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": "https://imgcdn.mckesson.com/CumulusWeb/Images/Original_Image/501969_front.jpg",
+        "desc": "Sp02 Extension Cables – Standard Model<br>This standard sp02 extension cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Sp02 Extension Cables – Standard Model<br>A reliable and durable sp02 extension cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
         "images": [
-            "https://imgcdn.mckesson.com/CumulusWeb/Images/Original_Image/501969_front.jpg"
+            "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
+            "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg|http://cdn.shopify.com/s/files/1/0046/5505/4921/products/spo2-extension-cable-compatible-for-silicon-labs-2-3-mtr-biometriccables_556_1200x1200.jpg?v=1551786600|https://www.biometriccables.com/IMG_9471.jpg"
         ]
     },
     {
@@ -156,13 +172,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.6",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": "https://www.rallyinc.com/images/demo/products/22-1-4404.jpg",
+        "desc": "Sp02 Extension Cables – Premium Model<br>This premium quality sp02 extension cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Sp02 Extension Cables – Premium Model<br>A high-performance sp02 extension cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
         "images": [
-            "https://www.rallyinc.com/images/demo/products/22-1-4404.jpg"
+            "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
+            "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg|http://cdn.shopify.com/s/files/1/0046/5505/4921/products/spo2-extension-cable-compatible-for-silicon-labs-2-3-mtr-biometriccables_556_1200x1200.jpg?v=1551786600|https://www.biometriccables.com/IMG_9471.jpg"
         ]
     },
     {
@@ -174,13 +192,15 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.2",
-        "ratingCount": 25,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2024/4/412935540/OJ/MK/AA/122574700/disposable-spo2-probes-500x500.webp",
+        "desc": "Disposable Sp02 Probes – Budget Model<br>This affordable disposable sp02 probes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Sp02 Probes – Basic Model <br>An affordable disposable sp02 probes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2024/4/412935540/OJ/MK/AA/122574700/disposable-spo2-probes-500x500.webp"
+            "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
+            "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg|https://www.dial4trade.com/uploaded_files/product_images/thumbs/disposable-spo2-probes-0-u-124515584551002908696199.jpg|https://curbellmedical.com/wp-content/uploads/2020/10/disposable-spo2-foam.jpg"
         ]
     },
     {
@@ -192,11 +212,16 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "4.5",
-        "ratingCount": 55,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": ""
+        "desc": "Disposable Sp02 Probes – Standard Model<br>This standard disposable sp02 probes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Sp02 Probes – Standard Model<br>A reliable and durable disposable sp02 probes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
+        "images": [
+            "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
+            "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg|https://www.dial4trade.com/uploaded_files/product_images/thumbs/disposable-spo2-probes-0-u-124515584551002908696199.jpg|https://curbellmedical.com/wp-content/uploads/2020/10/disposable-spo2-foam.jpg"
+        ]
     },
     {
         "id": 12,
@@ -207,11 +232,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.3",
-        "ratingCount": 48,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Sensors and extensions used to measure oxygen saturation in the blood.",
-        "usage": "Clipped to a finger or earlobe; light sensors detect oxygen levels and display them on a monitor.",
-        "image": ""
+        "desc": "Disposable Sp02 Probes – Premium Model<br>This premium quality disposable sp02 probes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Sp02 Probes – Premium Model<br>A high-performance disposable sp02 probes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
+        "images": [
+            "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
+            "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg|https://www.dial4trade.com/uploaded_files/product_images/thumbs/disposable-spo2-probes-0-u-124515584551002908696199.jpg|https://curbellmedical.com/wp-content/uploads/2020/10/disposable-spo2-foam.jpg"
+        ]
     },
     {
         "id": 13,
@@ -222,13 +252,15 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "4.6",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": "https://tiimg.tistatic.com/fp/1/009/155/5-lead-ecg-cable-6-pin-single-notch-681.jpg",
+        "desc": "Monitor 5 Lead Ecg Cables – Budget Model<br>This affordable monitor 5 lead ecg cables is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Monitor 5 Lead Ecg Cables – Basic Model <br>An affordable monitor 5 lead ecg cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
         "images": [
-            "https://tiimg.tistatic.com/fp/1/009/155/5-lead-ecg-cable-6-pin-single-notch-681.jpg"
+            "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
+            "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg|https://m.media-amazon.com/images/I/716l2gJPL1L.jpg|https://image.made-in-china.com/2f0j00abNiAeTqhDfH/Adult-5-Lead-ECG-EKG-Cable-Clips-M1623A-Medical-Equipment-for-Hospital.jpg"
         ]
     },
     {
@@ -240,11 +272,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.1",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": ""
+        "desc": "Monitor 5 Lead Ecg Cables – Standard Model<br>This standard monitor 5 lead ecg cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Monitor 5 Lead Ecg Cables – Standard Model<br>A reliable and durable monitor 5 lead ecg cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
+        "images": [
+            "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
+            "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg|https://m.media-amazon.com/images/I/716l2gJPL1L.jpg|https://image.made-in-china.com/2f0j00abNiAeTqhDfH/Adult-5-Lead-ECG-EKG-Cable-Clips-M1623A-Medical-Equipment-for-Hospital.jpg"
+        ]
     },
     {
         "id": 15,
@@ -255,11 +292,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.8",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": ""
+        "desc": "Monitor 5 Lead Ecg Cables – Premium Model<br>This premium quality monitor 5 lead ecg cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Monitor 5 Lead Ecg Cables – Premium Model<br>A high-performance monitor 5 lead ecg cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
+        "images": [
+            "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
+            "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg|https://m.media-amazon.com/images/I/716l2gJPL1L.jpg|https://image.made-in-china.com/2f0j00abNiAeTqhDfH/Adult-5-Lead-ECG-EKG-Cable-Clips-M1623A-Medical-Equipment-for-Hospital.jpg"
+        ]
     },
     {
         "id": 16,
@@ -270,13 +312,15 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.9",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": "https://www.sinokmed.com/cdn/shop/products/SG3115S_grande.jpg?v=1627435605",
+        "desc": "Monitor 3 Lead Ecg Cables – Budget Model<br>This affordable monitor 3 lead ecg cables is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Monitor 3 Lead Ecg Cables – Basic Model <br>An affordable monitor 3 lead ecg cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
         "images": [
-            "https://www.sinokmed.com/cdn/shop/products/SG3115S_grande.jpg?v=1627435605"
+            "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
+            "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cable-compatiblebuttonsnap-for-spacelabsaspenbcibplcontecedangedraegermindraynellcornihon-kohdenphilipsmedianamedicaid-cables_660_250x250@2x.jpg?v=1552111203|http://www.biometriccables.in/cdn/shop/products/3-lead-ecg-monitoring-cableclipcompatible-for-akas-biometriccables_767_1200x1200.jpg?v=1611123688"
         ]
     },
     {
@@ -288,11 +332,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.7",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": ""
+        "desc": "Monitor 3 Lead Ecg Cables – Standard Model<br>This standard monitor 3 lead ecg cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Monitor 3 Lead Ecg Cables – Standard Model<br>A reliable and durable monitor 3 lead ecg cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
+        "images": [
+            "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
+            "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cable-compatiblebuttonsnap-for-spacelabsaspenbcibplcontecedangedraegermindraynellcornihon-kohdenphilipsmedianamedicaid-cables_660_250x250@2x.jpg?v=1552111203|http://www.biometriccables.in/cdn/shop/products/3-lead-ecg-monitoring-cableclipcompatible-for-akas-biometriccables_767_1200x1200.jpg?v=1611123688"
+        ]
     },
     {
         "id": 18,
@@ -303,11 +352,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.5",
-        "ratingCount": 74,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": ""
+        "desc": "Monitor 3 Lead Ecg Cables – Premium Model<br>This premium quality monitor 3 lead ecg cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Monitor 3 Lead Ecg Cables – Premium Model<br>A high-performance monitor 3 lead ecg cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
+        "images": [
+            "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
+            "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cable-compatiblebuttonsnap-for-spacelabsaspenbcibplcontecedangedraegermindraynellcornihon-kohdenphilipsmedianamedicaid-cables_660_250x250@2x.jpg?v=1552111203|http://www.biometriccables.in/cdn/shop/products/3-lead-ecg-monitoring-cableclipcompatible-for-akas-biometriccables_767_1200x1200.jpg?v=1611123688"
+        ]
     },
     {
         "id": 19,
@@ -318,13 +372,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.3",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": "https://m.media-amazon.com/images/I/51bx9Nr7EtL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+        "desc": "10 Leads Ecg Cables – Budget Model<br>This affordable 10 leads ecg cables is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "10 Leads Ecg Cables – Basic Model <br>An affordable 10 leads ecg cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/51bx9Nr7EtL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg"
+            "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
+            "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2022/1/YU/LO/UD/105216276/ecg-patient-cables-10-lead-1000x1000.jpg|https://www.cambus-tw.com/proimages/sr/design/2index_pro1.jpg"
         ]
     },
     {
@@ -336,11 +392,16 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.5",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": ""
+        "desc": "10 Leads Ecg Cables – Standard Model<br>This standard 10 leads ecg cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "10 Leads Ecg Cables – Standard Model<br>A reliable and durable 10 leads ecg cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
+        "images": [
+            "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
+            "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2022/1/YU/LO/UD/105216276/ecg-patient-cables-10-lead-1000x1000.jpg|https://www.cambus-tw.com/proimages/sr/design/2index_pro1.jpg"
+        ]
     },
     {
         "id": 21,
@@ -351,11 +412,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.6",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Multi-lead cables (3, 5, or 10 leads) that transmit heart signals.",
-        "usage": "Connected to electrodes on the patient's chest and limbs to record heart activity.",
-        "image": ""
+        "desc": "10 Leads Ecg Cables – Premium Model<br>This premium quality 10 leads ecg cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "10 Leads Ecg Cables – Premium Model<br>A high-performance 10 leads ecg cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
+        "images": [
+            "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
+            "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2022/1/YU/LO/UD/105216276/ecg-patient-cables-10-lead-1000x1000.jpg|https://www.cambus-tw.com/proimages/sr/design/2index_pro1.jpg"
+        ]
     },
     {
         "id": 22,
@@ -366,13 +432,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.7",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": "https://m.media-amazon.com/images/I/515L8vi52uL._AC_UF350,350_QL50_.jpg",
+        "desc": "Ecg Electrodes – Budget Model<br>This affordable ecg electrodes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ecg Electrodes – Basic Model <br>An affordable ecg electrodes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/515L8vi52uL._AC_UF350,350_QL50_.jpg"
+            "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg|https://dukermedical.com/wp-content/uploads/2019/10/ecg-electrode.jpg|https://comedical.africa/wp-content/uploads/2024/05/Electrodes_Adult_Healthease__CO_Medical.png"
         ]
     },
     {
@@ -384,11 +452,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.1",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Ecg Electrodes – Standard Model<br>This standard ecg electrodes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ecg Electrodes – Standard Model<br>A reliable and durable ecg electrodes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
+        "images": [
+            "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg|https://dukermedical.com/wp-content/uploads/2019/10/ecg-electrode.jpg|https://comedical.africa/wp-content/uploads/2024/05/Electrodes_Adult_Healthease__CO_Medical.png"
+        ]
     },
     {
         "id": 24,
@@ -399,11 +472,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.2",
-        "ratingCount": 56,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Ecg Electrodes – Premium Model<br>This premium quality ecg electrodes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ecg Electrodes – Premium Model<br>A high-performance ecg electrodes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
+        "images": [
+            "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg|https://dukermedical.com/wp-content/uploads/2019/10/ecg-electrode.jpg|https://comedical.africa/wp-content/uploads/2024/05/Electrodes_Adult_Healthease__CO_Medical.png"
+        ]
     },
     {
         "id": 25,
@@ -414,13 +492,15 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "4.6",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": "https://m.media-amazon.com/images/I/61QuLnampxL._SX522_.jpg",
+        "desc": "Neon Ecg Electrode 3 Wire – Budget Model<br>This affordable neon ecg electrode 3 wire is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Neon Ecg Electrode 3 Wire – Basic Model <br>An affordable neon ecg electrode 3 wire designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/61QuLnampxL._SX522_.jpg"
+            "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/11/358868893/MY/KI/NA/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/9/XL/GG/IR/121423911/dyna-ecg-electrodes-500x500.jpg"
         ]
     },
     {
@@ -432,11 +512,16 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.3",
-        "ratingCount": 78,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Neon Ecg Electrode 3 Wire – Standard Model<br>This standard neon ecg electrode 3 wire offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Neon Ecg Electrode 3 Wire – Standard Model<br>A reliable and durable neon ecg electrode 3 wire designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
+        "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/11/358868893/MY/KI/NA/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/9/XL/GG/IR/121423911/dyna-ecg-electrodes-500x500.jpg"
+        ]
     },
     {
         "id": 27,
@@ -447,11 +532,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.5",
-        "ratingCount": 48,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Neon Ecg Electrode 3 Wire – Premium Model<br>This premium quality neon ecg electrode 3 wire provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Neon Ecg Electrode 3 Wire – Premium Model<br>A high-performance neon ecg electrode 3 wire designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
+        "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/11/358868893/MY/KI/NA/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/9/XL/GG/IR/121423911/dyna-ecg-electrodes-500x500.jpg"
+        ]
     },
     {
         "id": 28,
@@ -462,11 +552,20 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.4",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Disposable Electrodes – Budget Model<br>This affordable disposable electrodes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Electrodes – Basic Model <br>An affordable disposable electrodes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "images": [
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_600",
+            "h_600/https://biosensemedical.com/wp-content/uploads/2019/01/M0833_20.jpg|https://eu.nihonkohden.com/media/SdSy9pq2/disposable-electrodes_04.png"
+        ]
     },
     {
         "id": 29,
@@ -477,11 +576,20 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.4",
-        "ratingCount": 22,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Disposable Electrodes – Standard Model<br>This standard disposable electrodes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Electrodes – Standard Model<br>A reliable and durable disposable electrodes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "images": [
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_600",
+            "h_600/https://biosensemedical.com/wp-content/uploads/2019/01/M0833_20.jpg|https://eu.nihonkohden.com/media/SdSy9pq2/disposable-electrodes_04.png"
+        ]
     },
     {
         "id": 30,
@@ -492,11 +600,20 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "3.3",
-        "ratingCount": 20,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Disposable Electrodes – Premium Model<br>This premium quality disposable electrodes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Electrodes – Premium Model<br>A high-performance disposable electrodes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "images": [
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_600",
+            "h_600/https://biosensemedical.com/wp-content/uploads/2019/01/M0833_20.jpg|https://eu.nihonkohden.com/media/SdSy9pq2/disposable-electrodes_04.png"
+        ]
     },
     {
         "id": 31,
@@ -507,13 +624,19 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.1",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": "https://m.media-amazon.com/images/I/51mtodITGKL._SX522_.jpg",
+        "desc": "Disposable Electrodes – Budget Model<br>This affordable disposable electrodes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Electrodes – Basic Model <br>An affordable disposable electrodes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/51mtodITGKL._SX522_.jpg"
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_600",
+            "h_600/https://biosensemedical.com/wp-content/uploads/2019/01/M0833_20.jpg|https://eu.nihonkohden.com/media/SdSy9pq2/disposable-electrodes_04.png"
         ]
     },
     {
@@ -525,11 +648,20 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "4.2",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Disposable Electrodes – Standard Model<br>This standard disposable electrodes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Electrodes – Standard Model<br>A reliable and durable disposable electrodes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "images": [
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_600",
+            "h_600/https://biosensemedical.com/wp-content/uploads/2019/01/M0833_20.jpg|https://eu.nihonkohden.com/media/SdSy9pq2/disposable-electrodes_04.png"
+        ]
     },
     {
         "id": 33,
@@ -540,11 +672,20 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.9",
-        "ratingCount": 22,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Small conductive pads that attach to the skin.",
-        "usage": "Placed on specific body parts to pick up electrical heart impulses.",
-        "image": ""
+        "desc": "Disposable Electrodes – Premium Model<br>This premium quality disposable electrodes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Electrodes – Premium Model<br>A high-performance disposable electrodes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "images": [
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+            "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_600",
+            "h_600/https://biosensemedical.com/wp-content/uploads/2019/01/M0833_20.jpg|https://eu.nihonkohden.com/media/SdSy9pq2/disposable-electrodes_04.png"
+        ]
     },
     {
         "id": 34,
@@ -555,13 +696,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.4",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Metal or plastic connectors for ECG leads.",
-        "usage": "Clamped onto wrists/ankles or clipped to electrodes to ensure a steady signal.",
-        "image": "https://www.davismedical.com/Images/Products/philips_989803129231.png",
+        "desc": "Ecg Alligator Clips – Budget Model<br>This affordable ecg alligator clips is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ecg Alligator Clips – Basic Model <br>An affordable ecg alligator clips designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
         "images": [
-            "https://www.davismedical.com/Images/Products/philips_989803129231.png"
+            "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
+            "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg|https://www.siomedical.com/wp-content/uploads/2025/03/veterinary-ECG-cable-and-clips-600x600.png|https://www.allstatesmedical.com.au/wp-content/uploads/2023/08/CLEAR-ECG-CLIPS-600x486.jpg"
         ]
     },
     {
@@ -573,11 +716,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.1",
-        "ratingCount": 97,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Metal or plastic connectors for ECG leads.",
-        "usage": "Clamped onto wrists/ankles or clipped to electrodes to ensure a steady signal.",
-        "image": ""
+        "desc": "Ecg Alligator Clips – Standard Model<br>This standard ecg alligator clips offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ecg Alligator Clips – Standard Model<br>A reliable and durable ecg alligator clips designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
+        "images": [
+            "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
+            "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg|https://www.siomedical.com/wp-content/uploads/2025/03/veterinary-ECG-cable-and-clips-600x600.png|https://www.allstatesmedical.com.au/wp-content/uploads/2023/08/CLEAR-ECG-CLIPS-600x486.jpg"
+        ]
     },
     {
         "id": 36,
@@ -588,11 +736,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.2",
-        "ratingCount": 55,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Metal or plastic connectors for ECG leads.",
-        "usage": "Clamped onto wrists/ankles or clipped to electrodes to ensure a steady signal.",
-        "image": ""
+        "desc": "Ecg Alligator Clips – Premium Model<br>This premium quality ecg alligator clips provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ecg Alligator Clips – Premium Model<br>A high-performance ecg alligator clips designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
+        "images": [
+            "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
+            "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg|https://www.siomedical.com/wp-content/uploads/2025/03/veterinary-ECG-cable-and-clips-600x600.png|https://www.allstatesmedical.com.au/wp-content/uploads/2023/08/CLEAR-ECG-CLIPS-600x486.jpg"
+        ]
     },
     {
         "id": 37,
@@ -603,13 +756,18 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "3.9",
-        "ratingCount": 88,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Metal or plastic connectors for ECG leads.",
-        "usage": "Clamped onto wrists/ankles or clipped to electrodes to ensure a steady signal.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/7/330669703/WB/SZ/XR/22566074/2.jpg",
+        "desc": "Ecg Clamps Set – Budget Model<br>This affordable ecg clamps set is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ecg Clamps Set – Basic Model <br>An affordable ecg clamps set designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/7/330669703/WB/SZ/XR/22566074/2.jpg"
+            "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg|https://static.wixstatic.com/media/eccb80_7644d20c5fad4e0b8722586c79a68fb6~mv2.jpg/v1/fill/w_1200",
+            "h_800",
+            "al_c",
+            "q_85/file.jpg|https://www.bioplusmedical.com/wp-content/uploads/2017/11/ecg-clamp.jpg"
         ]
     },
     {
@@ -621,11 +779,19 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "3.8",
-        "ratingCount": 11,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Metal or plastic connectors for ECG leads.",
-        "usage": "Clamped onto wrists/ankles or clipped to electrodes to ensure a steady signal.",
-        "image": ""
+        "desc": "Ecg Clamps Set – Standard Model<br>This standard ecg clamps set offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ecg Clamps Set – Standard Model<br>A reliable and durable ecg clamps set designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
+        "images": [
+            "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg|https://static.wixstatic.com/media/eccb80_7644d20c5fad4e0b8722586c79a68fb6~mv2.jpg/v1/fill/w_1200",
+            "h_800",
+            "al_c",
+            "q_85/file.jpg|https://www.bioplusmedical.com/wp-content/uploads/2017/11/ecg-clamp.jpg"
+        ]
     },
     {
         "id": 39,
@@ -636,11 +802,19 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "3.6",
-        "ratingCount": 10,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Metal or plastic connectors for ECG leads.",
-        "usage": "Clamped onto wrists/ankles or clipped to electrodes to ensure a steady signal.",
-        "image": ""
+        "desc": "Ecg Clamps Set – Premium Model<br>This premium quality ecg clamps set provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ecg Clamps Set – Premium Model<br>A high-performance ecg clamps set designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
+        "images": [
+            "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg|https://static.wixstatic.com/media/eccb80_7644d20c5fad4e0b8722586c79a68fb6~mv2.jpg/v1/fill/w_1200",
+            "h_800",
+            "al_c",
+            "q_85/file.jpg|https://www.bioplusmedical.com/wp-content/uploads/2017/11/ecg-clamp.jpg"
+        ]
     },
     {
         "id": 40,
@@ -651,13 +825,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "3.9",
-        "ratingCount": 33,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": "https://sc04.alicdn.com/kf/H7a9a70b13097456281494e78cdc8daaaz.jpg",
+        "desc": "Ecg Paper -A4 Sheet – Budget Model<br>This affordable ecg paper -a4 sheet is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ecg Paper -A4 Sheet – Basic Model <br>An affordable ecg paper -a4 sheet designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
         "images": [
-            "https://sc04.alicdn.com/kf/H7a9a70b13097456281494e78cdc8daaaz.jpg"
+            "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
+            "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg|https://www.sinymedical.com/wp-content/uploads/2024/01/ecg-paper-supplier.jpg|https://5.imimg.com/data5/SELLER/Default/2023/10/350155291/VD/QP/DZ/12872071/ecg-paper-sheet-500x500.jpg"
         ]
     },
     {
@@ -669,11 +845,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.1",
-        "ratingCount": 22,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": ""
+        "desc": "Ecg Paper -A4 Sheet – Standard Model<br>This standard ecg paper -a4 sheet offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ecg Paper -A4 Sheet – Standard Model<br>A reliable and durable ecg paper -a4 sheet designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
+        "images": [
+            "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
+            "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg|https://www.sinymedical.com/wp-content/uploads/2024/01/ecg-paper-supplier.jpg|https://5.imimg.com/data5/SELLER/Default/2023/10/350155291/VD/QP/DZ/12872071/ecg-paper-sheet-500x500.jpg"
+        ]
     },
     {
         "id": 42,
@@ -684,11 +865,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.2",
-        "ratingCount": 30,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": ""
+        "desc": "Ecg Paper -A4 Sheet – Premium Model<br>This premium quality ecg paper -a4 sheet provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ecg Paper -A4 Sheet – Premium Model<br>A high-performance ecg paper -a4 sheet designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
+        "images": [
+            "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
+            "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg|https://www.sinymedical.com/wp-content/uploads/2024/01/ecg-paper-supplier.jpg|https://5.imimg.com/data5/SELLER/Default/2023/10/350155291/VD/QP/DZ/12872071/ecg-paper-sheet-500x500.jpg"
+        ]
     },
     {
         "id": 43,
@@ -699,13 +885,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.5",
-        "ratingCount": 22,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": "https://m.media-amazon.com/images/I/31eIATaT2QS.jpg",
+        "desc": "Ecg Paper-3 Channel Papers – Budget Model<br>This affordable ecg paper-3 channel papers is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ecg Paper-3 Channel Papers – Basic Model <br>An affordable ecg paper-3 channel papers designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/31eIATaT2QS.jpg"
+            "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(Pack%20of%203%20Rolls)%201",
+            "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(Pack%20of%203%20Rolls)%201|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(Pack%20of%203%20Rolls)%202|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(Pack%20of%203%20Rolls)%203"
         ]
     },
     {
@@ -717,11 +905,16 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "4.3",
-        "ratingCount": 20,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": ""
+        "desc": "Ecg Paper-3 Channel Papers – Standard Model<br>This standard ecg paper-3 channel papers offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ecg Paper-3 Channel Papers – Standard Model<br>A reliable and durable ecg paper-3 channel papers designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(100%20sheets)%201",
+            "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(100%20sheets)%201|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(100%20sheets)%202|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(100%20sheets)%203"
+        ]
     },
     {
         "id": 45,
@@ -732,11 +925,16 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.2",
-        "ratingCount": 55,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": ""
+        "desc": "Ecg Paper-3 Channel Papers – Premium Model<br>This premium quality ecg paper-3 channel papers provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ecg Paper-3 Channel Papers – Premium Model<br>A high-performance ecg paper-3 channel papers designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(150%20sheets)%201",
+            "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(150%20sheets)%201|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(150%20sheets)%202|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(150%20sheets)%203"
+        ]
     },
     {
         "id": 46,
@@ -747,11 +945,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.6",
-        "ratingCount": 66,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": ""
+        "desc": "Nst Machinepapers – Budget Model<br>This affordable nst machinepapers is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Nst Machinepapers – Basic Model <br>An affordable nst machinepapers designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
+        "images": [
+            "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%201",
+            "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%201|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%202|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%203"
+        ]
     },
     {
         "id": 47,
@@ -762,11 +965,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.2",
-        "ratingCount": 44,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": ""
+        "desc": "Nst Machinepapers – Standard Model<br>This standard nst machinepapers offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Nst Machinepapers – Standard Model<br>A reliable and durable nst machinepapers designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
+        "images": [
+            "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(100%20sheets)%201",
+            "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(100%20sheets)%201|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(100%20sheets)%202|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(100%20sheets)%203"
+        ]
     },
     {
         "id": 48,
@@ -777,11 +985,16 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.3",
-        "ratingCount": 40,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Thermal-sensitive paper for ECG and NST machines.",
-        "usage": "Loaded into the device printer to provide a permanent physical record of patient tests.",
-        "image": ""
+        "desc": "Nst Machinepapers – Premium Model<br>This premium quality nst machinepapers provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Nst Machinepapers – Premium Model<br>A high-performance nst machinepapers designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
+        "images": [
+            "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(150%20sheets)%201",
+            "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(150%20sheets)%201|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(150%20sheets)%202|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(150%20sheets)%203"
+        ]
     },
     {
         "id": 49,
@@ -792,13 +1005,15 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "4.6",
-        "ratingCount": 52,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2025/11/563862054/YU/JT/WW/47841137/otica-ultrasound-gel-for-usg-ecg-eeg-sonography-and-physio-250ml-blue-gel-pack-of-6.jpg",
+        "desc": "Ecg Machine Jelly Bottle 250 Ml – Budget Model<br>This affordable ecg machine jelly bottle 250 ml is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ecg Machine Jelly Bottle 250 Ml – Basic Model <br>An affordable ecg machine jelly bottle 250 ml designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/9/GK/UU/BH/1747978/ecg-ultrasound-gel-250ml.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2025/11/563862054/YU/JT/WW/47841137/otica-ultrasound-gel-for-usg-ecg-eeg-sonography-and-physio-250ml-blue-gel-pack-of-6.jpg"
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%203"
         ]
     },
     {
@@ -810,11 +1025,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.2",
-        "ratingCount": 55,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": ""
+        "desc": "Ecg Machine Jelly Bottle 250 Ml – Standard Model<br>This standard ecg machine jelly bottle 250 ml offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ecg Machine Jelly Bottle 250 Ml – Standard Model<br>A reliable and durable ecg machine jelly bottle 250 ml designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%203"
+        ]
     },
     {
         "id": 51,
@@ -825,11 +1045,16 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "4.5",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": ""
+        "desc": "Ecg Machine Jelly Bottle 250 Ml – Premium Model<br>This premium quality ecg machine jelly bottle 250 ml provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ecg Machine Jelly Bottle 250 Ml – Premium Model<br>A high-performance ecg machine jelly bottle 250 ml designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%203"
+        ]
     },
     {
         "id": 52,
@@ -840,13 +1065,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.3",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": "https://cpimg.tistatic.com/11421052/b/4/5L-ECG-Gel..webp",
+        "desc": "Ecg Machine Jelly Jar 5 Kg – Budget Model<br>This affordable ecg machine jelly jar 5 kg is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ecg Machine Jelly Jar 5 Kg – Basic Model <br>An affordable ecg machine jelly jar 5 kg designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/2/MI/QK/NE/57038963/ecg-gel-5kg-jar.jpg",
         "images": [
-            "https://cpimg.tistatic.com/11421052/b/4/5L-ECG-Gel..webp"
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%203"
         ]
     },
     {
@@ -858,11 +1085,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.6",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": ""
+        "desc": "Ecg Machine Jelly Jar 5 Kg – Standard Model<br>This standard ecg machine jelly jar 5 kg offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ecg Machine Jelly Jar 5 Kg – Standard Model<br>A reliable and durable ecg machine jelly jar 5 kg designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%203"
+        ]
     },
     {
         "id": 54,
@@ -873,11 +1105,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.1",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": ""
+        "desc": "Ecg Machine Jelly Jar 5 Kg – Premium Model<br>This premium quality ecg machine jelly jar 5 kg provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ecg Machine Jelly Jar 5 Kg – Premium Model<br>A high-performance ecg machine jelly jar 5 kg designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
+            "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%203"
+        ]
     },
     {
         "id": 55,
@@ -888,13 +1125,15 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.8",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": "https://d29azk3rh443yy.cloudfront.net/static/Products/Ultrasound-Jelly--Sonograpgy-Gel-250-ml-surginatal.com-006.webp",
+        "desc": "Ultrasound Jelly Bottle 250 Ml – Budget Model<br>This affordable ultrasound jelly bottle 250 ml is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ultrasound Jelly Bottle 250 Ml – Basic Model <br>An affordable ultrasound jelly bottle 250 ml designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/9/GK/UU/BH/1747978/ecg-ultrasound-gel-250ml.jpg",
         "images": [
-            "https://d29azk3rh443yy.cloudfront.net/static/Products/Ultrasound-Jelly--Sonograpgy-Gel-250-ml-surginatal.com-006.webp"
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%203"
         ]
     },
     {
@@ -906,11 +1145,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.9",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": ""
+        "desc": "Ultrasound Jelly Bottle 250 Ml – Standard Model<br>This standard ultrasound jelly bottle 250 ml offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ultrasound Jelly Bottle 250 Ml – Standard Model<br>A reliable and durable ultrasound jelly bottle 250 ml designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%203"
+        ]
     },
     {
         "id": 57,
@@ -921,11 +1165,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.7",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": ""
+        "desc": "Ultrasound Jelly Bottle 250 Ml – Premium Model<br>This premium quality ultrasound jelly bottle 250 ml provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ultrasound Jelly Bottle 250 Ml – Premium Model<br>A high-performance ultrasound jelly bottle 250 ml designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%203"
+        ]
     },
     {
         "id": 58,
@@ -936,13 +1185,15 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.5",
-        "ratingCount": 89,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": "https://m.media-amazon.com/images/I/61m7K9gz2tL._AC_UF350,350_QL50_.jpg",
+        "desc": "Ultrasound Jelly Jar 5 Kg – Budget Model<br>This affordable ultrasound jelly jar 5 kg is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ultrasound Jelly Jar 5 Kg – Basic Model <br>An affordable ultrasound jelly jar 5 kg designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/2/MI/QK/NE/57038963/ecg-gel-5kg-jar.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/61m7K9gz2tL._AC_UF350,350_QL50_.jpg"
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%201",
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%203"
         ]
     },
     {
@@ -954,11 +1205,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.3",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": ""
+        "desc": "Ultrasound Jelly Jar 5 Kg – Standard Model<br>This standard ultrasound jelly jar 5 kg offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ultrasound Jelly Jar 5 Kg – Standard Model<br>A reliable and durable ultrasound jelly jar 5 kg designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%201",
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%203"
+        ]
     },
     {
         "id": 60,
@@ -969,11 +1225,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.5",
-        "ratingCount": 86,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Water-soluble gels (ECG/Ultrasound).",
-        "usage": "Spread on skin to eliminate air gaps, allowing clear sound waves or electrical signals.",
-        "image": ""
+        "desc": "Ultrasound Jelly Jar 5 Kg – Premium Model<br>This premium quality ultrasound jelly jar 5 kg provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ultrasound Jelly Jar 5 Kg – Premium Model<br>A high-performance ultrasound jelly jar 5 kg designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%201",
+            "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20JAR%205%20KG%203"
+        ]
     },
     {
         "id": 61,
@@ -984,13 +1245,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.6",
-        "ratingCount": 84,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": "https://www.hemodiaz.com/wp-content/uploads/2025/02/72.png",
+        "desc": "Nibp Hosing – Budget Model<br>This affordable nibp hosing is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Nibp Hosing – Basic Model <br>An affordable nibp hosing designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/9/RE/UW/EK/8080571/nibp-hose-tube.jpg",
         "images": [
-            "https://www.hemodiaz.com/wp-content/uploads/2025/02/72.png"
+            "https://via.placeholder.com/600x600?text=NIBP%20HOSING%201",
+            "https://via.placeholder.com/600x600?text=NIBP%20HOSING%201|https://via.placeholder.com/600x600?text=NIBP%20HOSING%202|https://via.placeholder.com/600x600?text=NIBP%20HOSING%203"
         ]
     },
     {
@@ -1002,11 +1265,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.7",
-        "ratingCount": 82,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": ""
+        "desc": "Nibp Hosing – Standard Model<br>This standard nibp hosing offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Nibp Hosing – Standard Model<br>A reliable and durable nibp hosing designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=NIBP%20HOSING%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=NIBP%20HOSING%201",
+            "https://via.placeholder.com/600x600?text=NIBP%20HOSING%201|https://via.placeholder.com/600x600?text=NIBP%20HOSING%202|https://via.placeholder.com/600x600?text=NIBP%20HOSING%203"
+        ]
     },
     {
         "id": 63,
@@ -1017,11 +1285,16 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "4.1",
-        "ratingCount": 97,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": ""
+        "desc": "Nibp Hosing – Premium Model<br>This premium quality nibp hosing provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Nibp Hosing – Premium Model<br>A high-performance nibp hosing designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=NIBP%20HOSING%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=NIBP%20HOSING%201",
+            "https://via.placeholder.com/600x600?text=NIBP%20HOSING%201|https://via.placeholder.com/600x600?text=NIBP%20HOSING%202|https://via.placeholder.com/600x600?text=NIBP%20HOSING%203"
+        ]
     },
     {
         "id": 64,
@@ -1032,13 +1305,15 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.2",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": "https://www.gehealthcare.com/-/jssmedia/gehc/us/images/products/clinical-accessories/non-invasive-blood-pressure-cuffs/product-switcher/product-switcher-dura-cuf-desktop.jpg?h=593&iar=0&w=1054&rev=-1&hash=127D499CAB0AFE7F57259824718A7C57",
+        "desc": "Reusable Nibp Cuffs – Budget Model<br>This affordable reusable nibp cuffs is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Reusable Nibp Cuffs – Basic Model <br>An affordable reusable nibp cuffs designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/3/UH/ZX/VH/4398698/reusable-nibp-cuff.jpg",
         "images": [
-            "https://www.gehealthcare.com/-/jssmedia/gehc/us/images/products/clinical-accessories/non-invasive-blood-pressure-cuffs/product-switcher/product-switcher-dura-cuf-desktop.jpg?h=593&iar=0&w=1054&rev=-1&hash=127D499CAB0AFE7F57259824718A7C57"
+            "https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%201",
+            "https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%201|https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%202|https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%203"
         ]
     },
     {
@@ -1052,9 +1327,14 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": ""
+        "desc": "Reusable Nibp Cuffs – Standard Model<br>This standard reusable nibp cuffs offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Reusable Nibp Cuffs – Standard Model<br>A reliable and durable reusable nibp cuffs designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%201",
+            "https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%201|https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%202|https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%203"
+        ]
     },
     {
         "id": 66,
@@ -1065,11 +1345,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.3",
-        "ratingCount": 86,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": ""
+        "desc": "Reusable Nibp Cuffs – Premium Model<br>This premium quality reusable nibp cuffs provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Reusable Nibp Cuffs – Premium Model<br>A high-performance reusable nibp cuffs designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%201",
+            "https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%201|https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%202|https://via.placeholder.com/600x600?text=REUSABLE%20NIBP%20CUFFS%20(ADULT%2C%20EX%20LARGE%2C%20THIGH)%203"
+        ]
     },
     {
         "id": 67,
@@ -1080,11 +1365,16 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.5",
-        "ratingCount": 84,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": ""
+        "desc": "Disposable Nibpcuffs – Budget Model<br>This affordable disposable nibpcuffs is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Nibpcuffs – Basic Model <br>An affordable disposable nibpcuffs designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg",
+        "images": [
+            "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg",
+            "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg|https://www.muslim-medical.com/wp-content/uploads/2015/02/disposable.jpg|https://www.ecmedihealth.com/wp-content/uploads/2016/09/PastedGraphic-1.jpg"
+        ]
     },
     {
         "id": 68,
@@ -1095,11 +1385,16 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "4.4",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": ""
+        "desc": "Disposable Nibpcuffs – Standard Model<br>This standard disposable nibpcuffs offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Nibpcuffs – Standard Model<br>A reliable and durable disposable nibpcuffs designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg",
+        "images": [
+            "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg",
+            "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg|https://www.muslim-medical.com/wp-content/uploads/2015/02/disposable.jpg|https://www.ecmedihealth.com/wp-content/uploads/2016/09/PastedGraphic-1.jpg"
+        ]
     },
     {
         "id": 69,
@@ -1110,11 +1405,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.4",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Inflatable arm/thigh bands for non-invasive blood pressure.",
-        "usage": "Wrapped around a limb and inflated by a monitor to measure pressure levels.",
-        "image": ""
+        "desc": "Disposable Nibpcuffs – Premium Model<br>This premium quality disposable nibpcuffs provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Nibpcuffs – Premium Model<br>A high-performance disposable nibpcuffs designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg",
+        "images": [
+            "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg",
+            "https://sky-medical.in/wp-content/gallery/medical-accessories-disposable-gallery/Disposable-NIBP-Cuff-Neonatal-Img.jpg|https://www.muslim-medical.com/wp-content/uploads/2015/02/disposable.jpg|https://www.ecmedihealth.com/wp-content/uploads/2016/09/PastedGraphic-1.jpg"
+        ]
     },
     {
         "id": 70,
@@ -1125,13 +1425,15 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "3.3",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/12/370157222/DQ/KV/MJ/92146431/aami-compatible-ibp-adapter-cable-bd-connector.jpg",
+        "desc": "Bd Ibp Cable – Budget Model<br>This affordable bd ibp cable is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Bd Ibp Cable – Basic Model <br>An affordable bd ibp cable designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/7/TR/YL/AS/9066547/ibp-transducer-cable.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/12/370157222/DQ/KV/MJ/92146431/aami-compatible-ibp-adapter-cable-bd-connector.jpg"
+            "https://medical-cables.com/wp-content/uploads/2022/03/2Disposable-IBP-cable-1500x1000.jpg",
+            "https://medical-cables.com/wp-content/uploads/2022/03/2Disposable-IBP-cable-1500x1000.jpg|https://img.medicalexpo.com/images_me/photo-m2/250608-18837805.jpg|http://www.bmtmedical.com/en/wp-content/uploads/2017/01/PHILIPS-BD-IBP-KABLO.jpg"
         ]
     },
     {
@@ -1143,11 +1445,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.1",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Bd Ibp Cable – Standard Model<br>This standard bd ibp cable offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Bd Ibp Cable – Standard Model<br>A reliable and durable bd ibp cable designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://medical-cables.com/wp-content/uploads/2022/03/2Disposable-IBP-cable-1500x1000.jpg",
+        "images": [
+            "https://medical-cables.com/wp-content/uploads/2022/03/2Disposable-IBP-cable-1500x1000.jpg",
+            "https://medical-cables.com/wp-content/uploads/2022/03/2Disposable-IBP-cable-1500x1000.jpg|https://img.medicalexpo.com/images_me/photo-m2/250608-18837805.jpg|http://www.bmtmedical.com/en/wp-content/uploads/2017/01/PHILIPS-BD-IBP-KABLO.jpg"
+        ]
     },
     {
         "id": 72,
@@ -1158,11 +1465,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.2",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Bd Ibp Cable – Premium Model<br>This premium quality bd ibp cable provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Bd Ibp Cable – Premium Model<br>A high-performance bd ibp cable designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://medical-cables.com/wp-content/uploads/2022/03/2Disposable-IBP-cable-1500x1000.jpg",
+        "images": [
+            "https://medical-cables.com/wp-content/uploads/2022/03/2Disposable-IBP-cable-1500x1000.jpg",
+            "https://medical-cables.com/wp-content/uploads/2022/03/2Disposable-IBP-cable-1500x1000.jpg|https://img.medicalexpo.com/images_me/photo-m2/250608-18837805.jpg|http://www.bmtmedical.com/en/wp-content/uploads/2017/01/PHILIPS-BD-IBP-KABLO.jpg"
+        ]
     },
     {
         "id": 73,
@@ -1173,13 +1485,15 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.9",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "http://5.imimg.com/data5/SELLER/Default/2022/12/YH/CJ/TN/972966/ibp-cable-1000x1000.jpg",
+        "desc": "Medex Ibp Cable – Budget Model<br>This affordable medex ibp cable is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Medex Ibp Cable – Basic Model <br>An affordable medex ibp cable designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg",
         "images": [
-            "http://5.imimg.com/data5/SELLER/Default/2022/12/YH/CJ/TN/972966/ibp-cable-1000x1000.jpg"
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2017/08/Medex-IBP.jpg|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/ibp-adapter-cablemedex-abbott-compatible-with-ge_508.jpg?v=1559288853"
         ]
     },
     {
@@ -1191,11 +1505,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.4",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Medex Ibp Cable – Standard Model<br>This standard medex ibp cable offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Medex Ibp Cable – Standard Model<br>A reliable and durable medex ibp cable designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg",
+        "images": [
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2017/08/Medex-IBP.jpg|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/ibp-adapter-cablemedex-abbott-compatible-with-ge_508.jpg?v=1559288853"
+        ]
     },
     {
         "id": 75,
@@ -1206,11 +1525,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.1",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Medex Ibp Cable – Premium Model<br>This premium quality medex ibp cable provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Medex Ibp Cable – Premium Model<br>A high-performance medex ibp cable designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg",
+        "images": [
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KA-HP-MX.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2017/08/Medex-IBP.jpg|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/ibp-adapter-cablemedex-abbott-compatible-with-ge_508.jpg?v=1559288853"
+        ]
     },
     {
         "id": 76,
@@ -1223,11 +1547,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "http://5.imimg.com/data5/SELLER/Default/2024/5/421846623/WG/KB/UU/37981635/transducer-ibp-cable-1000x1000.jpg",
+        "desc": "Edwards Ibp Cable – Budget Model<br>This affordable edwards ibp cable is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Edwards Ibp Cable – Basic Model <br>An affordable edwards ibp cable designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg",
         "images": [
-            "http://5.imimg.com/data5/SELLER/Default/2024/5/421846623/WG/KB/UU/37981635/transducer-ibp-cable-1000x1000.jpg"
+            "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg",
+            "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg|https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37267275224.jpg|https://medical-cables.com/wp-content/uploads/2022/03/5Compatible-IBP-Adapter-Cable-1500x1000.jpg"
         ]
     },
     {
@@ -1239,11 +1565,16 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "3.9",
-        "ratingCount": 68,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Edwards Ibp Cable – Standard Model<br>This standard edwards ibp cable offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Edwards Ibp Cable – Standard Model<br>A reliable and durable edwards ibp cable designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg",
+        "images": [
+            "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg",
+            "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg|https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37267275224.jpg|https://medical-cables.com/wp-content/uploads/2022/03/5Compatible-IBP-Adapter-Cable-1500x1000.jpg"
+        ]
     },
     {
         "id": 78,
@@ -1254,11 +1585,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "3.8",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Edwards Ibp Cable – Premium Model<br>This premium quality edwards ibp cable provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Edwards Ibp Cable – Premium Model<br>A high-performance edwards ibp cable designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg",
+        "images": [
+            "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg",
+            "https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37197999537.jpg|https://heomed.com/wp-content/uploads/2024/06/philips-edwards-ibp-cable37267275224.jpg|https://medical-cables.com/wp-content/uploads/2022/03/5Compatible-IBP-Adapter-Cable-1500x1000.jpg"
+        ]
     },
     {
         "id": 79,
@@ -1271,11 +1607,13 @@ var products = [
         "rating": "3.6",
         "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "",
-        "usage": "",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/361395803/FS/TR/XX/8847843/skin-temperature-probes.jpg",
+        "desc": "Temperature Probes – Budget Model<br>This affordable temperature probes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Temperature Probes – Basic Model <br>An affordable temperature probes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/11/361395803/FS/TR/XX/8847843/skin-temperature-probes.jpg"
+            "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg",
+            "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg|https://3.imimg.com/data3/FV/ES/MY-11928069/medical-temperature-probes-500x500.jpg|http://siellamedical.com/cdn/shop/collections/Temperature_Probe.png?v=1710047726"
         ]
     },
     {
@@ -1287,11 +1625,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "3.9",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "Temperature Probes – Standard Model<br>This standard temperature probes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Temperature Probes – Standard Model<br>A reliable and durable temperature probes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg",
+        "images": [
+            "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg",
+            "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg|https://3.imimg.com/data3/FV/ES/MY-11928069/medical-temperature-probes-500x500.jpg|http://siellamedical.com/cdn/shop/collections/Temperature_Probe.png?v=1710047726"
+        ]
     },
     {
         "id": 81,
@@ -1302,11 +1645,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.1",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "Temperature Probes – Premium Model<br>This premium quality temperature probes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Temperature Probes – Premium Model<br>A high-performance temperature probes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg",
+        "images": [
+            "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg",
+            "https://kamleshyadav.com/templatemonster/medicalequipment/wp-content/uploads/2020/06/pro12-1.jpg|https://3.imimg.com/data3/FV/ES/MY-11928069/medical-temperature-probes-500x500.jpg|http://siellamedical.com/cdn/shop/collections/Temperature_Probe.png?v=1710047726"
+        ]
     },
     {
         "id": 82,
@@ -1319,9 +1667,19 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Edwards Single Line – Budget Model<br>This affordable edwards single line is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Edwards Single Line – Basic Model <br>An affordable edwards single line designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+        "images": [
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png|https://static.wixstatic.com/media/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png/v1/fill/w_490",
+            "h_314",
+            "al_c",
+            "q_85",
+            "usm_0.66_1.00_0.01",
+            "enc_auto/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png|https://champcohen.com/wp-content/uploads/2019/11/edwardsbrochure2_b.jpg"
+        ]
     },
     {
         "id": 83,
@@ -1334,9 +1692,19 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Edwards Single Line – Standard Model<br>This standard edwards single line offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Edwards Single Line – Standard Model<br>A reliable and durable edwards single line designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+        "images": [
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png|https://static.wixstatic.com/media/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png/v1/fill/w_490",
+            "h_314",
+            "al_c",
+            "q_85",
+            "usm_0.66_1.00_0.01",
+            "enc_auto/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png|https://champcohen.com/wp-content/uploads/2019/11/edwardsbrochure2_b.jpg"
+        ]
     },
     {
         "id": 84,
@@ -1347,11 +1715,21 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.3",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Edwards Single Line – Premium Model<br>This premium quality edwards single line provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Edwards Single Line – Premium Model<br>A high-performance edwards single line designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+        "images": [
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png|https://static.wixstatic.com/media/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png/v1/fill/w_490",
+            "h_314",
+            "al_c",
+            "q_85",
+            "usm_0.66_1.00_0.01",
+            "enc_auto/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png|https://champcohen.com/wp-content/uploads/2019/11/edwardsbrochure2_b.jpg"
+        ]
     },
     {
         "id": 85,
@@ -1362,13 +1740,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.2",
-        "ratingCount": 44,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "https://m.media-amazon.com/images/I/51sXY6ughBL._AC_UF350,350_QL80_.jpg",
+        "desc": "Medex Single Line – Budget Model<br>This affordable medex single line is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Medex Single Line – Basic Model <br>An affordable medex single line designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/51sXY6ughBL._AC_UF350,350_QL80_.jpg"
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg|https://cdn11.bigcommerce.com/s-22fhhbs/products/90/images/276/Logical_Medex__30282.1395782541.400.300.jpg?c=2|https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg"
         ]
     },
     {
@@ -1380,11 +1760,16 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.6",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Medex Single Line – Standard Model<br>This standard medex single line offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Medex Single Line – Standard Model<br>A reliable and durable medex single line designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+        "images": [
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg|https://cdn11.bigcommerce.com/s-22fhhbs/products/90/images/276/Logical_Medex__30282.1395782541.400.300.jpg?c=2|https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg"
+        ]
     },
     {
         "id": 87,
@@ -1395,11 +1780,16 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "4.2",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Medex Single Line – Premium Model<br>This premium quality medex single line provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Medex Single Line – Premium Model<br>A high-performance medex single line designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+        "images": [
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg|https://cdn11.bigcommerce.com/s-22fhhbs/products/90/images/276/Logical_Medex__30282.1395782541.400.300.jpg?c=2|https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg"
+        ]
     },
     {
         "id": 88,
@@ -1410,13 +1800,15 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.3",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "https://img.medicalexpo.com/images_me/photo-g/300302-20214542.jpg",
+        "desc": "Utah Single Line – Budget Model<br>This affordable utah single line is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Utah Single Line – Basic Model <br>An affordable utah single line designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
         "images": [
-            "https://img.medicalexpo.com/images_me/photo-g/300302-20214542.jpg"
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://lassonde.utah.edu/wp/wp-content/uploads/2015/01/Light-Line-Catheter-3-1920x1080.jpg|https://universalmedicalequipmentllc.com/wp-content/uploads/2024/11/ume-about-img-600x674.jpg"
         ]
     },
     {
@@ -1428,11 +1820,16 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "4.6",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Utah Single Line – Standard Model<br>This standard utah single line offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Utah Single Line – Standard Model<br>A reliable and durable utah single line designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+        "images": [
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://lassonde.utah.edu/wp/wp-content/uploads/2015/01/Light-Line-Catheter-3-1920x1080.jpg|https://universalmedicalequipmentllc.com/wp-content/uploads/2024/11/ume-about-img-600x674.jpg"
+        ]
     },
     {
         "id": 90,
@@ -1443,11 +1840,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.2",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Utah Single Line – Premium Model<br>This premium quality utah single line provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Utah Single Line – Premium Model<br>A high-performance utah single line designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+        "images": [
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://lassonde.utah.edu/wp/wp-content/uploads/2015/01/Light-Line-Catheter-3-1920x1080.jpg|https://universalmedicalequipmentllc.com/wp-content/uploads/2024/11/ume-about-img-600x674.jpg"
+        ]
     },
     {
         "id": 91,
@@ -1458,13 +1860,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.5",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "https://www.tuvsud.com/-/media/regions/sg/images/resource-centre/blogs/ts-medical.jpg?la=en-sg&h=150&w=221&hash=B8401062BFECB38B6FF66DE8969A5C42",
+        "desc": "B.d Single Line – Budget Model<br>This affordable b.d single line is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "B.d Single Line – Basic Model <br>An affordable b.d single line designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
         "images": [
-            "https://www.tuvsud.com/-/media/regions/sg/images/resource-centre/blogs/ts-medical.jpg?la=en-sg&h=150&w=221&hash=B8401062BFECB38B6FF66DE8969A5C42"
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://www.medicaldevice-network.com/wp-content/uploads/sites/23/2023/04/Mikron-Semi-automatic-assembly-line-in-production-scaled.jpg|https://www.meridian-medical.com/wp-content/uploads/2023/03/sample-line-set-draft-1.png"
         ]
     },
     {
@@ -1478,9 +1882,14 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "B.d Single Line – Standard Model<br>This standard b.d single line offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "B.d Single Line – Standard Model<br>A reliable and durable b.d single line designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+        "images": [
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://www.medicaldevice-network.com/wp-content/uploads/sites/23/2023/04/Mikron-Semi-automatic-assembly-line-in-production-scaled.jpg|https://www.meridian-medical.com/wp-content/uploads/2023/03/sample-line-set-draft-1.png"
+        ]
     },
     {
         "id": 93,
@@ -1491,11 +1900,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.6",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "B.d Single Line – Premium Model<br>This premium quality b.d single line provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "B.d Single Line – Premium Model<br>A high-performance b.d single line designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+        "images": [
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://www.medicaldevice-network.com/wp-content/uploads/sites/23/2023/04/Mikron-Semi-automatic-assembly-line-in-production-scaled.jpg|https://www.meridian-medical.com/wp-content/uploads/2023/03/sample-line-set-draft-1.png"
+        ]
     },
     {
         "id": 94,
@@ -1508,11 +1922,18 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "https://respbuy.com/wp-content/uploads/2022/10/RespBuy-Edwards-Connector-Compatible-IBP-Disposable-Transducer.webp",
+        "desc": "Edwards Double Line – Budget Model<br>This affordable edwards double line is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Edwards Double Line – Basic Model <br>An affordable edwards double line designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
         "images": [
-            "https://respbuy.com/wp-content/uploads/2022/10/RespBuy-Edwards-Connector-Compatible-IBP-Disposable-Transducer.webp"
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png|https://static.wixstatic.com/media/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png/v1/fill/w_490",
+            "h_314",
+            "al_c",
+            "q_85",
+            "usm_0.66_1.00_0.01",
+            "enc_auto/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png|https://champcohen.com/wp-content/uploads/2019/11/edwardsbrochure2_b.jpg"
         ]
     },
     {
@@ -1524,11 +1945,21 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.8",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Edwards Double Line – Standard Model<br>This standard edwards double line offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Edwards Double Line – Standard Model<br>A reliable and durable edwards double line designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+        "images": [
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png|https://static.wixstatic.com/media/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png/v1/fill/w_490",
+            "h_314",
+            "al_c",
+            "q_85",
+            "usm_0.66_1.00_0.01",
+            "enc_auto/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png|https://champcohen.com/wp-content/uploads/2019/11/edwardsbrochure2_b.jpg"
+        ]
     },
     {
         "id": 96,
@@ -1539,11 +1970,21 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.9",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Edwards Double Line – Premium Model<br>This premium quality edwards double line provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Edwards Double Line – Premium Model<br>A high-performance edwards double line designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+        "images": [
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png",
+            "https://device.report/m/a637bd3831c24496413dc03a28feebd8a8e0082b30fc4e0fecafd0f058f806f7.png|https://static.wixstatic.com/media/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png/v1/fill/w_490",
+            "h_314",
+            "al_c",
+            "q_85",
+            "usm_0.66_1.00_0.01",
+            "enc_auto/b487ad_46b65e64597f415faa7e840fcafd2919~mv2.png|https://champcohen.com/wp-content/uploads/2019/11/edwardsbrochure2_b.jpg"
+        ]
     },
     {
         "id": 97,
@@ -1554,13 +1995,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.7",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2024/1/379751556/QH/UM/ZE/210553352/dr-surgical-single-pressure-transducer-disposable-500x500.png",
+        "desc": "Medex Double Line – Budget Model<br>This affordable medex double line is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Medex Double Line – Basic Model <br>An affordable medex double line designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2024/1/379751556/QH/UM/ZE/210553352/dr-surgical-single-pressure-transducer-disposable-500x500.png"
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg|https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://cdn11.bigcommerce.com/s-rihs34rpvk/images/stencil/1280x1280/products/62621/128169/MDX-MX9602Anew__21156.1646766649.jpg?c=1"
         ]
     },
     {
@@ -1574,9 +2017,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Medex Double Line – Standard Model<br>This standard medex double line offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Medex Double Line – Standard Model<br>A reliable and durable medex double line designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+        "images": [
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg|https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://cdn11.bigcommerce.com/s-rihs34rpvk/images/stencil/1280x1280/products/62621/128169/MDX-MX9602Anew__21156.1646766649.jpg?c=1"
+        ]
     },
     {
         "id": 99,
@@ -1587,11 +2035,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.3",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Medex Double Line – Premium Model<br>This premium quality medex double line provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Medex Double Line – Premium Model<br>A high-performance medex double line designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+        "images": [
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg",
+            "https://medex.com.ge/wp-content/uploads/2020/01/1.jpg|https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://cdn11.bigcommerce.com/s-rihs34rpvk/images/stencil/1280x1280/products/62621/128169/MDX-MX9602Anew__21156.1646766649.jpg?c=1"
+        ]
     },
     {
         "id": 100,
@@ -1604,11 +2057,13 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": "https://tiimg.tistatic.com/fp/6/008/680/disposable-pressure-transducer-kit-105.jpg",
+        "desc": "Ibp Dpt Bracket & Dpt Holder – Budget Model<br>This affordable ibp dpt bracket & dpt holder is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ibp Dpt Bracket & Dpt Holder – Basic Model <br>An affordable ibp dpt bracket & dpt holder designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2021/8/KN/VN/JS/74038734/ibp-dpt-bracket.jpg",
         "images": [
-            "https://tiimg.tistatic.com/fp/6/008/680/disposable-pressure-transducer-kit-105.jpg"
+            "https://amydi-med.com/wp-content/uploads/2022/10/1-5.jpg",
+            "https://amydi-med.com/wp-content/uploads/2022/10/1-5.jpg|https://amydi-med.com/wp-content/uploads/2022/10/1-4.jpg|https://amydi-med.com/wp-content/uploads/2022/10/IBP-1024x606.jpg"
         ]
     },
     {
@@ -1622,9 +2077,14 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Ibp Dpt Bracket & Dpt Holder – Standard Model<br>This standard ibp dpt bracket & dpt holder offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ibp Dpt Bracket & Dpt Holder – Standard Model<br>A reliable and durable ibp dpt bracket & dpt holder designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://amydi-med.com/wp-content/uploads/2022/10/1-5.jpg",
+        "images": [
+            "https://amydi-med.com/wp-content/uploads/2022/10/1-5.jpg",
+            "https://amydi-med.com/wp-content/uploads/2022/10/1-5.jpg|https://amydi-med.com/wp-content/uploads/2022/10/1-4.jpg|https://amydi-med.com/wp-content/uploads/2022/10/IBP-1024x606.jpg"
+        ]
     },
     {
         "id": 102,
@@ -1635,11 +2095,16 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.7",
-        "ratingCount": 96,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Invasive pressure cables and disposable transducer lines.",
-        "usage": "Connected to an arterial catheter for constant, \"beat-to-beat\" blood pressure monitoring.",
-        "image": ""
+        "desc": "Ibp Dpt Bracket & Dpt Holder – Premium Model<br>This premium quality ibp dpt bracket & dpt holder provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ibp Dpt Bracket & Dpt Holder – Premium Model<br>A high-performance ibp dpt bracket & dpt holder designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://amydi-med.com/wp-content/uploads/2022/10/1-5.jpg",
+        "images": [
+            "https://amydi-med.com/wp-content/uploads/2022/10/1-5.jpg",
+            "https://amydi-med.com/wp-content/uploads/2022/10/1-5.jpg|https://amydi-med.com/wp-content/uploads/2022/10/1-4.jpg|https://amydi-med.com/wp-content/uploads/2022/10/IBP-1024x606.jpg"
+        ]
     },
     {
         "id": 103,
@@ -1652,11 +2117,13 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": "https://cpimg.tistatic.com/10257966/b/4/Contec-ETCO2-Mainstream-Module-For-Contec-Patient-Monitors..jpg",
+        "desc": "Etco2 Module – Budget Model<br>This affordable etco2 module is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Etco2 Module – Basic Model <br>An affordable etco2 module designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg",
         "images": [
-            "https://cpimg.tistatic.com/10257966/b/4/Contec-ETCO2-Mainstream-Module-For-Contec-Patient-Monitors..jpg"
+            "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg",
+            "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg|https://img.medicalexpo.com/images_me/photo-m2/128763-18758167.jpg|https://img.medicalexpo.com/images_me/photo-m2/68095-19618999.jpg"
         ]
     },
     {
@@ -1668,11 +2135,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.2",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Module – Standard Model<br>This standard etco2 module offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Etco2 Module – Standard Model<br>A reliable and durable etco2 module designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg",
+        "images": [
+            "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg",
+            "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg|https://img.medicalexpo.com/images_me/photo-m2/128763-18758167.jpg|https://img.medicalexpo.com/images_me/photo-m2/68095-19618999.jpg"
+        ]
     },
     {
         "id": 105,
@@ -1685,9 +2157,14 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Module – Premium Model<br>This premium quality etco2 module provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Etco2 Module – Premium Model<br>A high-performance etco2 module designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg",
+        "images": [
+            "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg",
+            "https://5.imimg.com/data5/LY/PU/ZD/SELLER-4291542/capnometer-etco2-monitor-500x500.jpg|https://img.medicalexpo.com/images_me/photo-m2/128763-18758167.jpg|https://img.medicalexpo.com/images_me/photo-m2/68095-19618999.jpg"
+        ]
     },
     {
         "id": 106,
@@ -1700,11 +2177,13 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2025/9/547829787/MA/EA/OG/50826304/ge-dfend-pro-water-trap.jpg",
+        "desc": "Etco2 Water Traps – Budget Model<br>This affordable etco2 water traps is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Etco2 Water Traps – Basic Model <br>An affordable etco2 water traps designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2025/9/547829787/MA/EA/OG/50826304/ge-dfend-pro-water-trap.jpg"
+            "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg",
+            "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg|https://image.made-in-china.com/2f0j00TiOcvJoRSbqm/Medical-Instrument-Disposable-Ventilator-Breathing-Circuit-Anesthesia-Circuit-for-Hospital-Equipment-with-Water-Traps.jpg|https://robinmedical.co.uk/wp-content/uploads/2024/03/Edan-etCO2-Water-Trap.jpg"
         ]
     },
     {
@@ -1716,11 +2195,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.5",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Water Traps – Standard Model<br>This standard etco2 water traps offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Etco2 Water Traps – Standard Model<br>A reliable and durable etco2 water traps designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg",
+            "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg|https://image.made-in-china.com/2f0j00TiOcvJoRSbqm/Medical-Instrument-Disposable-Ventilator-Breathing-Circuit-Anesthesia-Circuit-for-Hospital-Equipment-with-Water-Traps.jpg|https://robinmedical.co.uk/wp-content/uploads/2024/03/Edan-etCO2-Water-Trap.jpg"
+        ]
     },
     {
         "id": 108,
@@ -1733,9 +2217,14 @@ var products = [
         "rating": "4.4",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Water Traps – Premium Model<br>This premium quality etco2 water traps provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Etco2 Water Traps – Premium Model<br>A high-performance etco2 water traps designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg",
+            "https://image.made-in-china.com/2f0j00PHNbSsoqGvcK/CE-ISO-Medical-Equipment-Ventilator-Circuit-with-Water-Traps-Factory-Price-Disposable-Anestheisa-Ventilator-Breathing-Circuit-for-Hospital-Machine.jpg|https://image.made-in-china.com/2f0j00TiOcvJoRSbqm/Medical-Instrument-Disposable-Ventilator-Breathing-Circuit-Anesthesia-Circuit-for-Hospital-Equipment-with-Water-Traps.jpg|https://robinmedical.co.uk/wp-content/uploads/2024/03/Edan-etCO2-Water-Trap.jpg"
+        ]
     },
     {
         "id": 109,
@@ -1746,13 +2235,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.4",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": "https://cdn.tri-anim.com/ths/products/group006030_original_1200Wx1200H_8978551963678",
+        "desc": "Etco2 Sampling Line – Budget Model<br>This affordable etco2 sampling line is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Etco2 Sampling Line – Basic Model <br>An affordable etco2 sampling line designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg",
         "images": [
-            "https://cdn.tri-anim.com/ths/products/group006030_original_1200Wx1200H_8978551963678"
+            "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg",
+            "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg|https://robinmedical.co.uk/wp-content/uploads/2024/03/Pro-Breath-etCO2-line.png|https://robinmedical.co.uk/wp-content/uploads/2024/03/Proact-Sampling-Line-1024x603.jpg"
         ]
     },
     {
@@ -1766,9 +2257,14 @@ var products = [
         "rating": "3.3",
         "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Sampling Line – Standard Model<br>This standard etco2 sampling line offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Etco2 Sampling Line – Standard Model<br>A reliable and durable etco2 sampling line designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg",
+        "images": [
+            "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg",
+            "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg|https://robinmedical.co.uk/wp-content/uploads/2024/03/Pro-Breath-etCO2-line.png|https://robinmedical.co.uk/wp-content/uploads/2024/03/Proact-Sampling-Line-1024x603.jpg"
+        ]
     },
     {
         "id": 111,
@@ -1781,9 +2277,14 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Sampling Line – Premium Model<br>This premium quality etco2 sampling line provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Etco2 Sampling Line – Premium Model<br>A high-performance etco2 sampling line designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg",
+        "images": [
+            "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg",
+            "https://inrorwxhqlijlr5q.ldycdn.com/cloud/liBppKjrliSRqjripojrio/ETCO2-Sampling-Line.jpg|https://robinmedical.co.uk/wp-content/uploads/2024/03/Pro-Breath-etCO2-line.png|https://robinmedical.co.uk/wp-content/uploads/2024/03/Proact-Sampling-Line-1024x603.jpg"
+        ]
     },
     {
         "id": 112,
@@ -1794,11 +2295,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.2",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Adaptor – Budget Model<br>This affordable etco2 adaptor is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Etco2 Adaptor – Basic Model <br>An affordable etco2 adaptor designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg",
+            "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg|https://image.made-in-china.com/2f0j00SBwbCDvGlLkI/Veterinary-Etco2-Sensor-Airway-Adaptor.jpg|https://image.made-in-china.com/2f0j00gMJcoIeahDqT/Neonate-Etco2-Sensor-Airway-Adaptor.jpg"
+        ]
     },
     {
         "id": 113,
@@ -1811,9 +2317,14 @@ var products = [
         "rating": "4.9",
         "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Adaptor – Standard Model<br>This standard etco2 adaptor offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Etco2 Adaptor – Standard Model<br>A reliable and durable etco2 adaptor designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg",
+            "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg|https://image.made-in-china.com/2f0j00SBwbCDvGlLkI/Veterinary-Etco2-Sensor-Airway-Adaptor.jpg|https://image.made-in-china.com/2f0j00gMJcoIeahDqT/Neonate-Etco2-Sensor-Airway-Adaptor.jpg"
+        ]
     },
     {
         "id": 114,
@@ -1826,9 +2337,14 @@ var products = [
         "rating": "4.4",
         "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Modules and sampling lines for measuring exhaled CO2.",
-        "usage": "Attached to breathing circuits to monitor how well a patient is breathing/ventilating.",
-        "image": ""
+        "desc": "Etco2 Adaptor – Premium Model<br>This premium quality etco2 adaptor provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Etco2 Adaptor – Premium Model<br>A high-performance etco2 adaptor designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg",
+            "https://image.made-in-china.com/2f0j00DMJkVHjmkIof/Etco2-Sensor-Airway-Adaptor.jpg|https://image.made-in-china.com/2f0j00SBwbCDvGlLkI/Veterinary-Etco2-Sensor-Airway-Adaptor.jpg|https://image.made-in-china.com/2f0j00gMJcoIeahDqT/Neonate-Etco2-Sensor-Airway-Adaptor.jpg"
+        ]
     },
     {
         "id": 115,
@@ -1841,11 +2357,13 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "A connector for managing two invasive pressure readings.",
-        "usage": "Links multiple transducer lines to a single monitor port.",
-        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KS-HP-HP-2.jpg",
+        "desc": "Ibp Double Adaptor – Budget Model<br>This affordable ibp double adaptor is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ibp Double Adaptor – Basic Model <br>An affordable ibp double adaptor designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg",
         "images": [
-            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/KS-HP-HP-2.jpg"
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg|https://5.imimg.com/data5/SELLER/Default/2024/12/470774452/DM/YF/HL/128549962/ibp-adaptor-cable-1000x1000.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2017/08/GE-IBP-Plug-500x500.jpg"
         ]
     },
     {
@@ -1857,11 +2375,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.2",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "A connector for managing two invasive pressure readings.",
-        "usage": "Links multiple transducer lines to a single monitor port.",
-        "image": ""
+        "desc": "Ibp Double Adaptor – Standard Model<br>This standard ibp double adaptor offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ibp Double Adaptor – Standard Model<br>A reliable and durable ibp double adaptor designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg",
+        "images": [
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg|https://5.imimg.com/data5/SELLER/Default/2024/12/470774452/DM/YF/HL/128549962/ibp-adaptor-cable-1000x1000.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2017/08/GE-IBP-Plug-500x500.jpg"
+        ]
     },
     {
         "id": 117,
@@ -1874,9 +2397,14 @@ var products = [
         "rating": "3.9",
         "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "A connector for managing two invasive pressure readings.",
-        "usage": "Links multiple transducer lines to a single monitor port.",
-        "image": ""
+        "desc": "Ibp Double Adaptor – Premium Model<br>This premium quality ibp double adaptor provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ibp Double Adaptor – Premium Model<br>A high-performance ibp double adaptor designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg",
+        "images": [
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg",
+            "https://www.waltersmedical.co.uk/wp-content/uploads/2020/05/KS-MQ-MQ.jpg|https://5.imimg.com/data5/SELLER/Default/2024/12/470774452/DM/YF/HL/128549962/ibp-adaptor-cable-1000x1000.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2017/08/GE-IBP-Plug-500x500.jpg"
+        ]
     },
     {
         "id": 118,
@@ -1887,13 +2415,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "3.8",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "A clear dome used for infants.",
-        "usage": "Placed over a baby's head to deliver a high-oxygen environment without a mask.",
-        "image": "https://m.media-amazon.com/images/I/31AXjaiOq0S._AC_UF350,350_QL80_.jpg",
+        "desc": "Oxygen Hood – Budget Model<br>This affordable oxygen hood is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Oxygen Hood – Basic Model <br>An affordable oxygen hood designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/31AXjaiOq0S._AC_UF350,350_QL80_.jpg"
+            "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg|https://sivamedicalsystems.in/wp-content/uploads/2022/01/oxygen-hood-500x753.jpg|https://www.descomedicalindia.com/Uploads/Catalogue/oxygen-hood-with-nozzle-637661836896890909.jpg"
         ]
     },
     {
@@ -1907,9 +2437,14 @@ var products = [
         "rating": "3.6",
         "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "A clear dome used for infants.",
-        "usage": "Placed over a baby's head to deliver a high-oxygen environment without a mask.",
-        "image": ""
+        "desc": "Oxygen Hood – Standard Model<br>This standard oxygen hood offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Oxygen Hood – Standard Model<br>A reliable and durable oxygen hood designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg",
+        "images": [
+            "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg|https://sivamedicalsystems.in/wp-content/uploads/2022/01/oxygen-hood-500x753.jpg|https://www.descomedicalindia.com/Uploads/Catalogue/oxygen-hood-with-nozzle-637661836896890909.jpg"
+        ]
     },
     {
         "id": 120,
@@ -1922,9 +2457,14 @@ var products = [
         "rating": "3.9",
         "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "A clear dome used for infants.",
-        "usage": "Placed over a baby's head to deliver a high-oxygen environment without a mask.",
-        "image": ""
+        "desc": "Oxygen Hood – Premium Model<br>This premium quality oxygen hood provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Oxygen Hood – Premium Model<br>A high-performance oxygen hood designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg",
+        "images": [
+            "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/02/OXYGEN-HOOD-scaled.jpg|https://sivamedicalsystems.in/wp-content/uploads/2022/01/oxygen-hood-500x753.jpg|https://www.descomedicalindia.com/Uploads/Catalogue/oxygen-hood-with-nozzle-637661836896890909.jpg"
+        ]
     },
     {
         "id": 121,
@@ -1935,13 +2475,15 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.1",
-        "ratingCount": 54,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Face, Anaesthesia, and Nasal masks in various sizes.",
-        "usage": "Held over the face to deliver oxygen or anesthetic gases.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2020/9/XL/XX/FW/27724764/anesthesia-mask-500x500-500x500.jpg",
+        "desc": "Face Masks – Budget Model<br>This affordable face masks is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Face Masks – Basic Model <br>An affordable face masks designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2020/9/XL/XX/FW/27724764/anesthesia-mask-500x500-500x500.jpg"
+            "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg",
+            "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg|https://www.anbusafety.com/wp-content/uploads/2024/01/Medical-Face-Masks-2.jpg|https://www.anbusafety.com/wp-content/uploads/2024/01/Medical-Face-Masks-1.jpg"
         ]
     },
     {
@@ -1955,9 +2497,14 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Face, Anaesthesia, and Nasal masks in various sizes.",
-        "usage": "Held over the face to deliver oxygen or anesthetic gases.",
-        "image": ""
+        "desc": "Face Masks – Standard Model<br>This standard face masks offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Face Masks – Standard Model<br>A reliable and durable face masks designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg",
+        "images": [
+            "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg",
+            "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg|https://www.anbusafety.com/wp-content/uploads/2024/01/Medical-Face-Masks-2.jpg|https://www.anbusafety.com/wp-content/uploads/2024/01/Medical-Face-Masks-1.jpg"
+        ]
     },
     {
         "id": 123,
@@ -1970,9 +2517,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Face, Anaesthesia, and Nasal masks in various sizes.",
-        "usage": "Held over the face to deliver oxygen or anesthetic gases.",
-        "image": ""
+        "desc": "Face Masks – Premium Model<br>This premium quality face masks provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Face Masks – Premium Model<br>A high-performance face masks designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg",
+        "images": [
+            "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg",
+            "https://jinyemed.com/wp-content/uploads/2024/01/4_看图王-40.jpg|https://www.anbusafety.com/wp-content/uploads/2024/01/Medical-Face-Masks-2.jpg|https://www.anbusafety.com/wp-content/uploads/2024/01/Medical-Face-Masks-1.jpg"
+        ]
     },
     {
         "id": 124,
@@ -1985,11 +2537,13 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Face, Anaesthesia, and Nasal masks in various sizes.",
-        "usage": "Held over the face to deliver oxygen or anesthetic gases.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2021/5/PT/VD/PN/104083645/product-niv-face-masks-04.jpg",
+        "desc": "Disposableadult Humidifier Chamber – Budget Model<br>This affordable disposableadult humidifier chamber is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposableadult Humidifier Chamber – Basic Model <br>An affordable disposableadult humidifier chamber designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2021/5/PT/VD/PN/104083645/product-niv-face-masks-04.jpg"
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/421899067/ZG/WK/SD/140630895/disposable-humidifier-chamber-autofeed-500x500.jpg|https://www.northafricallc.com/wp-content/uploads/2024/10/cd567a2d-00fe-44cd-99bc-390eeaf75801-Photoroom.jpg"
         ]
     },
     {
@@ -2001,11 +2555,16 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "4.2",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Face, Anaesthesia, and Nasal masks in various sizes.",
-        "usage": "Held over the face to deliver oxygen or anesthetic gases.",
-        "image": ""
+        "desc": "Disposableadult Humidifier Chamber – Standard Model<br>This standard disposableadult humidifier chamber offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposableadult Humidifier Chamber – Standard Model<br>A reliable and durable disposableadult humidifier chamber designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+        "images": [
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/421899067/ZG/WK/SD/140630895/disposable-humidifier-chamber-autofeed-500x500.jpg|https://www.northafricallc.com/wp-content/uploads/2024/10/cd567a2d-00fe-44cd-99bc-390eeaf75801-Photoroom.jpg"
+        ]
     },
     {
         "id": 126,
@@ -2018,9 +2577,14 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Face, Anaesthesia, and Nasal masks in various sizes.",
-        "usage": "Held over the face to deliver oxygen or anesthetic gases.",
-        "image": ""
+        "desc": "Disposableadult Humidifier Chamber – Premium Model<br>This premium quality disposableadult humidifier chamber provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposableadult Humidifier Chamber – Premium Model<br>A high-performance disposableadult humidifier chamber designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+        "images": [
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/421899067/ZG/WK/SD/140630895/disposable-humidifier-chamber-autofeed-500x500.jpg|https://www.northafricallc.com/wp-content/uploads/2024/10/cd567a2d-00fe-44cd-99bc-390eeaf75801-Photoroom.jpg"
+        ]
     },
     {
         "id": 127,
@@ -2033,9 +2597,14 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": ""
+        "desc": "Reusable Adult Humidifier Chamber – Budget Model<br>This affordable reusable adult humidifier chamber is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Reusable Adult Humidifier Chamber – Basic Model <br>An affordable reusable adult humidifier chamber designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg",
+        "images": [
+            "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg",
+            "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg|http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343|https://vadimedical.com/wp-content/uploads/2020/09/G-314003-1.jpg"
+        ]
     },
     {
         "id": 128,
@@ -2046,11 +2615,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.3",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": ""
+        "desc": "Reusable Adult Humidifier Chamber – Standard Model<br>This standard reusable adult humidifier chamber offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Reusable Adult Humidifier Chamber – Standard Model<br>A reliable and durable reusable adult humidifier chamber designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg",
+        "images": [
+            "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg",
+            "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg|http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343|https://vadimedical.com/wp-content/uploads/2020/09/G-314003-1.jpg"
+        ]
     },
     {
         "id": 129,
@@ -2063,9 +2637,14 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": ""
+        "desc": "Reusable Adult Humidifier Chamber – Premium Model<br>This premium quality reusable adult humidifier chamber provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Reusable Adult Humidifier Chamber – Premium Model<br>A high-performance reusable adult humidifier chamber designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg",
+        "images": [
+            "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg",
+            "https://www.egmedmall.com/wp-content/uploads/2024/08/صورة-واتساب-بتاريخ-1446-02-14-في-11.38.49_7a2aa5ba_Watermarked-1.jpg|http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343|https://vadimedical.com/wp-content/uploads/2020/09/G-314003-1.jpg"
+        ]
     },
     {
         "id": 130,
@@ -2076,13 +2655,15 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.2",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/9/341337144/UZ/XN/AG/316820/hc200-humidification-chamber.png",
+        "desc": "Reusable Neonate Humidifier Chamber – Budget Model<br>This affordable reusable neonate humidifier chamber is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Reusable Neonate Humidifier Chamber – Basic Model <br>An affordable reusable neonate humidifier chamber designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/9/341337144/UZ/XN/AG/316820/hc200-humidification-chamber.png"
+            "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343",
+            "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343|https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://4.imimg.com/data4/AE/IJ/MY-690545/reusable-adult-humidifier-chamber-500x500.jpg"
         ]
     },
     {
@@ -2096,9 +2677,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": ""
+        "desc": "Reusable Neonate Humidifier Chamber – Standard Model<br>This standard reusable neonate humidifier chamber offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Reusable Neonate Humidifier Chamber – Standard Model<br>A reliable and durable reusable neonate humidifier chamber designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343",
+        "images": [
+            "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343",
+            "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343|https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://4.imimg.com/data4/AE/IJ/MY-690545/reusable-adult-humidifier-chamber-500x500.jpg"
+        ]
     },
     {
         "id": 132,
@@ -2109,11 +2695,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.3",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": ""
+        "desc": "Reusable Neonate Humidifier Chamber – Premium Model<br>This premium quality reusable neonate humidifier chamber provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Reusable Neonate Humidifier Chamber – Premium Model<br>A high-performance reusable neonate humidifier chamber designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343",
+        "images": [
+            "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343",
+            "http://www.biometriccables.in/cdn/shop/products/Humdifier_Champier.jpg?v=1571048343|https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://4.imimg.com/data4/AE/IJ/MY-690545/reusable-adult-humidifier-chamber-500x500.jpg"
+        ]
     },
     {
         "id": 133,
@@ -2126,11 +2717,13 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": "https://2.wlimg.com/product_images/bc-full/2021/12/9384894/auto-feed-humidification-chamber-1639555331-6052415.jpg",
+        "desc": "Disposable Neonate Humidifier Chamber – Budget Model<br>This affordable disposable neonate humidifier chamber is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Neonate Humidifier Chamber – Basic Model <br>An affordable disposable neonate humidifier chamber designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
         "images": [
-            "https://2.wlimg.com/product_images/bc-full/2021/12/9384894/auto-feed-humidification-chamber-1639555331-6052415.jpg"
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://img.medicalexpo.com/images_me/photo-m2/95849-12132302.jpg|https://5.imimg.com/data5/SELLER/Default/2024/10/460462311/BN/MX/LZ/140667743/-cmp0234-1000x1000.jpg"
         ]
     },
     {
@@ -2142,11 +2735,16 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.1",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": ""
+        "desc": "Disposable Neonate Humidifier Chamber – Standard Model<br>This standard disposable neonate humidifier chamber offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Neonate Humidifier Chamber – Standard Model<br>A reliable and durable disposable neonate humidifier chamber designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+        "images": [
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://img.medicalexpo.com/images_me/photo-m2/95849-12132302.jpg|https://5.imimg.com/data5/SELLER/Default/2024/10/460462311/BN/MX/LZ/140667743/-cmp0234-1000x1000.jpg"
+        ]
     },
     {
         "id": 135,
@@ -2159,9 +2757,14 @@ var products = [
         "rating": "4.8",
         "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Reusable and disposable water containers for ventilation.",
-        "usage": "Heats and adds moisture to air from a ventilator to keep the airway from drying.",
-        "image": ""
+        "desc": "Disposable Neonate Humidifier Chamber – Premium Model<br>This premium quality disposable neonate humidifier chamber provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Neonate Humidifier Chamber – Premium Model<br>A high-performance disposable neonate humidifier chamber designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+        "images": [
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg",
+            "https://ronfellmedical.com/wp-content/uploads/2022/06/Humidifier-Chamber.jpg|https://img.medicalexpo.com/images_me/photo-m2/95849-12132302.jpg|https://5.imimg.com/data5/SELLER/Default/2024/10/460462311/BN/MX/LZ/140667743/-cmp0234-1000x1000.jpg"
+        ]
     },
     {
         "id": 136,
@@ -2174,11 +2777,13 @@ var products = [
         "rating": "4.9",
         "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Laryngeal Mask Airway; an alternative to intubation.",
-        "usage": "Inserted into the throat to maintain an open airway during surgery.",
-        "image": "https://m.media-amazon.com/images/I/71VInXDnHjL._AC_UF350,350_QL50_.jpg",
+        "desc": "Anaesthesia Masks – Budget Model<br>This affordable anaesthesia masks is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Anaesthesia Masks – Basic Model <br>An affordable anaesthesia masks designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png",
         "images": [
-            "https://m.media-amazon.com/images/I/71VInXDnHjL._AC_UF350,350_QL50_.jpg"
+            "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png",
+            "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png|https://www.gwsmed.com/backend/assets/images/category/wordpress/2019/11/Anaesthesia-Masks.jpg|https://tiimg.tistatic.com/fp/1/003/865/anaesthesia-masks-130.jpg"
         ]
     },
     {
@@ -2192,9 +2797,14 @@ var products = [
         "rating": "4.7",
         "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Laryngeal Mask Airway; an alternative to intubation.",
-        "usage": "Inserted into the throat to maintain an open airway during surgery.",
-        "image": ""
+        "desc": "Anaesthesia Masks – Standard Model<br>This standard anaesthesia masks offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Anaesthesia Masks – Standard Model<br>A reliable and durable anaesthesia masks designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png",
+        "images": [
+            "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png",
+            "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png|https://www.gwsmed.com/backend/assets/images/category/wordpress/2019/11/Anaesthesia-Masks.jpg|https://tiimg.tistatic.com/fp/1/003/865/anaesthesia-masks-130.jpg"
+        ]
     },
     {
         "id": 138,
@@ -2205,11 +2815,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.5",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Laryngeal Mask Airway; an alternative to intubation.",
-        "usage": "Inserted into the throat to maintain an open airway during surgery.",
-        "image": ""
+        "desc": "Anaesthesia Masks – Premium Model<br>This premium quality anaesthesia masks provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Anaesthesia Masks – Premium Model<br>A high-performance anaesthesia masks designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png",
+        "images": [
+            "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png",
+            "https://assets.website-files.com/632cbc40140ca684832fa7a6/649087e563815ff3c32f6398_Surgical---Anaesthesia-Masks.png|https://www.gwsmed.com/backend/assets/images/category/wordpress/2019/11/Anaesthesia-Masks.jpg|https://tiimg.tistatic.com/fp/1/003/865/anaesthesia-masks-130.jpg"
+        ]
     },
     {
         "id": 139,
@@ -2222,9 +2837,14 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Laryngeal Mask Airway; an alternative to intubation.",
-        "usage": "Inserted into the throat to maintain an open airway during surgery.",
-        "image": ""
+        "desc": "Lma – Budget Model<br>This affordable lma is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Lma – Basic Model <br>An affordable lma designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg",
+        "images": [
+            "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg",
+            "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg|https://www.shutterstock.com/shutterstock/photos/2383378075/display_1500/stock-photo-hospital-medical-equipment-endotracheal-tube-lma-and-airway-mask-symbolizing-life-saving-2383378075.jpg|https://www.shutterstock.com/shutterstock/photos/2383378079/display_1500/stock-photo-hospital-medical-equipment-endotracheal-tube-lma-and-airway-mask-symbolizing-life-saving-2383378079.jpg"
+        ]
     },
     {
         "id": 140,
@@ -2237,9 +2857,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Laryngeal Mask Airway; an alternative to intubation.",
-        "usage": "Inserted into the throat to maintain an open airway during surgery.",
-        "image": ""
+        "desc": "Lma – Standard Model<br>This standard lma offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Lma – Standard Model<br>A reliable and durable lma designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg",
+        "images": [
+            "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg",
+            "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg|https://www.shutterstock.com/shutterstock/photos/2383378075/display_1500/stock-photo-hospital-medical-equipment-endotracheal-tube-lma-and-airway-mask-symbolizing-life-saving-2383378075.jpg|https://www.shutterstock.com/shutterstock/photos/2383378079/display_1500/stock-photo-hospital-medical-equipment-endotracheal-tube-lma-and-airway-mask-symbolizing-life-saving-2383378079.jpg"
+        ]
     },
     {
         "id": 141,
@@ -2250,11 +2875,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.6",
-        "ratingCount": 84,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Laryngeal Mask Airway; an alternative to intubation.",
-        "usage": "Inserted into the throat to maintain an open airway during surgery.",
-        "image": ""
+        "desc": "Lma – Premium Model<br>This premium quality lma provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Lma – Premium Model<br>A high-performance lma designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg",
+        "images": [
+            "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg",
+            "https://www.airwaytubes.com/test/airwaytubes.com/photo/pl151406765-remark.jpg|https://www.shutterstock.com/shutterstock/photos/2383378075/display_1500/stock-photo-hospital-medical-equipment-endotracheal-tube-lma-and-airway-mask-symbolizing-life-saving-2383378075.jpg|https://www.shutterstock.com/shutterstock/photos/2383378079/display_1500/stock-photo-hospital-medical-equipment-endotracheal-tube-lma-and-airway-mask-symbolizing-life-saving-2383378079.jpg"
+        ]
     },
     {
         "id": 142,
@@ -2265,13 +2895,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.7",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "A specialized tube system for anesthesia.",
-        "usage": "Delivers fresh gas while removing exhaled carbon dioxide.",
-        "image": "https://m.media-amazon.com/images/I/71-Ts9G+FfL.jpg",
+        "desc": "Disposable Bain Circuit – Budget Model<br>This affordable disposable bain circuit is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Bain Circuit – Basic Model <br>An affordable disposable bain circuit designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png",
         "images": [
-            "https://m.media-amazon.com/images/I/71-Ts9G+FfL.jpg"
+            "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png",
+            "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png|https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Bain-Circuit.jpg|https://burtonsveterinary.com/media/catalog/product/cache/bc30e38d9c917994cbdede8c24f5361e/1/0/103-220_2.jpg"
         ]
     },
     {
@@ -2285,11 +2917,13 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "A specialized tube system for anesthesia.",
-        "usage": "Delivers fresh gas while removing exhaled carbon dioxide.",
-        "image": "\\",
+        "desc": "Disposable Bain Circuit – Standard Model<br>This standard disposable bain circuit offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Bain Circuit – Standard Model<br>A reliable and durable disposable bain circuit designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png",
         "images": [
-            "\\"
+            "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png",
+            "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png|https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Bain-Circuit.jpg|https://burtonsveterinary.com/media/catalog/product/cache/bc30e38d9c917994cbdede8c24f5361e/1/0/103-220_2.jpg"
         ]
     },
     {
@@ -2303,11 +2937,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "A specialized tube system for anesthesia.",
-        "usage": "Delivers fresh gas while removing exhaled carbon dioxide.",
-        "image": "\\",
+        "desc": "Disposable Bain Circuit – Premium Model<br>This premium quality disposable bain circuit provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Bain Circuit – Premium Model<br>A high-performance disposable bain circuit designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png",
         "images": [
-            "\\"
+            "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png",
+            "https://yubhacare.com/wp-content/uploads/2022/10/Disposable-Adult-Bain-Circuit-.png|https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Bain-Circuit.jpg|https://burtonsveterinary.com/media/catalog/product/cache/bc30e38d9c917994cbdede8c24f5361e/1/0/103-220_2.jpg"
         ]
     },
     {
@@ -2319,13 +2955,15 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.6",
-        "ratingCount": 24,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "https://5.imimg.com/data5/IOS/Default/2023/4/299115161/NQ/MQ/JN/186121235/product-jpeg-250x250.png",
+        "desc": "Disposable Ventilator Circuit – Budget Model<br>This affordable disposable ventilator circuit is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Ventilator Circuit – Basic Model <br>An affordable disposable ventilator circuit designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png",
         "images": [
-            "https://5.imimg.com/data5/IOS/Default/2023/4/299115161/NQ/MQ/JN/186121235/product-jpeg-250x250.png"
+            "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png",
+            "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png|https://cpimg.tistatic.com/10054022/b/4/Disposable-Ventilator-Circuit.jpeg|https://www.descomedicalindia.com/Uploads/Catalogue/ventilator-circuit-disposable-637774258299647967.jpg"
         ]
     },
     {
@@ -2337,13 +2975,15 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "4.3",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "\\",
+        "desc": "Disposable Ventilator Circuit – Standard Model<br>This standard disposable ventilator circuit offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Ventilator Circuit – Standard Model<br>A reliable and durable disposable ventilator circuit designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png",
         "images": [
-            "\\"
+            "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png",
+            "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png|https://cpimg.tistatic.com/10054022/b/4/Disposable-Ventilator-Circuit.jpeg|https://www.descomedicalindia.com/Uploads/Catalogue/ventilator-circuit-disposable-637774258299647967.jpg"
         ]
     },
     {
@@ -2355,13 +2995,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.5",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "\\",
+        "desc": "Disposable Ventilator Circuit – Premium Model<br>This premium quality disposable ventilator circuit provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Ventilator Circuit – Premium Model<br>A high-performance disposable ventilator circuit designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png",
         "images": [
-            "\\"
+            "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png",
+            "https://medagre.com/wp-content/uploads/2023/12/Disposable-Ventilator-circuit.png|https://cpimg.tistatic.com/10054022/b/4/Disposable-Ventilator-Circuit.jpeg|https://www.descomedicalindia.com/Uploads/Catalogue/ventilator-circuit-disposable-637774258299647967.jpg"
         ]
     },
     {
@@ -2373,13 +3015,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.4",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/8/338358272/LL/SF/PF/51458038/double-water-trap-breathing-circuits.jpg",
+        "desc": "Disposable Ventilator Circuit With 2 Water Trap – Budget Model<br>This affordable disposable ventilator circuit with 2 water trap is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Ventilator Circuit With 2 Water Trap – Basic Model <br>An affordable disposable ventilator circuit with 2 water trap designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/8/338358272/LL/SF/PF/51458038/double-water-trap-breathing-circuits.jpg"
+            "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg",
+            "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg|https://5.imimg.com/data5/IOS/Default/2023/1/EY/ID/BC/80958590/product-jpeg-500x500.png|https://5.imimg.com/data5/SELLER/Default/2022/6/ZS/VA/QS/78639305/ventilator-circuit-double-water-trap-1000x1000.jpg"
         ]
     },
     {
@@ -2391,13 +3035,15 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.4",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "\\",
+        "desc": "Disposable Ventilator Circuit With 2 Water Trap – Standard Model<br>This standard disposable ventilator circuit with 2 water trap offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Ventilator Circuit With 2 Water Trap – Standard Model<br>A reliable and durable disposable ventilator circuit with 2 water trap designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg",
         "images": [
-            "\\"
+            "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg",
+            "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg|https://5.imimg.com/data5/IOS/Default/2023/1/EY/ID/BC/80958590/product-jpeg-500x500.png|https://5.imimg.com/data5/SELLER/Default/2022/6/ZS/VA/QS/78639305/ventilator-circuit-double-water-trap-1000x1000.jpg"
         ]
     },
     {
@@ -2411,11 +3057,13 @@ var products = [
         "rating": "3.3",
         "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "\\",
+        "desc": "Disposable Ventilator Circuit With 2 Water Trap – Premium Model<br>This premium quality disposable ventilator circuit with 2 water trap provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Ventilator Circuit With 2 Water Trap – Premium Model<br>A high-performance disposable ventilator circuit with 2 water trap designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg",
         "images": [
-            "\\"
+            "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg",
+            "https://ebuynsell.in/wp-content/uploads/2023/08/Disposable-ventilator-double-water-trap-circuit.jpg|https://5.imimg.com/data5/IOS/Default/2023/1/EY/ID/BC/80958590/product-jpeg-500x500.png|https://5.imimg.com/data5/SELLER/Default/2022/6/ZS/VA/QS/78639305/ventilator-circuit-double-water-trap-1000x1000.jpg"
         ]
     },
     {
@@ -2429,11 +3077,13 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "https://5.imimg.com/data5/AJ/BA/MY-1650889/silicon-reusable-ventilator-circuit-neonatal-250x250.jpg",
+        "desc": "Reusable Ventilator Circuit – Budget Model<br>This affordable reusable ventilator circuit is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Reusable Ventilator Circuit – Basic Model <br>An affordable reusable ventilator circuit designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg",
         "images": [
-            "https://5.imimg.com/data5/AJ/BA/MY-1650889/silicon-reusable-ventilator-circuit-neonatal-250x250.jpg"
+            "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg",
+            "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg|https://medisurge.mw/wp-content/uploads/2024/08/ventilator-circuit.jpg|https://5.imimg.com/data5/SELLER/Default/2022/12/ZJ/VK/IF/63931690/pnc-reusable-ventilator-circuits-500x500.jpeg"
         ]
     },
     {
@@ -2447,11 +3097,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "\\",
+        "desc": "Reusable Ventilator Circuit – Standard Model<br>This standard reusable ventilator circuit offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Reusable Ventilator Circuit – Standard Model<br>A reliable and durable reusable ventilator circuit designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg",
         "images": [
-            "\\"
+            "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg",
+            "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg|https://medisurge.mw/wp-content/uploads/2024/08/ventilator-circuit.jpg|https://5.imimg.com/data5/SELLER/Default/2022/12/ZJ/VK/IF/63931690/pnc-reusable-ventilator-circuits-500x500.jpeg"
         ]
     },
     {
@@ -2463,13 +3115,15 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.9",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Corrugated tubing sets for breathing machines.",
-        "usage": "Acts as the breathing tube between the patient and the ventilator.",
-        "image": "\\",
+        "desc": "Reusable Ventilator Circuit – Premium Model<br>This premium quality reusable ventilator circuit provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Reusable Ventilator Circuit – Premium Model<br>A high-performance reusable ventilator circuit designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg",
         "images": [
-            "\\"
+            "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg",
+            "https://sevamedicalequipment.com/wp-content/uploads/2024/03/ventilator-breathing-circuit.jpg|https://medisurge.mw/wp-content/uploads/2024/08/ventilator-circuit.jpg|https://5.imimg.com/data5/SELLER/Default/2022/12/ZJ/VK/IF/63931690/pnc-reusable-ventilator-circuits-500x500.jpeg"
         ]
     },
     {
@@ -2483,11 +3137,13 @@ var products = [
         "rating": "4.4",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Simulated lungs for equipment testing.",
-        "usage": "Attached to a ventilator to check its function before using it on a patient.",
-        "image": "https://m.media-amazon.com/images/I/41J5SBX-tXL.jpg",
+        "desc": "Test Lung – Budget Model<br>This affordable test lung is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Test Lung – Basic Model <br>An affordable test lung designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.nasco.com/media/catalog/product/T/L/TL-2000-test-lung.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/41J5SBX-tXL.jpg"
+            "https://bay-medical.com/wp-content/uploads/2020/04/4-0050-50_Web.jpg",
+            "https://bay-medical.com/wp-content/uploads/2020/04/4-0050-50_Web.jpg|https://img.medicalexpo.com/images_me/photo-m2/300923-20101128.jpg|https://hs770.com/wp-content/uploads/2024/12/essential-medical-equipment-for-lung-cancer-diagnosis-and-monitoring-1.jpg"
         ]
     },
     {
@@ -2499,13 +3155,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.1",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Simulated lungs for equipment testing.",
-        "usage": "Attached to a ventilator to check its function before using it on a patient.",
-        "image": "\\",
+        "desc": "Test Lung – Standard Model<br>This standard test lung offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Test Lung – Standard Model<br>A reliable and durable test lung designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://bay-medical.com/wp-content/uploads/2020/04/4-0050-50_Web.jpg",
         "images": [
-            "\\"
+            "https://bay-medical.com/wp-content/uploads/2020/04/4-0050-50_Web.jpg",
+            "https://bay-medical.com/wp-content/uploads/2020/04/4-0050-50_Web.jpg|https://img.medicalexpo.com/images_me/photo-m2/300923-20101128.jpg|https://hs770.com/wp-content/uploads/2024/12/essential-medical-equipment-for-lung-cancer-diagnosis-and-monitoring-1.jpg"
         ]
     },
     {
@@ -2519,11 +3177,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Simulated lungs for equipment testing.",
-        "usage": "Attached to a ventilator to check its function before using it on a patient.",
-        "image": "\\",
+        "desc": "Test Lung – Premium Model<br>This premium quality test lung provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Test Lung – Premium Model<br>A high-performance test lung designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://bay-medical.com/wp-content/uploads/2020/04/4-0050-50_Web.jpg",
         "images": [
-            "\\"
+            "https://bay-medical.com/wp-content/uploads/2020/04/4-0050-50_Web.jpg",
+            "https://bay-medical.com/wp-content/uploads/2020/04/4-0050-50_Web.jpg|https://img.medicalexpo.com/images_me/photo-m2/300923-20101128.jpg|https://hs770.com/wp-content/uploads/2024/12/essential-medical-equipment-for-lung-cancer-diagnosis-and-monitoring-1.jpg"
         ]
     },
     {
@@ -2535,13 +3195,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "3.9",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Simulated lungs for equipment testing.",
-        "usage": "Attached to a ventilator to check its function before using it on a patient.",
-        "image": "https://www.medline.com/media/catalog/sku/BIV/BIV1021_PRI01.JPG",
+        "desc": "Neonate Test Lung – Budget Model<br>This affordable neonate test lung is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Neonate Test Lung – Basic Model <br>An affordable neonate test lung designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg",
         "images": [
-            "https://www.medline.com/media/catalog/sku/BIV/BIV1021_PRI01.JPG"
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/3/WH/RP/EH/105216276/neonate-artificial-test-lung-1000x1000.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/422851024/KU/FB/JA/135108466/artificial-lung-test-neonate-1000x1000.png"
         ]
     },
     {
@@ -2553,11 +3215,16 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "3.8",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Simulated lungs for equipment testing.",
-        "usage": "Attached to a ventilator to check its function before using it on a patient.",
-        "image": ""
+        "desc": "Neonate Test Lung – Standard Model<br>This standard neonate test lung offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Neonate Test Lung – Standard Model<br>A reliable and durable neonate test lung designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg",
+        "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/3/WH/RP/EH/105216276/neonate-artificial-test-lung-1000x1000.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/422851024/KU/FB/JA/135108466/artificial-lung-test-neonate-1000x1000.png"
+        ]
     },
     {
         "id": 159,
@@ -2570,9 +3237,14 @@ var products = [
         "rating": "3.6",
         "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Simulated lungs for equipment testing.",
-        "usage": "Attached to a ventilator to check its function before using it on a patient.",
-        "image": ""
+        "desc": "Neonate Test Lung – Premium Model<br>This premium quality neonate test lung provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Neonate Test Lung – Premium Model<br>A high-performance neonate test lung designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg",
+        "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2021/1/OR/HZ/LF/274116/neonate-test-lung-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/3/WH/RP/EH/105216276/neonate-artificial-test-lung-1000x1000.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/422851024/KU/FB/JA/135108466/artificial-lung-test-neonate-1000x1000.png"
+        ]
     },
     {
         "id": 160,
@@ -2583,13 +3255,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "3.9",
-        "ratingCount": 25,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Manual resuscitator (AMBU) and reservoir bags.",
-        "usage": "Squeezed by hand to manually pump air into a patient's lungs.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2024/1/374194319/GU/UJ/DM/6223646/ambu-bag-250x250.jpg",
+        "desc": "Ambu Bag – Budget Model<br>This affordable ambu bag is designed for assisting with patient movement, providing necessary support and stability.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ambu Bag – Basic Model <br>An affordable ambu bag designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2024/1/374194319/GU/UJ/DM/6223646/ambu-bag-250x250.jpg"
+            "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg",
+            "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg|https://i0.wp.com/vngmedical.com/wp-content/uploads/2021/01/1-42.png|https://thumbs.dreamstime.com/z/doctor-medical-device-ambu-bag-49381011.jpg"
         ]
     },
     {
@@ -2601,11 +3275,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.1",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Manual resuscitator (AMBU) and reservoir bags.",
-        "usage": "Squeezed by hand to manually pump air into a patient's lungs.",
-        "image": ""
+        "desc": "Ambu Bag – Standard Model<br>This standard ambu bag offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ambu Bag – Standard Model<br>A reliable and durable ambu bag designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg",
+        "images": [
+            "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg",
+            "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg|https://i0.wp.com/vngmedical.com/wp-content/uploads/2021/01/1-42.png|https://thumbs.dreamstime.com/z/doctor-medical-device-ambu-bag-49381011.jpg"
+        ]
     },
     {
         "id": 162,
@@ -2618,9 +3297,14 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Manual resuscitator (AMBU) and reservoir bags.",
-        "usage": "Squeezed by hand to manually pump air into a patient's lungs.",
-        "image": ""
+        "desc": "Ambu Bag – Premium Model<br>This premium quality ambu bag provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Ambu Bag – Premium Model<br>A high-performance ambu bag designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg",
+        "images": [
+            "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg",
+            "https://www.msmedicalsystems.com/wp-content/uploads/2018/03/Ambu-Bag.jpg|https://i0.wp.com/vngmedical.com/wp-content/uploads/2021/01/1-42.png|https://thumbs.dreamstime.com/z/doctor-medical-device-ambu-bag-49381011.jpg"
+        ]
     },
     {
         "id": 163,
@@ -2633,11 +3317,13 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Manual resuscitator (AMBU) and reservoir bags.",
-        "usage": "Squeezed by hand to manually pump air into a patient's lungs.",
-        "image": "https://image.made-in-china.com/2f0j00DyIcnTWaZVos/Orcl-Factory-Reusable-3L-2L-1L-Latex-Free-Anesthesia-Oxygen-Reservoir-Medical-Breathing-Bag.webp",
+        "desc": "Breathing Bags – Budget Model<br>This affordable breathing bags is designed for assisting with patient movement, providing necessary support and stability.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Breathing Bags – Basic Model <br>An affordable breathing bags designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
         "images": [
-            "https://image.made-in-china.com/2f0j00DyIcnTWaZVos/Orcl-Factory-Reusable-3L-2L-1L-Latex-Free-Anesthesia-Oxygen-Reservoir-Medical-Breathing-Bag.webp"
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725|https://manartiexports.com/assets/website/images/products/breathing-bags.png|https://mainlinemedical.com/wp-content/uploads/2020/04/3-3525-01_Web.jpg"
         ]
     },
     {
@@ -2649,11 +3335,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.3",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Manual resuscitator (AMBU) and reservoir bags.",
-        "usage": "Squeezed by hand to manually pump air into a patient's lungs.",
-        "image": ""
+        "desc": "Breathing Bags – Standard Model<br>This standard breathing bags offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Breathing Bags – Standard Model<br>A reliable and durable breathing bags designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+        "images": [
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725|https://manartiexports.com/assets/website/images/products/breathing-bags.png|https://mainlinemedical.com/wp-content/uploads/2020/04/3-3525-01_Web.jpg"
+        ]
     },
     {
         "id": 165,
@@ -2666,9 +3357,14 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Manual resuscitator (AMBU) and reservoir bags.",
-        "usage": "Squeezed by hand to manually pump air into a patient's lungs.",
-        "image": ""
+        "desc": "Breathing Bags – Premium Model<br>This premium quality breathing bags provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Breathing Bags – Premium Model<br>A high-performance breathing bags designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+        "images": [
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725|https://manartiexports.com/assets/website/images/products/breathing-bags.png|https://mainlinemedical.com/wp-content/uploads/2020/04/3-3525-01_Web.jpg"
+        ]
     },
     {
         "id": 166,
@@ -2679,13 +3375,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.6",
-        "ratingCount": 68,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": "https://5.imimg.com/data5/SA/WD/MY-3840630/vein-finder-torch-500x500.jpg",
+        "desc": "Breathing Bags – Budget Model<br>This affordable breathing bags is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Breathing Bags – Basic Model <br>An affordable breathing bags designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
         "images": [
-            "https://5.imimg.com/data5/SA/WD/MY-3840630/vein-finder-torch-500x500.jpg"
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725|https://manartiexports.com/assets/website/images/products/breathing-bags.png|https://mainlinemedical.com/wp-content/uploads/2020/04/3-3525-01_Web.jpg"
         ]
     },
     {
@@ -2697,11 +3395,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.2",
-        "ratingCount": 88,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": ""
+        "desc": "Breathing Bags – Standard Model<br>This standard breathing bags offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Breathing Bags – Standard Model<br>A reliable and durable breathing bags designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+        "images": [
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725|https://manartiexports.com/assets/website/images/products/breathing-bags.png|https://mainlinemedical.com/wp-content/uploads/2020/04/3-3525-01_Web.jpg"
+        ]
     },
     {
         "id": 168,
@@ -2714,9 +3417,14 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": ""
+        "desc": "Breathing Bags – Premium Model<br>This premium quality breathing bags provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Breathing Bags – Premium Model<br>A high-performance breathing bags designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+        "images": [
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725",
+            "http://helpmedicalsupplies.com/cdn/shop/products/latex_free_bb.jpg?v=1679604725|https://manartiexports.com/assets/website/images/products/breathing-bags.png|https://mainlinemedical.com/wp-content/uploads/2020/04/3-3525-01_Web.jpg"
+        ]
     },
     {
         "id": 169,
@@ -2727,13 +3435,15 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.6",
-        "ratingCount": 99,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6789c004-a26e-42a0-bed2-de7d1b0483dd.__CR0,0,550,550_PT0_SX300_V1___.jpg",
+        "desc": "U Type Scan – Budget Model<br>This affordable u type scan is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "U Type Scan – Basic Model <br>An affordable u type scan designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://en.algomtl.com/upload/a-1-ktwxvg.jpg",
         "images": [
-            "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6789c004-a26e-42a0-bed2-de7d1b0483dd.__CR0,0,550,550_PT0_SX300_V1___.jpg"
+            "https://en.algomtl.com/upload/a-1-ktwxvg.jpg",
+            "https://en.algomtl.com/upload/a-1-ktwxvg.jpg|https://image.made-in-china.com/2f0j00tjnWMvlGAikV/Medical-Device-Experience-One-Stop-Service-Project-Hospital-Medical-Equipment-CT-Scan-X-Ray-Machine-Portable-Ultrasound.jpg|https://img.freepik.com/premium-photo/ultrasound-device-scanner-close-up-medical-equipment-examination_1161461-591.jpg"
         ]
     },
     {
@@ -2745,11 +3455,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.2",
-        "ratingCount": 97,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": ""
+        "desc": "U Type Scan – Standard Model<br>This standard u type scan offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "U Type Scan – Standard Model<br>A reliable and durable u type scan designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://en.algomtl.com/upload/a-1-ktwxvg.jpg",
+        "images": [
+            "https://en.algomtl.com/upload/a-1-ktwxvg.jpg",
+            "https://en.algomtl.com/upload/a-1-ktwxvg.jpg|https://image.made-in-china.com/2f0j00tjnWMvlGAikV/Medical-Device-Experience-One-Stop-Service-Project-Hospital-Medical-Equipment-CT-Scan-X-Ray-Machine-Portable-Ultrasound.jpg|https://img.freepik.com/premium-photo/ultrasound-device-scanner-close-up-medical-equipment-examination_1161461-591.jpg"
+        ]
     },
     {
         "id": 171,
@@ -2760,11 +3475,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.5",
-        "ratingCount": 58,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": ""
+        "desc": "U Type Scan – Premium Model<br>This premium quality u type scan provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "U Type Scan – Premium Model<br>A high-performance u type scan designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://en.algomtl.com/upload/a-1-ktwxvg.jpg",
+        "images": [
+            "https://en.algomtl.com/upload/a-1-ktwxvg.jpg",
+            "https://en.algomtl.com/upload/a-1-ktwxvg.jpg|https://image.made-in-china.com/2f0j00tjnWMvlGAikV/Medical-Device-Experience-One-Stop-Service-Project-Hospital-Medical-Equipment-CT-Scan-X-Ray-Machine-Portable-Ultrasound.jpg|https://img.freepik.com/premium-photo/ultrasound-device-scanner-close-up-medical-equipment-examination_1161461-591.jpg"
+        ]
     },
     {
         "id": 172,
@@ -2775,13 +3495,16 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.3",
-        "ratingCount": 36,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": "https://m.media-amazon.com/images/I/51QFbckqsdL._AC_UF350,350_QL80_.jpg",
+        "desc": "Thermo Scan – Budget Model<br>This affordable thermo scan is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Thermo Scan – Basic Model <br>An affordable thermo scan designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/51QFbckqsdL._AC_UF350,350_QL80_.jpg"
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://www.thermoiq.it/wp-content/uploads/2023/12/2-1.jpg|https://res.cloudinary.com/iwh/image/upload/q_auto",
+            "g_center/assets/1/7/thermo30_promo.jpg"
         ]
     },
     {
@@ -2793,11 +3516,17 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.6",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": ""
+        "desc": "Thermo Scan – Standard Model<br>This standard thermo scan offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Thermo Scan – Standard Model<br>A reliable and durable thermo scan designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+        "images": [
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://www.thermoiq.it/wp-content/uploads/2023/12/2-1.jpg|https://res.cloudinary.com/iwh/image/upload/q_auto",
+            "g_center/assets/1/7/thermo30_promo.jpg"
+        ]
     },
     {
         "id": 174,
@@ -2810,9 +3539,15 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Vein Scan, U Type Scan, and Thermo Scan.",
-        "usage": "Vein Scan: Projects a map of veins on skin to help with IV starts.",
-        "image": ""
+        "desc": "Thermo Scan – Premium Model<br>This premium quality thermo scan provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Thermo Scan – Premium Model<br>A high-performance thermo scan designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+        "images": [
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg",
+            "https://sc04.alicdn.com/kf/Hd9f24cdced14408da1d30b41c73afbf9E.jpg|https://www.thermoiq.it/wp-content/uploads/2023/12/2-1.jpg|https://res.cloudinary.com/iwh/image/upload/q_auto",
+            "g_center/assets/1/7/thermo30_promo.jpg"
+        ]
     },
     {
         "id": 175,
@@ -2823,13 +3558,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.8",
-        "ratingCount": 22,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": "https://2.imimg.com/data2/WT/YA/NSD-991925/images-laryngoscope_set_spares.jpg",
+        "desc": "Laryngoscope – Budget Model<br>This affordable laryngoscope is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Laryngoscope – Basic Model <br>An affordable laryngoscope designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg",
         "images": [
-            "https://2.imimg.com/data2/WT/YA/NSD-991925/images-laryngoscope_set_spares.jpg"
+            "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg|https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-Set-Blades.jpg|https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-Set-1-1024x683.jpg"
         ]
     },
     {
@@ -2843,9 +3580,14 @@ var products = [
         "rating": "4.9",
         "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": ""
+        "desc": "Laryngoscope – Standard Model<br>This standard laryngoscope offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Laryngoscope – Standard Model<br>A reliable and durable laryngoscope designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg",
+        "images": [
+            "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg|https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-Set-Blades.jpg|https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-Set-1-1024x683.jpg"
+        ]
     },
     {
         "id": 177,
@@ -2856,11 +3598,16 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "4.7",
-        "ratingCount": 99,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": ""
+        "desc": "Laryngoscope – Premium Model<br>This premium quality laryngoscope provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Laryngoscope – Premium Model<br>A high-performance laryngoscope designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg",
+        "images": [
+            "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg",
+            "https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-set-scaled.jpg|https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-Set-Blades.jpg|https://vngmedical.com/wp-content/uploads/2021/01/Laryngoscope-Set-1-1024x683.jpg"
+        ]
     },
     {
         "id": 178,
@@ -2871,13 +3618,15 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.5",
-        "ratingCount": 88,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": "https://m.media-amazon.com/images/I/513dpyW0hpL._AC_UF350,350_QL50_.jpg",
+        "desc": "Mccoy Laryngoscope – Budget Model<br>This affordable mccoy laryngoscope is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Mccoy Laryngoscope – Basic Model <br>An affordable mccoy laryngoscope designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/513dpyW0hpL._AC_UF350,350_QL50_.jpg"
+            "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg",
+            "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg|https://www.bionexmed.com/wp-content/uploads/2023/10/mccoy.jpg|https://www.surzon.com/uploads/product/McCoy Laryngoscope_17063379686911.jpg"
         ]
     },
     {
@@ -2889,11 +3638,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.3",
-        "ratingCount": 77,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": ""
+        "desc": "Mccoy Laryngoscope – Standard Model<br>This standard mccoy laryngoscope offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Mccoy Laryngoscope – Standard Model<br>A reliable and durable mccoy laryngoscope designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg",
+        "images": [
+            "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg",
+            "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg|https://www.bionexmed.com/wp-content/uploads/2023/10/mccoy.jpg|https://www.surzon.com/uploads/product/McCoy Laryngoscope_17063379686911.jpg"
+        ]
     },
     {
         "id": 180,
@@ -2906,9 +3660,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": ""
+        "desc": "Mccoy Laryngoscope – Premium Model<br>This premium quality mccoy laryngoscope provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Mccoy Laryngoscope – Premium Model<br>A high-performance mccoy laryngoscope designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg",
+        "images": [
+            "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg",
+            "https://surgitech.net/wp-content/uploads/2024/07/McCoy-Battery-Handle.jpg|https://www.bionexmed.com/wp-content/uploads/2023/10/mccoy.jpg|https://www.surzon.com/uploads/product/McCoy Laryngoscope_17063379686911.jpg"
+        ]
     },
     {
         "id": 181,
@@ -2919,13 +3678,15 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.6",
-        "ratingCount": 74,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": "https://img1.exportersindia.com/product_images/bc-small/dir_143/4267571/laryngoscope-bulb-2874098.jpg",
+        "desc": "Laryngoscope Bulbs – Budget Model<br>This affordable laryngoscope bulbs is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Laryngoscope Bulbs – Basic Model <br>An affordable laryngoscope bulbs designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg",
         "images": [
-            "https://img1.exportersindia.com/product_images/bc-small/dir_143/4267571/laryngoscope-bulb-2874098.jpg"
+            "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg",
+            "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg|https://www.naugramedical.com/images/product/SpareBulbsforLaryngoscopeSets-lab-1465188948.jpg|https://www.medline.com/media/catalog/sku/MDS/D1200012663382908_090320241156.jpg"
         ]
     },
     {
@@ -2937,11 +3698,16 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "4.7",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": ""
+        "desc": "Laryngoscope Bulbs – Standard Model<br>This standard laryngoscope bulbs offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Laryngoscope Bulbs – Standard Model<br>A reliable and durable laryngoscope bulbs designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg",
+        "images": [
+            "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg",
+            "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg|https://www.naugramedical.com/images/product/SpareBulbsforLaryngoscopeSets-lab-1465188948.jpg|https://www.medline.com/media/catalog/sku/MDS/D1200012663382908_090320241156.jpg"
+        ]
     },
     {
         "id": 183,
@@ -2952,11 +3718,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.1",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Handles, blades, and LED bulbs for airway viewing.",
-        "usage": "Inserted into the throat to move the tongue and view the vocal cords.",
-        "image": ""
+        "desc": "Laryngoscope Bulbs – Premium Model<br>This premium quality laryngoscope bulbs provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Laryngoscope Bulbs – Premium Model<br>A high-performance laryngoscope bulbs designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg",
+        "images": [
+            "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg",
+            "https://www.aconmedical.com/wp-content/uploads/2016/12/laryngoscope-bulbs.jpg|https://www.naugramedical.com/images/product/SpareBulbsforLaryngoscopeSets-lab-1465188948.jpg|https://www.medline.com/media/catalog/sku/MDS/D1200012663382908_090320241156.jpg"
+        ]
     },
     {
         "id": 184,
@@ -2967,13 +3738,15 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "4.2",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Finger Clips and Needle Destroyers.",
-        "usage": "Needle Destroyer: Electrically melts needles to prevent accidental stabs.",
-        "image": "https://shop.medtechlife.com/cdn/shop/products/medtech-pulse-oximeter-og-01-657903_1024x1024.webp?v=1663937941",
+        "desc": "Finger Clip – Budget Model<br>This affordable finger clip is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Finger Clip – Basic Model <br>An affordable finger clip designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg",
         "images": [
-            "https://shop.medtechlife.com/cdn/shop/products/medtech-pulse-oximeter-og-01-657903_1024x1024.webp?v=1663937941"
+            "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg",
+            "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg|https://rukminim1.flixcart.com/image/416/416/kuh9yfk0/electrotherapy/s/r/z/finger-gripper-ahgytuon5-physiotherapy-equipment-electrotherapy-original-imag7h59tvz3ggy9.jpeg?q=70|https://rukminim1.flixcart.com/image/416/416/kv5kfww0/electrotherapy/a/a/0/finger-gripper-10-ahgn5qkhab-physiotherapy-equipment-original-imag8494hkfjxda8.jpeg?q=70"
         ]
     },
     {
@@ -2985,11 +3758,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.6",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Finger Clips and Needle Destroyers.",
-        "usage": "Needle Destroyer: Electrically melts needles to prevent accidental stabs.",
-        "image": ""
+        "desc": "Finger Clip – Standard Model<br>This standard finger clip offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Finger Clip – Standard Model<br>A reliable and durable finger clip designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg",
+        "images": [
+            "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg",
+            "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg|https://rukminim1.flixcart.com/image/416/416/kuh9yfk0/electrotherapy/s/r/z/finger-gripper-ahgytuon5-physiotherapy-equipment-electrotherapy-original-imag7h59tvz3ggy9.jpeg?q=70|https://rukminim1.flixcart.com/image/416/416/kv5kfww0/electrotherapy/a/a/0/finger-gripper-10-ahgn5qkhab-physiotherapy-equipment-original-imag8494hkfjxda8.jpeg?q=70"
+        ]
     },
     {
         "id": 186,
@@ -3000,11 +3778,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.3",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Finger Clips and Needle Destroyers.",
-        "usage": "Needle Destroyer: Electrically melts needles to prevent accidental stabs.",
-        "image": ""
+        "desc": "Finger Clip – Premium Model<br>This premium quality finger clip provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Finger Clip – Premium Model<br>A high-performance finger clip designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg",
+        "images": [
+            "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg",
+            "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX29284629.jpg|https://rukminim1.flixcart.com/image/416/416/kuh9yfk0/electrotherapy/s/r/z/finger-gripper-ahgytuon5-physiotherapy-equipment-electrotherapy-original-imag7h59tvz3ggy9.jpeg?q=70|https://rukminim1.flixcart.com/image/416/416/kv5kfww0/electrotherapy/a/a/0/finger-gripper-10-ahgn5qkhab-physiotherapy-equipment-original-imag8494hkfjxda8.jpeg?q=70"
+        ]
     },
     {
         "id": 187,
@@ -3017,11 +3800,13 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Finger Clips and Needle Destroyers.",
-        "usage": "Needle Destroyer: Electrically melts needles to prevent accidental stabs.",
-        "image": "https://www.dentee.com/buy/content/images/thumbs/0004574_chromadent-needle-destroyer.jpeg",
+        "desc": "Needle Destroyer – Budget Model<br>This affordable needle destroyer is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Needle Destroyer – Basic Model <br>An affordable needle destroyer designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png",
         "images": [
-            "https://www.dentee.com/buy/content/images/thumbs/0004574_chromadent-needle-destroyer.jpeg"
+            "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png",
+            "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png|https://img.medicalexpo.com/images_me/photo-m2/74916-11642847.jpg|https://5.imimg.com/data5/VS/KS/MY-5378464/medical-needle-destroyer-500x500.jpg"
         ]
     },
     {
@@ -3033,11 +3818,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.4",
-        "ratingCount": 48,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Finger Clips and Needle Destroyers.",
-        "usage": "Needle Destroyer: Electrically melts needles to prevent accidental stabs.",
-        "image": ""
+        "desc": "Needle Destroyer – Standard Model<br>This standard needle destroyer offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Needle Destroyer – Standard Model<br>A reliable and durable needle destroyer designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png",
+        "images": [
+            "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png",
+            "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png|https://img.medicalexpo.com/images_me/photo-m2/74916-11642847.jpg|https://5.imimg.com/data5/VS/KS/MY-5378464/medical-needle-destroyer-500x500.jpg"
+        ]
     },
     {
         "id": 189,
@@ -3050,9 +3840,14 @@ var products = [
         "rating": "4.4",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Finger Clips and Needle Destroyers.",
-        "usage": "Needle Destroyer: Electrically melts needles to prevent accidental stabs.",
-        "image": ""
+        "desc": "Needle Destroyer – Premium Model<br>This premium quality needle destroyer provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Needle Destroyer – Premium Model<br>A high-performance needle destroyer designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png",
+        "images": [
+            "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png",
+            "https://modernquipmedicalsupplies.com/wp-content/uploads/2023/05/needle-syringe-destroyer-1324426-removebg-preview.png|https://img.medicalexpo.com/images_me/photo-m2/74916-11642847.jpg|https://5.imimg.com/data5/VS/KS/MY-5378464/medical-needle-destroyer-500x500.jpg"
+        ]
     },
     {
         "id": 190,
@@ -3063,13 +3858,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "3.3",
-        "ratingCount": 37,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Disposable masks for therapy.",
-        "usage": "Delivers oxygen or misted medication (nebulization) directly to the patient.",
-        "image": "https://images.meesho.com/images/products/435187702/lkfgp_512.jpg",
+        "desc": "Oxygen Masks – Budget Model<br>This affordable oxygen masks is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Oxygen Masks – Basic Model <br>An affordable oxygen masks designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg",
         "images": [
-            "https://images.meesho.com/images/products/435187702/lkfgp_512.jpg"
+            "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg",
+            "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg|https://image.shutterstock.com/z/stock-photo-oxygen-mask-medical-care-plastic-equipment-asthma-inhaler-emergency-hospital-help-air-breathing-443901115.jpg|https://www.descomedicalindia.com/Uploads/Catalogue/oxygen-mask-637018945484855509.jpg"
         ]
     },
     {
@@ -3083,9 +3880,14 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Disposable masks for therapy.",
-        "usage": "Delivers oxygen or misted medication (nebulization) directly to the patient.",
-        "image": ""
+        "desc": "Oxygen Masks – Standard Model<br>This standard oxygen masks offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Oxygen Masks – Standard Model<br>A reliable and durable oxygen masks designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg",
+        "images": [
+            "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg",
+            "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg|https://image.shutterstock.com/z/stock-photo-oxygen-mask-medical-care-plastic-equipment-asthma-inhaler-emergency-hospital-help-air-breathing-443901115.jpg|https://www.descomedicalindia.com/Uploads/Catalogue/oxygen-mask-637018945484855509.jpg"
+        ]
     },
     {
         "id": 192,
@@ -3096,11 +3898,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.2",
-        "ratingCount": 27,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Disposable masks for therapy.",
-        "usage": "Delivers oxygen or misted medication (nebulization) directly to the patient.",
-        "image": ""
+        "desc": "Oxygen Masks – Premium Model<br>This premium quality oxygen masks provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Oxygen Masks – Premium Model<br>A high-performance oxygen masks designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg",
+        "images": [
+            "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg",
+            "https://i.pinimg.com/originals/22/07/16/2207168e58e3202e45e20f3f608430a2.jpg|https://image.shutterstock.com/z/stock-photo-oxygen-mask-medical-care-plastic-equipment-asthma-inhaler-emergency-hospital-help-air-breathing-443901115.jpg|https://www.descomedicalindia.com/Uploads/Catalogue/oxygen-mask-637018945484855509.jpg"
+        ]
     },
     {
         "id": 193,
@@ -3111,13 +3918,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.9",
-        "ratingCount": 47,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Disposable masks for therapy.",
-        "usage": "Delivers oxygen or misted medication (nebulization) directly to the patient.",
-        "image": "https://rukminim2.flixcart.com/image/480/640/xif0q/nebulizer/c/i/f/child-nebulizer-mask-with-air-tube-medicine-chamber-nebulizer-original-imahg3h58awcz59b.jpeg?q=90",
+        "desc": "Nebulizer Masks – Budget Model<br>This affordable nebulizer masks is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Nebulizer Masks – Basic Model <br>An affordable nebulizer masks designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg",
         "images": [
-            "https://rukminim2.flixcart.com/image/480/640/xif0q/nebulizer/c/i/f/child-nebulizer-mask-with-air-tube-medicine-chamber-nebulizer-original-imahg3h58awcz59b.jpeg?q=90"
+            "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg|https://veemedical.in/wp-content/uploads/2021/07/nebulizer-mask-vee-medical.jpg|https://medicalstall.com/wp-content/uploads/2023/03/Nebulizer-musk-and-Accessories-Combo-Kit-2.jpg"
         ]
     },
     {
@@ -3129,11 +3938,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.4",
-        "ratingCount": 58,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Disposable masks for therapy.",
-        "usage": "Delivers oxygen or misted medication (nebulization) directly to the patient.",
-        "image": ""
+        "desc": "Nebulizer Masks – Standard Model<br>This standard nebulizer masks offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Nebulizer Masks – Standard Model<br>A reliable and durable nebulizer masks designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg",
+        "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg|https://veemedical.in/wp-content/uploads/2021/07/nebulizer-mask-vee-medical.jpg|https://medicalstall.com/wp-content/uploads/2023/03/Nebulizer-musk-and-Accessories-Combo-Kit-2.jpg"
+        ]
     },
     {
         "id": 195,
@@ -3144,11 +3958,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.1",
-        "ratingCount": 67,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Disposable masks for therapy.",
-        "usage": "Delivers oxygen or misted medication (nebulization) directly to the patient.",
-        "image": ""
+        "desc": "Nebulizer Masks – Premium Model<br>This premium quality nebulizer masks provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Nebulizer Masks – Premium Model<br>A high-performance nebulizer masks designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg",
+        "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2024/5/421912436/CR/LJ/OE/140630895/nebulizer-medical-machine-sterile-masks-1000x1000.jpg|https://veemedical.in/wp-content/uploads/2021/07/nebulizer-mask-vee-medical.jpg|https://medicalstall.com/wp-content/uploads/2023/03/Nebulizer-musk-and-Accessories-Combo-Kit-2.jpg"
+        ]
     },
     {
         "id": 196,
@@ -3161,11 +3980,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": "https://cruzine.in/cdn/shop/products/H.M.EFilter_0000_h2-f1000x1000_700x.jpg?v=1682058242",
+        "desc": "Hme Filter – Budget Model<br>This affordable hme filter is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Hme Filter – Basic Model <br>An affordable hme filter designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/5/RW/MQ/CG/7499855/hme-filter.jpg",
         "images": [
-            "https://cruzine.in/cdn/shop/products/H.M.EFilter_0000_h2-f1000x1000_700x.jpg?v=1682058242"
+            "https://shop.medicalpantry.org/cdn/shop/files/3.jpg?v=1722311931&amp;width=600",
+            "https://shop.medicalpantry.org/cdn/shop/files/3.jpg?v=1722311931&amp;width=600|https://i0.wp.com/lsptech.tlipng.com/wp-content/uploads/2021/03/rubbertiles.png?fit=791%2C893&amp;ssl=1|https://lamed.healthcare/wp-content/uploads/2021/01/03-13.png"
         ]
     },
     {
@@ -3177,11 +3998,16 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "3.9",
-        "ratingCount": 69,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": ""
+        "desc": "Hme Filter – Standard Model<br>This standard hme filter offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Hme Filter – Standard Model<br>A reliable and durable hme filter designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://shop.medicalpantry.org/cdn/shop/files/3.jpg?v=1722311931&amp;width=600",
+        "images": [
+            "https://shop.medicalpantry.org/cdn/shop/files/3.jpg?v=1722311931&amp;width=600",
+            "https://shop.medicalpantry.org/cdn/shop/files/3.jpg?v=1722311931&amp;width=600|https://i0.wp.com/lsptech.tlipng.com/wp-content/uploads/2021/03/rubbertiles.png?fit=791%2C893&amp;ssl=1|https://lamed.healthcare/wp-content/uploads/2021/01/03-13.png"
+        ]
     },
     {
         "id": 198,
@@ -3192,11 +4018,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "3.8",
-        "ratingCount": 89,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": ""
+        "desc": "Hme Filter – Premium Model<br>This premium quality hme filter provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Hme Filter – Premium Model<br>A high-performance hme filter designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://shop.medicalpantry.org/cdn/shop/files/3.jpg?v=1722311931&amp;width=600",
+        "images": [
+            "https://shop.medicalpantry.org/cdn/shop/files/3.jpg?v=1722311931&amp;width=600",
+            "https://shop.medicalpantry.org/cdn/shop/files/3.jpg?v=1722311931&amp;width=600|https://i0.wp.com/lsptech.tlipng.com/wp-content/uploads/2021/03/rubbertiles.png?fit=791%2C893&amp;ssl=1|https://lamed.healthcare/wp-content/uploads/2021/01/03-13.png"
+        ]
     },
     {
         "id": 199,
@@ -3207,13 +4038,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "3.6",
-        "ratingCount": 79,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": "https://m.media-amazon.com/images/I/41vPlHVOZjL._AC_UF1000,1000_QL80_.jpg",
+        "desc": "Bacterial Filter – Budget Model<br>This affordable bacterial filter is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Bacterial Filter – Basic Model <br>An affordable bacterial filter designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/41vPlHVOZjL._AC_UF1000,1000_QL80_.jpg"
+            "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg",
+            "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg|https://www.clinodevice.com/upload/data/images/products/intensive_care_unit/bacteria___viral_filter/clinodevice_bacteria_viral_filter_3.jpg|https://www.clinodevice.com/upload/data/images/products/intensive_care_unit/bacteria___viral_filter/clinodevice_bacteria_viral_filter_4.jpg"
         ]
     },
     {
@@ -3225,11 +4058,16 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "3.9",
-        "ratingCount": 99,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": ""
+        "desc": "Bacterial Filter – Standard Model<br>This standard bacterial filter offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Bacterial Filter – Standard Model<br>A reliable and durable bacterial filter designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg",
+        "images": [
+            "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg",
+            "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg|https://www.clinodevice.com/upload/data/images/products/intensive_care_unit/bacteria___viral_filter/clinodevice_bacteria_viral_filter_3.jpg|https://www.clinodevice.com/upload/data/images/products/intensive_care_unit/bacteria___viral_filter/clinodevice_bacteria_viral_filter_4.jpg"
+        ]
     },
     {
         "id": 201,
@@ -3242,9 +4080,14 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": ""
+        "desc": "Bacterial Filter – Premium Model<br>This premium quality bacterial filter provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Bacterial Filter – Premium Model<br>A high-performance bacterial filter designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg",
+        "images": [
+            "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg",
+            "https://www.medicalhire.co.uk/wp-content/uploads/2021/03/Bacterial-Filter-360x360-01-300x300.jpg|https://www.clinodevice.com/upload/data/images/products/intensive_care_unit/bacteria___viral_filter/clinodevice_bacteria_viral_filter_3.jpg|https://www.clinodevice.com/upload/data/images/products/intensive_care_unit/bacteria___viral_filter/clinodevice_bacteria_viral_filter_4.jpg"
+        ]
     },
     {
         "id": 202,
@@ -3257,11 +4100,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": "https://5.imimg.com/data5/CC/FS/OG/SELLER-8834241/disposable-ventilator-flow-sensor-500x500.png",
+        "desc": "Spirologa+h – Budget Model<br>This affordable spirologa+h is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Spirologa+h – Basic Model <br>An affordable spirologa+h designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/8/XW/VK/RR/5419548/spirometer-device.jpg",
         "images": [
-            "https://5.imimg.com/data5/CC/FS/OG/SELLER-8834241/disposable-ventilator-flow-sensor-500x500.png"
+            "https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%201",
+            "https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%201|https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%202|https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%203"
         ]
     },
     {
@@ -3273,11 +4118,16 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "4.5",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": ""
+        "desc": "Spirologa+h – Standard Model<br>This standard spirologa+h offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Spirologa+h – Standard Model<br>A reliable and durable spirologa+h designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%201",
+            "https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%201|https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%202|https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%203"
+        ]
     },
     {
         "id": 204,
@@ -3288,11 +4138,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.3",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "HME, Bacterial, and Spirolog filters.",
-        "usage": "Placed in breathing tubes to block germs or trap moisture.",
-        "image": ""
+        "desc": "Spirologa+h – Premium Model<br>This premium quality spirologa+h provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Spirologa+h – Premium Model<br>A high-performance spirologa+h designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%201",
+        "images": [
+            "https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%201",
+            "https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%201|https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%202|https://via.placeholder.com/600x600?text=SPIROLOGA%2BH%203"
+        ]
     },
     {
         "id": 205,
@@ -3305,11 +4160,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Lung function tools and flow sensors.",
-        "usage": "Patients blow into the device to measure lung capacity or strength.",
-        "image": "https://m.media-amazon.com/images/I/61RMZTb+sRL.jpg",
+        "desc": "Spirometer Three Ball – Budget Model<br>This affordable spirometer three ball is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Spirometer Three Ball – Basic Model <br>An affordable spirometer three ball designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/61RMZTb+sRL.jpg"
+            "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg",
+            "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg|https://image.made-in-china.com/2f0j00YVIbBjfArokM/China-Wholesale-Medical-Equipment-Disposable-Medical-Use-Three-Balls-Spirometer-for-Testing-Lung-Function-500-3000cc.jpg|https://image.made-in-china.com/2f0j00zwqtrgQJHmpH/Disposable-Medical-Three-Ball-Spirometer.jpg"
         ]
     },
     {
@@ -3321,11 +4178,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.6",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Lung function tools and flow sensors.",
-        "usage": "Patients blow into the device to measure lung capacity or strength.",
-        "image": ""
+        "desc": "Spirometer Three Ball – Standard Model<br>This standard spirometer three ball offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Spirometer Three Ball – Standard Model<br>A reliable and durable spirometer three ball designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg",
+            "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg|https://image.made-in-china.com/2f0j00YVIbBjfArokM/China-Wholesale-Medical-Equipment-Disposable-Medical-Use-Three-Balls-Spirometer-for-Testing-Lung-Function-500-3000cc.jpg|https://image.made-in-china.com/2f0j00zwqtrgQJHmpH/Disposable-Medical-Three-Ball-Spirometer.jpg"
+        ]
     },
     {
         "id": 207,
@@ -3338,9 +4200,14 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Lung function tools and flow sensors.",
-        "usage": "Patients blow into the device to measure lung capacity or strength.",
-        "image": ""
+        "desc": "Spirometer Three Ball – Premium Model<br>This premium quality spirometer three ball provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Spirometer Three Ball – Premium Model<br>A high-performance spirometer three ball designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg",
+            "https://image.made-in-china.com/2f0j00idZawYDMhPzQ/Medical-Three-Ball-Spirometer.jpg|https://image.made-in-china.com/2f0j00YVIbBjfArokM/China-Wholesale-Medical-Equipment-Disposable-Medical-Use-Three-Balls-Spirometer-for-Testing-Lung-Function-500-3000cc.jpg|https://image.made-in-china.com/2f0j00zwqtrgQJHmpH/Disposable-Medical-Three-Ball-Spirometer.jpg"
+        ]
     },
     {
         "id": 208,
@@ -3351,13 +4218,15 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.3",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Lung function tools and flow sensors.",
-        "usage": "Patients blow into the device to measure lung capacity or strength.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2024/9/451963624/TT/MQ/IO/24675155/ventilator-flow-sensor.jpg",
+        "desc": "Flow Sensor – Budget Model<br>This affordable flow sensor is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Flow Sensor – Basic Model <br>An affordable flow sensor designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2024/9/451963624/TT/MQ/IO/24675155/ventilator-flow-sensor.jpg"
+            "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg",
+            "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg|https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project.jpg|https://www.aichitokei.net/wp/wp-content/uploads/frowsensor_examples_1.png"
         ]
     },
     {
@@ -3369,11 +4238,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.6",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Lung function tools and flow sensors.",
-        "usage": "Patients blow into the device to measure lung capacity or strength.",
-        "image": ""
+        "desc": "Flow Sensor – Standard Model<br>This standard flow sensor offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Flow Sensor – Standard Model<br>A reliable and durable flow sensor designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg",
+        "images": [
+            "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg",
+            "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg|https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project.jpg|https://www.aichitokei.net/wp/wp-content/uploads/frowsensor_examples_1.png"
+        ]
     },
     {
         "id": 210,
@@ -3384,11 +4258,16 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.2",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Lung function tools and flow sensors.",
-        "usage": "Patients blow into the device to measure lung capacity or strength.",
-        "image": ""
+        "desc": "Flow Sensor – Premium Model<br>This premium quality flow sensor provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Flow Sensor – Premium Model<br>A high-performance flow sensor designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg",
+        "images": [
+            "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg",
+            "https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project-2.jpg|https://hindustan-medical.com/wp-content/uploads/2023/12/New-Project.jpg|https://www.aichitokei.net/wp/wp-content/uploads/frowsensor_examples_1.png"
+        ]
     },
     {
         "id": 211,
@@ -3399,13 +4278,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.5",
-        "ratingCount": 51,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "",
-        "usage": "",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/BR/LE/YK/68354692/adult-ventilator-circuit-jpg-500x500.jpg",
+        "desc": "Plain Circuit – Budget Model<br>This affordable plain circuit is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Plain Circuit – Basic Model <br>An affordable plain circuit designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2022/12/BR/LE/YK/68354692/adult-ventilator-circuit-jpg-500x500.jpg"
+            "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg",
+            "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg|https://hilelectronic.com/wp-content/uploads/2024/01/Medical-PCB-Manufacturing.jpg|https://atltechnology.com/sites/default/files/styles/meta/public/2023-06/FPC.jpeg?itok=3SEE-QN_"
         ]
     },
     {
@@ -3419,9 +4300,14 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "Plain Circuit – Standard Model<br>This standard plain circuit offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Plain Circuit – Standard Model<br>A reliable and durable plain circuit designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg",
+        "images": [
+            "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg",
+            "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg|https://hilelectronic.com/wp-content/uploads/2024/01/Medical-PCB-Manufacturing.jpg|https://atltechnology.com/sites/default/files/styles/meta/public/2023-06/FPC.jpeg?itok=3SEE-QN_"
+        ]
     },
     {
         "id": 213,
@@ -3432,11 +4318,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.6",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "Plain Circuit – Premium Model<br>This premium quality plain circuit provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Plain Circuit – Premium Model<br>A high-performance plain circuit designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg",
+        "images": [
+            "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg",
+            "https://biologpharma.in/wp-content/uploads/2023/05/Plain-Circuit.jpg|https://hilelectronic.com/wp-content/uploads/2024/01/Medical-PCB-Manufacturing.jpg|https://atltechnology.com/sites/default/files/styles/meta/public/2023-06/FPC.jpeg?itok=3SEE-QN_"
+        ]
     },
     {
         "id": 214,
@@ -3447,13 +4338,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.1",
-        "ratingCount": 42,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Adhesive conductive pads.",
-        "usage": "Placed on the chest to deliver an electric shock to restart the heart.",
-        "image": "https://m.media-amazon.com/images/I/61SiA+ZTr8L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+        "desc": "Defibrillator Pads – Budget Model<br>This affordable defibrillator pads is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Defibrillator Pads – Basic Model <br>An affordable defibrillator pads designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/61SiA+ZTr8L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg"
+            "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg",
+            "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg|https://egyhealthmedical.com/wp-content/uploads/2023/10/Disposable-pads-for-defibrillator-device.png|https://5.imimg.com/data5/SELLER/Default/2023/11/361068169/ZP/WF/SK/4115873/defibrillator-pacing-aed-pad-for-mediana-adult-500x500.jpg"
         ]
     },
     {
@@ -3465,11 +4358,16 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "4.8",
-        "ratingCount": 96,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Adhesive conductive pads.",
-        "usage": "Placed on the chest to deliver an electric shock to restart the heart.",
-        "image": ""
+        "desc": "Defibrillator Pads – Standard Model<br>This standard defibrillator pads offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Defibrillator Pads – Standard Model<br>A reliable and durable defibrillator pads designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg",
+        "images": [
+            "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg",
+            "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg|https://egyhealthmedical.com/wp-content/uploads/2023/10/Disposable-pads-for-defibrillator-device.png|https://5.imimg.com/data5/SELLER/Default/2023/11/361068169/ZP/WF/SK/4115873/defibrillator-pacing-aed-pad-for-mediana-adult-500x500.jpg"
+        ]
     },
     {
         "id": 216,
@@ -3480,11 +4378,16 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.9",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Adhesive conductive pads.",
-        "usage": "Placed on the chest to deliver an electric shock to restart the heart.",
-        "image": ""
+        "desc": "Defibrillator Pads – Premium Model<br>This premium quality defibrillator pads provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Defibrillator Pads – Premium Model<br>A high-performance defibrillator pads designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg",
+        "images": [
+            "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg",
+            "https://www.camshield-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg|https://egyhealthmedical.com/wp-content/uploads/2023/10/Disposable-pads-for-defibrillator-device.png|https://5.imimg.com/data5/SELLER/Default/2023/11/361068169/ZP/WF/SK/4115873/defibrillator-pacing-aed-pad-for-mediana-adult-500x500.jpg"
+        ]
     },
     {
         "id": 217,
@@ -3495,13 +4398,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.7",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": "https://m.media-amazon.com/images/I/21-F1dr2pzL.jpg",
+        "desc": "X-ray Viewer -Led – Budget Model<br>This affordable x-ray viewer -led is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "X-ray Viewer -Led – Basic Model <br>An affordable x-ray viewer -led designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/21-F1dr2pzL.jpg"
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
         ]
     },
     {
@@ -3515,9 +4420,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": ""
+        "desc": "X-ray Viewer -Led – Standard Model<br>This standard x-ray viewer -led offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "X-ray Viewer -Led – Standard Model<br>A reliable and durable x-ray viewer -led designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+        "images": [
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
+        ]
     },
     {
         "id": 219,
@@ -3528,11 +4438,16 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.3",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": ""
+        "desc": "X-ray Viewer -Led – Premium Model<br>This premium quality x-ray viewer -led provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "X-ray Viewer -Led – Premium Model<br>A high-performance x-ray viewer -led designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+        "images": [
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
+        ]
     },
     {
         "id": 220,
@@ -3545,11 +4460,13 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Premium",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": "https://cpimg.tistatic.com/01496954/b/8/Four-In-One-Screen-Led-X-Ray-View-Box.jpg",
+        "desc": "X-ray Viewer -Led – Budget Model<br>This affordable x-ray viewer -led is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "X-ray Viewer -Led – Basic Model <br>An affordable x-ray viewer -led designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
         "images": [
-            "https://cpimg.tistatic.com/01496954/b/8/Four-In-One-Screen-Led-X-Ray-View-Box.jpg"
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
         ]
     },
     {
@@ -3561,11 +4478,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.6",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": ""
+        "desc": "X-ray Viewer -Led – Standard Model<br>This standard x-ray viewer -led offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "X-ray Viewer -Led – Standard Model<br>A reliable and durable x-ray viewer -led designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+        "images": [
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
+        ]
     },
     {
         "id": 222,
@@ -3578,9 +4500,14 @@ var products = [
         "rating": "4.7",
         "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": ""
+        "desc": "X-ray Viewer -Led – Premium Model<br>This premium quality x-ray viewer -led provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "X-ray Viewer -Led – Premium Model<br>A high-performance x-ray viewer -led designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+        "images": [
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
+        ]
     },
     {
         "id": 223,
@@ -3593,11 +4520,13 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": "https://5.imimg.com/data5/BP/NH/UF/SELLER-4872186/led-x-ray-viewer-500x500.jpg",
+        "desc": "X-ray Viewer -Led – Budget Model<br>This affordable x-ray viewer -led is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "X-ray Viewer -Led – Basic Model <br>An affordable x-ray viewer -led designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
         "images": [
-            "https://5.imimg.com/data5/BP/NH/UF/SELLER-4872186/led-x-ray-viewer-500x500.jpg"
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
         ]
     },
     {
@@ -3609,11 +4538,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.2",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": ""
+        "desc": "X-ray Viewer -Led – Standard Model<br>This standard x-ray viewer -led offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "X-ray Viewer -Led – Standard Model<br>A reliable and durable x-ray viewer -led designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+        "images": [
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
+        ]
     },
     {
         "id": 225,
@@ -3626,9 +4560,14 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "LED light boxes (Single, Dual, Triple panels).",
-        "usage": "Used to illuminate and examine X-ray films in detail.",
-        "image": ""
+        "desc": "X-ray Viewer -Led – Premium Model<br>This premium quality x-ray viewer -led provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "X-ray Viewer -Led – Premium Model<br>A high-performance x-ray viewer -led designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+        "images": [
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg",
+            "http://www.winhillmedical.com/storage/products/114/galleries/677216e815af5_lg.jpg|https://image.made-in-china.com/2f0j00YifbVtOWgDoj/New-Hospital-Equipment-Medical-Device-Instrument-Wall-Hung-X-Ray-Film-Viewer-Ledxv-I.jpg|https://image.made-in-china.com/2f0j00FisqYGaCHzbl/Good-Price-X-Ray-Wall-Hung-Hospital-Equipment-Device-Medical-Film-Viewer-Ledxv-I.jpg"
+        ]
     },
     {
         "id": 226,
@@ -3639,13 +4578,15 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.3",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": "https://m.media-amazon.com/images/I/41+tHLAPjyL._AC_UF1000,1000_QL80_.jpg",
+        "desc": "Bipolar Cable – Budget Model<br>This affordable bipolar cable is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Bipolar Cable – Basic Model <br>An affordable bipolar cable designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/41+tHLAPjyL._AC_UF1000,1000_QL80_.jpg"
+            "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg",
+            "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg|https://www.boenmedical.com/qfy-content/uploads/2023/09/d24a456857907e699ac0430d7b09de9c.jpg|https://dtrmedical.com/wp-content/uploads/2015/10/151030-DTR-_0000s_0000_Bipolar-cable.jpg"
         ]
     },
     {
@@ -3659,9 +4600,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Bipolar Cable – Standard Model<br>This standard bipolar cable offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Bipolar Cable – Standard Model<br>A reliable and durable bipolar cable designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg",
+        "images": [
+            "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg",
+            "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg|https://www.boenmedical.com/qfy-content/uploads/2023/09/d24a456857907e699ac0430d7b09de9c.jpg|https://dtrmedical.com/wp-content/uploads/2015/10/151030-DTR-_0000s_0000_Bipolar-cable.jpg"
+        ]
     },
     {
         "id": 228,
@@ -3674,9 +4620,14 @@ var products = [
         "rating": "4.4",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Bipolar Cable – Premium Model<br>This premium quality bipolar cable provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Bipolar Cable – Premium Model<br>A high-performance bipolar cable designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg",
+        "images": [
+            "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg",
+            "https://www.boenmedical.com/qfy-content/uploads/2023/09/14526fc9e618094a9e48e40d3e3c6570.jpg|https://www.boenmedical.com/qfy-content/uploads/2023/09/d24a456857907e699ac0430d7b09de9c.jpg|https://dtrmedical.com/wp-content/uploads/2015/10/151030-DTR-_0000s_0000_Bipolar-cable.jpg"
+        ]
     },
     {
         "id": 229,
@@ -3687,13 +4638,15 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.4",
-        "ratingCount": 96,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": "https://i.ebayimg.com/images/g/0-wAAOSwifhejr0-/s-l1200.jpg",
+        "desc": "Diathermy Cables – Budget Model<br>This affordable diathermy cables is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Diathermy Cables – Basic Model <br>An affordable diathermy cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg",
         "images": [
-            "https://i.ebayimg.com/images/g/0-wAAOSwifhejr0-/s-l1200.jpg"
+            "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg|https://www.rbmedical.co.uk/media/4252/350-0502.jpg?mode=boxcrop&amp;width=400&amp;height=300&amp;anchor=&amp;bgcolor=ffffff|https://www.rbmedical.co.uk/media/1831/bipolar.jpg?mode=boxcrop&amp;width=400&amp;height=300&amp;anchor=&amp;bgcolor=ffffff"
         ]
     },
     {
@@ -3707,9 +4660,14 @@ var products = [
         "rating": "3.3",
         "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Diathermy Cables – Standard Model<br>This standard diathermy cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Diathermy Cables – Standard Model<br>A reliable and durable diathermy cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg",
+        "images": [
+            "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg|https://www.rbmedical.co.uk/media/4252/350-0502.jpg?mode=boxcrop&amp;width=400&amp;height=300&amp;anchor=&amp;bgcolor=ffffff|https://www.rbmedical.co.uk/media/1831/bipolar.jpg?mode=boxcrop&amp;width=400&amp;height=300&amp;anchor=&amp;bgcolor=ffffff"
+        ]
     },
     {
         "id": 231,
@@ -3720,11 +4678,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.1",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Diathermy Cables – Premium Model<br>This premium quality diathermy cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Diathermy Cables – Premium Model<br>A high-performance diathermy cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg",
+        "images": [
+            "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg",
+            "https://5.imimg.com/data5/ANDROID/Default/2023/11/358767149/IS/SI/LH/91377628/product-jpeg-500x500.jpg|https://www.rbmedical.co.uk/media/4252/350-0502.jpg?mode=boxcrop&amp;width=400&amp;height=300&amp;anchor=&amp;bgcolor=ffffff|https://www.rbmedical.co.uk/media/1831/bipolar.jpg?mode=boxcrop&amp;width=400&amp;height=300&amp;anchor=&amp;bgcolor=ffffff"
+        ]
     },
     {
         "id": 232,
@@ -3735,13 +4698,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.2",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": "https://m.media-amazon.com/images/I/51OHTaVma9L.jpg",
+        "desc": "Monopolar Cable – Budget Model<br>This affordable monopolar cable is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Monopolar Cable – Basic Model <br>An affordable monopolar cable designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/51OHTaVma9L.jpg"
+            "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg",
+            "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg|https://anesthesiamedical.pk/wp-content/uploads/2024/03/BC.130.03.jpg|https://grey-medical.com/wp-content/uploads/2018/02/167-003-600x600.jpg"
         ]
     },
     {
@@ -3753,11 +4718,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.9",
-        "ratingCount": 55,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Monopolar Cable – Standard Model<br>This standard monopolar cable offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Monopolar Cable – Standard Model<br>A reliable and durable monopolar cable designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg",
+        "images": [
+            "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg",
+            "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg|https://anesthesiamedical.pk/wp-content/uploads/2024/03/BC.130.03.jpg|https://grey-medical.com/wp-content/uploads/2018/02/167-003-600x600.jpg"
+        ]
     },
     {
         "id": 234,
@@ -3768,11 +4738,16 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "4.4",
-        "ratingCount": 98,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Monopolar Cable – Premium Model<br>This premium quality monopolar cable provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Monopolar Cable – Premium Model<br>A high-performance monopolar cable designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg",
+        "images": [
+            "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg",
+            "https://www.medical-hub.com/storage/admin/products/1772/6456a3d5d62e9-1683399637.jpg|https://anesthesiamedical.pk/wp-content/uploads/2024/03/BC.130.03.jpg|https://grey-medical.com/wp-content/uploads/2018/02/167-003-600x600.jpg"
+        ]
     },
     {
         "id": 235,
@@ -3783,13 +4758,15 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.1",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "",
-        "usage": "",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2025/6/518124776/XM/RV/ZD/45635244/medical-oxygen-sensor.jpg",
+        "desc": "O2 Sensor – Budget Model<br>This affordable o2 sensor is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "O2 Sensor – Basic Model <br>An affordable o2 sensor designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2025/6/518124776/XM/RV/ZD/45635244/medical-oxygen-sensor.jpg"
+            "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg",
+            "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg|https://mofmedmedical.com/wp-content/uploads/2023/10/pulse-oximetry-product-category-image.png|https://aeitechnologies.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-21-at-1.23.53-PM.png"
         ]
     },
     {
@@ -3801,11 +4778,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.2",
-        "ratingCount": 99,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "O2 Sensor – Standard Model<br>This standard o2 sensor offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "O2 Sensor – Standard Model<br>A reliable and durable o2 sensor designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg",
+        "images": [
+            "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg",
+            "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg|https://mofmedmedical.com/wp-content/uploads/2023/10/pulse-oximetry-product-category-image.png|https://aeitechnologies.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-21-at-1.23.53-PM.png"
+        ]
     },
     {
         "id": 237,
@@ -3816,11 +4798,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "3.9",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "O2 Sensor – Premium Model<br>This premium quality o2 sensor provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "O2 Sensor – Premium Model<br>A high-performance o2 sensor designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg",
+        "images": [
+            "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg",
+            "https://www.todaysmedicaldevelopments.com/fileuploads/image/2019/11/18/wireless-oxygen-sensor-wpi-medical-device.jpg|https://mofmedmedical.com/wp-content/uploads/2023/10/pulse-oximetry-product-category-image.png|https://aeitechnologies.com/wp-content/uploads/2021/01/Screen-Shot-2021-01-21-at-1.23.53-PM.png"
+        ]
     },
     {
         "id": 238,
@@ -3831,13 +4818,15 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "3.8",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhYYGBgaHBgYHBoYHBgYGhoYGhgaGhoYHBweIy4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHz8sISE0NDQ0NDQ6PzQ0NTQ0NDQ0MTQ2NjQ2NDQ0PTY0NDQ0NDQxMTQ0NDE0NDQ0NDUxMTQ0NP/AABEIAOQA3gMBIgACEQEDEQH/xAAbAAAABwEAAAAAAAAAAAAAAAAAAQIDBAYHBf/EAEsQAAIBAgIGBAoFCgUCBwAAAAECAAMRBCEFBhIxQVFhcYHRBxMiMlKRkrHB0hVCocLhFkNEU1RygpOi8BQzYrLxg+IjY2SUo9Pz/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QALhEAAgECBAUDAwQDAAAAAAAAAAECAxEEEkFRExQhMZFSYaEiQnEFgcHwJDKx/9oADAMBAAIRAxEAPwDRrQCETFLIQEVeJirQBV4m8FoBAFAQwYmKBEAVeGIm8O8AOKAvE3ihABABCvC37oAoi2+GjQ1S2+Ft55CAIenEbUktIrpnlCAe1EM5MQbDeYanKBYMLeEV5nKLBiXgAKjhG2EMtEsYAStHw0jLHFgo9eLV+iNqOMcDjoghHIhiJ2oAYAu8OIvDIIgCoLxO1AucAXFCw/v4RG6HcQBe1DW0bBhswgotoNoxvbvxiQw4wB8vzjWJx1Oku1UdEv6bKt/WZUdctahhl8XSINVuO8U1P1iNxbkO05ZHKcRialVySWd23k3Zj28vsE5ynZ2R7KWEco5puyNyfW7BDfiKf8J2v9t5Aqa94JTlVLdSVPeVmP8A0RXP1R1XJP2ZSRT1crtwA7CffJmlsdOBh13bNLr+ETCjd4xupV+8wkR/CdQHm0qh6yi+4mUdNU6x4+pZKpam1TvL9gtJeZcuFW7LFX8JqnzcMT0mpb7AnxkVvCVV+rh0HWzH4CMYbUY3G2HYdZEmjURLnyMulm74tLcZsKtCBV8JOJO5KK9jn78i1PCFjD9amvUgPvJlmo6lUgM0QnpAI+3fOhhNWUUGyJvPmoo+EuWW5HXoLtAoD6741jlXA6FRPlMB1jx7fnax/dQfBRNMp6KsLA+oRZ0Uu49eQ5y5HuZ5qGkEZkuK0i/18Vn+8nxEfoYDSLmxbE9uJC/EzTEwAFhn2yQmFAjJ7mHi9ooqOiNWKhW9epW27nL/ABLsLWFj5KDPfxlvp4KwAJc/x1Pmj9NBJYlUUeeVRy6sitC2pGxGICKzm9lBY2BJsBc2A3zjVdZktdKNd+oU1/3Os2cyxBxFu45zOdO+ELxDKn+GfaZdry6iLlcj6m0DuPGcHEeE+sytsUaaHfdmZ7C4G6wvvgGvs4hpXAmKYTwiYsuLmm175bFhe3Qb/bJza9Ys8aY6k7yZmUlHueijhp1VeJrr1RfMw9sb73Ex/Faz4sqjeOYbYa4CIACHIy8m9rW+2cvEaZxD+dXqEcttgPUDaYdVbHqj+nzfdo3CriwvnEAdJAkGrp7DofLr0xzBdO+Yk+ZucyQTc5m8HyzPGex1j+nR1Zs9fWzC2sK6HqO19glc03rxTVStC7udzEFVXpsc2PZbpmeBxxI82c+jTIY7NyTfdck3Itl0fGFNyTDwlOnJNpta9eiJ9eq7vcku7nM7yWMu2rerYCgvmTm3Sd4HUP73yFqpq61xUcZ8By/H/jnfRsHhLASxjY44rEZnlj2QzhdGIu5B6hJ6YYDgPVHFqAZWN91oS1ST8Of4zrY8LY4tIco4KQiVq8wYs1l5yWILFMCR3FzA1UtDW+4TVrECt1QMb8BHVW2XAxLpbqgCAls4IfjOm8UGB4wAso9TtaMta8NSB1wB105RDLHUYWjbNc84IzmYtCyOosCyOovci7KVuQN4z5ykvofFrl4yh2U3PveXzZvykapTvJZC5lum9VMRXKs9RCVBA2U2cjn6R4++cpdRqw3OMwQfJHHhvmx/4YWz/vlA2FGzfhylKZDhdRawIJbdwA3jkDfKdtNTWtvN/wB7uEvyIBx+Me2TcXFrSSin3OsKs4K0XYoP5JGyq7EqtyBc5E2vb1CJ/I1L8bcrnd13mguikg8I09IX8kfj0SZVsa5ipuyifkgm/h+814ldUEvuJ7W75oi4QMovccwMhH1oqMgJMq2Lx6m78lBo6lU+I/3H3mdnR+rNOn5qAdgHullZAM+eX4QPUAyuL93RKkZc5S7si0qewbBchllv/vdIlbWnDUrq9QbQJFlDMeo7IIU9ZlS1s1rvtUaJAG56i72t9VTwHM+qVTA6PetuyXd+A75zcutonrhhYxjnquy21NKOvOEAyLk9C5faY1W8IWG4JVO7cEHveVnDanggXOfHfn6rTqJqGhzuB1F++X6zP+MtGTG8ImH/AFdTt2O36xjL+EKlwpP7Sxa6lUwBcA9PlH3mOLqhR9Befmj1Zy2luTNhtn5Ih8IicKDH+MD7pjR8JBG7D+uoR7knYTVWgPzaewndHqWrdJDkvZZbGLS3Jnw6+z5K+/hMc/mF/mH5Ik+ESs27Dqf4mPuEtH0Ol77OY6BH10cl8hvi0tyOtQ0h8lPXXzFX8nDIf4ah90X+V+POYwqj+CqPiJcU0HS9GOU9HJc2X3ndCi9yOvT0giljWbSZzGHTnmrbu146undKn9Hpdv8A+kuIwi8hHkw4HAS5XuZdePoRWsJidLOPMwqfv7d+vyGaWjCCtsjb8Xt2F9jb2SbZkAkWF+uPpSsMxHADKo+5xnPNol+CHUqqgLMwVRmSxAAHMk5Cc3EawYVd+JoD/qpf/dJmkFJpuACSUcAXAuxU2FzlvtKW7Ylcjh3HU9I+55WzmkdfGa6YFDsnEKWsD5AaoO1kUi+W695zsX4RMIASrO59FEcX9rZH2yjay6GxVWsai0XsVUHylvdcufVOP9BYoBgaLcCLEEgg8gc8iZUU07B+EHCO1tmqlgSGdQVJ5WVmNz1STU13wxFgX6bIc5lWB0PiNrOk4yIuQQOc7aaAxHoAdZE5zlJPoe3D0qMo3m7P8l5qa5UFAyqG4uPJAuLkXzbmD6pGbXukM1SpfmdgfeMrGJ0TWZKYCG6qwYki2bki3YZDbQ2I9D7RMOUz1RoYXV/JcqnhD5UDuvm9suxIy3hDfhh13X88nf8Aw9MqZ0VXH5s+bbeu/wBcbOAq+gfNtvXf65nNM6qjhfbyWqrr3UY38UgsL+cT8JwNIa31K4KghRncKCCRfMFibkdVt8Yp6Nqk+YB5Nsz3R7Aarnau5t0Lfnfed3qmlmaaZiboU2pQt76v9iHovR7V247I84/AdM0jRWjgqgAWAyEh6NwiU1AAsB/d44+teGp5XZ/3ALX62IBHSLzUUorqearOpiJfSuiLJSogTo4ceTnw90oo1+ofq3v1oPiY0fCAg3I3tAfCXOtzlylXYv2IO4dsbFv790oZ8ISfqSf47X/oiV8IXLD3/jPyRnW45Ort8ov5t+EFxfKZ+mvj38nDH22P3Ib69V75YYjtf5Jc6I8JU2+UaGznl8bxLWIvax3zP111xJzGFJHPy7f7YTa5Yo5DDDt24zocrU9vKNGVwY14wAmZ+msmPIuMMvrb5hFrp7SJ83DIOv8AF4zInLS3Xkv61LRQOcoH0xpM/o1P7Pnj9DSWkz+j0R1kj78ub2Mug1qvJfTUyyhl5UaWI0kfzeFHW1T4XliomqQNpUvbOzORfja67pbnOULaoNxIdWiI/isQqKWZgqjMk5ACcxtOYY5+NB/dDH3CU5inw4OQFzFro1RvAPZOLpHXvCUG2buzWv5KN2X29mcmt4TsPYlaVZj/AKgij17Rt6oKXNMGvARqvRVd1ifdKbg/CYrMQ1BlW17hwx6rWHrvHhr1SuD4uoTxuUz+2ZclHud6dCpNXirotjYC/QOjj0xmrgdwGd5XMTrsFCgUWAYBxd1GRJscgbbpAbXlr3FNe12b4CZzx3OywdZ6fJbnwAsQcv73SI2BW+QvKjV1vrG9lQZBtzH7S3TGH1mrm+a5AHJRxt3ycWJ0WAre3kuaYVeiNvsrcmwAzJ5WlOOsNY38oZAHzV426Omcqtpx611LG3YAbHkLdG+HUVrpBYKSklJpXOxp3Te3dEPkcT6XX/p6OMZ0NoU1fKe9juG6/SeQjGh9Gmo20w8ngD9Y93vmg6JwgXeLzMYuTvI6160aUeFS07sh4PVuj9ZB6vfznSp6EpDci345Cdimg5ZZSSzC3k+6dUkj57nJ92cYaHT0R9kfpaHp3sUF+dp0UW56ZJpPcZ2vDM5mc76LRdygdQEUmj1ubqLdUkuxvxtFB7HI3HTBLjAwij6o9UWMKvKSGqLzjTVMhn8JbEuF/hxyiHoDlJKDLOB3FoIRRSEcWnFbXRFB5SBqlosCBXgDQRkLSNImm4QAsyMFBNhtEZXNjYX6JUHTFjLxVI/9Z/8A6pe2Ei10Udcz3KY/rHqziq9XxmyguqggOzbukovunIbVHFBWGyrG6nJs8rjK9h9Y8eE2euiDM+q8hPVp5liFtzIE0DJMBqvidrykCixzLKR1eSSZ101Zrc07Cx+7L0mKpFrB0bfkGBNuySi6rkLZ5zEoqTuz00cROnG0ShYvQdVlpjyAUTYJJbPy2YZbOWTW7JGbVqtzT1v8s0Gvs78vxjVSspGZt6pnhxO6xlXsUNtBVh6Hm7O9vljX0PV/0bgN7dHR0S7VqiA+entL3wU69HO7pfd5y98nDia5yt/UU5NC1DvZRls7ieXdJeB1YUHabyj7I9X4yy1MRTO5kPURI2I0nTT646hYk9gmssYnOVatUaX/ABD1FEpi5soAuScgBIra5IhIRNvpZtgc7gAE+u0rWmNMNVNhko3D4nmfsEnaA0Bt+XUF+OyeHXzPRM5nJ2id+BClHNV6t6HTOvpP5tex2+SL/L/K3il9tvknfwejFTIIOqwnTp4JCM1HqE1llucHVoej5Kemv/8A5Ke2fkix4QsreKH8z/slufR6eivqEC6NS19lfUItLcnFoej5KkNf140f/kHywhr6n6s+2Pllv+jKZF9hPZER9FUuKJ7K90WluOJQ9HyVY6/0/wBW3Yyw11+p8ab+tO+WY6Jpfq09he6E2haJ/NJ2ovdFpbkz0PS/JwDr/RO9Kv8AR88UmveH9Cr6k+edr6Bw/wCppewndCOgMP8As9L2E7pbS3I5Yf0vycxdecMfTH8I+DR1Nd8LxZ/YY+6dBdX8N+z0f5ad0UugMN+z0f5ad0fUZbobPyN4PW3CPe1ZVt6e0l78iwAO7hO3h8YjAMrKwIBBBWxBzBBO8dInOTQOG/ZqP8tO6dOnRAFgoAGQFgAByl+o4zyfbf8Ac5msjA4apfaGSW2S6t/mJexQht15m1VkG9q3bVxHxaauy3kSphRneWxgwTWFx442JZbLYszMenNiTvvOcCNk9Yyuc7g5/YPXN+r6OVt6g9YB9852J0DSYWamhHIqplvYGMYGpZrjI2O6dRax5zTKGrlFTdaSKbWuFAy5R19C0/QX2ROU45nc92HxKpRs1cz3HjYWiR9emHNyT5W3UQn+j7JBNXoX1TSKmgKR3oh/hHdI76tUvQX1d0xwmeqOOgl/qUPa3/ug7hvyhlzn+6D25d8uj6r0vQ/qfvifyUp8m9pu+ThM3z1PZlPBzbdkoO4b8u+Q6WKZjYi3AWFuNgOmX1NVaXI+00nYLQdNDdUUHnvNus5zUae5zqY2N04X6abld0FoFripUFjvVTw6T09HD3XzRuGCSBVrJSUs5CqN5Pw5noE41bXMD/LpEj0nYJfsAM19Meh5WqtduVrl72gTHhTAOeY6Jmja51eCUx1uT7hEtrpiOHih7R+8I4iHJ1djTLiKDru4e6ZYdc8T6VIdQf5oh9cMSfrp7J744iLyVQ1QkX3xyrUGUyI62Yn9Yg6kHxiDrLizurHspofuxxEXkam6Nb8ZB40HjMlGm8adz1D1U1+CxX0hj23Gueqn3LHEQ5KWskav468Br9MyoVtIHhiT1U2+WLWnpI8MV7JX32l4i2MvB27yXk1Nag5xfjBwmVjBaTP7T7YHxj9LRmlP/U/+4Rfe0Z/Yy8Kl9y8mpI8XtSoaITSCKqOgIvm1SsHexNzmqm9r5S1Jtjgp6yfllUvY884ZXa6YCbQ15yLj8alFGeq4RFtdje2ZsN2ZzInCq67YP6ta/Uj/ACzZzO+wzyjNRbb5UMZ4RMMpsvjGPQpA/qsZzMT4SUIJWk5N+Oyoz6bn3SWLcvxMDAcTM6wuv5YnaolQBlZwc+RBAkg678qfrb/tmZSS7nenRqTV4roXhlESwG+UjE621kYq1FUbK4djfMAjLZHAg9shVtba54016lLH7TaZzxO0cHVehobBQI2ziZtW1hxJveqRYgeSqDfyykd9L1s71qmRtkQOfRJxInRYGpujTmqqOMg4/SKUxcm3IbyTyA4mZ42Pqm961XLLz+vukNMbe5BJO4sxJa3WeEOp06I3HBWklN2v5OtprSzVGz4bl3he9unhuEkaG0AalnqXsdy7suk/CI1d0K1Rg7jyd6g8f9XVL/hMIF4SRjfrIuIxKguHT6JEDC6t0AP8pD1gH3yfS0BQB/yKfsJ3TpgZR2jOtkjwOrN6si0dF0h+apjl5Cd0krgkByRLdCjuj7KLxSnpixhyY2tJQclHqAhlRwyjrsOEJZTNxvYgRbGPgC0KCXC2REkRwWgvKBvYjiCCGFMAFo5EgQ7wQ5GnaTvh6qILuwULc7IuHR8zwyUzPMRobGWIsn8xvgs09zeRaiCSyFzHcZqhi3Ytspnb6/JQOIB4RmtqnilQL4tWO1e6sL2ItY3sLZfbNiZBGXQS3KZHgdVcTc7SBN3nMpv1bN50V1Xr/wCj2j3TRfFw1pX4Tm4qTuz00sTOnHKik6b0RXr1jVsoutIEbROaUlRju3EqT2znNqzXtuT2vwmkPStvF4Hora4mXBXO0cZUUbKxm76v188lzIPncuyA6v1zfJcyDvPdNB8WOiGUHRHDiXnqvsUNNWqxuCUAP7x+E6OitUaaEFyX6Dkvqzv7s90tmyBGajgcZpRS7HKeJqVGm9CRRCryjz4xFA2mVRzLAe+VDTOndnaSkQWHnPvCdHS3RKizF2z2qjHpJJ7JlySdkdqeElOOaTsjVzpqiPzie2vfFLp2l+sT2175mdPQNdhlQbtZR7zHRq5iP2dvbX5ozvYctT9aNL+naR+untr3xS6ap+mntr3zMvyaxH7O3tL80MasYn9nf2k+aM72JytP1o01NMJ6ae0sWulU9JfaWZcdWMV+zv6174PyYxP7O/2d8ud7F5Wn60ar9JpzHrEUukFP/ImT/kzif2ep9nfDGrWI/ZqvrHdGd7E5SHrRrIxYiv8AEzKF1br8cLW9pR92OpoGqP0TEfzAPuRnexl4WHqNVXE9cdTFA8+2Zamiag/QsT/OI+5JVHAVR+h4sdWIPyiXNfQw8Ml9xp23eANKfozEYimNlcJiiCb+XXRiMgLAtuGW6W6kTbce0gwpbo886dtSBj8YlJGdzZUFyQCcuoZnhK3U15wfpv2o494na07Qaph6yJYNUTZW5IAO2rXJAPo8pmOJ1SxY40+x2+UTocyyYnX3DDIF26kPxtIlbX6ha4Dno2QPeZU8ZqtiwR5AbLMqynifSIMjvoDEqhBoOSWUgqVYgANcWUk53GfRHQFvwuvKMbbDgWvewPZkZMTXOmNwf2fxlFwOgMSxP/gVBa3nKU57tq1+yTvoHEj8032d85ybT6Huw9KlKN5Pr+S1trmnBah/hHxMYfXEcKbnrsJx9P4eo1baSk6rsURkjABloorDIW84NOPUoPxR+1WmM0rnqjh6Nr/yWhtb24UT2uO6IOt1T9SPalYY7+sQE7+uZzyOnK0iynWuqfzP9Ui4nTtV8jamvHZzY9APCcbaybrkjQ+hcRWNthgD9dhZRvzvx4ZCVOUkZcKNKSuu9+unQOjTesy00XqA3AcWY/GXvQmglpLYC5O9jvP4dEmaC0ClBbDNj5zkZsfgOQnfp0hNxhbueLE4p1HaPYi0sNaSFoyQiRezOp5LjCUo+iCGBFCCXCFOHsR0QxBLjOzBsx4iFaBcb2YNmO2gtAuI2YNmLtAYKEIq8TBBCG4kd6Uk+6JIgEF6AMSMKJN2YNmARhQgNAcpLCwbEC5BfCgjdEHBidG0MpJYtzljALyEbbRqH6g9QnYCwykWLmZyE0coOSjsk1aMkbEAXOErEvcKmkkLTi0QRcoGRAYbmJ3wS4q8AMMxN84AtGjokY5xZe0AeBh3iQYAYAoQoCYLwAEwrwoDADvBCUQ5EwRALRLdEBeJB4ygUIQgESu/KALbKC8TtRTLAFLnDEK2VoFygC1EMiEphkwBBgtDhGALVrQ/GW3xthC6IAuo9xCp740RFLAHAOXCADOEzGFTgBtlAogc5RIbKAOU3zjxMih46jQB2CFeFAFQjE3ggC4W1C2oV4BCJgvEExKKAAALAcBuEyUfQ5Wg7YSCAtNECU5xwb4gEQMbjKAK2v8AmKEa2copTAHQbw9qNh/76YowAXhZHdvhEwk5wBy8ad4e11RCHPPsgDrjOAnrgJh3gBwXghGAJJvAy7oqEwgAi6cRDWAPXgvEgwEwAxDvE5wQA4IRI3cYJEwQ3hLDglAsQQQQA+MBgggAhNvgggBtuiHc2PUYIIA4eEQ0EEAAiSMxBBAHxxhQQQA4IIIAQhwQQAoDDggCxDWCCRgbqjNcyPKG7j5DGx6MhHRBBIgEyjI8QCB1Hf7hDgglQZ//2Q==",
+        "desc": "Biopolar Forceps – Budget Model<br>This affordable biopolar forceps is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Biopolar Forceps – Basic Model <br>An affordable biopolar forceps designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg",
         "images": [
-            "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhYYGBgaHBgYHBoYHBgYGhoYGhgaGhoYHBweIy4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHz8sISE0NDQ0NDQ6PzQ0NTQ0NDQ0MTQ2NjQ2NDQ0PTY0NDQ0NDQxMTQ0NDE0NDQ0NDUxMTQ0NP/AABEIAOQA3gMBIgACEQEDEQH/xAAbAAAABwEAAAAAAAAAAAAAAAAAAQIDBAYHBf/EAEsQAAIBAgIGBAoFCgUCBwAAAAECAAMRBCEFBhIxQVFhcYHRBxMiMlKRkrHB0hVCocLhFkNEU1RygpOi8BQzYrLxg+IjY2SUo9Pz/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QALhEAAgECBAUDAwQDAAAAAAAAAAECAxEEEkFRExQhMZFSYaEiQnEFgcHwJDKx/9oADAMBAAIRAxEAPwDRrQCETFLIQEVeJirQBV4m8FoBAFAQwYmKBEAVeGIm8O8AOKAvE3ihABABCvC37oAoi2+GjQ1S2+Ft55CAIenEbUktIrpnlCAe1EM5MQbDeYanKBYMLeEV5nKLBiXgAKjhG2EMtEsYAStHw0jLHFgo9eLV+iNqOMcDjoghHIhiJ2oAYAu8OIvDIIgCoLxO1AucAXFCw/v4RG6HcQBe1DW0bBhswgotoNoxvbvxiQw4wB8vzjWJx1Oku1UdEv6bKt/WZUdctahhl8XSINVuO8U1P1iNxbkO05ZHKcRialVySWd23k3Zj28vsE5ynZ2R7KWEco5puyNyfW7BDfiKf8J2v9t5Aqa94JTlVLdSVPeVmP8A0RXP1R1XJP2ZSRT1crtwA7CffJmlsdOBh13bNLr+ETCjd4xupV+8wkR/CdQHm0qh6yi+4mUdNU6x4+pZKpam1TvL9gtJeZcuFW7LFX8JqnzcMT0mpb7AnxkVvCVV+rh0HWzH4CMYbUY3G2HYdZEmjURLnyMulm74tLcZsKtCBV8JOJO5KK9jn78i1PCFjD9amvUgPvJlmo6lUgM0QnpAI+3fOhhNWUUGyJvPmoo+EuWW5HXoLtAoD6741jlXA6FRPlMB1jx7fnax/dQfBRNMp6KsLA+oRZ0Uu49eQ5y5HuZ5qGkEZkuK0i/18Vn+8nxEfoYDSLmxbE9uJC/EzTEwAFhn2yQmFAjJ7mHi9ooqOiNWKhW9epW27nL/ABLsLWFj5KDPfxlvp4KwAJc/x1Pmj9NBJYlUUeeVRy6sitC2pGxGICKzm9lBY2BJsBc2A3zjVdZktdKNd+oU1/3Os2cyxBxFu45zOdO+ELxDKn+GfaZdry6iLlcj6m0DuPGcHEeE+sytsUaaHfdmZ7C4G6wvvgGvs4hpXAmKYTwiYsuLmm175bFhe3Qb/bJza9Ys8aY6k7yZmUlHueijhp1VeJrr1RfMw9sb73Ex/Faz4sqjeOYbYa4CIACHIy8m9rW+2cvEaZxD+dXqEcttgPUDaYdVbHqj+nzfdo3CriwvnEAdJAkGrp7DofLr0xzBdO+Yk+ZucyQTc5m8HyzPGex1j+nR1Zs9fWzC2sK6HqO19glc03rxTVStC7udzEFVXpsc2PZbpmeBxxI82c+jTIY7NyTfdck3Itl0fGFNyTDwlOnJNpta9eiJ9eq7vcku7nM7yWMu2rerYCgvmTm3Sd4HUP73yFqpq61xUcZ8By/H/jnfRsHhLASxjY44rEZnlj2QzhdGIu5B6hJ6YYDgPVHFqAZWN91oS1ST8Of4zrY8LY4tIco4KQiVq8wYs1l5yWILFMCR3FzA1UtDW+4TVrECt1QMb8BHVW2XAxLpbqgCAls4IfjOm8UGB4wAso9TtaMta8NSB1wB105RDLHUYWjbNc84IzmYtCyOosCyOovci7KVuQN4z5ykvofFrl4yh2U3PveXzZvykapTvJZC5lum9VMRXKs9RCVBA2U2cjn6R4++cpdRqw3OMwQfJHHhvmx/4YWz/vlA2FGzfhylKZDhdRawIJbdwA3jkDfKdtNTWtvN/wB7uEvyIBx+Me2TcXFrSSin3OsKs4K0XYoP5JGyq7EqtyBc5E2vb1CJ/I1L8bcrnd13mguikg8I09IX8kfj0SZVsa5ipuyifkgm/h+814ldUEvuJ7W75oi4QMovccwMhH1oqMgJMq2Lx6m78lBo6lU+I/3H3mdnR+rNOn5qAdgHullZAM+eX4QPUAyuL93RKkZc5S7si0qewbBchllv/vdIlbWnDUrq9QbQJFlDMeo7IIU9ZlS1s1rvtUaJAG56i72t9VTwHM+qVTA6PetuyXd+A75zcutonrhhYxjnquy21NKOvOEAyLk9C5faY1W8IWG4JVO7cEHveVnDanggXOfHfn6rTqJqGhzuB1F++X6zP+MtGTG8ImH/AFdTt2O36xjL+EKlwpP7Sxa6lUwBcA9PlH3mOLqhR9Befmj1Zy2luTNhtn5Ih8IicKDH+MD7pjR8JBG7D+uoR7knYTVWgPzaewndHqWrdJDkvZZbGLS3Jnw6+z5K+/hMc/mF/mH5Ik+ESs27Dqf4mPuEtH0Ol77OY6BH10cl8hvi0tyOtQ0h8lPXXzFX8nDIf4ah90X+V+POYwqj+CqPiJcU0HS9GOU9HJc2X3ndCi9yOvT0giljWbSZzGHTnmrbu146undKn9Hpdv8A+kuIwi8hHkw4HAS5XuZdePoRWsJidLOPMwqfv7d+vyGaWjCCtsjb8Xt2F9jb2SbZkAkWF+uPpSsMxHADKo+5xnPNol+CHUqqgLMwVRmSxAAHMk5Cc3EawYVd+JoD/qpf/dJmkFJpuACSUcAXAuxU2FzlvtKW7Ylcjh3HU9I+55WzmkdfGa6YFDsnEKWsD5AaoO1kUi+W695zsX4RMIASrO59FEcX9rZH2yjay6GxVWsai0XsVUHylvdcufVOP9BYoBgaLcCLEEgg8gc8iZUU07B+EHCO1tmqlgSGdQVJ5WVmNz1STU13wxFgX6bIc5lWB0PiNrOk4yIuQQOc7aaAxHoAdZE5zlJPoe3D0qMo3m7P8l5qa5UFAyqG4uPJAuLkXzbmD6pGbXukM1SpfmdgfeMrGJ0TWZKYCG6qwYki2bki3YZDbQ2I9D7RMOUz1RoYXV/JcqnhD5UDuvm9suxIy3hDfhh13X88nf8Aw9MqZ0VXH5s+bbeu/wBcbOAq+gfNtvXf65nNM6qjhfbyWqrr3UY38UgsL+cT8JwNIa31K4KghRncKCCRfMFibkdVt8Yp6Nqk+YB5Nsz3R7Aarnau5t0Lfnfed3qmlmaaZiboU2pQt76v9iHovR7V247I84/AdM0jRWjgqgAWAyEh6NwiU1AAsB/d44+teGp5XZ/3ALX62IBHSLzUUorqearOpiJfSuiLJSogTo4ceTnw90oo1+ofq3v1oPiY0fCAg3I3tAfCXOtzlylXYv2IO4dsbFv790oZ8ISfqSf47X/oiV8IXLD3/jPyRnW45Ort8ov5t+EFxfKZ+mvj38nDH22P3Ib69V75YYjtf5Jc6I8JU2+UaGznl8bxLWIvax3zP111xJzGFJHPy7f7YTa5Yo5DDDt24zocrU9vKNGVwY14wAmZ+msmPIuMMvrb5hFrp7SJ83DIOv8AF4zInLS3Xkv61LRQOcoH0xpM/o1P7Pnj9DSWkz+j0R1kj78ub2Mug1qvJfTUyyhl5UaWI0kfzeFHW1T4XliomqQNpUvbOzORfja67pbnOULaoNxIdWiI/isQqKWZgqjMk5ACcxtOYY5+NB/dDH3CU5inw4OQFzFro1RvAPZOLpHXvCUG2buzWv5KN2X29mcmt4TsPYlaVZj/AKgij17Rt6oKXNMGvARqvRVd1ifdKbg/CYrMQ1BlW17hwx6rWHrvHhr1SuD4uoTxuUz+2ZclHud6dCpNXirotjYC/QOjj0xmrgdwGd5XMTrsFCgUWAYBxd1GRJscgbbpAbXlr3FNe12b4CZzx3OywdZ6fJbnwAsQcv73SI2BW+QvKjV1vrG9lQZBtzH7S3TGH1mrm+a5AHJRxt3ycWJ0WAre3kuaYVeiNvsrcmwAzJ5WlOOsNY38oZAHzV426Omcqtpx611LG3YAbHkLdG+HUVrpBYKSklJpXOxp3Te3dEPkcT6XX/p6OMZ0NoU1fKe9juG6/SeQjGh9Gmo20w8ngD9Y93vmg6JwgXeLzMYuTvI6160aUeFS07sh4PVuj9ZB6vfznSp6EpDci345Cdimg5ZZSSzC3k+6dUkj57nJ92cYaHT0R9kfpaHp3sUF+dp0UW56ZJpPcZ2vDM5mc76LRdygdQEUmj1ubqLdUkuxvxtFB7HI3HTBLjAwij6o9UWMKvKSGqLzjTVMhn8JbEuF/hxyiHoDlJKDLOB3FoIRRSEcWnFbXRFB5SBqlosCBXgDQRkLSNImm4QAsyMFBNhtEZXNjYX6JUHTFjLxVI/9Z/8A6pe2Ei10Udcz3KY/rHqziq9XxmyguqggOzbukovunIbVHFBWGyrG6nJs8rjK9h9Y8eE2euiDM+q8hPVp5liFtzIE0DJMBqvidrykCixzLKR1eSSZ101Zrc07Cx+7L0mKpFrB0bfkGBNuySi6rkLZ5zEoqTuz00cROnG0ShYvQdVlpjyAUTYJJbPy2YZbOWTW7JGbVqtzT1v8s0Gvs78vxjVSspGZt6pnhxO6xlXsUNtBVh6Hm7O9vljX0PV/0bgN7dHR0S7VqiA+entL3wU69HO7pfd5y98nDia5yt/UU5NC1DvZRls7ieXdJeB1YUHabyj7I9X4yy1MRTO5kPURI2I0nTT646hYk9gmssYnOVatUaX/ABD1FEpi5soAuScgBIra5IhIRNvpZtgc7gAE+u0rWmNMNVNhko3D4nmfsEnaA0Bt+XUF+OyeHXzPRM5nJ2id+BClHNV6t6HTOvpP5tex2+SL/L/K3il9tvknfwejFTIIOqwnTp4JCM1HqE1llucHVoej5Kemv/8A5Ke2fkix4QsreKH8z/slufR6eivqEC6NS19lfUItLcnFoej5KkNf140f/kHywhr6n6s+2Pllv+jKZF9hPZER9FUuKJ7K90WluOJQ9HyVY6/0/wBW3Yyw11+p8ab+tO+WY6Jpfq09he6E2haJ/NJ2ovdFpbkz0PS/JwDr/RO9Kv8AR88UmveH9Cr6k+edr6Bw/wCppewndCOgMP8As9L2E7pbS3I5Yf0vycxdecMfTH8I+DR1Nd8LxZ/YY+6dBdX8N+z0f5ad0UugMN+z0f5ad0fUZbobPyN4PW3CPe1ZVt6e0l78iwAO7hO3h8YjAMrKwIBBBWxBzBBO8dInOTQOG/ZqP8tO6dOnRAFgoAGQFgAByl+o4zyfbf8Ac5msjA4apfaGSW2S6t/mJexQht15m1VkG9q3bVxHxaauy3kSphRneWxgwTWFx442JZbLYszMenNiTvvOcCNk9Yyuc7g5/YPXN+r6OVt6g9YB9852J0DSYWamhHIqplvYGMYGpZrjI2O6dRax5zTKGrlFTdaSKbWuFAy5R19C0/QX2ROU45nc92HxKpRs1cz3HjYWiR9emHNyT5W3UQn+j7JBNXoX1TSKmgKR3oh/hHdI76tUvQX1d0xwmeqOOgl/qUPa3/ug7hvyhlzn+6D25d8uj6r0vQ/qfvifyUp8m9pu+ThM3z1PZlPBzbdkoO4b8u+Q6WKZjYi3AWFuNgOmX1NVaXI+00nYLQdNDdUUHnvNus5zUae5zqY2N04X6abld0FoFripUFjvVTw6T09HD3XzRuGCSBVrJSUs5CqN5Pw5noE41bXMD/LpEj0nYJfsAM19Meh5WqtduVrl72gTHhTAOeY6Jmja51eCUx1uT7hEtrpiOHih7R+8I4iHJ1djTLiKDru4e6ZYdc8T6VIdQf5oh9cMSfrp7J744iLyVQ1QkX3xyrUGUyI62Yn9Yg6kHxiDrLizurHspofuxxEXkam6Nb8ZB40HjMlGm8adz1D1U1+CxX0hj23Gueqn3LHEQ5KWskav468Br9MyoVtIHhiT1U2+WLWnpI8MV7JX32l4i2MvB27yXk1Nag5xfjBwmVjBaTP7T7YHxj9LRmlP/U/+4Rfe0Z/Yy8Kl9y8mpI8XtSoaITSCKqOgIvm1SsHexNzmqm9r5S1Jtjgp6yfllUvY884ZXa6YCbQ15yLj8alFGeq4RFtdje2ZsN2ZzInCq67YP6ta/Uj/ACzZzO+wzyjNRbb5UMZ4RMMpsvjGPQpA/qsZzMT4SUIJWk5N+Oyoz6bn3SWLcvxMDAcTM6wuv5YnaolQBlZwc+RBAkg678qfrb/tmZSS7nenRqTV4roXhlESwG+UjE621kYq1FUbK4djfMAjLZHAg9shVtba54016lLH7TaZzxO0cHVehobBQI2ziZtW1hxJveqRYgeSqDfyykd9L1s71qmRtkQOfRJxInRYGpujTmqqOMg4/SKUxcm3IbyTyA4mZ42Pqm961XLLz+vukNMbe5BJO4sxJa3WeEOp06I3HBWklN2v5OtprSzVGz4bl3he9unhuEkaG0AalnqXsdy7suk/CI1d0K1Rg7jyd6g8f9XVL/hMIF4SRjfrIuIxKguHT6JEDC6t0AP8pD1gH3yfS0BQB/yKfsJ3TpgZR2jOtkjwOrN6si0dF0h+apjl5Cd0krgkByRLdCjuj7KLxSnpixhyY2tJQclHqAhlRwyjrsOEJZTNxvYgRbGPgC0KCXC2REkRwWgvKBvYjiCCGFMAFo5EgQ7wQ5GnaTvh6qILuwULc7IuHR8zwyUzPMRobGWIsn8xvgs09zeRaiCSyFzHcZqhi3Ytspnb6/JQOIB4RmtqnilQL4tWO1e6sL2ItY3sLZfbNiZBGXQS3KZHgdVcTc7SBN3nMpv1bN50V1Xr/wCj2j3TRfFw1pX4Tm4qTuz00sTOnHKik6b0RXr1jVsoutIEbROaUlRju3EqT2znNqzXtuT2vwmkPStvF4Hora4mXBXO0cZUUbKxm76v188lzIPncuyA6v1zfJcyDvPdNB8WOiGUHRHDiXnqvsUNNWqxuCUAP7x+E6OitUaaEFyX6Dkvqzv7s90tmyBGajgcZpRS7HKeJqVGm9CRRCryjz4xFA2mVRzLAe+VDTOndnaSkQWHnPvCdHS3RKizF2z2qjHpJJ7JlySdkdqeElOOaTsjVzpqiPzie2vfFLp2l+sT2175mdPQNdhlQbtZR7zHRq5iP2dvbX5ozvYctT9aNL+naR+untr3xS6ap+mntr3zMvyaxH7O3tL80MasYn9nf2k+aM72JytP1o01NMJ6ae0sWulU9JfaWZcdWMV+zv6174PyYxP7O/2d8ud7F5Wn60ar9JpzHrEUukFP/ImT/kzif2ep9nfDGrWI/ZqvrHdGd7E5SHrRrIxYiv8AEzKF1br8cLW9pR92OpoGqP0TEfzAPuRnexl4WHqNVXE9cdTFA8+2Zamiag/QsT/OI+5JVHAVR+h4sdWIPyiXNfQw8Ml9xp23eANKfozEYimNlcJiiCb+XXRiMgLAtuGW6W6kTbce0gwpbo886dtSBj8YlJGdzZUFyQCcuoZnhK3U15wfpv2o494na07Qaph6yJYNUTZW5IAO2rXJAPo8pmOJ1SxY40+x2+UTocyyYnX3DDIF26kPxtIlbX6ha4Dno2QPeZU8ZqtiwR5AbLMqynifSIMjvoDEqhBoOSWUgqVYgANcWUk53GfRHQFvwuvKMbbDgWvewPZkZMTXOmNwf2fxlFwOgMSxP/gVBa3nKU57tq1+yTvoHEj8032d85ybT6Huw9KlKN5Pr+S1trmnBah/hHxMYfXEcKbnrsJx9P4eo1baSk6rsURkjABloorDIW84NOPUoPxR+1WmM0rnqjh6Nr/yWhtb24UT2uO6IOt1T9SPalYY7+sQE7+uZzyOnK0iynWuqfzP9Ui4nTtV8jamvHZzY9APCcbaybrkjQ+hcRWNthgD9dhZRvzvx4ZCVOUkZcKNKSuu9+unQOjTesy00XqA3AcWY/GXvQmglpLYC5O9jvP4dEmaC0ClBbDNj5zkZsfgOQnfp0hNxhbueLE4p1HaPYi0sNaSFoyQiRezOp5LjCUo+iCGBFCCXCFOHsR0QxBLjOzBsx4iFaBcb2YNmO2gtAuI2YNmLtAYKEIq8TBBCG4kd6Uk+6JIgEF6AMSMKJN2YNmARhQgNAcpLCwbEC5BfCgjdEHBidG0MpJYtzljALyEbbRqH6g9QnYCwykWLmZyE0coOSjsk1aMkbEAXOErEvcKmkkLTi0QRcoGRAYbmJ3wS4q8AMMxN84AtGjokY5xZe0AeBh3iQYAYAoQoCYLwAEwrwoDADvBCUQ5EwRALRLdEBeJB4ygUIQgESu/KALbKC8TtRTLAFLnDEK2VoFygC1EMiEphkwBBgtDhGALVrQ/GW3xthC6IAuo9xCp740RFLAHAOXCADOEzGFTgBtlAogc5RIbKAOU3zjxMih46jQB2CFeFAFQjE3ggC4W1C2oV4BCJgvEExKKAAALAcBuEyUfQ5Wg7YSCAtNECU5xwb4gEQMbjKAK2v8AmKEa2copTAHQbw9qNh/76YowAXhZHdvhEwk5wBy8ad4e11RCHPPsgDrjOAnrgJh3gBwXghGAJJvAy7oqEwgAi6cRDWAPXgvEgwEwAxDvE5wQA4IRI3cYJEwQ3hLDglAsQQQQA+MBgggAhNvgggBtuiHc2PUYIIA4eEQ0EEAAiSMxBBAHxxhQQQA4IIIAQhwQQAoDDggCxDWCCRgbqjNcyPKG7j5DGx6MhHRBBIgEyjI8QCB1Hf7hDgglQZ//2Q=="
+            "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg",
+            "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg|https://pissco.net/wp-content/uploads/2022/11/Reusable-Surgical-Medical-Bipolar-Forceps.jpg|https://image.made-in-china.com/2f0j00scbqokVzGwcm/Custom-Medical-Device-Laparoscopic-Surgery-Bipolar-Forceps-with-Titanize-Jaw.jpg"
         ]
     },
     {
@@ -3849,11 +4838,16 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "3.6",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Biopolar Forceps – Standard Model<br>This standard biopolar forceps offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Biopolar Forceps – Standard Model<br>A reliable and durable biopolar forceps designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg",
+        "images": [
+            "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg",
+            "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg|https://pissco.net/wp-content/uploads/2022/11/Reusable-Surgical-Medical-Bipolar-Forceps.jpg|https://image.made-in-china.com/2f0j00scbqokVzGwcm/Custom-Medical-Device-Laparoscopic-Surgery-Bipolar-Forceps-with-Titanize-Jaw.jpg"
+        ]
     },
     {
         "id": 240,
@@ -3864,11 +4858,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "3.9",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Biopolar Forceps – Premium Model<br>This premium quality biopolar forceps provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Biopolar Forceps – Premium Model<br>A high-performance biopolar forceps designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg",
+        "images": [
+            "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg",
+            "https://suremedicalsupplies.co.ke/wp-content/uploads/2025/05/Biopolar-Forceps.jpg|https://pissco.net/wp-content/uploads/2022/11/Reusable-Surgical-Medical-Bipolar-Forceps.jpg|https://image.made-in-china.com/2f0j00scbqokVzGwcm/Custom-Medical-Device-Laparoscopic-Surgery-Bipolar-Forceps-with-Titanize-Jaw.jpg"
+        ]
     },
     {
         "id": 241,
@@ -3881,11 +4880,17 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": "https://5.imimg.com/data5/ANDROID/Default/2022/1/BE/YO/HY/115082354/product-jpeg-500x500.jpg",
+        "desc": "Bipolar Forceps – Budget Model<br>This affordable bipolar forceps is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Bipolar Forceps – Basic Model <br>An affordable bipolar forceps designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://www.cieindia.com/images/bipolar-forceps.jpg",
         "images": [
-            "https://5.imimg.com/data5/ANDROID/Default/2022/1/BE/YO/HY/115082354/product-jpeg-500x500.jpg"
+            "http://www.cieindia.com/images/bipolar-forceps.jpg",
+            "http://www.cieindia.com/images/bipolar-forceps.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_1920",
+            "h_1280/https://ideal-ms.com/wp-content/uploads/2022/06/IMG_1814_photo-1-scaled.jpg|http://quantumscientific.in/wp-content/uploads/2017/03/1-Bipolar-Forceps.jpg"
         ]
     },
     {
@@ -3899,9 +4904,18 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Bipolar Forceps – Standard Model<br>This standard bipolar forceps offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Bipolar Forceps – Standard Model<br>A reliable and durable bipolar forceps designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://www.cieindia.com/images/bipolar-forceps.jpg",
+        "images": [
+            "http://www.cieindia.com/images/bipolar-forceps.jpg",
+            "http://www.cieindia.com/images/bipolar-forceps.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_1920",
+            "h_1280/https://ideal-ms.com/wp-content/uploads/2022/06/IMG_1814_photo-1-scaled.jpg|http://quantumscientific.in/wp-content/uploads/2017/03/1-Bipolar-Forceps.jpg"
+        ]
     },
     {
         "id": 243,
@@ -3912,11 +4926,20 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.5",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Bipolar/Monopolar cables and forceps.",
-        "usage": "Uses electricity to cut tissue or seal bleeding vessels during surgery.",
-        "image": ""
+        "desc": "Bipolar Forceps – Premium Model<br>This premium quality bipolar forceps provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Bipolar Forceps – Premium Model<br>A high-performance bipolar forceps designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://www.cieindia.com/images/bipolar-forceps.jpg",
+        "images": [
+            "http://www.cieindia.com/images/bipolar-forceps.jpg",
+            "http://www.cieindia.com/images/bipolar-forceps.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
+            "q_glossy",
+            "ret_img",
+            "w_1920",
+            "h_1280/https://ideal-ms.com/wp-content/uploads/2022/06/IMG_1814_photo-1-scaled.jpg|http://quantumscientific.in/wp-content/uploads/2017/03/1-Bipolar-Forceps.jpg"
+        ]
     },
     {
         "id": 244,
@@ -3927,13 +4950,15 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.3",
-        "ratingCount": 25,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/8/336669570/QY/OB/BY/5538683/silicon-patient-plate-black-rubber-indian-500x500.jpg",
+        "desc": "Silicon Patient Plate – Budget Model<br>This affordable silicon patient plate is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Silicon Patient Plate – Basic Model <br>An affordable silicon patient plate designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/8/336669570/QY/OB/BY/5538683/silicon-patient-plate-black-rubber-indian-500x500.jpg"
+            "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg",
+            "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg|https://cardiocare.in/wp-content/uploads/2023/11/pt.jpg|https://cpimg.tistatic.com/08838836/b/4/Diathermy-Silicon-Patient-Plate-reusable-Silicon-Patient-Plate-Biometric-Cable-Silicone-Patient-Plate-with-adaptor-cable-Compatible-with-Valleylab.png"
         ]
     },
     {
@@ -3945,11 +4970,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.2",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": ""
+        "desc": "Silicon Patient Plate – Standard Model<br>This standard silicon patient plate offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Silicon Patient Plate – Standard Model<br>A reliable and durable silicon patient plate designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg",
+        "images": [
+            "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg",
+            "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg|https://cardiocare.in/wp-content/uploads/2023/11/pt.jpg|https://cpimg.tistatic.com/08838836/b/4/Diathermy-Silicon-Patient-Plate-reusable-Silicon-Patient-Plate-Biometric-Cable-Silicone-Patient-Plate-with-adaptor-cable-Compatible-with-Valleylab.png"
+        ]
     },
     {
         "id": 246,
@@ -3960,11 +4990,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.6",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": ""
+        "desc": "Silicon Patient Plate – Premium Model<br>This premium quality silicon patient plate provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Silicon Patient Plate – Premium Model<br>A high-performance silicon patient plate designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg",
+        "images": [
+            "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg",
+            "https://sparesindustrial.com/wp-content/uploads/2022/09/Silicon-Patient-Plate.jpg|https://cardiocare.in/wp-content/uploads/2023/11/pt.jpg|https://cpimg.tistatic.com/08838836/b/4/Diathermy-Silicon-Patient-Plate-reusable-Silicon-Patient-Plate-Biometric-Cable-Silicone-Patient-Plate-with-adaptor-cable-Compatible-with-Valleylab.png"
+        ]
     },
     {
         "id": 247,
@@ -3975,13 +5010,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.2",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-500x500.jpg",
+        "desc": "Metal Patient Plate – Budget Model<br>This affordable metal patient plate is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Metal Patient Plate – Basic Model <br>An affordable metal patient plate designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg",
         "images": [
-            "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-500x500.jpg"
+            "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg",
+            "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2023/8/337457986/YU/PE/OO/5538683/reusable-patient-plate-metal-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/8/337458221/MT/WB/ZM/5538683/reusable-patient-plate-metal-500x500.png"
         ]
     },
     {
@@ -3993,11 +5030,16 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.3",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": ""
+        "desc": "Metal Patient Plate – Standard Model<br>This standard metal patient plate offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Metal Patient Plate – Standard Model<br>A reliable and durable metal patient plate designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg",
+        "images": [
+            "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg",
+            "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2023/8/337457986/YU/PE/OO/5538683/reusable-patient-plate-metal-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/8/337458221/MT/WB/ZM/5538683/reusable-patient-plate-metal-500x500.png"
+        ]
     },
     {
         "id": 249,
@@ -4010,9 +5052,14 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": ""
+        "desc": "Metal Patient Plate – Premium Model<br>This premium quality metal patient plate provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Metal Patient Plate – Premium Model<br>A high-performance metal patient plate designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg",
+        "images": [
+            "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg",
+            "https://5.imimg.com/data5/QN/US/DA/SELLER-3910970/metal-surgical-patient-plate-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2023/8/337457986/YU/PE/OO/5538683/reusable-patient-plate-metal-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/8/337458221/MT/WB/ZM/5538683/reusable-patient-plate-metal-500x500.png"
+        ]
     },
     {
         "id": 250,
@@ -4023,13 +5070,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.2",
-        "ratingCount": 52,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": "https://m.media-amazon.com/images/I/41ZGPKO+siL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_QL100_.jpg",
+        "desc": "Split Pad – Budget Model<br>This affordable split pad is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Split Pad – Basic Model <br>An affordable split pad designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/41ZGPKO+siL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_QL100_.jpg"
+            "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg",
+            "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg|https://www.decotechgroup.com/images/blog/MS-250-catheter-machines.jpg|https://www.decotechgroup.com/images/2024/11/26/medical-device-printing-intro.jpg"
         ]
     },
     {
@@ -4041,11 +5090,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.5",
-        "ratingCount": 36,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": ""
+        "desc": "Split Pad – Standard Model<br>This standard split pad offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Split Pad – Standard Model<br>A reliable and durable split pad designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg",
+        "images": [
+            "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg",
+            "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg|https://www.decotechgroup.com/images/blog/MS-250-catheter-machines.jpg|https://www.decotechgroup.com/images/2024/11/26/medical-device-printing-intro.jpg"
+        ]
     },
     {
         "id": 252,
@@ -4056,11 +5110,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.3",
-        "ratingCount": 52,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": ""
+        "desc": "Split Pad – Premium Model<br>This premium quality split pad provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Split Pad – Premium Model<br>A high-performance split pad designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg",
+        "images": [
+            "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg",
+            "https://www.decotechgroup.com/images/blog/ms-250-catheter-machines-closeup.jpg|https://www.decotechgroup.com/images/blog/MS-250-catheter-machines.jpg|https://www.decotechgroup.com/images/2024/11/26/medical-device-printing-intro.jpg"
+        ]
     },
     {
         "id": 253,
@@ -4073,11 +5132,13 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2021/1/ZJ/ZJ/HX/29879742/grf-bilogical-glue.jpg",
+        "desc": "Disposable Pad – Budget Model<br>This affordable disposable pad is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Pad – Basic Model <br>An affordable disposable pad designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2021/1/ZJ/ZJ/HX/29879742/grf-bilogical-glue.jpg"
+            "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg",
+            "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg|https://www.decotechgroup.com/images/2024/11/26/medical-device-printing-intro.jpg|https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg"
         ]
     },
     {
@@ -4089,11 +5150,16 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.1",
-        "ratingCount": 15,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": ""
+        "desc": "Disposable Pad – Standard Model<br>This standard disposable pad offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Pad – Standard Model<br>A reliable and durable disposable pad designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg",
+        "images": [
+            "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg",
+            "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg|https://www.decotechgroup.com/images/2024/11/26/medical-device-printing-intro.jpg|https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg"
+        ]
     },
     {
         "id": 255,
@@ -4104,11 +5170,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.8",
-        "ratingCount": 59,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Silicon, metal, or disposable grounding pads.",
-        "usage": "Provides a safe return path for electricity during monopolar surgery.",
-        "image": ""
+        "desc": "Disposable Pad – Premium Model<br>This premium quality disposable pad provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Pad – Premium Model<br>A high-performance disposable pad designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg",
+        "images": [
+            "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg",
+            "https://www.springtextile.com/blogs/wp-content/uploads/2020/12/12.14博客配图.jpg|https://www.decotechgroup.com/images/2024/11/26/medical-device-printing-intro.jpg|https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg"
+        ]
     },
     {
         "id": 256,
@@ -4119,13 +5190,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.9",
-        "ratingCount": 57,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/CN/TT/YM/972966/aero-win-full-face-non-vented-large-medium-small.jpeg",
+        "desc": "Vented Mask – Budget Model<br>This affordable vented mask is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Vented Mask – Basic Model <br>An affordable vented mask designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2022/12/CN/TT/YM/972966/aero-win-full-face-non-vented-large-medium-small.jpeg"
+            "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg",
+            "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg|https://5.imimg.com/data5/SELLER/Default/2024/3/404456031/QL/HV/QM/7714794/vented-non-vented-mask-1000x1000.jpg|https://5.imimg.com/data5/XX/DG/DR/SELLER-107183503/untitled-png-250x250.png"
         ]
     },
     {
@@ -4137,11 +5210,16 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.7",
-        "ratingCount": 58,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": ""
+        "desc": "Vented Mask – Standard Model<br>This standard vented mask offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Vented Mask – Standard Model<br>A reliable and durable vented mask designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg",
+        "images": [
+            "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg",
+            "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg|https://5.imimg.com/data5/SELLER/Default/2024/3/404456031/QL/HV/QM/7714794/vented-non-vented-mask-1000x1000.jpg|https://5.imimg.com/data5/XX/DG/DR/SELLER-107183503/untitled-png-250x250.png"
+        ]
     },
     {
         "id": 258,
@@ -4154,9 +5232,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": ""
+        "desc": "Vented Mask – Premium Model<br>This premium quality vented mask provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Vented Mask – Premium Model<br>A high-performance vented mask designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg",
+        "images": [
+            "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg",
+            "https://www.dulary.fr/data/medias/301/style/catalogue_produits_show/131-1.jpg|https://5.imimg.com/data5/SELLER/Default/2024/3/404456031/QL/HV/QM/7714794/vented-non-vented-mask-1000x1000.jpg|https://5.imimg.com/data5/XX/DG/DR/SELLER-107183503/untitled-png-250x250.png"
+        ]
     },
     {
         "id": 259,
@@ -4167,13 +5250,15 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.3",
-        "ratingCount": 46,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": "https://cpimg.tistatic.com/08907841/b/4/Resmed-AcuCare-F1-0-Face-Mask.jpg",
+        "desc": "Nonvented Mask – Budget Model<br>This affordable nonvented mask is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Nonvented Mask – Basic Model <br>An affordable nonvented mask designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg",
         "images": [
-            "https://cpimg.tistatic.com/08907841/b/4/Resmed-AcuCare-F1-0-Face-Mask.jpg"
+            "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg",
+            "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg|https://image.made-in-china.com/2f0j00AYmUItgdlJrw/Medical-Machine-Face-Mask-China-Supplier-Disposable-PVC-Oxygen-Mask-Hospital-Equipment-Medical-Equipment-Nebulizer-Masks-for-Hospital-Use-with-CE-ISO.jpg|https://image.made-in-china.com/2f0j00fCriBtQGugbq/Medical-Equipment-Simple-Oxygen-Mask-Nebulizer-Mask-Non-Rebreathing-Mask.jpg"
         ]
     },
     {
@@ -4187,9 +5272,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": ""
+        "desc": "Nonvented Mask – Standard Model<br>This standard nonvented mask offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Nonvented Mask – Standard Model<br>A reliable and durable nonvented mask designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg",
+            "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg|https://image.made-in-china.com/2f0j00AYmUItgdlJrw/Medical-Machine-Face-Mask-China-Supplier-Disposable-PVC-Oxygen-Mask-Hospital-Equipment-Medical-Equipment-Nebulizer-Masks-for-Hospital-Use-with-CE-ISO.jpg|https://image.made-in-china.com/2f0j00fCriBtQGugbq/Medical-Equipment-Simple-Oxygen-Mask-Nebulizer-Mask-Non-Rebreathing-Mask.jpg"
+        ]
     },
     {
         "id": 261,
@@ -4200,11 +5290,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.6",
-        "ratingCount": 64,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": ""
+        "desc": "Nonvented Mask – Premium Model<br>This premium quality nonvented mask provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Nonvented Mask – Premium Model<br>A high-performance nonvented mask designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg",
+        "images": [
+            "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg",
+            "https://image.made-in-china.com/2f0j00iDockRJZwMbA/Medical-Products-Surgical-Supply-ICU-Ventilator-Medical-Equipment-Pocket-Machine-CPR-Oxygen-Mask-Face-Mask-Emergency-Mask-Hospital-Equipment.jpg|https://image.made-in-china.com/2f0j00AYmUItgdlJrw/Medical-Machine-Face-Mask-China-Supplier-Disposable-PVC-Oxygen-Mask-Hospital-Equipment-Medical-Equipment-Nebulizer-Masks-for-Hospital-Use-with-CE-ISO.jpg|https://image.made-in-china.com/2f0j00fCriBtQGugbq/Medical-Equipment-Simple-Oxygen-Mask-Nebulizer-Mask-Non-Rebreathing-Mask.jpg"
+        ]
     },
     {
         "id": 262,
@@ -4217,11 +5312,13 @@ var products = [
         "rating": "4.7",
         "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": "https://image.made-in-china.com/2f0j00MiIgLPefbybV/Nasal-Cannula-High-Flow-Hfnc-Oxygen-Tube.webp",
+        "desc": "Nasal Cannula – Budget Model<br>This affordable nasal cannula is designed for assisting with patient movement, providing necessary support and stability.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Nasal Cannula – Basic Model <br>An affordable nasal cannula designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188",
         "images": [
-            "https://image.made-in-china.com/2f0j00MiIgLPefbybV/Nasal-Cannula-High-Flow-Hfnc-Oxygen-Tube.webp"
+            "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188",
+            "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188|https://img.freepik.com/premium-photo/nasal-cannula-medical-device-white-background_894067-26284.jpg|https://www.wkmedical.com/wp-content/uploads/2020/01/111.jpg"
         ]
     },
     {
@@ -4233,11 +5330,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.1",
-        "ratingCount": 70,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": ""
+        "desc": "Nasal Cannula – Standard Model<br>This standard nasal cannula offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Nasal Cannula – Standard Model<br>A reliable and durable nasal cannula designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188",
+        "images": [
+            "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188",
+            "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188|https://img.freepik.com/premium-photo/nasal-cannula-medical-device-white-background_894067-26284.jpg|https://www.wkmedical.com/wp-content/uploads/2020/01/111.jpg"
+        ]
     },
     {
         "id": 264,
@@ -4248,11 +5350,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.2",
-        "ratingCount": 80,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": ""
+        "desc": "Nasal Cannula – Premium Model<br>This premium quality nasal cannula provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Nasal Cannula – Premium Model<br>A high-performance nasal cannula designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188",
+        "images": [
+            "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188",
+            "http://ded7t1cra1lh5.cloudfront.net/media/118173/c945dd3b725dd038c7d97c288ae163d720860139/original/Nasal_cannula.jpg?1456445188|https://img.freepik.com/premium-photo/nasal-cannula-medical-device-white-background_894067-26284.jpg|https://www.wkmedical.com/wp-content/uploads/2020/01/111.jpg"
+        ]
     },
     {
         "id": 265,
@@ -4263,13 +5370,15 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.6",
-        "ratingCount": 54,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": "https://m.media-amazon.com/images/I/41K3peNopZL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID44PC9zcGFuPg==,500,900,420,420,0,0_QL100_.jpg",
+        "desc": "Nasal Mask – Budget Model<br>This affordable nasal mask is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Nasal Mask – Basic Model <br>An affordable nasal mask designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/41K3peNopZL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID44PC9zcGFuPg==,500,900,420,420,0,0_QL100_.jpg"
+            "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg|https://www.cncmedical.net/home-care-sleep-apnea/nasal-mask.jpg|https://product.etol-rubber.com/wp-content/uploads/2019/01/medical-nasal-mask-700x700.jpg"
         ]
     },
     {
@@ -4283,9 +5392,14 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": ""
+        "desc": "Nasal Mask – Standard Model<br>This standard nasal mask offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Nasal Mask – Standard Model<br>A reliable and durable nasal mask designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg",
+        "images": [
+            "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg|https://www.cncmedical.net/home-care-sleep-apnea/nasal-mask.jpg|https://product.etol-rubber.com/wp-content/uploads/2019/01/medical-nasal-mask-700x700.jpg"
+        ]
     },
     {
         "id": 267,
@@ -4296,11 +5410,16 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.5",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Vented, Nonvented, and Nasal masks.",
-        "usage": "Used with CPAP/BiPAP machines for non-invasive breathing support.",
-        "image": ""
+        "desc": "Nasal Mask – Premium Model<br>This premium quality nasal mask provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Nasal Mask – Premium Model<br>A high-performance nasal mask designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg",
+        "images": [
+            "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/respiratory-products-08-mask-.jpg|https://www.cncmedical.net/home-care-sleep-apnea/nasal-mask.jpg|https://product.etol-rubber.com/wp-content/uploads/2019/01/medical-nasal-mask-700x700.jpg"
+        ]
     },
     {
         "id": 268,
@@ -4311,13 +5430,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.4",
-        "ratingCount": 83,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": "https://m.media-amazon.com/images/I/41ms3btsc4L.jpg",
+        "desc": "Bp Apparatus – Budget Model<br>This affordable bp apparatus is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Bp Apparatus – Basic Model <br>An affordable bp apparatus designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg",
         "images": [
-            "https://m.media-amazon.com/images/I/41ms3btsc4L.jpg"
+            "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg|https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg|https://aonemedical.ae/wp-content/uploads/2023/10/5-DIGITAL-BP-WITH-STAND-.jpg"
         ]
     },
     {
@@ -4331,9 +5452,14 @@ var products = [
         "rating": "4.4",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": ""
+        "desc": "Bp Apparatus – Standard Model<br>This standard bp apparatus offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Bp Apparatus – Standard Model<br>A reliable and durable bp apparatus designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg",
+        "images": [
+            "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg|https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg|https://aonemedical.ae/wp-content/uploads/2023/10/5-DIGITAL-BP-WITH-STAND-.jpg"
+        ]
     },
     {
         "id": 270,
@@ -4344,11 +5470,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "3.3",
-        "ratingCount": 81,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": ""
+        "desc": "Bp Apparatus – Premium Model<br>This premium quality bp apparatus provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Bp Apparatus – Premium Model<br>A high-performance bp apparatus designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg",
+        "images": [
+            "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg",
+            "https://aonemedical.ae/wp-content/uploads/2023/10/mercury-bp-apparatus.jpeg|https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg|https://aonemedical.ae/wp-content/uploads/2023/10/5-DIGITAL-BP-WITH-STAND-.jpg"
+        ]
     },
     {
         "id": 271,
@@ -4359,13 +5490,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.1",
-        "ratingCount": 38,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2021/10/ZD/SZ/FJ/124095643/aneroid-sphygmomanometer-500x500.jpg",
+        "desc": "Cuff Bp Apparatus – Budget Model<br>This affordable cuff bp apparatus is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Cuff Bp Apparatus – Basic Model <br>An affordable cuff bp apparatus designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/1/GK/KO/SU/131047498/aneroid-bp-apparatus.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2021/10/ZD/SZ/FJ/124095643/aneroid-sphygmomanometer-500x500.jpg"
+            "https://hplmedical.ca/wp-content/uploads/2019/12/multi-cuff-cuff-gauge-500x500-1.jpg",
+            "https://hplmedical.ca/wp-content/uploads/2019/12/multi-cuff-cuff-gauge-500x500-1.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/421684229/VN/SW/ON/52455881/bp-cuff-for-manual-bp-apparatus-500x500.png|https://img3.exportersindia.com/product_images/bc-full/2018/9/842637/bp-cuff-for-manual-bp-apparatus-1537765318-4330086.jpeg"
         ]
     },
     {
@@ -4377,11 +5510,16 @@ var products = [
         "gst": 5,
         "discount": "40% OFF",
         "rating": "4.2",
-        "ratingCount": 53,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": ""
+        "desc": "Cuff Bp Apparatus – Standard Model<br>This standard cuff bp apparatus offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Cuff Bp Apparatus – Standard Model<br>A reliable and durable cuff bp apparatus designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://hplmedical.ca/wp-content/uploads/2019/12/multi-cuff-cuff-gauge-500x500-1.jpg",
+        "images": [
+            "https://hplmedical.ca/wp-content/uploads/2019/12/multi-cuff-cuff-gauge-500x500-1.jpg",
+            "https://hplmedical.ca/wp-content/uploads/2019/12/multi-cuff-cuff-gauge-500x500-1.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/421684229/VN/SW/ON/52455881/bp-cuff-for-manual-bp-apparatus-500x500.png|https://img3.exportersindia.com/product_images/bc-full/2018/9/842637/bp-cuff-for-manual-bp-apparatus-1537765318-4330086.jpeg"
+        ]
     },
     {
         "id": 273,
@@ -4392,11 +5530,16 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.9",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": ""
+        "desc": "Cuff Bp Apparatus – Premium Model<br>This premium quality cuff bp apparatus provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Cuff Bp Apparatus – Premium Model<br>A high-performance cuff bp apparatus designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://hplmedical.ca/wp-content/uploads/2019/12/multi-cuff-cuff-gauge-500x500-1.jpg",
+        "images": [
+            "https://hplmedical.ca/wp-content/uploads/2019/12/multi-cuff-cuff-gauge-500x500-1.jpg",
+            "https://hplmedical.ca/wp-content/uploads/2019/12/multi-cuff-cuff-gauge-500x500-1.jpg|https://5.imimg.com/data5/SELLER/Default/2024/5/421684229/VN/SW/ON/52455881/bp-cuff-for-manual-bp-apparatus-500x500.png|https://img3.exportersindia.com/product_images/bc-full/2018/9/842637/bp-cuff-for-manual-bp-apparatus-1537765318-4330086.jpeg"
+        ]
     },
     {
         "id": 274,
@@ -4407,13 +5550,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.4",
-        "ratingCount": 81,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": "https://images-eu.ssl-images-amazon.com/images/I/51swDPamvJL._AC_UL210_SR210,210_.jpg",
+        "desc": "Digital Bp Apparatus – Budget Model<br>This affordable digital bp apparatus is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Digital Bp Apparatus – Basic Model <br>An affordable digital bp apparatus designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg",
         "images": [
-            "https://images-eu.ssl-images-amazon.com/images/I/51swDPamvJL._AC_UL210_SR210,210_.jpg"
+            "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg",
+            "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg|https://www.pioneersurgicalco.com/wp-content/uploads/2023/05/digital-bp.jpg|https://aonemedical.ae/wp-content/uploads/2023/10/5-DIGITAL-BP-WITH-STAND-.jpg"
         ]
     },
     {
@@ -4425,11 +5570,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.1",
-        "ratingCount": 86,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": ""
+        "desc": "Digital Bp Apparatus – Standard Model<br>This standard digital bp apparatus offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Digital Bp Apparatus – Standard Model<br>A reliable and durable digital bp apparatus designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg",
+        "images": [
+            "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg",
+            "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg|https://www.pioneersurgicalco.com/wp-content/uploads/2023/05/digital-bp.jpg|https://aonemedical.ae/wp-content/uploads/2023/10/5-DIGITAL-BP-WITH-STAND-.jpg"
+        ]
     },
     {
         "id": 276,
@@ -4440,11 +5590,16 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.2",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Diamond (Mercurial/LED) and PHS manual or digital monitors.",
-        "usage": "Measures blood pressure manually using mercury/dial or automatically.",
-        "image": ""
+        "desc": "Digital Bp Apparatus – Premium Model<br>This premium quality digital bp apparatus provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Digital Bp Apparatus – Premium Model<br>A high-performance digital bp apparatus designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg",
+        "images": [
+            "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg",
+            "https://jbmedicaltrading.com/wp-content/uploads/2023/08/Digital-Arm-Bp-Apparatus.jpg|https://www.pioneersurgicalco.com/wp-content/uploads/2023/05/digital-bp.jpg|https://aonemedical.ae/wp-content/uploads/2023/10/5-DIGITAL-BP-WITH-STAND-.jpg"
+        ]
     },
     {
         "id": 277,
@@ -4455,13 +5610,15 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "3.9",
-        "ratingCount": 35,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "",
-        "usage": "",
-        "image": "https://rukminim2.flixcart.com/image/300/300/krdtlzk0/bp-monitor-bulb/2/h/d/bp-bulb-with-valve-original-deluxe-quality-agarwals-original-imag56ddwpjnyaun.jpeg",
+        "desc": "Bp Bulbs – Budget Model<br>This affordable bp bulbs is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Bp Bulbs – Basic Model <br>An affordable bp bulbs designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg",
         "images": [
-            "https://rukminim2.flixcart.com/image/300/300/krdtlzk0/bp-monitor-bulb/2/h/d/bp-bulb-with-valve-original-deluxe-quality-agarwals-original-imag56ddwpjnyaun.jpeg"
+            "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg",
+            "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg|https://5.imimg.com/data5/SELLER/Default/2020/10/PI/UU/QM/56186/blood-pressure-bp-bulb-500x500.jpg|https://www.biomedhealthtech.com/img/BP.png"
         ]
     },
     {
@@ -4475,9 +5632,14 @@ var products = [
         "rating": "3.8",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "Bp Bulbs – Standard Model<br>This standard bp bulbs offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Bp Bulbs – Standard Model<br>A reliable and durable bp bulbs designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg",
+        "images": [
+            "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg",
+            "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg|https://5.imimg.com/data5/SELLER/Default/2020/10/PI/UU/QM/56186/blood-pressure-bp-bulb-500x500.jpg|https://www.biomedhealthtech.com/img/BP.png"
+        ]
     },
     {
         "id": 279,
@@ -4490,9 +5652,14 @@ var products = [
         "rating": "3.6",
         "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "Bp Bulbs – Premium Model<br>This premium quality bp bulbs provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Bp Bulbs – Premium Model<br>A high-performance bp bulbs designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg",
+        "images": [
+            "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg",
+            "http://www.tajbd.com/1631-large_default/bp-bulbs.jpg|https://5.imimg.com/data5/SELLER/Default/2020/10/PI/UU/QM/56186/blood-pressure-bp-bulb-500x500.jpg|https://www.biomedhealthtech.com/img/BP.png"
+        ]
     },
     {
         "id": 280,
@@ -4503,13 +5670,15 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "3.9",
-        "ratingCount": 56,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "",
-        "usage": "",
-        "image": "https://m.media-amazon.com/images/I/41tOWM5lnSL._AC_UF350,350_QL80_.jpg",
+        "desc": "Bp Bags – Budget Model<br>This affordable bp bags is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Bp Bags – Basic Model <br>An affordable bp bags designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/41tOWM5lnSL._AC_UF350,350_QL80_.jpg"
+            "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg",
+            "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg|https://www.bluechipmedical.com/images/imgs/bag shot final.jpg|https://flexcraft.com/wp-content/uploads/2024/05/Fluid-Breather-Bags.jpg"
         ]
     },
     {
@@ -4521,11 +5690,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.1",
-        "ratingCount": 54,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "Bp Bags – Standard Model<br>This standard bp bags offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Bp Bags – Standard Model<br>A reliable and durable bp bags designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg",
+        "images": [
+            "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg",
+            "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg|https://www.bluechipmedical.com/images/imgs/bag shot final.jpg|https://flexcraft.com/wp-content/uploads/2024/05/Fluid-Breather-Bags.jpg"
+        ]
     },
     {
         "id": 282,
@@ -4536,11 +5710,16 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.2",
-        "ratingCount": 57,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "",
-        "usage": "",
-        "image": ""
+        "desc": "Bp Bags – Premium Model<br>This premium quality bp bags provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Bp Bags – Premium Model<br>A high-performance bp bags designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg",
+        "images": [
+            "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg",
+            "https://bpmedical.be/en/wp-content/uploads/sites/2/2023/04/medical-scales-1.jpg|https://www.bluechipmedical.com/images/imgs/bag shot final.jpg|https://flexcraft.com/wp-content/uploads/2024/05/Fluid-Breather-Bags.jpg"
+        ]
     },
     {
         "id": 283,
@@ -4551,13 +5730,15 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.5",
-        "ratingCount": 59,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": "https://m.media-amazon.com/images/I/51sYPdmhECL.jpg",
+        "desc": "Oxygen Flow Meters Type-1 – Budget Model<br>This affordable oxygen flow meters type-1 is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Oxygen Flow Meters Type-1 – Basic Model <br>An affordable oxygen flow meters type-1 designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/10/WA/RH/UM/16155680/oxygen-flow-meter-type1.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/51sYPdmhECL.jpg"
+            "https://www.medicalgasinstallers.com/wp-content/uploads/2021/02/700x700-Flowmeter-1.jpg",
+            "https://www.medicalgasinstallers.com/wp-content/uploads/2021/02/700x700-Flowmeter-1.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X|https://www.successmedical.com.hk/wp-content/uploads/2024/03/FM-15IO-BMXX-S-1.png"
         ]
     },
     {
@@ -4571,9 +5752,14 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": ""
+        "desc": "Oxygen Flow Meters Type-1 – Standard Model<br>This standard oxygen flow meters type-1 offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Oxygen Flow Meters Type-1 – Standard Model<br>A reliable and durable oxygen flow meters type-1 designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.medicalgasinstallers.com/wp-content/uploads/2021/02/700x700-Flowmeter-1.jpg",
+        "images": [
+            "https://www.medicalgasinstallers.com/wp-content/uploads/2021/02/700x700-Flowmeter-1.jpg",
+            "https://www.medicalgasinstallers.com/wp-content/uploads/2021/02/700x700-Flowmeter-1.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X|https://www.successmedical.com.hk/wp-content/uploads/2024/03/FM-15IO-BMXX-S-1.png"
+        ]
     },
     {
         "id": 285,
@@ -4584,11 +5770,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.2",
-        "ratingCount": 58,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": ""
+        "desc": "Oxygen Flow Meters Type-1 – Premium Model<br>This premium quality oxygen flow meters type-1 provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Oxygen Flow Meters Type-1 – Premium Model<br>A high-performance oxygen flow meters type-1 designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.medicalgasinstallers.com/wp-content/uploads/2021/02/700x700-Flowmeter-1.jpg",
+        "images": [
+            "https://www.medicalgasinstallers.com/wp-content/uploads/2021/02/700x700-Flowmeter-1.jpg",
+            "https://www.medicalgasinstallers.com/wp-content/uploads/2021/02/700x700-Flowmeter-1.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X|https://www.successmedical.com.hk/wp-content/uploads/2024/03/FM-15IO-BMXX-S-1.png"
+        ]
     },
     {
         "id": 286,
@@ -4601,11 +5792,13 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2024/4/412926603/OO/HM/QT/189175314/green-type-regulator-with-bottle.jpeg",
+        "desc": "Oxygen Flow Meters Type-2 – Budget Model<br>This affordable oxygen flow meters type-2 is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Oxygen Flow Meters Type-2 – Basic Model <br>An affordable oxygen flow meters type-2 designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/10/WA/RH/UM/16155680/oxygen-flow-meter-type1.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2024/4/412926603/OO/HM/QT/189175314/green-type-regulator-with-bottle.jpeg"
+            "https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF252217/D1200012663486944_040220240937.jpg",
+            "https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF252217/D1200012663486944_040220240937.jpg|https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF01864/D1200012663336801_040220240935.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X"
         ]
     },
     {
@@ -4617,11 +5810,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.2",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": ""
+        "desc": "Oxygen Flow Meters Type-2 – Standard Model<br>This standard oxygen flow meters type-2 offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Oxygen Flow Meters Type-2 – Standard Model<br>A reliable and durable oxygen flow meters type-2 designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF252217/D1200012663486944_040220240937.jpg",
+        "images": [
+            "https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF252217/D1200012663486944_040220240937.jpg",
+            "https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF252217/D1200012663486944_040220240937.jpg|https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF01864/D1200012663336801_040220240935.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X"
+        ]
     },
     {
         "id": 288,
@@ -4632,11 +5830,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.3",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": ""
+        "desc": "Oxygen Flow Meters Type-2 – Premium Model<br>This premium quality oxygen flow meters type-2 provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Oxygen Flow Meters Type-2 – Premium Model<br>A high-performance oxygen flow meters type-2 designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF252217/D1200012663486944_040220240937.jpg",
+        "images": [
+            "https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF252217/D1200012663486944_040220240937.jpg",
+            "https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF252217/D1200012663486944_040220240937.jpg|https://www.medline.com/media/catalog/CA05/CA05_07/CA05_07_11/CA05_07_11_02/PF01864/D1200012663336801_040220240935.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X"
+        ]
     },
     {
         "id": 289,
@@ -4647,13 +5850,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.6",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": "https://www.indosurgicals.com/images/products/40029-flowmeter-humidifier-bottle.jpg",
+        "desc": "Oxygen Flow Meters Type-3 – Budget Model<br>This affordable oxygen flow meters type-3 is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Oxygen Flow Meters Type-3 – Basic Model <br>An affordable oxygen flow meters type-3 designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg",
         "images": [
-            "https://www.indosurgicals.com/images/products/40029-flowmeter-humidifier-bottle.jpg"
+            "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg",
+            "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X|https://www.successmedical.com.hk/wp-content/uploads/2024/03/FM-15IO-BMXX-S-1.png"
         ]
     },
     {
@@ -4665,11 +5870,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.2",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": ""
+        "desc": "Oxygen Flow Meters Type-3 – Standard Model<br>This standard oxygen flow meters type-3 offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Oxygen Flow Meters Type-3 – Standard Model<br>A reliable and durable oxygen flow meters type-3 designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg",
+        "images": [
+            "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg",
+            "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X|https://www.successmedical.com.hk/wp-content/uploads/2024/03/FM-15IO-BMXX-S-1.png"
+        ]
     },
     {
         "id": 291,
@@ -4682,9 +5892,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": ""
+        "desc": "Oxygen Flow Meters Type-3 – Premium Model<br>This premium quality oxygen flow meters type-3 provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Oxygen Flow Meters Type-3 – Premium Model<br>A high-performance oxygen flow meters type-3 designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg",
+        "images": [
+            "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg",
+            "https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X|https://www.successmedical.com.hk/wp-content/uploads/2024/03/FM-15IO-BMXX-S-1.png"
+        ]
     },
     {
         "id": 292,
@@ -4695,13 +5910,15 @@ var products = [
         "gst": 5,
         "discount": "34% OFF",
         "rating": "4.3",
-        "ratingCount": 29,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": "https://cdn.tri-anim.com/ths/products/group004352_original_515Wx515H_8941830995998",
+        "desc": "Oxygen Flow Meters Type-4 – Budget Model<br>This affordable oxygen flow meters type-4 is designed for emergency and immediate basic care. Essential for rapid medical response.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Oxygen Flow Meters Type-4 – Basic Model <br>An affordable oxygen flow meters type-4 designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png",
         "images": [
-            "https://cdn.tri-anim.com/ths/products/group004352_original_515Wx515H_8941830995998"
+            "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png",
+            "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png|https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X"
         ]
     },
     {
@@ -4713,11 +5930,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.6",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": ""
+        "desc": "Oxygen Flow Meters Type-4 – Standard Model<br>This standard oxygen flow meters type-4 offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Oxygen Flow Meters Type-4 – Standard Model<br>A reliable and durable oxygen flow meters type-4 designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png",
+        "images": [
+            "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png",
+            "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png|https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X"
+        ]
     },
     {
         "id": 294,
@@ -4728,11 +5950,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.1",
-        "ratingCount": 86,
+        "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Precision valves for oxygen delivery.",
-        "usage": "Regulates the exact flow rate (Liters per Minute) of oxygen to a patient.",
-        "image": ""
+        "desc": "Oxygen Flow Meters Type-4 – Premium Model<br>This premium quality oxygen flow meters type-4 provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Oxygen Flow Meters Type-4 – Premium Model<br>A high-performance oxygen flow meters type-4 designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png",
+        "images": [
+            "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png",
+            "https://www.airtechmedical.com/wp-content/uploads/2024/06/flowmeter-5.png|https://www.chinamedicalwholesale.com/attached/proimage/china-medical202332748.jpg|https://www.concoa.com/sites/default/files/styles/product_page_photo/public/2023-09/Medical Oxygen Flowmeter.png.webp?itok=paPhfm2X"
+        ]
     },
     {
         "id": 295,
@@ -4743,13 +5970,15 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.8",
-        "ratingCount": 48,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": "https://shop.bionetus.com/cdn/shop/products/C-Fusor-1000mlMX4810_1024x1024.jpg?v=1674172699",
+        "desc": "Reusable Transparent Infusion Pressure Bags Reusable – Budget Model<br>This affordable reusable transparent infusion pressure bags reusable is designed for assisting with patient movement, providing necessary support and stability.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Reusable Transparent Infusion Pressure Bags Reusable – Basic Model <br>An affordable reusable transparent infusion pressure bags reusable designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412",
         "images": [
-            "https://shop.bionetus.com/cdn/shop/products/C-Fusor-1000mlMX4810_1024x1024.jpg?v=1674172699"
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412",
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412|https://www.mcreatmedical.com/photo/pl171988136-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg|https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg"
         ]
     },
     {
@@ -4761,11 +5990,16 @@ var products = [
         "gst": 5,
         "discount": "36% OFF",
         "rating": "4.9",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": ""
+        "desc": "Reusable Transparent Infusion Pressure Bags Reusable – Standard Model<br>This standard reusable transparent infusion pressure bags reusable offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Reusable Transparent Infusion Pressure Bags Reusable – Standard Model<br>A reliable and durable reusable transparent infusion pressure bags reusable designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412",
+        "images": [
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412",
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412|https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg|https://cdn.shopify.com/s/files/1/0268/8178/6029/products/PI-500new.jpg?v=1620637338"
+        ]
     },
     {
         "id": 297,
@@ -4776,11 +6010,16 @@ var products = [
         "gst": 5,
         "discount": "15% OFF",
         "rating": "4.7",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": ""
+        "desc": "Reusable Transparent Infusion Pressure Bags Reusable  Medex – Premium Model<br>This premium quality reusable transparent infusion pressure bags reusable  medex provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Reusable Transparent Infusion Pressure Bags Reusable  Medex – Premium Model<br>A high-performance reusable transparent infusion pressure bags reusable  medex designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg",
+        "images": [
+            "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg",
+            "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg|https://www.mcreatmedical.com/photo/ps171052480-medical_equipment_pressure_infusor_bag_500ml_1000ml_reusable_pressure_infusion_bag.jpg|https://www.sinymedical.com/wp-content/uploads/2023/09/Medical-Infusion-Bags.jpg"
+        ]
     },
     {
         "id": 298,
@@ -4793,11 +6032,13 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": "https://m.media-amazon.com/images/I/51enieAwFnL.jpg",
+        "desc": "Reusable Infusion Pressure Bags – Budget Model<br>This affordable reusable infusion pressure bags is designed for assisting with patient movement, providing necessary support and stability.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Reusable Infusion Pressure Bags – Basic Model <br>An affordable reusable infusion pressure bags designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/51enieAwFnL.jpg"
+            "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg",
+            "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg|https://www.mcreatmedical.com/photo/pl171052480-medical_equipment_pressure_infusor_bag_500ml_1000ml_reusable_pressure_infusion_bag.jpg|https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412"
         ]
     },
     {
@@ -4809,11 +6050,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.3",
-        "ratingCount": 36,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": ""
+        "desc": "Reusable Infusion Pressure Bags – Standard Model<br>This standard reusable infusion pressure bags offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Reusable Infusion Pressure Bags – Standard Model<br>A reliable and durable reusable infusion pressure bags designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg",
+        "images": [
+            "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg",
+            "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg|https://www.mcreatmedical.com/photo/pl171052480-medical_equipment_pressure_infusor_bag_500ml_1000ml_reusable_pressure_infusion_bag.jpg|https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412"
+        ]
     },
     {
         "id": 300,
@@ -4826,9 +6072,14 @@ var products = [
         "rating": "4.5",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": ""
+        "desc": "Reusable Infusion Pressure Bags – Premium Model<br>This premium quality reusable infusion pressure bags provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Reusable Infusion Pressure Bags – Premium Model<br>A high-performance reusable infusion pressure bags designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg",
+        "images": [
+            "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg",
+            "https://www.mcreatmedical.com/photo/ps171988138-reusable_pressure_infusion_bag_medical_equipment_iv_pressure_bag.jpg|https://www.mcreatmedical.com/photo/pl171052480-medical_equipment_pressure_infusor_bag_500ml_1000ml_reusable_pressure_infusion_bag.jpg|https://cdn.shopify.com/s/files/1/0240/8382/4692/products/19865_xl_large.jpg?v=1586239412"
+        ]
     },
     {
         "id": 301,
@@ -4841,11 +6092,13 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": "https://m.media-amazon.com/images/I/51SGuZMXXiL._AC_UF350,350_QL80_.jpg",
+        "desc": "Disposable Infusion Pressure Bags – Budget Model<br>This affordable disposable infusion pressure bags is designed for assisting with patient movement, providing necessary support and stability.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Infusion Pressure Bags – Basic Model <br>An affordable disposable infusion pressure bags designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407",
         "images": [
-            "https://m.media-amazon.com/images/I/51SGuZMXXiL._AC_UF350,350_QL80_.jpg"
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407",
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407|https://www.macmedcable.com/cdn/shop/files/PressureInfusionBags.jpg?v=1696576356|https://www.macmedcable.com/cdn/shop/files/PressureInfusionBags3.jpg?v=1696576356&amp;width=1946"
         ]
     },
     {
@@ -4857,11 +6110,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.7",
-        "ratingCount": 25,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": ""
+        "desc": "Disposable Infusion Pressure Bags – Standard Model<br>This standard disposable infusion pressure bags offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Infusion Pressure Bags – Standard Model<br>A reliable and durable disposable infusion pressure bags designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407",
+        "images": [
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407",
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407|https://www.macmedcable.com/cdn/shop/files/PressureInfusionBags.jpg?v=1696576356|https://www.macmedcable.com/cdn/shop/files/PressureInfusionBags3.jpg?v=1696576356&amp;width=1946"
+        ]
     },
     {
         "id": 303,
@@ -4874,9 +6132,14 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Inflatable sleeves for IV bags (1000 ml).",
-        "usage": "Squeezes the IV bag to force fluids into the patient rapidly during emergencies.",
-        "image": ""
+        "desc": "Disposable Infusion Pressure Bags – Premium Model<br>This premium quality disposable infusion pressure bags provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Infusion Pressure Bags – Premium Model<br>A high-performance disposable infusion pressure bags designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407",
+        "images": [
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407",
+            "https://cdn.shopify.com/s/files/1/0240/8382/4692/products/10401_xl_1024x1024.jpg?v=1586239407|https://www.macmedcable.com/cdn/shop/files/PressureInfusionBags.jpg?v=1696576356|https://www.macmedcable.com/cdn/shop/files/PressureInfusionBags3.jpg?v=1696576356&amp;width=1946"
+        ]
     },
     {
         "id": 304,
@@ -4887,13 +6150,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.2",
-        "ratingCount": 65,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": "https://www.seremed.com/wp-content/uploads/2020/11/Cicoboy.jpg",
+        "desc": "Nebulizer – Budget Model<br>This affordable nebulizer is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Nebulizer – Basic Model <br>An affordable nebulizer designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg",
         "images": [
-            "https://www.seremed.com/wp-content/uploads/2020/11/Cicoboy.jpg"
+            "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg",
+            "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg|https://www.everymedical.com.ng/wp-content/uploads/2017/06/nebulizer.jpg|http://rudrabrothers.in/cdn/shop/articles/Nebulizer_Medical_Equipment_in_India.jpg?v=1722845158"
         ]
     },
     {
@@ -4905,11 +6170,16 @@ var products = [
         "gst": 5,
         "discount": "12% OFF",
         "rating": "4.6",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": ""
+        "desc": "Nebulizer – Standard Model<br>This standard nebulizer offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Nebulizer – Standard Model<br>A reliable and durable nebulizer designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg",
+        "images": [
+            "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg",
+            "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg|https://www.everymedical.com.ng/wp-content/uploads/2017/06/nebulizer.jpg|http://rudrabrothers.in/cdn/shop/articles/Nebulizer_Medical_Equipment_in_India.jpg?v=1722845158"
+        ]
     },
     {
         "id": 306,
@@ -4920,11 +6190,16 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.3",
-        "ratingCount": 74,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": ""
+        "desc": "Nebulizer – Premium Model<br>This premium quality nebulizer provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Nebulizer – Premium Model<br>A high-performance nebulizer designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg",
+        "images": [
+            "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg",
+            "https://thumbs.dreamstime.com/z/medical-device-nebulizer-equipment-compressor-171370973.jpg|https://www.everymedical.com.ng/wp-content/uploads/2017/06/nebulizer.jpg|http://rudrabrothers.in/cdn/shop/articles/Nebulizer_Medical_Equipment_in_India.jpg?v=1722845158"
+        ]
     },
     {
         "id": 307,
@@ -4935,13 +6210,15 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.5",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": "https://omronhealthcare.com/images/fit=crop-50-50,fm=jpg,h=1600,w=1600/products/sc150_hero_800x800.png?signature=d0a3d1b7af391f4bc2fb0b8147714019d6eb6d7a7102136e65433d37e7574cb7",
+        "desc": "Weight Scale – Budget Model<br>This affordable weight scale is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Weight Scale – Basic Model <br>An affordable weight scale designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg",
         "images": [
-            "https://omronhealthcare.com/images/fit=crop-50-50,fm=jpg,h=1600,w=1600/products/sc150_hero_800x800.png?signature=d0a3d1b7af391f4bc2fb0b8147714019d6eb6d7a7102136e65433d37e7574cb7"
+            "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg",
+            "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg|https://img.freepik.com/premium-psd/weight-scale-medical-healthcare-hospital-instrument_66255-429.jpg|https://image.made-in-china.com/2f0j00SqnbWkBDemoJ/Medical-Hospital-Equipment-Body-Weight-Scale-160kg.jpg"
         ]
     },
     {
@@ -4953,11 +6230,16 @@ var products = [
         "gst": 5,
         "discount": "28% OFF",
         "rating": "4.4",
-        "ratingCount": 96,
+        "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": ""
+        "desc": "Weight Scale – Standard Model<br>This standard weight scale offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Weight Scale – Standard Model<br>A reliable and durable weight scale designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg",
+        "images": [
+            "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg",
+            "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg|https://img.freepik.com/premium-psd/weight-scale-medical-healthcare-hospital-instrument_66255-429.jpg|https://image.made-in-china.com/2f0j00SqnbWkBDemoJ/Medical-Hospital-Equipment-Body-Weight-Scale-160kg.jpg"
+        ]
     },
     {
         "id": 309,
@@ -4968,11 +6250,16 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "4.4",
-        "ratingCount": 45,
+        "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": ""
+        "desc": "Weight Scale – Premium Model<br>This premium quality weight scale provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Weight Scale – Premium Model<br>A high-performance weight scale designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg",
+        "images": [
+            "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg",
+            "https://smsindus.com/wp-content/uploads/2023/12/Electronic-Digital-Weight-Scale-with-Height-Meter-600x600.jpg|https://img.freepik.com/premium-psd/weight-scale-medical-healthcare-hospital-instrument_66255-429.jpg|https://image.made-in-china.com/2f0j00SqnbWkBDemoJ/Medical-Hospital-Equipment-Body-Weight-Scale-160kg.jpg"
+        ]
     },
     {
         "id": 310,
@@ -4985,11 +6272,13 @@ var products = [
         "rating": "3.3",
         "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": "https://m.media-amazon.com/images/I/51RfizRx-qL._SX522_.jpg",
+        "desc": "Child Scale – Budget Model<br>This affordable child scale is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Child Scale – Basic Model <br>An affordable child scale designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "http://www.rochesterscale.com/images/Baby - Pediatric.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/51RfizRx-qL._SX522_.jpg"
+            "http://www.rochesterscale.com/images/Baby - Pediatric.jpg",
+            "http://www.rochesterscale.com/images/Baby - Pediatric.jpg|https://medicalequipmentnig.com/wp-content/uploads/2022/09/Electronic-Pediatric-Scale-medicalequipmentnig.jpg_2_500x500.jpg|https://www.cityweighingscales.com/img/industrial-scale/baby-scale.jpg"
         ]
     },
     {
@@ -5003,9 +6292,14 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": ""
+        "desc": "Child Scale – Standard Model<br>This standard child scale offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Child Scale – Standard Model<br>A reliable and durable child scale designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "http://www.rochesterscale.com/images/Baby - Pediatric.jpg",
+        "images": [
+            "http://www.rochesterscale.com/images/Baby - Pediatric.jpg",
+            "http://www.rochesterscale.com/images/Baby - Pediatric.jpg|https://medicalequipmentnig.com/wp-content/uploads/2022/09/Electronic-Pediatric-Scale-medicalequipmentnig.jpg_2_500x500.jpg|https://www.cityweighingscales.com/img/industrial-scale/baby-scale.jpg"
+        ]
     },
     {
         "id": 312,
@@ -5016,11 +6310,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "4.2",
-        "ratingCount": 62,
+        "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "Weight scales and medication misting machines.",
-        "usage": "Nebulizer: Turns liquid medicine into a mist for inhalation.",
-        "image": ""
+        "desc": "Child Scale – Premium Model<br>This premium quality child scale provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Child Scale – Premium Model<br>A high-performance child scale designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "http://www.rochesterscale.com/images/Baby - Pediatric.jpg",
+        "images": [
+            "http://www.rochesterscale.com/images/Baby - Pediatric.jpg",
+            "http://www.rochesterscale.com/images/Baby - Pediatric.jpg|https://medicalequipmentnig.com/wp-content/uploads/2022/09/Electronic-Pediatric-Scale-medicalequipmentnig.jpg_2_500x500.jpg|https://www.cityweighingscales.com/img/industrial-scale/baby-scale.jpg"
+        ]
     },
     {
         "id": 313,
@@ -5033,11 +6332,13 @@ var products = [
         "rating": "4.9",
         "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Disposable and reusable diathermy pens",
-        "usage": "The pen used by a surgeon to apply electrical current for cutting.",
-        "image": "https://m.media-amazon.com/images/I/312HbI7SskL.jpg",
+        "desc": "Disposable Pencils – Budget Model<br>This affordable disposable pencils is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Pencils – Basic Model <br>An affordable disposable pencils designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/312HbI7SskL.jpg"
+            "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg",
+            "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg|https://www.knmedi.com/knmedi/2021/05/10/kn(30).jpg?imageView2/2/format/jp2|https://3.imimg.com/data3/MC/NE/MY-768023/disposable-pencils-500x500.jpg"
         ]
     },
     {
@@ -5049,11 +6350,16 @@ var products = [
         "gst": 5,
         "discount": "31% OFF",
         "rating": "4.4",
-        "ratingCount": 52,
+        "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Disposable and reusable diathermy pens",
-        "usage": "The pen used by a surgeon to apply electrical current for cutting.",
-        "image": ""
+        "desc": "Disposable Pencils – Standard Model<br>This standard disposable pencils offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Pencils – Standard Model<br>A reliable and durable disposable pencils designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg",
+        "images": [
+            "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg",
+            "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg|https://www.knmedi.com/knmedi/2021/05/10/kn(30).jpg?imageView2/2/format/jp2|https://3.imimg.com/data3/MC/NE/MY-768023/disposable-pencils-500x500.jpg"
+        ]
     },
     {
         "id": 315,
@@ -5066,9 +6372,14 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Disposable and reusable diathermy pens",
-        "usage": "The pen used by a surgeon to apply electrical current for cutting.",
-        "image": ""
+        "desc": "Disposable Pencils – Premium Model<br>This premium quality disposable pencils provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Disposable Pencils – Premium Model<br>A high-performance disposable pencils designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg",
+        "images": [
+            "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg",
+            "https://www.shutterstock.com/image-photo/disposable-medical-devices-600nw-1241641930.jpg|https://www.knmedi.com/knmedi/2021/05/10/kn(30).jpg?imageView2/2/format/jp2|https://3.imimg.com/data3/MC/NE/MY-768023/disposable-pencils-500x500.jpg"
+        ]
     },
     {
         "id": 316,
@@ -5081,11 +6392,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Disposable and reusable diathermy pens",
-        "usage": "The pen  used by a surgeon to apply electrical current for cutting.",
-        "image": "https://3.imimg.com/data3/KV/AO/GLADMIN-114028/cautery-pencil-250x250.jpg",
+        "desc": "Reusable Pencils – Budget Model<br>This affordable reusable pencils is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Reusable Pencils – Basic Model <br>An affordable reusable pencils designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2021/2/YM/PY/MF/6093527/surgical-diathermy-pencil.jpg",
         "images": [
-            "https://3.imimg.com/data3/KV/AO/GLADMIN-114028/cautery-pencil-250x250.jpg"
+            "https://www.mymobilitys.com/wp-content/uploads/2023/08/No.44TrailWalker_1200x1200.jpg",
+            "https://www.mymobilitys.com/wp-content/uploads/2023/08/No.44TrailWalker_1200x1200.jpg|https://enbs5t87qvj.exactdn.com/wp-content/uploads/2024/08/highpowervalidation-321655-reusable-medical-devices-image1.jpg?strip=all&amp;lossy=1&amp;ssl=1|https://judd-medical.co.uk/wp-content/uploads/2022/06/Disposable-Diathermy-Pencil.png"
         ]
     },
     {
@@ -5097,11 +6410,16 @@ var products = [
         "gst": 5,
         "discount": "5% OFF",
         "rating": "3.9",
-        "ratingCount": 48,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Disposable and reusable diathermy pens",
-        "usage": "The pen  used by a surgeon to apply electrical current for cutting.",
-        "image": ""
+        "desc": "Reusable Pencils – Standard Model<br>This standard reusable pencils offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Reusable Pencils – Standard Model<br>A reliable and durable reusable pencils designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://www.mymobilitys.com/wp-content/uploads/2023/08/No.44TrailWalker_1200x1200.jpg",
+        "images": [
+            "https://www.mymobilitys.com/wp-content/uploads/2023/08/No.44TrailWalker_1200x1200.jpg",
+            "https://www.mymobilitys.com/wp-content/uploads/2023/08/No.44TrailWalker_1200x1200.jpg|https://enbs5t87qvj.exactdn.com/wp-content/uploads/2024/08/highpowervalidation-321655-reusable-medical-devices-image1.jpg?strip=all&amp;lossy=1&amp;ssl=1|https://judd-medical.co.uk/wp-content/uploads/2022/06/Disposable-Diathermy-Pencil.png"
+        ]
     },
     {
         "id": 318,
@@ -5112,11 +6430,16 @@ var products = [
         "gst": 5,
         "discount": "20% OFF",
         "rating": "3.8",
-        "ratingCount": 75,
+        "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "Disposable and reusable diathermy pens",
-        "usage": "The pen  used by a surgeon to apply electrical current for cutting.",
-        "image": ""
+        "desc": "Reusable Pencils – Premium Model<br>This premium quality reusable pencils provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Reusable Pencils – Premium Model<br>A high-performance reusable pencils designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://www.mymobilitys.com/wp-content/uploads/2023/08/No.44TrailWalker_1200x1200.jpg",
+        "images": [
+            "https://www.mymobilitys.com/wp-content/uploads/2023/08/No.44TrailWalker_1200x1200.jpg",
+            "https://www.mymobilitys.com/wp-content/uploads/2023/08/No.44TrailWalker_1200x1200.jpg|https://enbs5t87qvj.exactdn.com/wp-content/uploads/2024/08/highpowervalidation-321655-reusable-medical-devices-image1.jpg?strip=all&amp;lossy=1&amp;ssl=1|https://judd-medical.co.uk/wp-content/uploads/2022/06/Disposable-Diathermy-Pencil.png"
+        ]
     },
     {
         "id": 319,
@@ -5127,13 +6450,15 @@ var products = [
         "gst": 5,
         "discount": "30% OFF",
         "rating": "3.6",
-        "ratingCount": 86,
+        "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Acoustic listening device.",
-        "usage": "Used by doctors to listen to heart, lung, and bowel sounds.",
-        "image": "https://m.media-amazon.com/images/I/41i+zWBppZL._QL92_SH45_SS200_.jpg",
+        "desc": "Stethoscope – Budget Model<br>This affordable stethoscope is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Stethoscope – Basic Model <br>An affordable stethoscope designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "NO WARRANTY",
+        "image": "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg",
         "images": [
-            "https://m.media-amazon.com/images/I/41i+zWBppZL._QL92_SH45_SS200_.jpg"
+            "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg",
+            "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg|https://img.freepik.com/premium-photo/stethoscope-sits-medical-device_1053-1879.jpg|https://image.made-in-china.com/2f0j00kjFVSNvsMgut/Digital-Medical-Stethoscope-Portable-Single-Side-Stethoscope-Doctor-Medical-Equipment-Nurse-Stethoscope-Medical-Device.jpg"
         ]
     },
     {
@@ -5147,9 +6472,14 @@ var products = [
         "rating": "3.9",
         "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Acoustic listening device.",
-        "usage": "Used by doctors to listen to heart, lung, and bowel sounds.",
-        "image": ""
+        "desc": "Stethoscope – Standard Model<br>This standard stethoscope offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Stethoscope – Standard Model<br>A reliable and durable stethoscope designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "6 M WARRANTY",
+        "image": "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg",
+        "images": [
+            "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg",
+            "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg|https://img.freepik.com/premium-photo/stethoscope-sits-medical-device_1053-1879.jpg|https://image.made-in-china.com/2f0j00kjFVSNvsMgut/Digital-Medical-Stethoscope-Portable-Single-Side-Stethoscope-Doctor-Medical-Equipment-Nurse-Stethoscope-Medical-Device.jpg"
+        ]
     },
     {
         "id": 321,
@@ -5160,11 +6490,16 @@ var products = [
         "gst": 5,
         "discount": "35% OFF",
         "rating": "4.1",
-        "ratingCount": 51,
+        "ratingCount": 50,
         "tag": "Bulk Available",
-        "desc": "Acoustic listening device.",
-        "usage": "Used by doctors to listen to heart, lung, and bowel sounds.",
-        "image": ""
+        "desc": "Stethoscope – Premium Model<br>This premium quality stethoscope provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Stethoscope – Premium Model<br>A high-performance stethoscope designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "1 Y WARRANTY",
+        "image": "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg",
+        "images": [
+            "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg",
+            "https://cdn.creazilla.com/photos/1558505/stethoscope-medical-device-photo-md.jpeg|https://img.freepik.com/premium-photo/stethoscope-sits-medical-device_1053-1879.jpg|https://image.made-in-china.com/2f0j00kjFVSNvsMgut/Digital-Medical-Stethoscope-Portable-Single-Side-Stethoscope-Doctor-Medical-Equipment-Nurse-Stethoscope-Medical-Device.jpg"
+        ]
     },
     {
         "id": 322,
@@ -5175,13 +6510,15 @@ var products = [
         "gst": 5,
         "discount": "25% OFF",
         "rating": "4.2",
-        "ratingCount": 95,
+        "ratingCount": 50,
         "tag": "Professional Grade",
-        "desc": "Patient gowns, Surgeon gowns (SMS), and bed sheets.",
-        "usage": "Surgeon Gown: Sterile barrier used in the OT to prevent infection",
-        "image": "https://m.media-amazon.com/images/I/61Pm-7GzVCL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+        "desc": "Disposable Patient Gown – Budget Model<br>This affordable disposable patient gown is designed for personal protection, ensuring safety against hazardous environments.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Disposable Patient Gown – Basic Model <br>An affordable disposable patient gown designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "",
+        "image": "https://i0.wp.com/inspire-medical.info/wp-content/uploads/2023/03/KDSPG1001.png?fit=1001%2C1001&amp;ssl=1",
         "images": [
-            "https://m.media-amazon.com/images/I/61Pm-7GzVCL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg"
+            "https://i0.wp.com/inspire-medical.info/wp-content/uploads/2023/03/KDSPG1001.png?fit=1001%2C1001&amp;ssl=1",
+            "https://i0.wp.com/inspire-medical.info/wp-content/uploads/2023/03/KDSPG1001.png?fit=1001%2C1001&amp;ssl=1|https://egintmedical.com/wp-content/uploads/2023/12/disposable-patient-gown-2048x1322.png|https://2.wlimg.com/product_images/bc-full/2024/4/8514241/patient-gown-1713955813-7396968.jpg"
         ]
     },
     {
@@ -5193,13 +6530,15 @@ var products = [
         "gst": 5,
         "discount": "22% OFF",
         "rating": "4.5",
-        "ratingCount": 46,
+        "ratingCount": 50,
         "tag": "Hot Deal",
-        "desc": "Patient gowns, Surgeon gowns (SMS), and bed sheets.",
-        "usage": "Surgeon Gown: Sterile barrier used in the OT to prevent infection",
-        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSlDXoeZ9QgjIQh6pw-SuchNEl_vvkvwhz21qUncvprAbuaJXVgH32twVR-I9j5UsrWwsE4JYDcv4Wpkw9xH2F5Wh7CT3OE_g",
+        "desc": "Disposable Surgeon Gown Wrapped Around  With Wipes- Sterile 50 Gsm – Standard Model<br>This standard disposable surgeon gown wrapped around  with wipes- sterile 50 gsm offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Disposable Surgeon Gown Wrapped Around  With Wipes- Sterile 50 Gsm – Standard Model<br>A reliable and durable disposable surgeon gown wrapped around  with wipes- sterile 50 gsm designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/4/HG/JC/JA/12026728/sterile-disposable-surgeon-gowns-1000x1000.jpg",
         "images": [
-            "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSlDXoeZ9QgjIQh6pw-SuchNEl_vvkvwhz21qUncvprAbuaJXVgH32twVR-I9j5UsrWwsE4JYDcv4Wpkw9xH2F5Wh7CT3OE_g"
+            "https://5.imimg.com/data5/SELLER/Default/2022/4/HG/JC/JA/12026728/sterile-disposable-surgeon-gowns-1000x1000.jpg",
+            "https://5.imimg.com/data5/SELLER/Default/2022/4/HG/JC/JA/12026728/sterile-disposable-surgeon-gowns-1000x1000.jpg|https://5.imimg.com/data5/IOS/Default/2023/4/299737339/ML/SG/KU/186121235/product-jpeg-500x500.png|https://5.imimg.com/data5/SELLER/Default/2023/9/344433994/JP/OX/CV/88821292/disposable-surgeon-gown-1000x1000.jpeg"
         ]
     },
     {
@@ -5213,11 +6552,13 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Recommended",
-        "desc": "Patient gowns, Surgeon gowns (SMS), and bed sheets.",
-        "usage": "Surgeon Gown: Sterile barrier used in the OT to prevent infection",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2024/10/458727664/DM/FF/BC/9024997/disposable-bedsheet-pillow-cover.png",
+        "desc": "Bed Sheet With Pillow Cover Sms Nonwoven 85x63 – Premium Model<br>This premium quality bed sheet with pillow cover sms nonwoven 85x63 provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Bed Sheet With Pillow Cover Sms Nonwoven 85x63 – Premium Model<br>A high-performance bed sheet with pillow cover sms nonwoven 85x63 designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/6/FM/HC/NU/37085993/sms-nonwoven-bed-sheet.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2024/10/458727664/DM/FF/BC/9024997/disposable-bedsheet-pillow-cover.png"
+            "https://en.lantianmedical.com/upload/202002/1582717304.jpg",
+            "https://en.lantianmedical.com/upload/202002/1582717304.jpg|https://5.imimg.com/data5/SELLER/Default/2022/3/VD/QP/PV/7116827/disposable-medical-bedsheet-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/8/WG/EE/XM/106265219/surgical-bed-sheet-500x500.jpg"
         ]
     },
     {
@@ -5231,11 +6572,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "Quick Ship",
-        "desc": "All-in-one vital sign displays (Edan).",
-        "usage": "Placed bedside to track heart rate, BP, and oxygen 24/7.",
-        "image": "https://m.media-amazon.com/images/I/71yCZzEcCoL.jpg",
+        "desc": "Patient Monitors – Budget Model<br>This affordable patient monitors is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Patient Monitors – Basic Model <br>An affordable patient monitors designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "",
+        "image": "https://www.medcorp.co.za/wp-content/uploads/2023/10/patient-monitor.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/71yCZzEcCoL.jpg"
+            "https://www.medcorp.co.za/wp-content/uploads/2023/10/patient-monitor.jpg",
+            "https://www.medcorp.co.za/wp-content/uploads/2023/10/patient-monitor.jpg|https://image.made-in-china.com/2f0j00GZrkcobqCakC/Surgical-Intensive-Care-Unit-Medical-Device-Patient-Monitors-9000d.jpg|https://www.flashmedicalsolutions.com/wp-content/uploads/2024/04/Patient-Monitor.jpg"
         ]
     },
     {
@@ -5249,11 +6592,13 @@ var products = [
         "rating": "4.6",
         "ratingCount": 50,
         "tag": "Bestseller",
-        "desc": "Multi-channel diagnostic recorders (Edan, Comen)",
-        "usage": "Captures 12 heart views at once to diagnose heart attacks or issues.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/7/WY/ZT/AX/153996048/se-1200-express-2-1000x1000.jpg",
+        "desc": "Ecg Machines – Standard Model<br>This standard ecg machines offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Ecg Machines – Standard Model<br>A reliable and durable ecg machines designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "",
+        "image": "https://medicalequipmentindia.com/manage/uploads/products/1578548025.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2022/7/WY/ZT/AX/153996048/se-1200-express-2-1000x1000.jpg"
+            "https://medicalequipmentindia.com/manage/uploads/products/1578548025.jpg",
+            "https://medicalequipmentindia.com/manage/uploads/products/1578548025.jpg|https://img.freepik.com/premium-photo/modern-hospital-medical-equipment-ecg-machines_145644-12821.jpg|https://img.freepik.com/premium-photo/modern-hospital-medical-equipment-ecg-machines_145644-12820.jpg"
         ]
     },
     {
@@ -5265,13 +6610,15 @@ var products = [
         "gst": 0,
         "discount": "",
         "rating": "4.2",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Fast Delivery",
-        "desc": "High-precision medication delivery (Smiths, Akas)",
-        "usage": "Automatically pushes a syringe at a set rate (e.g., 2 ml/hr).",
-        "image": "https://www.colmed.in/pub/media/catalog/product/cache/0b053d6a941a972e37b88f9ddcceee64/s/p/sp101.jpg",
+        "desc": "Syringe Pump – Premium Model<br>This premium quality syringe pump provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Syringe Pump – Premium Model<br>A high-performance syringe pump designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "",
+        "image": "https://www.amismedical.com/wp-content/uploads/2018/06/AM-eB08A-1-1310x1310.jpg",
         "images": [
-            "https://www.colmed.in/pub/media/catalog/product/cache/0b053d6a941a972e37b88f9ddcceee64/s/p/sp101.jpg"
+            "https://www.amismedical.com/wp-content/uploads/2018/06/AM-eB08A-1-1310x1310.jpg",
+            "https://www.amismedical.com/wp-content/uploads/2018/06/AM-eB08A-1-1310x1310.jpg|https://www.orientalmotor.com/images/industries/medical_syringe-pump-350px.jpg|https://microsidd.com/cdn/shop/products/0000210_syringepump.png?v=1685330716"
         ]
     },
     {
@@ -5285,11 +6632,13 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Limited Stock",
-        "desc": "High-volume fluid delivery (Smiths, Akas).",
-        "usage": "Regulates the flow of IV fluids or nutrition from a bag.",
-        "image": "https://ik.imagekit.io/z6mqjyyzz/media/public/3cf3bee156544fc98_graseby-1200-smiths-medical_1_.jpg?tr=w-1000,q-75,f-avif",
+        "desc": "Infusion Pump – Budget Model<br>This affordable infusion pump is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Infusion Pump – Basic Model <br>An affordable infusion pump designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "",
+        "image": "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX15566036.jpg",
         "images": [
-            "https://ik.imagekit.io/z6mqjyyzz/media/public/3cf3bee156544fc98_graseby-1200-smiths-medical_1_.jpg?tr=w-1000,q-75,f-avif"
+            "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX15566036.jpg",
+            "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX15566036.jpg|https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX15565835.jpg|https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX15566001.jpg"
         ]
     },
     {
@@ -5301,13 +6650,15 @@ var products = [
         "gst": 0,
         "discount": "",
         "rating": "4.6",
-        "ratingCount": 76,
+        "ratingCount": 50,
         "tag": "Quality Assured",
-        "desc": "Medical vacuum machines (Venky, Yuwell).",
-        "usage": "Used to suck out mucus, blood, or fluids from a patient's airway.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/1/AH/MF/WO/29714077/hospital-suction-apparatus.png",
+        "desc": "Suction Apparatus – Standard Model<br>This standard suction apparatus offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Suction Apparatus – Standard Model<br>A reliable and durable suction apparatus designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "",
+        "image": "https://p.globalsources.com/IMAGES/PDT/B1189213678/Medical-suction-device.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/1/AH/MF/WO/29714077/hospital-suction-apparatus.png"
+            "https://p.globalsources.com/IMAGES/PDT/B1189213678/Medical-suction-device.jpg",
+            "https://p.globalsources.com/IMAGES/PDT/B1189213678/Medical-suction-device.jpg|https://monkon.net/wp-content/uploads/2024/12/7A-23D-Electric-Suction-Apparatus-Machine-1.jpg|http://www.wanrooemed.com/wp-content/uploads/2020/09/YX980D-Electric-Suction-Apparatus-Suction-Machine.jpg"
         ]
     },
     {
@@ -5321,11 +6672,13 @@ var products = [
         "rating": "4.2",
         "ratingCount": 50,
         "tag": "New Arrival",
-        "desc": "Handheld heart rate detector (BPL, Dr Trust).",
-        "usage": "Uses ultrasound to let doctors and parents hear the baby's heartbeat.",
-        "image": "https://m.media-amazon.com/images/I/513GsXOT9+L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID4zMDA8L3NwYW4+,500,900,420,420,0,0_QL100_.jpg",
+        "desc": "Fetal Doppler – Premium Model<br>This premium quality fetal doppler provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Fetal Doppler – Premium Model<br>A high-performance fetal doppler designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "",
+        "image": "https://medessmedical.com/wp-content/uploads/2023/10/FETAL-DOPPLER.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/513GsXOT9+L.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOUR-medium,BottomLeft,30,-20_ZJPHNwYW4gZm9yZWdyb3VuZD0iIzU2NTk1OSIgZm9udD0iQW1hem9uRW1iZXIgNTAiID4zMDA8L3NwYW4+,500,900,420,420,0,0_QL100_.jpg"
+            "https://medessmedical.com/wp-content/uploads/2023/10/FETAL-DOPPLER.jpg",
+            "https://medessmedical.com/wp-content/uploads/2023/10/FETAL-DOPPLER.jpg|https://aonemedical.ae/wp-content/uploads/2023/10/ITEM-4-gynecology-fetal-monitor.jpg|https://iirorwxhnnkmlp5m-static.micyjz.com/cloud/jpBpiKrrlmSRjkqnjnqljo/pocket-fetal-doppler-for-home-use.jpg"
         ]
     },
     {
@@ -5337,13 +6690,15 @@ var products = [
         "gst": 0,
         "discount": "",
         "rating": "4.5",
-        "ratingCount": 85,
+        "ratingCount": 50,
         "tag": "Premium Choice",
-        "desc": "Fetal heart and contraction monitor (Contec, Edan).",
-        "usage": "Monitors the baby’s stress levels during pregnancy or labor.",
-        "image": "https://m.media-amazon.com/images/I/61nZrNddywL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
+        "desc": "Ctg Machine – Budget Model<br>This affordable ctg machine is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Ctg Machine – Basic Model <br>An affordable ctg machine designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/7/LH/GS/BC/5038888/ctg-machine-fetal-monitor.jpg",
         "images": [
-            "https://m.media-amazon.com/images/I/61nZrNddywL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg"
+            "https://asiansurgicalindia.com/wp-content/uploads/2020/09/CTG-Machine-600x600.png",
+            "https://asiansurgicalindia.com/wp-content/uploads/2020/09/CTG-Machine-600x600.png|https://i0.wp.com/bamcmedicalltd.com/wp-content/uploads/2023/08/BAMC-CTG-scaled.jpg?fit=600%2C421&amp;ssl=1|https://5.imimg.com/data5/SELLER/Default/2024/7/432405005/KB/QT/JW/50557771/ctg-machine-500x500.jpeg"
         ]
     },
     {
@@ -5357,11 +6712,13 @@ var products = [
         "rating": "4.3",
         "ratingCount": 50,
         "tag": "Value Pack",
-        "desc": "Automated External Defibrillator (Nihon Kohden)",
-        "usage": "Portable device that talks to the user to guide them through saving a heart attack victim.",
-        "image": "https://in.nihonkohden.com/sites/in/files/2023-08/main_cardiolife-aed-3100_01.webp",
+        "desc": "Aed Machine – Standard Model<br>This standard aed machine offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Aed Machine – Standard Model<br>A reliable and durable aed machine designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "",
+        "image": "https://convmed.com/cdn/shop/files/1000-AED_3.jpg?v=1698636447&amp;width=1500",
         "images": [
-            "https://in.nihonkohden.com/sites/in/files/2023-08/main_cardiolife-aed-3100_01.webp"
+            "https://convmed.com/cdn/shop/files/1000-AED_3.jpg?v=1698636447&amp;width=1500",
+            "https://convmed.com/cdn/shop/files/1000-AED_3.jpg?v=1698636447&amp;width=1500|https://convmed.com/cdn/shop/files/1000-AED_6.jpg?v=1698636443&amp;width=1500|https://www.medicaldesignandoutsourcing.com/wp-content/uploads/2022/07/AED-automated-external-defibrillator-by-James-Rein.jpg"
         ]
     },
     {
@@ -5373,13 +6730,15 @@ var products = [
         "gst": 0,
         "discount": "",
         "rating": "4.6",
-        "ratingCount": 89,
+        "ratingCount": 50,
         "tag": "Premium",
-        "desc": "Professional heart-shocking device (Nihon Kohden).",
-        "usage": "Used by doctors to deliver a calculated shock to stop life-threatening rhythms",
-        "image": "https://bzbddujafhhdrbcrvadc.supabase.co/storage/v1/object/public/s3.neogenesis.dewonderstruck.com/846a051b-f148-4d26-b6d0-ac761c1bdebe.jpg",
+        "desc": "Defibrillator – Premium Model<br>This premium quality defibrillator provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Defibrillator – Premium Model<br>A high-performance defibrillator designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "",
+        "image": "https://www.camshieldgroup-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-1.jpg",
         "images": [
-            "https://bzbddujafhhdrbcrvadc.supabase.co/storage/v1/object/public/s3.neogenesis.dewonderstruck.com/846a051b-f148-4d26-b6d0-ac761c1bdebe.jpg"
+            "https://www.camshieldgroup-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-1.jpg",
+            "https://www.camshieldgroup-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-1.jpg|https://www.camshieldgroup-med.com/wp-content/uploads/2021/11/medical-device-electronic-equipments-defibrillator-3.jpg|https://mir-s3-cdn-cf.behance.net/project_modules/disp/189b5c49328711.58b16ce3dd7d7.png"
         ]
     },
     {
@@ -5393,11 +6752,13 @@ var products = [
         "rating": "4.1",
         "ratingCount": 50,
         "tag": "Hospital Grade",
-        "desc": "In-line heating device (Smiths, BPL).",
-        "usage": "Warms cold IV fluids or blood to body temperature before they enter the patient.",
-        "image": "https://static.wixstatic.com/media/bc389a_356dd9ee3b664caba7d26461a99f70bc~mv2.webp/v1/fill/w_600,h_600,al_c,lg_1,q_80,enc_avif,quality_auto/bc389a_356dd9ee3b664caba7d26461a99f70bc~mv2.webp",
+        "desc": "Fluid/blood Warmer – Budget Model<br>This affordable fluid/blood warmer is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
+        "usage": "Fluid/blood Warmer – Basic Model <br>An affordable fluid/blood warmer designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
+        "warranty": "",
+        "image": "https://image.made-in-china.com/2f0j00ZrsYBbmIfRqc/Medical-Equipment-Fluid-Blood-Warmer-Factory-Price.jpg",
         "images": [
-            "https://static.wixstatic.com/media/bc389a_356dd9ee3b664caba7d26461a99f70bc~mv2.webp/v1/fill/w_600,h_600,al_c,lg_1,q_80,enc_avif,quality_auto/bc389a_356dd9ee3b664caba7d26461a99f70bc~mv2.webp"
+            "https://image.made-in-china.com/2f0j00ZrsYBbmIfRqc/Medical-Equipment-Fluid-Blood-Warmer-Factory-Price.jpg",
+            "https://image.made-in-china.com/2f0j00ZrsYBbmIfRqc/Medical-Equipment-Fluid-Blood-Warmer-Factory-Price.jpg|https://www.comsol.com/paper/image/69491/big.png|https://image.made-in-china.com/2f0j00lJCVNUuEhazy/Hospital-Infusion-Heater-LCD-Display-Medical-Device-Fluid-Blood-Infusion-Warmer.jpg"
         ]
     },
     {
@@ -5411,11 +6772,13 @@ var products = [
         "rating": "4.8",
         "ratingCount": 50,
         "tag": "Trusted Brand",
-        "desc": "Warming cabinet (IOB, ABM).",
-        "usage": "Keeps hospital blankets at a set heat to treat or prevent hypothermia.",
-        "image": "https://ik.imagekit.io/z6mqjyyzz/media/public/150518fb916348f19_image.png?tr=w-1000,q-75,f-avif",
+        "desc": "Blanket Warmer – Standard Model<br>This standard blanket warmer offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
+        "usage": "Blanket Warmer – Standard Model<br>A reliable and durable blanket warmer designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
+        "warranty": "",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/1/MS/KH/OW/79706831/blanket-warmer-cabinet.jpg",
         "images": [
-            "https://ik.imagekit.io/z6mqjyyzz/media/public/150518fb916348f19_image.png?tr=w-1000,q-75,f-avif"
+            "https://img.medicalexpo.com/images_me/photo-m2/70802-19126424.jpg",
+            "https://img.medicalexpo.com/images_me/photo-m2/70802-19126424.jpg|https://attenutech.com/wp-content/uploads/2024/05/BLNWR-001_1.jpg|https://attenutech.com/wp-content/uploads/2024/05/BLNWR-001_2.jpg"
         ]
     },
     {
@@ -5427,13 +6790,15 @@ var products = [
         "gst": 0,
         "discount": "",
         "rating": "4.9",
-        "ratingCount": 79,
+        "ratingCount": 50,
         "tag": "Top Pick",
-        "desc": "Replacement interfaces for medical pumps/monitors.",
-        "usage": "Replaces worn-out buttons on equipment so they remain sterile and functional.",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/9/341634295/XU/EZ/EF/19505317/flexible-membrane-keypad-1000x1000.jpg",
+        "desc": "Key Pads – Premium Model<br>This premium quality key pads provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
+        "usage": "Key Pads – Premium Model<br>A high-performance key pads designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
+        "warranty": "",
+        "image": "https://5.imimg.com/data5/UG/BY/MY-1650889/medical-equipment-membrane-key-pads-1000x1000.jpg",
         "images": [
-            "https://5.imimg.com/data5/SELLER/Default/2023/9/341634295/XU/EZ/EF/19505317/flexible-membrane-keypad-1000x1000.jpg"
+            "https://5.imimg.com/data5/UG/BY/MY-1650889/medical-equipment-membrane-key-pads-1000x1000.jpg",
+            "https://5.imimg.com/data5/UG/BY/MY-1650889/medical-equipment-membrane-key-pads-1000x1000.jpg|https://medicalequipmentindia.com/manage/uploads/products/1578547062.jpg|https://www.emedbss.com/wp-content/uploads/2018/03/Keypad-450x360.jpg"
         ]
     }
 ];

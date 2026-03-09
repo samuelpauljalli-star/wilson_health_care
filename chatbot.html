@@ -390,7 +390,21 @@
         }
 
         function processResponse(text) {
-            const query = text.toLowerCase();
+            const query = text.toLowerCase().trim();
+
+            const blockedTerms = [
+                'thumati', 'wilson babu', 'owner', 'founder', 'director',
+                'admin', 'samuelpauljalli', 'samuel paul', 'samuel',
+                'wilsonhealthcare7', 'gmail', 'email address', 'password',
+                'login details', 'who runs', 'who made', 'who created',
+                'who owns', 'who is behind', 'personal', 'private',
+                'management', 'staff', 'employee'
+            ];
+            if (blockedTerms.some(term => query.includes(term))) {
+                addMessage("I'm only able to help with product queries, orders, and general support. For admin enquiries, please contact us via verified channels. 😊", 'bot');
+                return;
+            }
+
             let response = "I'm sorry, I didn't quite understand that. Would you like to check our catalog or contact support?";
 
             if (query.includes('hello') || query.includes('hi')) {
@@ -398,16 +412,15 @@
             } else if (query.includes('catalog') || query.includes('products')) {
                 response = "We have a wide range of premium medical equipment. Here are some of our top categories: Diagnostics, Surgical, and First Aid.";
                 renderProductSuggestions();
+                return;
             } else if (query.includes('order')) {
                 response = "To track your order, please provide your Order ID (e.g., ORD-1234). Or login to view your history.";
             } else if (query.includes('contact') || query.includes('support')) {
                 response = "You can reach our support team at support@wilsonhealthcare.com or call us at +91 70326 87122.";
             } else {
-                // Try searching for products
                 const found = products.filter(p => p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query)).slice(0, 3);
                 if (found.length > 0) {
-                    response = `I found ${found.length} products matching "${text}":`;
-                    addMessage(response, 'bot');
+                    addMessage(`I found ${found.length} products matching "${text}":`, 'bot');
                     found.forEach(p => {
                         const card = document.createElement('div');
                         card.className = 'product-card-bot';

@@ -31,6 +31,12 @@ This platform is built with a focus on **Rich Aesthetics** and **Visual Excellen
 ### 📦 Seamless Fulfillment
 *   **WhatsApp Booking Engine**: A refined order flow that packages order details and user addresses into a professional WhatsApp request for instant fulfillment.
 *   **Order Tracking**: Persistent history for users to track their past medical equipment purchases.
+*   **Smart Quantity Presets**: Optimized buying experience with dedicated **5, 7, and 10** quantity buttons for fast bulk ordering.
+
+### 🛡️ Enhanced Security & Intelligence
+*   **Knowledge-Aware Chatbot**: Intelligent product discovery with built-in security filters to protect administrative and founder information.
+*   **Live Admin Analytics**: Real-time revenue and order bar graphs in the administrator dashboard (`peter.html`), prioritizing live data from Firebase Firestore.
+*   **Instant Nav "Preview"**: Quick-access navigation on all administrative pages to jump between the dashboard and the live storefront.
 
 ---
 

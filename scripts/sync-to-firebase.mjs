@@ -63,6 +63,7 @@ const products = rows.map((row, i) => {
         tag: String(row['Tag'] || '').trim(),
         desc: String(row['Description'] || '').trim(),
         usage: String(row['Usage'] || '').trim(),
+        warranty: String(row['warenty'] || row['warranty'] || row['Warranty'] || '').trim() || 'NO WARRANTY',
         image: imgMain,
         images: allImages,
     };

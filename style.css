@@ -275,7 +275,7 @@ nav {
     background-position: center;
     opacity: 0;
     transition: opacity 2s ease-in-out, transform 10s linear;
-    z-index: -1;
+    z-index: 1;
     transform: scale(1);
 }
 
@@ -291,10 +291,12 @@ nav {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%);
-    z-index: 0;
+    z-index: 2;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 3;
     max-width: 600px;
     animation: fadeInUp 1s ease;
 }
@@ -1094,8 +1096,7 @@ nav {
 
 /* Modal Styles */
 .modal-overlay {
-    /* Constrain to the mobile frame, not the full viewport */
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;

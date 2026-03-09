@@ -5,7 +5,7 @@
  * Columns in the sheet:
  *   ID | Name | Category | Price (Rs) | Old Price (Rs) | GST (%) |
  *   Discount | Rating | Rating members | Tag | Description | Usage |
- *   Image URL | Extra Images
+ *   Image URL | Extra Images | warenty
  *
  * Usage:  node scripts/import-from-excel.mjs
  * Or:     npm run excel:import
@@ -68,6 +68,7 @@ const products = rows.map((row, i) => {
         tag: String(row['Tag'] || '').trim(),
         desc: String(row['Description'] || '').trim(),
         usage: String(row['Usage'] || '').trim(),
+        warranty: String(row['warenty'] || row['Warranty'] || row['warranty'] || '').trim(),
         image: imgMain,
     };
 

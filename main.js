@@ -2221,6 +2221,9 @@ async function loadDynamicContent() {
                         p && p.id !== null && p.id !== undefined && p.id !== ''
                     );
 
+                    // Sort by numeric ID to retain Excel file sequence
+                    validProducts.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+
                     if (validProducts.length > 0) {
                         window.products = validProducts;
                         renderProducts(currentCategory);
@@ -2299,6 +2302,16 @@ async function init() {
         }
         renderProducts();
     }
+}
+function startHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length <= 1) return;
+    let currentHeroSlide = 0;
+    setInterval(() => {
+        slides[currentHeroSlide].classList.remove('active');
+        currentHeroSlide = (currentHeroSlide + 1) % slides.length;
+        slides[currentHeroSlide].classList.add('active');
+    }, 5000); // Change every 5 seconds
 }
 
 function updateStats() {
@@ -2450,6 +2463,8 @@ function openModal(type) {
             renderLoginStep();
         }
     }
+    // Scroll to top so modal is always visible at the top of screen
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     modal.style.display = 'flex';
     if (type === 'cart') renderCart();
     if (type === 'wishlist') renderWishlist();
@@ -2716,10 +2731,7 @@ function askBot(typeOrText) {
         userText = typeOrText;
         const query = typeOrText.toLowerCase();
 
-        if (query === 'thumati wilson babu with wilson health care') {
-            botResponse = 'Authenticating… Please wait.';
-            setTimeout(() => window.location.href = 'peter.html', 1200);
-        } else if (query.includes('hello') || query.includes('hi')) {
+        if (query.includes('hello') || query.includes('hi')) {
 
             botResponse = "Hello! How can Wilson Health Care assist you today?";
         } else if (query.includes('price') || query.includes('cost')) {
@@ -2845,7 +2857,7 @@ function renderProducts(filter = 'All', searchQuery = '', sortBy = 'default') {
                 <div class="product-card" onclick="if(!event.target.closest('button')) showProductInfo('${p.id}')">
                     ${p.discount ? `<div class="discount-badge">${p.discount}</div>` : ''}
                     ${warrantyBadge}
-                    <img src="${p.image || 'logo.jpg'}" alt="${p.name}" class="product-img" onerror="this.src='logo.jpg'">
+                    <img src="${p.image || (p.images && p.images.length ? p.images[0] : 'logo.jpg')}" alt="${p.name}" class="product-img" onerror="this.onerror=null; this.src='logo.jpg';">
                     <div class="product-info">
                         <span class="product-tag">${p.tag || 'Medical'}</span>
                         <h3 class="product-title">${p.name || 'Unnamed Product'}</h3>

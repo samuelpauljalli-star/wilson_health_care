@@ -43,6 +43,7 @@ function loadFromExcel() {
         tag: String(row['Tag'] || row['tag'] || '').trim(),
         desc: String(row['Description'] || row['desc'] || '').trim(),
         usage: String(row['Usage'] || row['usage'] || '').trim(),
+        warranty: String(row['warenty'] || row['Warranty'] || row['warranty'] || '').trim(),
         image: String(row['Image URL'] || row['image'] || '').trim(),
         images: String(row['Extra Images'] || '').split('|').map(s => s.trim()).filter(Boolean),
     }));
@@ -120,6 +121,7 @@ function tripleProducts(originals) {
                 tag: p.tag,
                 desc: p.desc,
                 usage: p.usage,
+                warranty: p.warranty,
                 image: variants[v].image,
                 images: variants[v].images,
             });
@@ -145,13 +147,14 @@ function writeExcel(products) {
         'Usage': p.usage,
         'Image URL': p.image,
         'Extra Images': (p.images || []).join('|'),
+        'warenty': p.warranty || '',
     }));
 
     const ws = XLSX.utils.json_to_sheet(rows);
     ws['!cols'] = [
         { wch: 6 }, { wch: 42 }, { wch: 20 }, { wch: 14 }, { wch: 15 }, { wch: 9 },
         { wch: 13 }, { wch: 9 }, { wch: 13 }, { wch: 18 }, { wch: 55 }, { wch: 40 },
-        { wch: 65 }, { wch: 100 }
+        { wch: 65 }, { wch: 100 }, { wch: 20 }
     ];
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Products');
@@ -175,6 +178,7 @@ function writeDataJs(products) {
             `ratingCount: ${p.ratingCount}`,
             `tag: ${JSON.stringify(p.tag)}`,
             `desc: ${JSON.stringify(p.desc)}`,
+            p.warranty ? `warranty: ${JSON.stringify(p.warranty)}` : null,
             `image: ${JSON.stringify(p.image)}`,
             p.usage ? `usage: ${JSON.stringify(p.usage)}` : null,
             p.images && p.images.length
