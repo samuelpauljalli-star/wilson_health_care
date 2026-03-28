@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -89,6 +89,29 @@
 </head>
 
 <body>
+
+    <!-- ── PWA Install Banner (top of page) ─── -->
+    <div id="pwa-top-banner" class="pwa-top-banner">
+        <div class="pwa-banner-inner">
+            <div class="pwa-banner-left">
+                <div class="pwa-banner-icon">
+                    <i class="fas fa-mobile-screen-button"></i>
+                </div>
+                <div class="pwa-banner-text">
+                    <strong>Install Wilson Health Care</strong>
+                    <span>Get the app on your phone, tablet or laptop — works offline too!</span>
+                </div>
+            </div>
+            <div class="pwa-banner-actions">
+                <button id="pwa-banner-install-btn" class="pwa-banner-btn" onclick="triggerPwaInstall()">
+                    <i class="fas fa-download"></i> Install Now
+                </button>
+                <button class="pwa-banner-close" onclick="closePwaBanner()" title="Dismiss">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Dynamic Announcement Bar -->
     <div id="dynamic-announcement"
@@ -186,6 +209,11 @@
                 </button>
                 <button class="nav-btn" id="login-nav-btn" onclick="openModal('login')" title="Account">
                     <i class="fas fa-user-circle"></i>
+                </button>
+                <!-- PWA Install Button (always visible in nav) -->
+                <button id="pwa-install-btn" class="pwa-install-btn" onclick="triggerPwaInstall()" title="Install App">
+                    <i class="fas fa-download"></i>
+                    <span>Install</span>
                 </button>
             </div>
         </div>
@@ -765,6 +793,76 @@
             }, { threshold: 0.2 });
 
             items.forEach(item => observer.observe(item));
+        })();
+    </script>
+
+    <!-- PWA Install Logic -->
+    <script>
+        (function initPwaInstall() {
+            let deferredPrompt = null;
+            const navBtn     = document.getElementById('pwa-install-btn');
+            const bannerBtn  = document.getElementById('pwa-banner-install-btn');
+            const topBanner  = document.getElementById('pwa-top-banner');
+
+            // Hide banner if user already dismissed it this session
+            if (sessionStorage.getItem('pwa-banner-dismissed')) {
+                if (topBanner) topBanner.style.display = 'none';
+            }
+
+            // Dismiss banner
+            window.closePwaBanner = function () {
+                if (topBanner) {
+                    topBanner.classList.add('pwa-banner-hide');
+                    setTimeout(() => topBanner.style.display = 'none', 400);
+                }
+                sessionStorage.setItem('pwa-banner-dismissed', '1');
+            };
+
+            // Capture the browser's install prompt
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                // Mark banner buttons as ready
+                if (bannerBtn) bannerBtn.classList.add('pwa-ready');
+                if (navBtn)   navBtn.classList.add('pwa-ready');
+                console.log('[PWA] Install prompt ready');
+            });
+
+            // Trigger install
+            window.triggerPwaInstall = async function () {
+                if (!deferredPrompt) {
+                    // App might already be installed or browser doesn't support
+                    showToast('Open this site in Chrome/Edge on Android or desktop to install.');
+                    return;
+                }
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log('[PWA] Install outcome:', outcome);
+                deferredPrompt = null;
+                if (outcome === 'accepted') {
+                    showToast('✅ Wilson Health Care installed successfully!');
+                    window.closePwaBanner();
+                    if (navBtn) navBtn.style.display = 'none';
+                }
+            };
+
+            // Hide everything once installed
+            window.addEventListener('appinstalled', () => {
+                window.closePwaBanner();
+                if (navBtn) navBtn.style.display = 'none';
+                deferredPrompt = null;
+                showToast('✅ App installed! Find it on your home screen.');
+                console.log('[PWA] App installed!');
+            });
+
+            // Helper: reuse existing toast
+            function showToast(msg) {
+                const t = document.getElementById('toast');
+                if (!t) return;
+                t.textContent = msg;
+                t.classList.add('show');
+                setTimeout(() => t.classList.remove('show'), 4000);
+            }
         })();
     </script>
 
