@@ -2307,11 +2307,12 @@ function startHeroSlideshow() {
     const slides = document.querySelectorAll('.hero-slide');
     if (slides.length <= 1) return;
     let currentHeroSlide = 0;
-    setInterval(() => {
+    // Disabled slideshow to keep the preferred image permanently
+    /*setInterval(() => {
         slides[currentHeroSlide].classList.remove('active');
         currentHeroSlide = (currentHeroSlide + 1) % slides.length;
         slides[currentHeroSlide].classList.add('active');
-    }, 5000); // Change every 5 seconds
+    }, 5000); // Change every 5 seconds*/
 }
 
 function updateStats() {
@@ -2386,11 +2387,12 @@ function startHeroSlideshow() {
     const slides = document.querySelectorAll('.hero-slide');
     if (slides.length <= 1) return;
 
-    setInterval(() => {
+    // Disabled slideshow to keep the preferred image permanently
+    /*setInterval(() => {
         slides[currentHeroSlide].classList.remove('active');
         currentHeroSlide = (currentHeroSlide + 1) % slides.length;
         slides[currentHeroSlide].classList.add('active');
-    }, 3000);
+    }, 3000);*/
 }
 
 const BUSINESS_WHATSAPP = "917032687122";
