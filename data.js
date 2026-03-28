@@ -1,5 +1,5 @@
 // Wilson Health Care — Product Data
-// Imported from products-tripled.xlsx on 19/3/2026, 1:17:10 pm
+// Imported from products-tripled.xlsx on 28/3/2026, 7:00:03 pm
 // Total: 336 products
 
 var products = [
@@ -17,8 +17,9 @@ var products = [
         "desc": "Sp02 Probes – Budget Model<br>This affordable sp02 probes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Sp02 Probes – Basic Model <br>An affordable sp02 probes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
+        "image": "https://genuinemedica.net/wp-content/uploads/2024/05/sensor.jpg",
         "images": [
+            "https://genuinemedica.net/wp-content/uploads/2024/05/sensor.jpg",
             "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
             "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2020/06/D100A-SML-324x306.jpg|https://www.infiniummedical.com/wp-content/uploads/2019/05/OMNI2_0815.jpg"
         ]
@@ -37,8 +38,9 @@ var products = [
         "desc": "Sp02 Probes – Standard Model<br>This standard sp02 probes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Sp02 Probes – Standard Model<br>A reliable and durable sp02 probes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
+        "image": "https://lifesupport.my/wp-content/uploads/4-3-300x300.jpg",
         "images": [
+            "https://lifesupport.my/wp-content/uploads/4-3-300x300.jpg",
             "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
             "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2020/06/D100A-SML-324x306.jpg|https://www.infiniummedical.com/wp-content/uploads/2019/05/OMNI2_0815.jpg"
         ]
@@ -57,8 +59,9 @@ var products = [
         "desc": "Sp02 Probes – Premium Model<br>This premium quality sp02 probes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Sp02 Probes – Premium Model<br>A high-performance sp02 probes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
+        "image": "https://i.ebayimg.com/images/g/PWwAAOSwlapmwts0/s-l1600.webp",
         "images": [
+            "https://i.ebayimg.com/images/g/PWwAAOSwlapmwts0/s-l1600.webp",
             "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg",
             "https://www.waltersmedical.co.uk/wp-content/uploads/2020/07/Solaris-White-Probes-Collage-1024x1024.jpg|https://www.waltersmedical.co.uk/wp-content/uploads/2020/06/D100A-SML-324x306.jpg|https://www.infiniummedical.com/wp-content/uploads/2019/05/OMNI2_0815.jpg"
         ]
@@ -77,8 +80,9 @@ var products = [
         "desc": "Contec Spo2 Probe – Budget Model<br>This affordable contec spo2 probe is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Contec Spo2 Probe – Basic Model <br>An affordable contec spo2 probe designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2025/2/490185800/OA/CQ/TP/150854567/pulse-oximeter-monitor-spo2-probe.jpeg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2025/2/490185800/OA/CQ/TP/150854567/pulse-oximeter-monitor-spo2-probe.jpeg",
             "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
             "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg|https://image.made-in-china.com/2f0j00QaForHqnhYly/Contec-Medical-Equipment-SpO2-Disposable-Neonatal-Probe-Non-Woven-Probe.jpg|http://tentabs.in/cdn/shop/products/3_d1961d94-6c2d-468e-ac23-8956a2347acf_1200x1200.jpg?v=1635401413"
         ]
@@ -97,8 +101,9 @@ var products = [
         "desc": "Contec Spo2 Probe – Standard Model<br>This standard contec spo2 probe offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Contec Spo2 Probe – Standard Model<br>A reliable and durable contec spo2 probe designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
+        "image": "https://images-eu.ssl-images-amazon.com/images/I/71aVOEv+ASL._AC_UL210_SR210,210_.jpg",
         "images": [
+            "https://images-eu.ssl-images-amazon.com/images/I/71aVOEv+ASL._AC_UL210_SR210,210_.jpg",
             "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
             "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg|https://image.made-in-china.com/2f0j00QaForHqnhYly/Contec-Medical-Equipment-SpO2-Disposable-Neonatal-Probe-Non-Woven-Probe.jpg|http://tentabs.in/cdn/shop/products/3_d1961d94-6c2d-468e-ac23-8956a2347acf_1200x1200.jpg?v=1635401413"
         ]
@@ -117,8 +122,9 @@ var products = [
         "desc": "Contec Spo2 Probe – Premium Model<br>This premium quality contec spo2 probe provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Contec Spo2 Probe – Premium Model<br>A high-performance contec spo2 probe designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
+        "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/pulse-oximeter/7/o/8/contec-original-spo2-probe-for-cms5100-cms8000-adult-otica-original-imah6ykem3cnftfb.jpeg?q=70",
         "images": [
+            "https://rukmini1.flixcart.com/image/1500/1500/xif0q/pulse-oximeter/7/o/8/contec-original-spo2-probe-for-cms5100-cms8000-adult-otica-original-imah6ykem3cnftfb.jpeg?q=70",
             "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg",
             "https://sc04.alicdn.com/kf/H852d597e4401422b91bdfaaecd249b5d2.jpg|https://image.made-in-china.com/2f0j00QaForHqnhYly/Contec-Medical-Equipment-SpO2-Disposable-Neonatal-Probe-Non-Woven-Probe.jpg|http://tentabs.in/cdn/shop/products/3_d1961d94-6c2d-468e-ac23-8956a2347acf_1200x1200.jpg?v=1635401413"
         ]
@@ -137,8 +143,9 @@ var products = [
         "desc": "Sp02 Extension Cables – Budget Model<br>This affordable sp02 extension cables is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Sp02 Extension Cables – Basic Model <br>An affordable sp02 extension cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
+        "image": "https://d3edssu4vf7j1p.cloudfront.net/images/detailed/13/Quality-Guaranteed-Medical-Device-Health-Care-9-Pin-SpO2-Sensor-Cable-Soft-tip-For-Oximeter-DS100A_zb1c-9i.jpg?t=1616436617",
         "images": [
+            "https://d3edssu4vf7j1p.cloudfront.net/images/detailed/13/Quality-Guaranteed-Medical-Device-Health-Care-9-Pin-SpO2-Sensor-Cable-Soft-tip-For-Oximeter-DS100A_zb1c-9i.jpg?t=1616436617",
             "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
             "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg|http://cdn.shopify.com/s/files/1/0046/5505/4921/products/spo2-extension-cable-compatible-for-silicon-labs-2-3-mtr-biometriccables_556_1200x1200.jpg?v=1551786600|https://www.biometriccables.com/IMG_9471.jpg"
         ]
@@ -157,8 +164,9 @@ var products = [
         "desc": "Sp02 Extension Cables – Standard Model<br>This standard sp02 extension cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Sp02 Extension Cables – Standard Model<br>A reliable and durable sp02 extension cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
+        "image": "https://www.shberrymed.com/u_file/2101/products/19/1aa981897d.jpg.500x500.jpg",
         "images": [
+            "https://www.shberrymed.com/u_file/2101/products/19/1aa981897d.jpg.500x500.jpg",
             "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
             "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg|http://cdn.shopify.com/s/files/1/0046/5505/4921/products/spo2-extension-cable-compatible-for-silicon-labs-2-3-mtr-biometriccables_556_1200x1200.jpg?v=1551786600|https://www.biometriccables.com/IMG_9471.jpg"
         ]
@@ -177,8 +185,9 @@ var products = [
         "desc": "Sp02 Extension Cables – Premium Model<br>This premium quality sp02 extension cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Sp02 Extension Cables – Premium Model<br>A high-performance sp02 extension cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
+        "image": "https://surgicalcenter.in/wp-content/uploads/2016/04/Spo2.jpg",
         "images": [
+            "https://surgicalcenter.in/wp-content/uploads/2016/04/Spo2.jpg",
             "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg",
             "https://endokart.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-28-at-12.02.54-PM.jpeg|http://cdn.shopify.com/s/files/1/0046/5505/4921/products/spo2-extension-cable-compatible-for-silicon-labs-2-3-mtr-biometriccables_556_1200x1200.jpg?v=1551786600|https://www.biometriccables.com/IMG_9471.jpg"
         ]
@@ -197,8 +206,9 @@ var products = [
         "desc": "Disposable Sp02 Probes – Budget Model<br>This affordable disposable sp02 probes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Disposable Sp02 Probes – Basic Model <br>An affordable disposable sp02 probes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
+        "image": "https://cpimg.tistatic.com/9369843/s/4/disposable-spo2-sensor.jpg",
         "images": [
+            "https://cpimg.tistatic.com/9369843/s/4/disposable-spo2-sensor.jpg",
             "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
             "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg|https://www.dial4trade.com/uploaded_files/product_images/thumbs/disposable-spo2-probes-0-u-124515584551002908696199.jpg|https://curbellmedical.com/wp-content/uploads/2020/10/disposable-spo2-foam.jpg"
         ]
@@ -217,8 +227,9 @@ var products = [
         "desc": "Disposable Sp02 Probes – Standard Model<br>This standard disposable sp02 probes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Disposable Sp02 Probes – Standard Model<br>A reliable and durable disposable sp02 probes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/4/412935540/OJ/MK/AA/122574700/disposable-spo2-probes-250x250.webp",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2024/4/412935540/OJ/MK/AA/122574700/disposable-spo2-probes-250x250.webp",
             "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
             "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg|https://www.dial4trade.com/uploaded_files/product_images/thumbs/disposable-spo2-probes-0-u-124515584551002908696199.jpg|https://curbellmedical.com/wp-content/uploads/2020/10/disposable-spo2-foam.jpg"
         ]
@@ -237,8 +248,9 @@ var products = [
         "desc": "Disposable Sp02 Probes – Premium Model<br>This premium quality disposable sp02 probes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Disposable Sp02 Probes – Premium Model<br>A high-performance disposable sp02 probes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2025/4/501798291/TP/HY/JJ/126911/disposable-9-pin-spo2-sensor-adult-250x250.png",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2025/4/501798291/TP/HY/JJ/126911/disposable-9-pin-spo2-sensor-adult-250x250.png",
             "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg",
             "http://thinkmdi.net/wp-content/uploads/2017/09/spo2-probes-02.jpg|https://www.dial4trade.com/uploaded_files/product_images/thumbs/disposable-spo2-probes-0-u-124515584551002908696199.jpg|https://curbellmedical.com/wp-content/uploads/2020/10/disposable-spo2-foam.jpg"
         ]
@@ -257,8 +269,9 @@ var products = [
         "desc": "Monitor 5 Lead Ecg Cables – Budget Model<br>This affordable monitor 5 lead ecg cables is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Monitor 5 Lead Ecg Cables – Basic Model <br>An affordable monitor 5 lead ecg cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
+        "image": "https://image.made-in-china.com/202f0j00ejNaMOvFcKrZ/Compatible-Good-Quality-Care-Vue-50-One-Piece-5-Leads-ECG-Cable.webp",
         "images": [
+            "https://image.made-in-china.com/202f0j00ejNaMOvFcKrZ/Compatible-Good-Quality-Care-Vue-50-One-Piece-5-Leads-ECG-Cable.webp",
             "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
             "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg|https://m.media-amazon.com/images/I/716l2gJPL1L.jpg|https://image.made-in-china.com/2f0j00abNiAeTqhDfH/Adult-5-Lead-ECG-EKG-Cable-Clips-M1623A-Medical-Equipment-for-Hospital.jpg"
         ]
@@ -277,8 +290,9 @@ var products = [
         "desc": "Monitor 5 Lead Ecg Cables – Standard Model<br>This standard monitor 5 lead ecg cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Monitor 5 Lead Ecg Cables – Standard Model<br>A reliable and durable monitor 5 lead ecg cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
+        "image": "https://image.made-in-china.com/202f0j00lGvBhNiREzqd/6-Pin-5-Lead-Lead-Patient-Monitor-ECG-Cable.webp",
         "images": [
+            "https://image.made-in-china.com/202f0j00lGvBhNiREzqd/6-Pin-5-Lead-Lead-Patient-Monitor-ECG-Cable.webp",
             "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
             "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg|https://m.media-amazon.com/images/I/716l2gJPL1L.jpg|https://image.made-in-china.com/2f0j00abNiAeTqhDfH/Adult-5-Lead-ECG-EKG-Cable-Clips-M1623A-Medical-Equipment-for-Hospital.jpg"
         ]
@@ -297,8 +311,9 @@ var products = [
         "desc": "Monitor 5 Lead Ecg Cables – Premium Model<br>This premium quality monitor 5 lead ecg cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Monitor 5 Lead Ecg Cables – Premium Model<br>A high-performance monitor 5 lead ecg cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/9/341824798/EQ/RR/IL/427124/ecg-cable-250x250.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2023/9/341824798/EQ/RR/IL/427124/ecg-cable-250x250.jpg",
             "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg",
             "https://www.medicaldevicecables.com/photo/pl15341657-disposable_medical_ecg_cable_for_patient_monitor_5_leads_clip_aha.jpg|https://m.media-amazon.com/images/I/716l2gJPL1L.jpg|https://image.made-in-china.com/2f0j00abNiAeTqhDfH/Adult-5-Lead-ECG-EKG-Cable-Clips-M1623A-Medical-Equipment-for-Hospital.jpg"
         ]
@@ -317,8 +332,9 @@ var products = [
         "desc": "Monitor 3 Lead Ecg Cables – Budget Model<br>This affordable monitor 3 lead ecg cables is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Monitor 3 Lead Ecg Cables – Basic Model <br>An affordable monitor 3 lead ecg cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
+        "image": "https://www.sinokmed.com/cdn/shop/products/SP5215P_grande.jpg?v=1627437051",
         "images": [
+            "https://www.sinokmed.com/cdn/shop/products/SP5215P_grande.jpg?v=1627437051",
             "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
             "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cable-compatiblebuttonsnap-for-spacelabsaspenbcibplcontecedangedraegermindraynellcornihon-kohdenphilipsmedianamedicaid-cables_660_250x250@2x.jpg?v=1552111203|http://www.biometriccables.in/cdn/shop/products/3-lead-ecg-monitoring-cableclipcompatible-for-akas-biometriccables_767_1200x1200.jpg?v=1611123688"
         ]
@@ -337,8 +353,9 @@ var products = [
         "desc": "Monitor 3 Lead Ecg Cables – Standard Model<br>This standard monitor 3 lead ecg cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Monitor 3 Lead Ecg Cables – Standard Model<br>A reliable and durable monitor 3 lead ecg cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
+        "image": "https://www.pray-med.com/uploads/202112725/comen-3-lead-12-pin-ecg-integrated-cable-with11390160368.jpg",
         "images": [
+            "https://www.pray-med.com/uploads/202112725/comen-3-lead-12-pin-ecg-integrated-cable-with11390160368.jpg",
             "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
             "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cable-compatiblebuttonsnap-for-spacelabsaspenbcibplcontecedangedraegermindraynellcornihon-kohdenphilipsmedianamedicaid-cables_660_250x250@2x.jpg?v=1552111203|http://www.biometriccables.in/cdn/shop/products/3-lead-ecg-monitoring-cableclipcompatible-for-akas-biometriccables_767_1200x1200.jpg?v=1611123688"
         ]
@@ -357,8 +374,9 @@ var products = [
         "desc": "Monitor 3 Lead Ecg Cables – Premium Model<br>This premium quality monitor 3 lead ecg cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Monitor 3 Lead Ecg Cables – Premium Model<br>A high-performance monitor 3 lead ecg cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
+        "image": "https://imgcdn.mckesson.com/CumulusWeb/Images/Original_Image/1227655_left.jpg",
         "images": [
+            "https://imgcdn.mckesson.com/CumulusWeb/Images/Original_Image/1227655_left.jpg",
             "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713",
             "https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cableclip-compatible-for-concept-leadclip-biometriccables_859_250x250@2x.jpg?v=1615374713|https://cdn.shopify.com/s/files/1/0046/5505/4921/products/3-lead-ecg-monitoring-cable-compatiblebuttonsnap-for-spacelabsaspenbcibplcontecedangedraegermindraynellcornihon-kohdenphilipsmedianamedicaid-cables_660_250x250@2x.jpg?v=1552111203|http://www.biometriccables.in/cdn/shop/products/3-lead-ecg-monitoring-cableclipcompatible-for-akas-biometriccables_767_1200x1200.jpg?v=1611123688"
         ]
@@ -377,8 +395,9 @@ var products = [
         "desc": "10 Leads Ecg Cables – Budget Model<br>This affordable 10 leads ecg cables is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "10 Leads Ecg Cables – Basic Model <br>An affordable 10 leads ecg cables designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
+        "image": "https://m.media-amazon.com/images/I/61bzLDbKTXL.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/61bzLDbKTXL.jpg",
             "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
             "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2022/1/YU/LO/UD/105216276/ecg-patient-cables-10-lead-1000x1000.jpg|https://www.cambus-tw.com/proimages/sr/design/2index_pro1.jpg"
         ]
@@ -397,8 +416,9 @@ var products = [
         "desc": "10 Leads Ecg Cables – Standard Model<br>This standard 10 leads ecg cables offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "10 Leads Ecg Cables – Standard Model<br>A reliable and durable 10 leads ecg cables designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
+        "image": "https://i.ebayimg.com/images/g/WPAAAOSwYgJhuYCD/s-l1200.jpg",
         "images": [
+            "https://i.ebayimg.com/images/g/WPAAAOSwYgJhuYCD/s-l1200.jpg",
             "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
             "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2022/1/YU/LO/UD/105216276/ecg-patient-cables-10-lead-1000x1000.jpg|https://www.cambus-tw.com/proimages/sr/design/2index_pro1.jpg"
         ]
@@ -417,8 +437,9 @@ var products = [
         "desc": "10 Leads Ecg Cables – Premium Model<br>This premium quality 10 leads ecg cables provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "10 Leads Ecg Cables – Premium Model<br>A high-performance 10 leads ecg cables designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
+        "image": "https://m.media-amazon.com/images/I/41m7hm0JvuL.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/41m7hm0JvuL.jpg",
             "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg",
             "https://4.imimg.com/data4/HD/WY/MY-33420776/10-leads-ecg-cables-250x250.jpg|https://5.imimg.com/data5/SELLER/Default/2022/1/YU/LO/UD/105216276/ecg-patient-cables-10-lead-1000x1000.jpg|https://www.cambus-tw.com/proimages/sr/design/2index_pro1.jpg"
         ]
@@ -437,8 +458,9 @@ var products = [
         "desc": "Ecg Electrodes – Budget Model<br>This affordable ecg electrodes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Ecg Electrodes – Basic Model <br>An affordable ecg electrodes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2025/5/512823625/SK/GU/HQ/69529441/silicone-ecg-bulb-500x500.png",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2025/5/512823625/SK/GU/HQ/69529441/silicone-ecg-bulb-500x500.png",
             "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
             "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg|https://dukermedical.com/wp-content/uploads/2019/10/ecg-electrode.jpg|https://comedical.africa/wp-content/uploads/2024/05/Electrodes_Adult_Healthease__CO_Medical.png"
         ]
@@ -457,8 +479,9 @@ var products = [
         "desc": "Ecg Electrodes – Standard Model<br>This standard ecg electrodes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Ecg Electrodes – Standard Model<br>A reliable and durable ecg electrodes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2025/5/510673780/HA/AA/KW/244480927/ecg-chest-electrode-bulb-set-500x500.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2025/5/510673780/HA/AA/KW/244480927/ecg-chest-electrode-bulb-set-500x500.jpg",
             "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
             "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg|https://dukermedical.com/wp-content/uploads/2019/10/ecg-electrode.jpg|https://comedical.africa/wp-content/uploads/2024/05/Electrodes_Adult_Healthease__CO_Medical.png"
         ]
@@ -477,8 +500,9 @@ var products = [
         "desc": "Ecg Electrodes – Premium Model<br>This premium quality ecg electrodes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Ecg Electrodes – Premium Model<br>A high-performance ecg electrodes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
+        "image": "https://m.media-amazon.com/images/I/515L8vi52uL._AC_UF350,350_QL80_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/515L8vi52uL._AC_UF350,350_QL80_.jpg",
             "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg",
             "https://aonemedical.ae/wp-content/uploads/2023/10/ECG-Eletrodes.jpg|https://dukermedical.com/wp-content/uploads/2019/10/ecg-electrode.jpg|https://comedical.africa/wp-content/uploads/2024/05/Electrodes_Adult_Healthease__CO_Medical.png"
         ]
@@ -497,8 +521,9 @@ var products = [
         "desc": "Neon Ecg Electrode 3 Wire – Budget Model<br>This affordable neon ecg electrode 3 wire is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Neon Ecg Electrode 3 Wire – Basic Model <br>An affordable neon ecg electrode 3 wire designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
+        "image": "https://cpimg.tistatic.com/10542812/b/4/Prewired-ECG-Electrodes..jpg",
         "images": [
+            "https://cpimg.tistatic.com/10542812/b/4/Prewired-ECG-Electrodes..jpg",
             "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/11/358868893/MY/KI/NA/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/9/XL/GG/IR/121423911/dyna-ecg-electrodes-500x500.jpg"
         ]
@@ -517,8 +542,9 @@ var products = [
         "desc": "Neon Ecg Electrode 3 Wire – Standard Model<br>This standard neon ecg electrode 3 wire offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Neon Ecg Electrode 3 Wire – Standard Model<br>A reliable and durable neon ecg electrode 3 wire designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
+        "image": "https://m.media-amazon.com/images/I/71vODD1exVL._AC_UF1000,1000_QL80_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/71vODD1exVL._AC_UF1000,1000_QL80_.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/11/358868893/MY/KI/NA/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/9/XL/GG/IR/121423911/dyna-ecg-electrodes-500x500.jpg"
         ]
@@ -537,8 +563,9 @@ var products = [
         "desc": "Neon Ecg Electrode 3 Wire – Premium Model<br>This premium quality neon ecg electrode 3 wire provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Neon Ecg Electrode 3 Wire – Premium Model<br>A high-performance neon ecg electrode 3 wire designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
+        "image": "https://img2.exportersindia.com/product_images/bc-small/150x150/2025/9/14315496/disposable-ecg-electrodes-1758617670-8347754.jpg",
         "images": [
+            "https://img2.exportersindia.com/product_images/bc-small/150x150/2025/9/14315496/disposable-ecg-electrodes-1758617670-8347754.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2023/11/358868909/QV/EF/MM/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2023/11/358868893/MY/KI/NA/4115873/pre-wired-neonate-ecg-electrodes-medico-electrodes-500x500.jpg|https://5.imimg.com/data5/SELLER/Default/2022/9/XL/GG/IR/121423911/dyna-ecg-electrodes-500x500.jpg"
         ]
@@ -557,8 +584,9 @@ var products = [
         "desc": "Disposable Electrodes – Budget Model<br>This affordable disposable electrodes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Disposable Electrodes – Basic Model <br>An affordable disposable electrodes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "image": "https://m.media-amazon.com/images/I/71CvrVX80lL._SX679_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/71CvrVX80lL._SX679_.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
             "q_glossy",
@@ -581,8 +609,9 @@ var products = [
         "desc": "Disposable Electrodes – Standard Model<br>This standard disposable electrodes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Disposable Electrodes – Standard Model<br>A reliable and durable disposable electrodes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "image": "https://m.media-amazon.com/images/I/71XpV+8DLgL._SX679_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/71XpV+8DLgL._SX679_.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
             "q_glossy",
@@ -605,8 +634,9 @@ var products = [
         "desc": "Disposable Electrodes – Premium Model<br>This premium quality disposable electrodes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Disposable Electrodes – Premium Model<br>A high-performance disposable electrodes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "image": "https://m.media-amazon.com/images/I/61ecw6bannL._SX522_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/61ecw6bannL._SX522_.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
             "q_glossy",
@@ -629,8 +659,9 @@ var products = [
         "desc": "Disposable Electrodes – Budget Model<br>This affordable disposable electrodes is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Disposable Electrodes – Basic Model <br>An affordable disposable electrodes designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/11/KA/QG/OG/1211630/55mm-ecg-electrode-500x500.jpeg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2022/11/KA/QG/OG/1211630/55mm-ecg-electrode-500x500.jpeg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
             "q_glossy",
@@ -653,8 +684,9 @@ var products = [
         "desc": "Disposable Electrodes – Standard Model<br>This standard disposable electrodes offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Disposable Electrodes – Standard Model<br>A reliable and durable disposable electrodes designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "image": "https://image.made-in-china.com/202f0j00kVlcpYhygvrf/Medical-Disposable-ECG-Electrode-with-Non-Woven-Backing-Round-55mm.webp",
         "images": [
+            "https://image.made-in-china.com/202f0j00kVlcpYhygvrf/Medical-Disposable-ECG-Electrode-with-Non-Woven-Backing-Round-55mm.webp",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
             "q_glossy",
@@ -677,8 +709,9 @@ var products = [
         "desc": "Disposable Electrodes – Premium Model<br>This premium quality disposable electrodes provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Disposable Electrodes – Premium Model<br>A high-performance disposable electrodes designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/11/KA/QG/OG/1211630/55mm-ecg-electrode-500x500.jpeg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2022/11/KA/QG/OG/1211630/55mm-ecg-electrode-500x500.jpeg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg",
             "https://www.jordanmedical.nl/images/1000x0/electrodes.jpg|https://sp-ao.shortpixel.ai/client/to_webp",
             "q_glossy",
@@ -701,8 +734,9 @@ var products = [
         "desc": "Ecg Alligator Clips – Budget Model<br>This affordable ecg alligator clips is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Ecg Alligator Clips – Basic Model <br>An affordable ecg alligator clips designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
+        "image": "https://www.sinokmed.com/cdn/shop/products/SVV23-2_grande.jpg?v=1579661050",
         "images": [
+            "https://www.sinokmed.com/cdn/shop/products/SVV23-2_grande.jpg?v=1579661050",
             "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
             "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg|https://www.siomedical.com/wp-content/uploads/2025/03/veterinary-ECG-cable-and-clips-600x600.png|https://www.allstatesmedical.com.au/wp-content/uploads/2023/08/CLEAR-ECG-CLIPS-600x486.jpg"
         ]
@@ -721,8 +755,9 @@ var products = [
         "desc": "Ecg Alligator Clips – Standard Model<br>This standard ecg alligator clips offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Ecg Alligator Clips – Standard Model<br>A reliable and durable ecg alligator clips designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
+        "image": "https://m.media-amazon.com/images/I/51k9coZtHzL._AC_UF1000,1000_QL80_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/51k9coZtHzL._AC_UF1000,1000_QL80_.jpg",
             "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
             "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg|https://www.siomedical.com/wp-content/uploads/2025/03/veterinary-ECG-cable-and-clips-600x600.png|https://www.allstatesmedical.com.au/wp-content/uploads/2023/08/CLEAR-ECG-CLIPS-600x486.jpg"
         ]
@@ -741,8 +776,9 @@ var products = [
         "desc": "Ecg Alligator Clips – Premium Model<br>This premium quality ecg alligator clips provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Ecg Alligator Clips – Premium Model<br>A high-performance ecg alligator clips designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
+        "image": "https://www.davismedical.com/Images/Products/philips_989803129231.png",
         "images": [
+            "https://www.davismedical.com/Images/Products/philips_989803129231.png",
             "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg",
             "https://cdn.mysagestore.com/a348c1ef9801fceafc0f249315719d25/contents/47036/47036.jpeg|https://www.siomedical.com/wp-content/uploads/2025/03/veterinary-ECG-cable-and-clips-600x600.png|https://www.allstatesmedical.com.au/wp-content/uploads/2023/08/CLEAR-ECG-CLIPS-600x486.jpg"
         ]
@@ -761,8 +797,9 @@ var products = [
         "desc": "Ecg Clamps Set – Budget Model<br>This affordable ecg clamps set is designed for surgical and clinical procedures. Designed for safety, sterility, and performance.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Ecg Clamps Set – Basic Model <br>An affordable ecg clamps set designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
+        "image": "https://s.alicdn.com/@sc04/kf/H818304c9cd4f4ec7b63d66b3d96692130.jpg",
         "images": [
+            "https://s.alicdn.com/@sc04/kf/H818304c9cd4f4ec7b63d66b3d96692130.jpg",
             "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
             "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg|https://static.wixstatic.com/media/eccb80_7644d20c5fad4e0b8722586c79a68fb6~mv2.jpg/v1/fill/w_1200",
             "h_800",
@@ -784,8 +821,9 @@ var products = [
         "desc": "Ecg Clamps Set – Standard Model<br>This standard ecg clamps set offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Ecg Clamps Set – Standard Model<br>A reliable and durable ecg clamps set designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/7/327650478/VL/FI/TM/185462333/sk9206-1-aac2aa3c-45e4-413b-9550-e686d84faf13-600x-crop-center-result.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2023/7/327650478/VL/FI/TM/185462333/sk9206-1-aac2aa3c-45e4-413b-9550-e686d84faf13-600x-crop-center-result.jpg",
             "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
             "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg|https://static.wixstatic.com/media/eccb80_7644d20c5fad4e0b8722586c79a68fb6~mv2.jpg/v1/fill/w_1200",
             "h_800",
@@ -807,8 +845,9 @@ var products = [
         "desc": "Ecg Clamps Set – Premium Model<br>This premium quality ecg clamps set provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Ecg Clamps Set – Premium Model<br>A high-performance ecg clamps set designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/7/330669703/WB/SZ/XR/22566074/2.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2023/7/330669703/WB/SZ/XR/22566074/2.jpg",
             "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg",
             "https://vngmedical.com/wp-content/uploads/2021/01/IMG_7483-2048x1365.jpg|https://static.wixstatic.com/media/eccb80_7644d20c5fad4e0b8722586c79a68fb6~mv2.jpg/v1/fill/w_1200",
             "h_800",
@@ -830,8 +869,9 @@ var products = [
         "desc": "Ecg Paper -A4 Sheet – Budget Model<br>This affordable ecg paper -a4 sheet is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Ecg Paper -A4 Sheet – Basic Model <br>An affordable ecg paper -a4 sheet designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
+        "image": "https://m.media-amazon.com/images/I/81MuHJuVS6L._SX522_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/81MuHJuVS6L._SX522_.jpg",
             "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
             "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg|https://www.sinymedical.com/wp-content/uploads/2024/01/ecg-paper-supplier.jpg|https://5.imimg.com/data5/SELLER/Default/2023/10/350155291/VD/QP/DZ/12872071/ecg-paper-sheet-500x500.jpg"
         ]
@@ -850,8 +890,9 @@ var products = [
         "desc": "Ecg Paper -A4 Sheet – Standard Model<br>This standard ecg paper -a4 sheet offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Ecg Paper -A4 Sheet – Standard Model<br>A reliable and durable ecg paper -a4 sheet designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
+        "image": "https://m.media-amazon.com/images/I/71PaoqlUq3L._SX522_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/71PaoqlUq3L._SX522_.jpg",
             "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
             "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg|https://www.sinymedical.com/wp-content/uploads/2024/01/ecg-paper-supplier.jpg|https://5.imimg.com/data5/SELLER/Default/2023/10/350155291/VD/QP/DZ/12872071/ecg-paper-sheet-500x500.jpg"
         ]
@@ -870,8 +911,9 @@ var products = [
         "desc": "Ecg Paper -A4 Sheet – Premium Model<br>This premium quality ecg paper -a4 sheet provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Ecg Paper -A4 Sheet – Premium Model<br>A high-performance ecg paper -a4 sheet designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
+        "image": "https://m.media-amazon.com/images/I/81vqCGCjPXL._SX522_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/81vqCGCjPXL._SX522_.jpg",
             "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg",
             "https://www.sinymedical.com/wp-content/uploads/2024/01/3-Channel-ECG-Paper-1-768x768.jpg|https://www.sinymedical.com/wp-content/uploads/2024/01/ecg-paper-supplier.jpg|https://5.imimg.com/data5/SELLER/Default/2023/10/350155291/VD/QP/DZ/12872071/ecg-paper-sheet-500x500.jpg"
         ]
@@ -890,8 +932,9 @@ var products = [
         "desc": "Ecg Paper-3 Channel Papers – Budget Model<br>This affordable ecg paper-3 channel papers is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Ecg Paper-3 Channel Papers – Basic Model <br>An affordable ecg paper-3 channel papers designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
+        "image": "https://www.indosurgicals.com/images/products/50mm-20m-Thermal-ECG-Paper-Roll-Medical-Recording-Paper-for-Hospital-for-ECG-Machine.jpg",
         "images": [
+            "https://www.indosurgicals.com/images/products/50mm-20m-Thermal-ECG-Paper-Roll-Medical-Recording-Paper-for-Hospital-for-ECG-Machine.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
             "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(Pack%20of%203%20Rolls)%201",
             "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(Pack%20of%203%20Rolls)%201|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(Pack%20of%203%20Rolls)%202|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(Pack%20of%203%20Rolls)%203"
@@ -911,8 +954,9 @@ var products = [
         "desc": "Ecg Paper-3 Channel Papers – Standard Model<br>This standard ecg paper-3 channel papers offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Ecg Paper-3 Channel Papers – Standard Model<br>A reliable and durable ecg paper-3 channel papers designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/4/DY/WZ/WN/149497733/ecg-paper-rolls-250x250.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2022/4/DY/WZ/WN/149497733/ecg-paper-rolls-250x250.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
             "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(100%20sheets)%201",
             "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(100%20sheets)%201|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(100%20sheets)%202|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(100%20sheets)%203"
@@ -932,8 +976,9 @@ var products = [
         "desc": "Ecg Paper-3 Channel Papers – Premium Model<br>This premium quality ecg paper-3 channel papers provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Ecg Paper-3 Channel Papers – Premium Model<br>A high-performance ecg paper-3 channel papers designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
+        "image": "https://rukminim2.flixcart.com/image/480/640/kobspe80/paper/c/i/g/thermal-paper-roll-for-all-ecg-ultrasonic-lab-testing-machine-original-imag2td3zzzyfy4p.jpeg?q=20",
         "images": [
+            "https://rukminim2.flixcart.com/image/480/640/kobspe80/paper/c/i/g/thermal-paper-roll-for-all-ecg-ultrasonic-lab-testing-machine-original-imag2td3zzzyfy4p.jpeg?q=20",
             "https://5.imimg.com/data5/SELLER/Default/2022/3/QR/DV/SS/3448665/ecg-paper-3-channel.jpg",
             "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(150%20sheets)%201",
             "https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(150%20sheets)%201|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(150%20sheets)%202|https://via.placeholder.com/600x600?text=ECG%20PAPER-3%20CHANNEL%20PAPERS%20(150%20sheets)%203"
@@ -953,8 +998,9 @@ var products = [
         "desc": "Nst Machinepapers – Budget Model<br>This affordable nst machinepapers is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Nst Machinepapers – Basic Model <br>An affordable nst machinepapers designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
+        "image": "https://image.made-in-china.com/2f0j00uBioprGgsjcY/3-6-12-Channel-Medical-Portable-ECG-Paper-Rolls-ECG-Recording-Thermal-Medical-Chart-Paper.webp",
         "images": [
+            "https://image.made-in-china.com/2f0j00uBioprGgsjcY/3-6-12-Channel-Medical-Portable-ECG-Paper-Rolls-ECG-Recording-Thermal-Medical-Chart-Paper.webp",
             "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
             "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%201",
             "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%201|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%202|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%203"
@@ -974,8 +1020,9 @@ var products = [
         "desc": "Nst Machinepapers – Standard Model<br>This standard nst machinepapers offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Nst Machinepapers – Standard Model<br>A reliable and durable nst machinepapers designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
+        "image": "https://pandapaperroll.com/wp-content/uploads/2024/06/152mm-x-90mm-150-Sheets.jpg",
         "images": [
+            "https://pandapaperroll.com/wp-content/uploads/2024/06/152mm-x-90mm-150-Sheets.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
             "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(100%20sheets)%201",
             "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(100%20sheets)%201|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(100%20sheets)%202|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(100%20sheets)%203"
@@ -995,8 +1042,9 @@ var products = [
         "desc": "Nst Machinepapers – Premium Model<br>This premium quality nst machinepapers provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Nst Machinepapers – Premium Model<br>A high-performance nst machinepapers designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
+        "image": "https://pandapaperroll.com/wp-content/uploads/2024/06/152-x-90-ECG-paper-pad.png",
         "images": [
+            "https://pandapaperroll.com/wp-content/uploads/2024/06/152-x-90-ECG-paper-pad.png",
             "https://5.imimg.com/data5/SELLER/Default/2022/12/KY/ZD/FI/13978693/nst-machine-paper-roll.jpg",
             "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(150%20sheets)%201",
             "https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(150%20sheets)%201|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(150%20sheets)%202|https://via.placeholder.com/600x600?text=NST%20MACHINEPAPERS%20(150%20sheets)%203"
@@ -1016,8 +1064,9 @@ var products = [
         "desc": "Ecg Machine Jelly Bottle 250 Ml – Budget Model<br>This affordable ecg machine jelly bottle 250 ml is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Ecg Machine Jelly Bottle 250 Ml – Basic Model <br>An affordable ecg machine jelly bottle 250 ml designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/9/GK/UU/BH/1747978/ecg-ultrasound-gel-250ml.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2022/7/SA/HR/RR/683919/250-ml-ecg-gel-500x500-500x500.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2022/7/SA/HR/RR/683919/250-ml-ecg-gel-500x500-500x500.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2022/9/GK/UU/BH/1747978/ecg-ultrasound-gel-250ml.jpg",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%203"
@@ -1037,8 +1086,9 @@ var products = [
         "desc": "Ecg Machine Jelly Bottle 250 Ml – Standard Model<br>This standard ecg machine jelly bottle 250 ml offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Ecg Machine Jelly Bottle 250 Ml – Standard Model<br>A reliable and durable ecg machine jelly bottle 250 ml designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/7/437511237/XA/CA/LJ/164175930/250-ml-ecg-gel.png",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2024/7/437511237/XA/CA/LJ/164175930/250-ml-ecg-gel.png",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%203"
         ]
@@ -1057,8 +1107,9 @@ var products = [
         "desc": "Ecg Machine Jelly Bottle 250 Ml – Premium Model<br>This premium quality ecg machine jelly bottle 250 ml provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Ecg Machine Jelly Bottle 250 Ml – Premium Model<br>A high-performance ecg machine jelly bottle 250 ml designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/4/414469001/ZS/RT/TF/201761525/ultrasound-ecg-jelly-250x250.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2024/4/414469001/ZS/RT/TF/201761525/ultrasound-ecg-jelly-250x250.jpg",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20BOTTLE%20250%20ml%203"
         ]
@@ -1077,8 +1128,9 @@ var products = [
         "desc": "Ecg Machine Jelly Jar 5 Kg – Budget Model<br>This affordable ecg machine jelly jar 5 kg is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Ecg Machine Jelly Jar 5 Kg – Basic Model <br>An affordable ecg machine jelly jar 5 kg designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2023/2/MI/QK/NE/57038963/ecg-gel-5kg-jar.jpg",
+        "image": "https://m.media-amazon.com/images/S/aplus-seller-content-images-us-east-1/A21TJRUUN4KGV/A3V1ABPREF26MT/da5ebdb3-cad3-4ea1-acdc-445d08169e24._CR0,0,300,300_PT0_SX300__.jpg",
         "images": [
+            "https://m.media-amazon.com/images/S/aplus-seller-content-images-us-east-1/A21TJRUUN4KGV/A3V1ABPREF26MT/da5ebdb3-cad3-4ea1-acdc-445d08169e24._CR0,0,300,300_PT0_SX300__.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2023/2/MI/QK/NE/57038963/ecg-gel-5kg-jar.jpg",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%203"
@@ -1098,8 +1150,9 @@ var products = [
         "desc": "Ecg Machine Jelly Jar 5 Kg – Standard Model<br>This standard ecg machine jelly jar 5 kg offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Ecg Machine Jelly Jar 5 Kg – Standard Model<br>A reliable and durable ecg machine jelly jar 5 kg designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
+        "image": "https://m.media-amazon.com/images/I/71ryRm+G-vL._AC_UF350,350_QL80_.jpg",
         "images": [
+            "https://m.media-amazon.com/images/I/71ryRm+G-vL._AC_UF350,350_QL80_.jpg",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%203"
         ]
@@ -1118,8 +1171,9 @@ var products = [
         "desc": "Ecg Machine Jelly Jar 5 Kg – Premium Model<br>This premium quality ecg machine jelly jar 5 kg provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Ecg Machine Jelly Jar 5 Kg – Premium Model<br>A high-performance ecg machine jelly jar 5 kg designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
+        "image": "https://smartcareind.in/cdn/shop/products/IMG_3978_700x700.jpg?v=1568453597",
         "images": [
+            "https://smartcareind.in/cdn/shop/products/IMG_3978_700x700.jpg?v=1568453597",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201",
             "https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%201|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%202|https://via.placeholder.com/600x600?text=ECG%20MACHINE%20JELLY%20JAR%205%20KG%203"
         ]
@@ -1138,8 +1192,9 @@ var products = [
         "desc": "Ultrasound Jelly Bottle 250 Ml – Budget Model<br>This affordable ultrasound jelly bottle 250 ml is designed for essential diagnostic and monitoring functions. It provides reliable measurements for patient care.<br>💰 Best for customers looking for a low-cost solution.<br>⚠️ No warranty included.",
         "usage": "Ultrasound Jelly Bottle 250 Ml – Basic Model <br>An affordable ultrasound jelly bottle 250 ml designed for everyday medical use. It is suitable for clinics or medical centers looking for a low-cost solution.<br>Warranty: No Warranty",
         "warranty": "NO WARRANTY",
-        "image": "https://5.imimg.com/data5/SELLER/Default/2022/9/GK/UU/BH/1747978/ecg-ultrasound-gel-250ml.jpg",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/8/440402041/BR/NV/IZ/52083709/250-ml-gelpro-ultrasound-gel-1000x1000.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2024/8/440402041/BR/NV/IZ/52083709/250-ml-gelpro-ultrasound-gel-1000x1000.jpg",
             "https://5.imimg.com/data5/SELLER/Default/2022/9/GK/UU/BH/1747978/ecg-ultrasound-gel-250ml.jpg",
             "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
             "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%203"
@@ -1159,8 +1214,9 @@ var products = [
         "desc": "Ultrasound Jelly Bottle 250 Ml – Standard Model<br>This standard ultrasound jelly bottle 250 ml offers accurate and stable performance with improved durability. It is suitable for hospitals, clinics, and regular patient care.<br>🛠️ Includes 6 months warranty for reliability and customer assurance.<br>💰 Perfect balance between price and quality.",
         "usage": "Ultrasound Jelly Bottle 250 Ml – Standard Model<br>A reliable and durable ultrasound jelly bottle 250 ml designed for regular medical use. Made with better-quality materials for steady performance. It includes a 6-month warranty for dependable use.<br>Warranty: 6 Months",
         "warranty": "6 M WARRANTY",
-        "image": "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2024/8/440402042/EK/RE/MI/52083709/250-ml-gelpro-ultrasound-gel-1000x1000.jpg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2024/8/440402042/EK/RE/MI/52083709/250-ml-gelpro-ultrasound-gel-1000x1000.jpg",
             "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
             "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%203"
         ]
@@ -1179,8 +1235,9 @@ var products = [
         "desc": "Ultrasound Jelly Bottle 250 Ml – Premium Model<br>This premium quality ultrasound jelly bottle 250 ml provides high accuracy, long-lasting performance, and comfortable patient use. Designed for professional medical environments, it ensures dependable performance and durability.<br>🛡️ Includes 1 year warranty for maximum trust and support.<br>💰 Best choice for long-term and professional use.",
         "usage": "Ultrasound Jelly Bottle 250 Ml – Premium Model<br>A high-performance ultrasound jelly bottle 250 ml designed for accurate and long-term use. Built with advanced materials to ensure stable performance. Comes with a 1-year warranty, making it ideal for professional healthcare environments.<br>Warranty: 1 Year",
         "warranty": "1 Y WARRANTY",
-        "image": "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
+        "image": "https://5.imimg.com/data5/SELLER/Default/2023/7/326803156/UK/DV/OL/52083709/gelpro-ultrasound-gel.jpeg",
         "images": [
+            "https://5.imimg.com/data5/SELLER/Default/2023/7/326803156/UK/DV/OL/52083709/gelpro-ultrasound-gel.jpeg",
             "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201",
             "https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%201|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%202|https://via.placeholder.com/600x600?text=ULTRASOUND%20JELLY%20BOTTLE%20250%20ml%203"
         ]
