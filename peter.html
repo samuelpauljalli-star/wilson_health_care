@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -618,9 +618,11 @@
                             <h4 style="margin-bottom: 0.5rem;">Site Announcement</h4>
                             <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem;">Update the
                                 scrolling marquee at the top of the home page.</p>
-                            <div style="display: flex; gap: 10px;">
+                            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                                 <input type="text" id="announcement-text" placeholder="Type announcement here..."
                                     style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 10px; color: white;">
+                                <input type="number" id="announcement-speed" placeholder="Speed (secs)" title="Duration in seconds (e.g. 60)" 
+                                    style="width: 120px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 10px; color: white;">
                                 <button onclick="saveAnnouncement()"
                                     style="background: var(--primary); border: none; color: white; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: 600;">Update</button>
                             </div>
@@ -1087,10 +1089,13 @@
 
         window.saveAnnouncement = async function () {
             const text = document.getElementById('announcement-text').value.trim();
+            const speedVal = document.getElementById('announcement-speed').value.trim();
+            const speedSec = speedVal ? parseInt(speedVal) : 60; // default 60s
 
             try {
                 await setDoc(doc(db, "settings", "announcement"), {
                     text: text,
+                    speed: speedSec,
                     updatedAt: new Date().toISOString()
                 });
                 showSuccess(text ? "Announcement updated!" : "Announcement cleared!");
@@ -1099,6 +1104,19 @@
                 showToast("Failed to update announcement");
             }
         }
+
+        window.loadAnnouncement = async function () {
+            try {
+                const snap = await getDoc(doc(db, "settings", "announcement"));
+                if (snap.exists()) {
+                    const data = snap.data();
+                    if (data.text) document.getElementById('announcement-text').value = data.text;
+                    if (data.speed) document.getElementById('announcement-speed').value = data.speed;
+                }
+            } catch (e) {
+                console.error("Failed to load announcement settings", e);
+            }
+        };
 
         function clearData(type) {
             if (confirm(`Are you sure you want to clear all ${type}? This cannot be undone.`)) {
@@ -1366,6 +1384,7 @@
                 document.getElementById('login-gate').style.display = 'none';
                 document.getElementById('dashboard').style.display = 'grid';
                 loadDashboardData();
+                if (typeof window.loadAnnouncement === 'function') window.loadAnnouncement();
                 if (typeof window.loadProducts === 'function') window.loadProducts();
                 initCharts();
                 if (typeof window.loadFirebaseUsers === 'function') window.loadFirebaseUsers();

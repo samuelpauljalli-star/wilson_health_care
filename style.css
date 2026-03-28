@@ -1671,7 +1671,7 @@ footer {
 .marquee-track {
     display: flex;
     gap: 50px;
-    animation: marquee 30s linear infinite;
+    animation: marquee var(--marquee-speed, 60s) linear infinite;
     width: max-content;
 }
 

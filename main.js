@@ -2194,12 +2194,15 @@ async function loadDynamicContent() {
 
                 if (docSnap.exists() && docSnap.data().text && docSnap.data().text.trim()) {
                     const text = docSnap.data().text.trim();
+                    const speedSec = docSnap.data().speed || 60; // default 60s
+                    // Apply speed to CSS variable
+                    document.documentElement.style.setProperty('--marquee-speed', speedSec + 's');
                     if (track) {
                         // Repeat content multiple times for seamless marquee on large screens
                         const item = `<div class="marquee-item"><i class="fas fa-bullhorn"></i> ${text}</div>`;
                         track.innerHTML = item.repeat(8);
                         bar.style.display = 'block';
-                        console.log("📢 Announcement updated:", text);
+                        console.log("📢 Announcement updated:", text, "Speed:", speedSec + 's');
                     }
                 } else {
                     if (bar) bar.style.display = 'none';
@@ -2855,11 +2858,21 @@ function renderProducts(filter = 'All', searchQuery = '', sortBy = 'default') {
             warrantyBadge = `<div class="warranty-badge six-month"><i class="fas fa-shield-alt"></i> 6 Month Warranty</div>`;
         }
         try {
+            // Check if item already in cart to determine quantity
+            const cartItem = cart.find(ci => ci.id == p.id);
+            const qtyInCart = cartItem ? (cartItem.quantity || 1) : 0;
+            const qtyControls = qtyInCart > 0
+                ? `<div class="qty-controls" id="qty-${p.id}" style="display:flex; align-items:center; gap:6px; flex:1;">
+                       <button class="qty-btn" onclick="event.stopPropagation(); changeCartQty('${p.id}', -1)" style="width:28px;height:28px;border-radius:50%;border:2px solid var(--primary);background:white;color:var(--primary);font-size:1rem;cursor:pointer;font-weight:700;">−</button>
+                       <span style="font-weight:700;font-size:0.95rem;min-width:20px;text-align:center;">${qtyInCart}</span>
+                       <button class="qty-btn" onclick="event.stopPropagation(); changeCartQty('${p.id}', 1)" style="width:28px;height:28px;border-radius:50%;border:2px solid var(--primary);background:var(--primary);color:white;font-size:1rem;cursor:pointer;font-weight:700;">+</button>
+                   </div>`
+                : `<button class="add-cart-btn" style="flex: 1; padding: 0.5rem; font-size: 0.8rem;" onclick="addToCart('${p.id}')"><i class="fas fa-cart-plus"></i> Cart</button>`;
             html += `
                 <div class="product-card" onclick="if(!event.target.closest('button')) showProductInfo('${p.id}')">
                     ${p.discount ? `<div class="discount-badge">${p.discount}</div>` : ''}
                     ${warrantyBadge}
-                    <img src="${p.image || (p.images && p.images.length ? p.images[0] : 'logo.jpg')}" alt="${p.name}" class="product-img" onerror="this.onerror=null; this.src='logo.jpg';">
+                    <img src="${p.image || (p.images && p.images.length ? p.images[0] : 'images/whc.png')}" alt="${p.name}" class="product-img" loading="lazy" onerror="this.onerror=null; this.src='images/whc.png';" style="object-fit:contain; background:#f8fafc;">
                     <div class="product-info">
                         <span class="product-tag">${p.tag || 'Medical'}</span>
                         <h3 class="product-title">${p.name || 'Unnamed Product'}</h3>
@@ -2874,9 +2887,7 @@ function renderProducts(filter = 'All', searchQuery = '', sortBy = 'default') {
                             ` : '<span class="current-price">Contact for Price</span>'}
                         </div>
                         <div class="product-actions" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
-                            <button class="add-cart-btn" style="flex: 1; padding: 0.5rem; font-size: 0.8rem;" onclick="addToCart('${p.id}')">
-                                <i class="fas fa-cart-plus"></i> Cart
-                            </button>
+                            ${qtyControls}
                             <button class="checkout-btn" style="flex: 1.2; padding: 0.5rem; font-size: 0.8rem; background: var(--secondary);" onclick="buyNow('${p.id}')">
                                 <i class="fas fa-bolt"></i> Buy Now
                             </button>
@@ -3015,6 +3026,27 @@ function addToCart(id) {
         showToast(`Added ${product.name} to cart!`);
     }
     updateStats();
+    renderProducts(currentCategory);
+}
+
+// Adjust quantity directly from the product card
+function changeCartQty(id, delta) {
+    if (!currentUser) {
+        showToast("Please login to add items to cart");
+        openModal('login');
+        return;
+    }
+    const item = cart.find(i => i.id == id);
+    if (item) {
+        item.quantity = (item.quantity || 1) + delta;
+        if (item.quantity <= 0) {
+            cart = cart.filter(i => i.cartId !== item.cartId);
+            showToast(`Removed from cart!`);
+        }
+        updateStats();
+        renderProducts(currentCategory);
+        renderCart();
+    }
 }
 
 function changeQuantity(cartId, delta) {
