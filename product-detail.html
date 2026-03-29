@@ -92,19 +92,11 @@
 </head>
 
 <body>
-    <!-- Dynamic Announcement Bar -->
-    <div id="dynamic-announcement"
-        style="display: none; background: #059669; color: #fff; padding: 10px 0; border-bottom: 2px solid #047857; position: relative; z-index: 10001; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.15);">
-        <div class="marquee-track" id="announcement-track"
-            style="display: flex; gap: 50px; animation: marquee 30s linear infinite; width: max-content;">
-            <!-- Text injected by JS -->
-        </div>
-    </div>
-    <nav>
-        <button onclick="history.back()" class="back-btn" title="Go back">
-            <i class="fas fa-arrow-left"></i>
-        </button>
-    </nav>
+    <button onclick="history.back()" class="floating-back-btn" title="Go back">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+
 
     <div class="main-container">
         <!-- Vertical Thumbs -->

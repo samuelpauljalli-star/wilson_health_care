@@ -96,7 +96,6 @@
         .login-card h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #fff, var(--primary));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -335,6 +334,143 @@
         .toast.show {
             transform: translateX(-50%) translateY(0);
         }
+
+        /* Responsive Dashboard */
+        @media (max-width: 1024px) {
+            #dashboard {
+                grid-template-columns: 220px 1fr;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #dashboard {
+                grid-template-columns: 1fr;
+                height: auto;
+                padding: 1rem;
+                overflow-y: auto;
+            }
+            aside {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 70px;
+                flex-direction: row;
+                border-radius: 0;
+                z-index: 1000;
+                padding: 0 10px;
+                justify-content: space-around;
+                align-items: center;
+                gap: 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            aside > div:first-child {
+                display: none !important;
+            }
+            aside > div:last-child {
+                margin: 0 !important;
+            }
+            .nav-item {
+                padding: 10px;
+                flex-direction: column;
+                gap: 4px;
+                font-size: 0.6rem;
+                color: var(--text-dim);
+            }
+            .nav-item i {
+                font-size: 1.2rem;
+            }
+            .nav-item span {
+                display: block;
+            }
+            main {
+                padding-bottom: 90px;
+                height: auto;
+                overflow: visible;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .stat-card {
+                padding: 1rem;
+            }
+            .stat-card .val {
+                font-size: 1.4rem;
+            }
+            .data-card {
+                padding: 1.2rem;
+            }
+            .data-card h2 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .data-card h2 div {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+            #monthlyChart, #yearlyChart, #usersChart {
+                max-height: 200px !important;
+            }
+            tr th:nth-child(n+4), tr td:nth-child(n+4) {
+                display: none;
+            }
+            th, td {
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Admin Welcome Splash */
+        .admin-welcome-splash {
+            position: fixed;
+            inset: 0;
+            background: #0a1f1c;
+            z-index: 11000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: welcomeFadeOut 1s ease forwards 2.5s;
+        }
+
+        .welcome-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 3px solid var(--primary);
+            padding: 8px;
+            background: white;
+            animation: welcomePulse 2s infinite ease-in-out;
+        }
+
+        .welcome-msg {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes welcomePulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(5, 150, 105, 0.4); }
+            50% { transform: scale(1.1); box-shadow: 0 0 40px rgba(5, 150, 105, 0.6); }
+        }
+
+        @keyframes welcomeFadeOut {
+            to { opacity: 0; visibility: hidden; }
+        }
     </style>
 </head>
 
@@ -380,19 +516,22 @@
             </div>
 
             <div class="nav-item active" onclick="switchTab('overview')">
-                <i class="fas fa-chart-line"></i> Overview
+                <i class="fas fa-chart-line"></i> <span>Overview</span>
             </div>
             <div class="nav-item" onclick="switchTab('orders')">
-                <i class="fas fa-shopping-bag"></i> Orders
+                <i class="fas fa-shopping-bag"></i> <span>Orders</span>
             </div>
             <div class="nav-item" onclick="switchTab('customers')">
-                <i class="fas fa-users"></i> Customers
+                <i class="fas fa-users"></i> <span>Customers</span>
             </div>
             <div class="nav-item" onclick="switchTab('products')">
-                <i class="fas fa-box"></i> Products
+                <i class="fas fa-box"></i> <span>Products</span>
+            </div>
+            <div class="nav-item" onclick="switchTab('chat')">
+                <i class="fas fa-comments"></i> <span>Chat Support</span>
             </div>
             <div class="nav-item" onclick="switchTab('settings')">
-                <i class="fas fa-cog"></i> Settings
+                <i class="fas fa-cog"></i> <span>Settings</span>
             </div>
 
             <div style="margin-top: auto;">
@@ -608,6 +747,35 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Support Tab -->
+            <div id="tab-chat" class="tab-content" style="display: none;">
+                <div class="data-card" style="height: calc(100vh - 150px); display: flex; flex-direction: column;">
+                    <h2>Real-time Support
+                        <button onclick="loadAdminChats()" class="stats-btn" style="background:var(--primary); border:none; color:white; padding:5px 15px; border-radius:10px; cursor:pointer;"><i class="fas fa-sync"></i> Refresh</button>
+                    </h2>
+                    <div style="display: flex; gap: 20px; flex: 1; overflow: hidden; margin-top: 1rem;">
+                        <!-- Chat List -->
+                        <div id="admin-chat-list" style="width: 300px; border-right: 1px solid rgba(255,255,255,0.1); overflow-y: auto; padding-right: 10px;">
+                            <p style="color: var(--text-dim); text-align: center; margin-top: 2rem;">Loading conversations...</p>
+                        </div>
+                        <!-- Chat Box -->
+                        <div id="admin-chat-box" style="flex: 1; display: flex; flex-direction: column; background: rgba(0,0,0,0.2); border-radius: 20px; padding: 20px;">
+                            <div id="admin-chat-header" style="padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 15px;">
+                                <h3 id="current-chat-user">Select a conversation</h3>
+                                <p id="current-chat-email" style="font-size: 0.8rem; color: var(--text-dim);"></p>
+                            </div>
+                            <div id="admin-chat-messages" style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-bottom: 20px;">
+                                <!-- Messages injected here -->
+                            </div>
+                            <div id="admin-chat-input-wrap" style="display: none; gap: 10px; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                                <input type="text" id="admin-chat-input" placeholder="Type a reply..." style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 12px 20px; border-radius: 30px; color: white; outline: none;">
+                                <button onclick="sendAdminReply()" style="background: var(--primary); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1320,6 +1488,7 @@
             if (tabId === 'products') loadProducts();
             if (tabId === 'orders') loadFirebaseOrders();
             if (tabId === 'customers') loadFirebaseUsers();
+            if (tabId === 'chat') loadAdminChats();
         }
 
         function getEnrichedUsers() {
@@ -1397,6 +1566,18 @@
 
                 if (user) {
                     console.log('Admin logged in:', user.displayName, user.email);
+                    
+                    // Show Welcome Splash
+                    const welcomeSplash = document.createElement('div');
+                    welcomeSplash.className = 'admin-welcome-splash';
+                    welcomeSplash.innerHTML = `
+                        <img src="images/whc.png" class="welcome-logo">
+                        <h2 class="welcome-msg">Welcome, Admin</h2>
+                        <p style="color: var(--text-dim); letter-spacing: 2px;">Accessing Wilson Health Care Dashboard</p>
+                    `;
+                    document.body.appendChild(welcomeSplash);
+                    setTimeout(() => welcomeSplash.remove(), 3500);
+
                     // Show name in sidebar
                     const nameEl = document.getElementById('admin-name-display');
                     if (nameEl) nameEl.textContent = user.displayName || user.email;
@@ -1407,6 +1588,77 @@
         window.unlockDashboard = unlockDashboard;
         window.initCharts = function () { initCharts(); };
         window.loadDashboardData = function () { loadDashboardData(); };
+
+        let activeChatUser = null;
+
+        async function loadAdminChats() {
+            if (!window.db) return;
+            const { collection, query, orderBy, onSnapshot, where } = window.firebaseFirestore;
+            const q = query(collection(window.db, "support_chats"), orderBy("timestamp", "asc"));
+            
+            onSnapshot(q, (snapshot) => {
+                const msgs = [];
+                snapshot.forEach(doc => msgs.push({ id: doc.id, ...doc.data() }));
+                
+                // Group by userEmail
+                const listEl = document.getElementById('admin-chat-list');
+                const groups = {};
+                msgs.forEach(m => {
+                    if (!groups[m.userEmail]) groups[m.userEmail] = { name: m.userName, email: m.userEmail, lastMsg: m.text, lastTs: m.timestamp, msgs: [] };
+                    groups[m.userEmail].msgs.push(m);
+                    groups[m.userEmail].lastMsg = m.text;
+                    groups[m.userEmail].lastTs = m.timestamp;
+                });
+
+                listEl.innerHTML = Object.values(groups).reverse().map(g => `
+                    <div class="chat-item ${activeChatUser === g.email ? 'active' : ''}" onclick="selectChat('${g.email}')" style="padding: 15px; border-radius: 15px; cursor: pointer; transition: 0.3s; margin-bottom: 10px; background: ${activeChatUser === g.email ? 'rgba(5, 150, 105, 0.2)' : 'rgba(255,255,255,0.03)'}">
+                        <div style="font-weight: 700; color: white;">${g.name || 'Guest'}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${g.lastMsg}</div>
+                    </div>
+                `).join('') || '<p style="text-align:center; color:var(--text-dim);">No messages yet.</p>';
+
+                if (activeChatUser) renderCurrentChat(groups[activeChatUser]?.msgs || []);
+            });
+        }
+
+        window.selectChat = function(email) {
+            activeChatUser = email;
+            document.getElementById('admin-chat-input-wrap').style.display = 'flex';
+            loadAdminChats(); // Triggers re-render
+        };
+
+        function renderCurrentChat(msgs) {
+            const container = document.getElementById('admin-chat-messages');
+            if (msgs.length > 0) {
+                document.getElementById('current-chat-user').innerText = msgs[0].userName || 'Guest';
+                document.getElementById('current-chat-email').innerText = msgs[0].userEmail;
+            }
+            container.innerHTML = msgs.map(m => `
+                <div style="align-self: ${m.isAdmin ? 'flex-end' : 'flex-start'}; background: ${m.isAdmin ? 'var(--primary)' : 'rgba(255,255,255,0.1)'}; color: white; padding: 10px 15px; border-radius: 15px; max-width: 80%; font-size: 0.9rem;">
+                    ${m.text}
+                    <div style="font-size: 0.6rem; opacity: 0.6; margin-top: 5px;">${m.timestamp?.toDate ? m.timestamp.toDate().toLocaleTimeString() : ''}</div>
+                </div>
+            `).join('');
+            container.scrollTop = container.scrollHeight;
+        }
+
+        window.sendAdminReply = async function() {
+            const input = document.getElementById('admin-chat-input');
+            const text = input.value.trim();
+            if (!text || !activeChatUser || !window.db) return;
+
+            try {
+                const { collection, addDoc, serverTimestamp } = window.firebaseFirestore;
+                await addDoc(collection(window.db, "support_chats"), {
+                    text: text,
+                    userEmail: activeChatUser,
+                    userName: 'Support', // For the user side
+                    timestamp: serverTimestamp(),
+                    isAdmin: true
+                });
+                input.value = '';
+            } catch (err) { console.error(err); }
+        };
 
         function loadDashboardData() {
             // Use Firebase orders if already loaded, otherwise fall back to localStorage

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Wilson Health Care</title>
+    <link rel="icon" type="image/jpg" href="images/whc.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #059669;
+            --primary-light: #10b981;
+            --bg-dark: #0a1f1c;
+            --text-gold: #fbbf24;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-dark);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: 'Outfit', sans-serif;
+            color: white;
+        }
+
+        /* Ambient Glow */
+        .ambient-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(5, 150, 105, 0.15) 0%, rgba(5, 150, 105, 0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.3); opacity: 0.8; }
+        }
+
+        .welcome-card {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 30px;
+            animation: zoom-in 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .logo-circle {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(5, 150, 105, 0.3);
+            animation: rotate-ring 10s linear infinite;
+        }
+
+        .logo-circle::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: 50%;
+            width: 10px; height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .logo-img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+            padding: 8px;
+            position: relative;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 30px rgba(5, 150, 105, 0.4);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, #a7f3d0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fade-up 0.8s ease forwards 0.5s;
+        }
+
+        .welcome-text {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fade-up 0.8s ease forwards 0.8s;
+        }
+
+        /* Animated Loading Bar */
+        .loader-container {
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            opacity: 0;
+            animation: fade-in 0.5s ease forwards 1.2s;
+        }
+
+        .loader-bar {
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            box-shadow: 0 0 10px var(--primary);
+            animation: load-progress 5s linear forwards;
+        }
+
+        .redirect-text {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #64748b;
+            opacity: 0;
+            animation: fade-in 0.5s ease forwards 1.5s;
+        }
+
+        /* Animations */
+        @keyframes zoom-in {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes rotate-ring {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fade-up {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade-in {
+            to { opacity: 1; }
+        }
+
+        @keyframes load-progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        /* Particle effects */
+        .particle {
+            position: absolute;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+    
+    <div class="welcome-card">
+        <div class="logo-container">
+            <div class="logo-circle"></div>
+            <img src="images/whc.png" class="logo-img" alt="Logo">
+        </div>
+        
+        <h1>Welcome User</h1>
+        <p class="welcome-text">Wilson Health Care</p>
+
+        <div class="loader-container">
+            <div class="loader-bar"></div>
+        </div>
+        <p class="redirect-text">Starting experience...</p>
+    </div>
+
+    <script>
+        // Redirect to index.html after 5 seconds
+        setTimeout(function() {
+            // Apply a fade-out effect before redirecting
+            document.body.style.transition = 'opacity 0.8s ease';
+            document.body.style.opacity = '0';
+            
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 800);
+        }, 4200); // 4.2s + 0.8s fade = 5s total
+
+        // Tiny particles decoration
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            const size = Math.random() * 4 + 2 + 'px';
+            particle.style.width = size;
+            particle.style.height = size;
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = Math.random() * 100 + 'vh';
+            particle.style.animation = `float ${Math.random() * 3 + 2}s linear infinite`;
+            document.body.appendChild(particle);
+            
+            setTimeout(() => particle.remove(), 5000);
+        }
+
+        const styleSheet = document.createElement("style");
+        styleSheet.innerText = `
+            @keyframes float {
+                from { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+                to { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(styleSheet);
+        setInterval(createParticle, 300);
+    </script>
+</body>
+</html>

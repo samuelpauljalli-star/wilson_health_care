@@ -35,116 +35,39 @@ body {
     line-height: 1.45;
     min-height: 100vh;
 }
-
-/* ── Back Button ─────────────────────────────── */
-.back-btn {
+/* ── Floating Back Button ─────────────────────── */
+.floating-back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+    background: rgba(10, 31, 28, 0.85); /* Deep forest translucent */
+    border: 1.5px solid rgba(5, 150, 105, 0.35);
+    color: white;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
     cursor: pointer;
-    transition: var(--transition);
+    z-index: 10002; /* Higher than announcement if any exists */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-.back-btn:hover {
-    background: rgba(255,255,255,0.2);
+
+.floating-back-btn:hover {
+    background: var(--primary);
     transform: scale(1.1);
-    border-color: var(--buy-now);
-}
-.back-btn i { font-size: 1rem; }
-
-/* ── Navbar ──────────────────────────────────── */
-nav {
-    background: var(--bg-nav);
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 62px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.35);
-    gap: 12px;
+    box-shadow: 0 8px 24px rgba(5, 150, 105, 0.4);
+    border-color: #a7f3d0;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    flex-shrink: 0;
-}
-.logo img {
-    height: 44px;
-    width: 44px;
-    border-radius: 50%;
-    border: 2px solid var(--primary);
-    padding: 2px;
-    background: white;
-}
-.logo .brand-wilson {
-    color: white;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    display: flex;
-    gap: 2px;
-    font-size: 1.25rem;
-    line-height: 1;
-}
-.logo .brand-healthcare {
-    color: var(--buy-now);
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    gap: 1.5px;
-    font-size: 0.55rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-@keyframes letterReveal {
-    from { opacity:0; transform: translateY(8px); }
-    to   { opacity:1; transform: translateY(0); }
-}
-.logo span b {
-    display: inline-block;
-    opacity: 0;
-    animation: letterReveal 0.5s cubic-bezier(0.175,.885,.32,1.275) forwards;
-}
-
-.nav-actions {
-    display: flex;
-    gap: 1.2rem;
-    align-items: center;
-}
-.nav-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
+.floating-back-btn i {
     font-size: 1.2rem;
-    text-decoration: none;
-    position: relative;
-    transition: transform 0.2s;
 }
-.nav-btn:hover { transform: scale(1.12); color: var(--buy-now); }
 
-.badge {
-    position: absolute;
-    top: -8px; right: -8px;
-    background: var(--buy-now);
-    color: #0a1f1c;
-    font-size: 0.65rem;
-    padding: 2px 5px;
-    border-radius: 50%;
-    font-weight: 800;
-}
+
 
 /* ── Main Container ──────────────────────────── */
 .main-container {
@@ -488,57 +411,3 @@ nav {
     .price-row { flex-wrap: nowrap; align-items: center; }
 }
 
-/* ── Mobile bottom nav ── */
-.mobile-bottom-nav { display: none; }
-
-@media (max-width: 640px) {
-    body { padding-bottom: 80px; }
-
-    .logo .brand-wilson,
-    .logo .brand-healthcare { display: none !important; }
-
-    .mobile-bottom-nav {
-        display: flex;
-        position: fixed;
-        bottom: 0; left: 0; right: 0;
-        width: 100%;
-        z-index: 9999;
-        background: rgba(255,255,255,0.98);
-        backdrop-filter: blur(20px);
-        border-top: 1px solid var(--border-mid);
-        box-shadow: 0 -4px 20px rgba(0,0,0,.08);
-        padding: 8px 0 max(8px, env(safe-area-inset-bottom));
-        justify-content: space-around;
-        align-items: center;
-    }
-    .mnav-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        flex: 1;
-        color: #64748b;
-        text-decoration: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        transition: var(--transition);
-    }
-    .mnav-item i { font-size: 1.35rem; }
-    .mnav-item:active { transform: scale(0.9); color: var(--primary); }
-    .mnav-label { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2px; }
-    .mnav-badge {
-        position: absolute;
-        top: 5px; left: 55%;
-        background: var(--primary);
-        color: white;
-        font-size: 0.62rem;
-        min-width: 17px; height: 17px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        border: 1.5px solid white;
-    }
-}

@@ -2697,7 +2697,11 @@ function handleManualChat() {
     const input = document.getElementById('chat-input');
     const text = input.value.trim();
     if (text) {
-        askBot(text);
+        if (chatAdminMode) {
+            sendToAdminChat(text);
+        } else {
+            askBot(text);
+        }
         input.value = '';
     }
 }
@@ -2711,6 +2715,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+let chatAdminMode = false;
+
+async function sendToAdminChat(text) {
+    if (!text) return;
+    const msgContainer = document.getElementById('chat-messages');
+    
+    // User Msg
+    const userDiv = document.createElement('div');
+    userDiv.className = 'chat-msg user-msg';
+    userDiv.innerText = text;
+    msgContainer.appendChild(userDiv);
+    msgContainer.scrollTop = msgContainer.scrollHeight;
+
+    // Send to Firestore
+    try {
+        const user = window.currentUser || { email: 'Guest@user.com', displayName: 'Guest' };
+        if (window.db) {
+            const { collection, addDoc, serverTimestamp } = window.firebaseFirestore;
+            await addDoc(collection(window.db, "support_chats"), {
+                text: text,
+                userEmail: user.email,
+                userName: user.displayName,
+                timestamp: serverTimestamp(),
+                isAdmin: false,
+                status: 'unread'
+            });
+            
+            // Bot confirmation
+            setTimeout(() => {
+                const botDiv = document.createElement('div');
+                botDiv.className = 'chat-msg bot-msg';
+                botDiv.innerText = "Message sent to Admin! We will get back to you soon.";
+                msgContainer.appendChild(botDiv);
+                msgContainer.scrollTop = msgContainer.scrollHeight;
+            }, 800);
+        } else {
+            console.error("Firestore DB not initialized for admin chat");
+        }
+    } catch (err) {
+        console.error("Error sending admin chat:", err);
+    }
+}
+
+function startAdminChat() {
+    chatAdminMode = true;
+    const msgContainer = document.getElementById('chat-messages');
+    const botDiv = document.createElement('div');
+    botDiv.className = 'chat-msg bot-msg';
+    botDiv.innerText = "You are now connected to Admin Support. Type your message below.";
+    msgContainer.appendChild(botDiv);
+    msgContainer.scrollTop = msgContainer.scrollHeight;
+}
 
 function askBot(typeOrText) {
     const msgContainer = document.getElementById('chat-messages');

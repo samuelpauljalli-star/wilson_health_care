@@ -2279,173 +2279,226 @@ footer {
 }
 
 .pwa-banner-btn {
+    background: white;
+    color: var(--primary);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: var(--transition);
     display: flex;
     align-items: center;
-    gap: 7px;
-    background: white;
-    color: var(--primary-dark);
-    border: none;
-    border-radius: 50px;
-    padding: 9px 22px;
-    font-size: 0.88rem;
-    font-weight: 800;
-    cursor: pointer;
-    letter-spacing: 0.3px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-    white-space: nowrap;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .pwa-banner-btn:hover {
-    background: #f0fdf4;
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.pwa-banner-btn:active {
-    transform: scale(0.97);
-}
-
-.pwa-banner-btn.pwa-ready {
-    animation: pwaButtonPop 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-}
-
-.pwa-banner-close {
-    background: rgba(255,255,255,0.15);
-    border: none;
+.pwa-top-banner {
+    position: relative;
+    z-index: 10002;
+    background: rgba(10, 31, 28, 0.88);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid var(--primary);
     color: white;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
+    padding: 14px 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pwa-banner-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background 0.25s ease;
-    flex-shrink: 0;
+    gap: 25px;
 }
 
-.pwa-banner-close:hover {
-    background: rgba(255,255,255,0.3);
-}
-
-/* Responsive: stack on small phones */
-@media (max-width: 480px) {
-    .pwa-banner-inner {
-        padding: 10px 4%;
-        gap: 10px;
-    }
-    .pwa-banner-text span {
-        display: none;
-    }
-    .pwa-banner-btn {
-        padding: 8px 16px;
-        font-size: 0.82rem;
-    }
-}
-
-/* ── Intro Splash Screen ─────────────────────────────── */
 .intro-splash {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: var(--bg-light);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #0a1f1c;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999999;
-    /* Scale container up to overlap body zoom boundaries, keeps center dead center */
-    transform: scale(1.15);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000000;
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .intro-splash.fade-out {
     opacity: 0;
     visibility: hidden;
-    transform: scale(1.3);
-    pointer-events: none;
+    transform: scale(1.1);
 }
 
-.intro-logo-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    z-index: 2;
-    /* Counter-scale to keep logo normal size while parent is stretched */
-    transform: scale(0.87); 
-}
-
-.intro-logo-pulse {
+.splash-bg-gradient {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 130px;
-    height: 130px;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 30%, #065f46 0%, transparent 40%),
+                radial-gradient(circle at 70% 70%, #0d9488 0%, transparent 40%),
+                radial-gradient(circle at 10% 80%, #134e4a 0%, transparent 40%),
+                #0a1f1c;
+    animation: splashGradientShift 15s infinite alternate ease-in-out;
+    z-index: 1;
+}
+
+@keyframes splashGradientShift {
+    0% { transform: translate(-25%, -25%) rotate(0deg); }
+    100% { transform: translate(5%, 5%) rotate(15deg); }
+}
+
+.splash-particles div {
+    position: absolute;
+    background: rgba(167, 243, 208, 0.15);
     border-radius: 50%;
-    z-index: -1;
-    opacity: 0;
-    animation: introPulse 2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+    z-index: 2;
+    animation: splashFloat 8s infinite linear;
 }
 
-@keyframes introPulse {
-    0% { transform: translateX(-50%) scale(0.8); opacity: 0.8; background: var(--primary); border: 2px solid var(--primary); }
-    50% { background: transparent; border: 6px solid var(--primary); }
-    100% { transform: translateX(-50%) scale(2.8); opacity: 0; background: transparent; border: 1px solid var(--primary); }
+.p-1 { width: 40px; height: 40px; top: 10%; left: 15%; animation-delay: 0s; }
+.p-2 { width: 60px; height: 60px; top: 70%; left: 80%; animation-delay: -2s; }
+.p-3 { width: 25px; height: 25px; top: 40%; left: 85%; animation-delay: -4s; }
+.p-4 { width: 45px; height: 45px; top: 80%; left: 10%; animation-delay: -6s; }
+.p-5 { width: 30px; height: 30px; top: 20%; left: 60%; animation-delay: -1s; }
+
+@keyframes splashFloat {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    20% { opacity: 0.6; }
+    80% { opacity: 0.6; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
 }
 
-.intro-logo-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 4px solid var(--primary);
-    padding: 4px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);
-    animation: introLogoReveal 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-}
-
-@keyframes introLogoReveal {
-    0% { transform: scale(0) rotate(-45deg) translateY(50px); opacity: 0; filter: blur(5px); }
-    100% { transform: scale(1) rotate(0) translateY(0); opacity: 1; filter: blur(0); }
-}
-
-.intro-text {
+.splash-card {
+    position: relative;
+    z-index: 10;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.2;
 }
 
-.intro-brand {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--primary);
-    letter-spacing: 2px;
+.splash-logo-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
 }
 
-.intro-brand-heal {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--secondary);
-    letter-spacing: 4px;
+.splash-ring, .splash-ring-outer {
+    position: absolute;
+    top: -8px; left: -8px; right: -8px; bottom: -8px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #059669;
+    animation: splashRotate 3s linear infinite;
 }
 
-.intro-text span span {
+.splash-ring-outer {
+    top: -18px; left: -18px; right: -18px; bottom: -18px;
+    border-width: 2px;
+    border-top-color: rgba(5, 150, 105, 0.3);
+    border-bottom-color: rgba(16, 185, 129, 0.3);
+    animation: splashRotate 6s linear infinite reverse;
+}
+
+.splash-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+    padding: 12px;
+    box-shadow: 0 0 40px rgba(5, 150, 105, 0.5);
+    animation: splashScale 6s infinite ease-in-out;
+}
+
+@keyframes splashScale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.splash-welcome-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: white;
+    display: flex;
+    gap: 4px;
+}
+
+.splash-welcome-title span {
     display: inline-block;
     opacity: 0;
     transform: translateY(20px);
-    animation: introTextReveal 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    background: linear-gradient(135deg, #fff 0%, #a7f3d0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: splashLetterIn 0.5s ease forwards;
 }
 
-@keyframes introTextReveal {
-    0% { opacity: 0; transform: translateY(20px) scale(0.8); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
+/* Staggered animation for 11 letters + space */
+.splash-welcome-title span:nth-child(1) { animation-delay: 0.1s; }
+.splash-welcome-title span:nth-child(2) { animation-delay: 0.15s; }
+.splash-welcome-title span:nth-child(3) { animation-delay: 0.2s; }
+.splash-welcome-title span:nth-child(4) { animation-delay: 0.25s; }
+.splash-welcome-title span:nth-child(5) { animation-delay: 0.3s; }
+.splash-welcome-title span:nth-child(6) { animation-delay: 0.35s; }
+.splash-welcome-title span:nth-child(7) { animation-delay: 0.4s; }
+.splash-welcome-title span:nth-child(8) { animation-delay: 0.5s; } /* space or next word */
+.splash-welcome-title span:nth-child(9) { animation-delay: 0.55s; }
+.splash-welcome-title span:nth-child(10) { animation-delay: 0.6s; }
+.splash-welcome-title span:nth-child(11) { animation-delay: 0.65s; }
+
+@keyframes splashLetterIn {
+    to { opacity: 1; transform: translateY(0); }
 }
+
+.splash-brand-text {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: splashFadeIn 1s ease forwards 1s;
+}
+
+.splash-loader-wrap {
+    width: 260px;
+    height: 5px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: splashFadeIn 1s ease forwards 1.2s;
+}
+
+.splash-loader-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #059669, #10b981, #34d399);
+    box-shadow: 0 0 15px #059669;
+    animation: splashLoad 4.2s linear forwards;
+}
+
+.splash-status-text {
+    font-size: 0.85rem;
+    color: #64748b;
+    opacity: 0;
+    animation: splashFadeIn 1s ease forwards 1.5s;
+}
+
+@keyframes splashFadeIn { to { opacity: 1; } }
+@keyframes splashRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes splashLoad { from { width: 0%; } to { width: 100%; } }

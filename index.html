@@ -160,19 +160,28 @@
 
 <body>
 
-    <!-- Intro Splash Screen -->
+    <!-- ── Premium Welcome Splash Screen ─── -->
     <div id="intro-splash" class="intro-splash">
-        <div class="intro-logo-container">
-            <div class="intro-logo-pulse"></div>
-            <img src="images/whc.png" alt="Wilson Health Care Logo" class="intro-logo-img">
-            <div class="intro-text">
-                <span class="intro-brand">
-                    <span style="animation-delay: 0.1s">W</span><span style="animation-delay: 0.15s">I</span><span style="animation-delay: 0.2s">L</span><span style="animation-delay: 0.25s">S</span><span style="animation-delay: 0.3s">O</span><span style="animation-delay: 0.35s">N</span>
-                </span>
-                <span class="intro-brand-heal">
-                    <span style="animation-delay: 0.4s">H</span><span style="animation-delay: 0.45s">E</span><span style="animation-delay: 0.5s">A</span><span style="animation-delay: 0.55s">L</span><span style="animation-delay: 0.6s">T</span><span style="animation-delay: 0.65s">H</span>&nbsp;<span style="animation-delay: 0.7s">C</span><span style="animation-delay: 0.75s">A</span><span style="animation-delay: 0.8s">R</span><span style="animation-delay: 0.85s">E</span>
-                </span>
+        <div class="splash-bg-gradient"></div>
+        <div class="splash-particles">
+            <div class="p-1"></div><div class="p-2"></div><div class="p-3"></div><div class="p-4"></div><div class="p-5"></div>
+        </div>
+        <div class="splash-card">
+            <div class="splash-logo-wrap">
+                <div class="splash-ring"></div>
+                <div class="splash-ring-outer"></div>
+                <img src="images/whc.png" alt="Wilson Logo" class="splash-img">
             </div>
+            <h2 class="splash-welcome-title">
+                <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+                &nbsp;
+                <span>U</span><span>s</span><span>e</span><span>r</span>
+            </h2>
+            <p class="splash-brand-text">Wilson Health Care</p>
+            <div class="splash-loader-wrap">
+                <div class="splash-loader-bar"></div>
+            </div>
+            <p class="splash-status-text">Starting experience...</p>
         </div>
     </div>
 
@@ -225,6 +234,7 @@
                 </div>
             </div>
             <div class="chat-options" id="chat-quick-options">
+                <button class="chat-opt-btn" onclick="startAdminChat()"><i class="fas fa-headset"></i> Chat with Admin</button>
                 <button class="chat-opt-btn" onclick="askBot('order')">Where is my order?</button>
                 <button class="chat-opt-btn" onclick="askBot('product')">Product Details</button>
                 <button class="chat-opt-btn" onclick="askBot('contact')">Contact Support</button>
@@ -249,15 +259,7 @@
         <div
             style="display: flex; align-items: center; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 10px;">
             <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 0;">
-                <button onclick="history.length > 1 ? history.back() : window.location.href='index.html'" title="Go Back"
-                    style="background: none; border: none; color: var(--primary); font-size: 1.35rem; cursor: pointer; padding: 5px; animation: blinker 1.5s infinite;">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-                <style>
-                    @keyframes blinker {
-                        50% { opacity: 0; }
-                    }
-                </style>
+
                 <a href="#" class="logo">
                     <img src="images/whc.png" alt="Wilson Health Care Logo">
                     <div style="display: flex; flex-direction: column; line-height: 1.1;">
@@ -924,18 +926,25 @@
         })();
     </script>
 
-    <!-- Intro Splash Script -->
+    <!-- Premium Splash Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const splash = document.getElementById('intro-splash');
             if (splash) {
-                // Keep splash visible for 2.5 seconds, then fade out
+                // Check if already shown this session to avoid annoyance
+                if (sessionStorage.getItem('splash-shown')) {
+                    splash.style.display = 'none';
+                    return;
+                }
+
+                // Show for 4.2s (bar fill) + 0.8s (fade) = 5s total
                 setTimeout(() => {
                     splash.classList.add('fade-out');
+                    sessionStorage.setItem('splash-shown', 'true');
                     setTimeout(() => {
                         splash.style.display = 'none';
-                    }, 500); // Wait for fade-out transition to finish
-                }, 2500);
+                    }, 800);
+                }, 4200);
             }
         });
     </script>
