@@ -249,6 +249,15 @@
         <div
             style="display: flex; align-items: center; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 10px;">
             <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 0;">
+                <button onclick="history.length > 1 ? history.back() : window.location.href='index.html'" title="Go Back"
+                    style="background: none; border: none; color: var(--primary); font-size: 1.35rem; cursor: pointer; padding: 5px; animation: blinker 1.5s infinite;">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <style>
+                    @keyframes blinker {
+                        50% { opacity: 0; }
+                    }
+                </style>
                 <a href="#" class="logo">
                     <img src="images/whc.png" alt="Wilson Health Care Logo">
                     <div style="display: flex; flex-direction: column; line-height: 1.1;">

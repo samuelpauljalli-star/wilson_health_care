@@ -3567,6 +3567,18 @@ if (localStorage.getItem('wilson-search-focus') === 'true') {
     }, 500);
 }
 
+// Hero Slider Auto-Animation
+(function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (!slides.length) return;
+    let currentSlide = 0;
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 4500); // 4.5 second transition
+})();
+
 // Call the main init function defined earlier
 init();
 
