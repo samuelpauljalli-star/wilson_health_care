@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -46,6 +46,12 @@
 </head>
 
 <body>
+    <div style="margin-bottom: 1rem;">
+        <button onclick="history.back()"
+            style="background:#059669; color:white; border:none; padding:8px 18px; border-radius:8px; font-size:0.88rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:7px;">
+            <span style="font-size:0.8rem;">&larr;</span> Back
+        </button>
+    </div>
     <h1>Upload Products from data.js to Firestore</h1>
     <p>This tool will upload all products found in <code>data.js</code> to the 'products' collection in Firestore.</p>
     <p><strong>Note:</strong> You must be logged in to upload data if your Firestore Security Rules require
