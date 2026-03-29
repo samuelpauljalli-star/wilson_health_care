@@ -4,13 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wilson Health Care | Premium Medical Equipment</title>
+    <!-- Primary SEO Meta Tags -->
+    <title>Wilson Health Care | Premium Medical Equipment & Hospital Supplies</title>
+    <meta name="title" content="Wilson Health Care | Premium Medical Equipment & Hospital Supplies">
+    <meta name="description" content="Wilson Health Care is a trusted supplier of advanced medical equipment, surgical tools, PPE kits, patient mobility solutions, and clinical diagnostics in India. With fast delivery and warranty support, we serve over 500+ hospitals.">
+    <meta name="keywords" content="Wilson Health Care, medical equipment, surgical tools, hospital supplies, clinical diagnostics, PPE kits, patient mobility, medical devices India, healthcare solutions, affordable medical supplies">
+    <meta name="author" content="Wilson Health Care">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wilsonhealthcare.com/">
+    <meta property="og:title" content="Wilson Health Care | Premium Medical Equipment">
+    <meta property="og:description" content="Your trusted partner for high-quality medical equipment and healthcare solutions. Serving 500+ hospitals with fast, reliable, and certified clinical supplies across India.">
+    <meta property="og:image" content="https://wilsonhealthcare.com/images/whc.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wilsonhealthcare.com/">
+    <meta property="twitter:title" content="Wilson Health Care | Premium Medical Equipment">
+    <meta property="twitter:description" content="Your trusted partner for high-quality medical equipment and healthcare solutions. Serving 500+ hospitals with fast, reliable, and certified clinical supplies across India.">
+    <meta property="twitter:image" content="https://wilsonhealthcare.com/images/whc.png">
+
+    <!-- Canonical Tag to avoid duplicate content flags -->
+    <link rel="canonical" href="https://wilsonhealthcare.com/">
+
     <link rel="icon" type="image/png" href="images/whc.png">
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#059669">
-    .
 
     <!-- iOS / Apple PWA Splash & Icon -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,8 +53,33 @@
     <meta name="msapplication-TileImage" content="images/whc.png">
     <meta name="msapplication-TileColor" content="#0a1f1c">
     <meta name="msapplication-navbutton-color" content="#059669">
-    <meta name="description"
-        content="Wilson Health Care - Your trusted partner for high-quality medical equipment, surgical tools, and healthcare solutions.">
+
+    <!-- JSON-LD Structured Data for Local Business/Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Wilson Health Care",
+      "url": "https://wilsonhealthcare.com/",
+      "logo": "https://wilsonhealthcare.com/images/whc.png",
+      "description": "Premium supplier of medical equipment, surgical tools, and healthcare solutions in India.",
+      "telephone": "+91-7032687122",
+      "email": "wilsonhealthcare7@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Uppal",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500039",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://instagram.com/wilson_health_care7",
+        "https://facebook.com/wilson_health_care"
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -111,6 +159,22 @@
 </head>
 
 <body>
+
+    <!-- Intro Splash Screen -->
+    <div id="intro-splash" class="intro-splash">
+        <div class="intro-logo-container">
+            <div class="intro-logo-pulse"></div>
+            <img src="images/whc.png" alt="Wilson Health Care Logo" class="intro-logo-img">
+            <div class="intro-text">
+                <span class="intro-brand">
+                    <span style="animation-delay: 0.1s">W</span><span style="animation-delay: 0.15s">I</span><span style="animation-delay: 0.2s">L</span><span style="animation-delay: 0.25s">S</span><span style="animation-delay: 0.3s">O</span><span style="animation-delay: 0.35s">N</span>
+                </span>
+                <span class="intro-brand-heal">
+                    <span style="animation-delay: 0.4s">H</span><span style="animation-delay: 0.45s">E</span><span style="animation-delay: 0.5s">A</span><span style="animation-delay: 0.55s">L</span><span style="animation-delay: 0.6s">T</span><span style="animation-delay: 0.65s">H</span>&nbsp;<span style="animation-delay: 0.7s">C</span><span style="animation-delay: 0.75s">A</span><span style="animation-delay: 0.8s">R</span><span style="animation-delay: 0.85s">E</span>
+                </span>
+            </div>
+        </div>
+    </div>
 
     <!-- ── PWA Install Banner (top of page) ─── -->
     <div id="pwa-top-banner" class="pwa-top-banner">
@@ -903,6 +967,21 @@
         })();
     </script>
 
+    <!-- Intro Splash Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const splash = document.getElementById('intro-splash');
+            if (splash) {
+                // Keep splash visible for 2.5 seconds, then fade out
+                setTimeout(() => {
+                    splash.classList.add('fade-out');
+                    setTimeout(() => {
+                        splash.style.display = 'none';
+                    }, 500); // Wait for fade-out transition to finish
+                }, 2500);
+            }
+        });
+    </script>
 </body>
 
 </html>
