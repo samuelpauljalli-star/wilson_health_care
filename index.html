@@ -808,59 +808,7 @@
 
     <script src="main.js"></script>
 
-    <!-- Mobile Bottom Navigation Bar (visible on phones only) -->
-    <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile Navigation">
-        <a class="mnav-item active" id="mnav-home" href="#"
-            onclick="document.getElementById('products-heading')?.scrollIntoView({behavior:'smooth'}); return false;"
-            title="Home">
-            <i class="fas fa-home"></i>
-            <span class="mnav-label">Home</span>
-        </a>
-        <button class="mnav-item" id="mnav-search"
-            onclick="toggleSearch(); setTimeout(()=>document.getElementById('search-input')?.focus(),200);"
-            title="Search">
-            <i class="fas fa-search"></i>
-            <span class="mnav-label">Search</span>
-        </button>
-        <button class="mnav-item" id="mnav-wishlist" onclick="openModal('wishlist')" title="Wishlist">
-            <i class="far fa-heart"></i>
-            <span class="mnav-badge" id="mobile-wishlist-count" style="display:none;">0</span>
-            <span class="mnav-label">Wishlist</span>
-        </button>
-        <button class="mnav-item" id="mnav-cart" onclick="openModal('cart')" title="Cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="mnav-badge" id="mobile-cart-count" style="display:none;">0</span>
-            <span class="mnav-label">Cart</span>
-        </button>
-        <button class="mnav-item" id="mnav-orders" onclick="openModal('orders')" title="Orders">
-            <i class="fas fa-box"></i>
-            <span class="mnav-label">Orders</span>
-        </button>
-        <button class="mnav-item" id="mnav-account" onclick="openModal('login')" title="Account">
-            <i class="fas fa-user-circle"></i>
-            <span class="mnav-label">Account</span>
-        </button>
-    </nav>
-
     <script>
-        // Sync mobile bottom nav badges with desktop badges
-        (function syncMobileNav() {
-            const update = () => {
-                const cartCount = document.getElementById('cart-count')?.innerText || '0';
-                const wishCount = document.getElementById('wishlist-count')?.innerText || '0';
-                const mobileCart = document.getElementById('mobile-cart-count');
-                const mobileWish = document.getElementById('mobile-wishlist-count');
-                if (mobileCart) {
-                    mobileCart.innerText = cartCount;
-                    mobileCart.style.display = (parseInt(cartCount) > 0) ? 'flex' : 'none';
-                }
-                if (mobileWish) {
-                    mobileWish.innerText = wishCount;
-                    mobileWish.style.display = (parseInt(wishCount) > 0) ? 'flex' : 'none';
-                }
-            };
-            setInterval(update, 500);
-        })();
 
         // Animate feature strip items on scroll
         (function initFeatureAnimations() {

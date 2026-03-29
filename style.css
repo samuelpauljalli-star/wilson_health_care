@@ -1918,13 +1918,9 @@ footer {
         display: flex;
     }
 
-    body {
-        padding-bottom: 72px;
-    }
-
-    /* Chatbot above the nav on mobile */
+    /* Chatbot spacing on mobile */
     .chat-bot {
-        bottom: 86px;
+        bottom: 16px;
     }
 }
 
